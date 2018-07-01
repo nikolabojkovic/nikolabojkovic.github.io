@@ -23,6 +23,7 @@ $(function() {
                            "&body=" + 
                            "Name: " + name + " " +
                            "Email: " + email + " " + 
+                           "Phone: " + phone + " " + 
                            "Message: " + message
       // $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       // $.ajax({
