@@ -11,6 +11,13 @@ header.masthead {
     @include body-font;
   }
 }
+
+.with-image {
+  background-image: url("../img/software-development.jpg");
+  background-repeat: no-repeat;
+  background-size: 900px 800px;
+}
+
 @media (min-width: 992px) {
   header.masthead {
     // padding-top: calc(6rem + 106px);
@@ -23,6 +30,11 @@ header.masthead {
     h2 {
       font-size: 1.75em;
     }
+  }
 
+  .with-image {
+    background-image: url("../img/software-development.jpg");
+    background-repeat: no-repeat;
+    background-size: 1500px 800px;
   }
 }
