@@ -1,5 +1,6 @@
 header.masthead {
-  padding-top: calc(6rem + 72px);
+  // padding-top: calc(6rem + 72px);
+  padding-top: 30px;
   padding-bottom: 6rem;
   h1 {
     font-size: 3rem;
@@ -12,7 +13,8 @@ header.masthead {
 }
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(6rem + 106px);
+    // padding-top: calc(6rem + 106px);
+    padding-top: 30px;
     padding-bottom: 6rem;
     h1 {
       font-size: 4.75em;
