@@ -1,29 +1,33 @@
 {
-    "title": "Freelancer",
-    "name": "startbootstrap-freelancer",
-    "version": "4.1.1",
-    "description": "A freelancer portfolio HTML theme for Bootstrap.",
+    "title": "Software Developer",
+    "name": "software-developer",
+    "version": "1.0.0",
+    "description": "A software developer portfolio.",
     "keywords": [
         "css",
         "sass",
         "html",
         "responsive",
         "theme",
-        "template"
+        "template",
+        "c#",
+        "IOS",
+        "Swift",
+        ".Net"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/freelancer",
+    "homepage": "https://nikolabojkovic.github.io/",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://nikolabojkovic.github.io/",
+        "email": "nikolabojkovic@gmail.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Nikola Bojkovic",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Nikola Bojkovc (https://nikolabojkovic.github.io/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+        "url": "https://github.com/nikolabojkovic/nikolabojkovic.github.io.git"
     },
     "dependencies": {
         "bootstrap": "4.1.1",
