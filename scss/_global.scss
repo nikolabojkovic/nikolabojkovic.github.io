@@ -12,6 +12,10 @@ h6 {
   @include heading-font;
 }
 
+h1, h2 {
+  padding-bottom: 40px;
+}
+
 // Custom Horizontal Rule with Star Icon
 hr.star-light,
 hr.star-dark {

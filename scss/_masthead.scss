@@ -1,5 +1,5 @@
-header.masthead {
-  padding-top: 30px;
+.masthead {
+  padding-top: 100px;
   padding-bottom: 6rem;
   h1 {
     font-size: 3rem;
@@ -11,15 +11,15 @@ header.masthead {
   }
 }
 
-.with-image {
-  background-image: url("../img/software-development.jpg");
-  background-repeat: no-repeat;
-  background-size: 900px 800px;
-}
+// .with-image {
+//   background-image: url("../img/simpleBackground.jpg");
+//   background-repeat: no-repeat;
+//   background-size: 900px 800px;
+// }
 
 @media (min-width: 992px) {
-  header.masthead {
-    padding-top: 30px;
+  .masthead {
+    padding-top: 150px;
     padding-bottom: 6rem;
     h1 {
       font-size: 4.75em;
@@ -30,11 +30,12 @@ header.masthead {
     }
   }
 
-  .with-image {
-    background-image: url("../img/software-development.jpg");
-    background-repeat: no-repeat;
-    background-size: 1500px 800px;
-  }
+  // .with-image {
+  //   background-image: url("../img/simpleBackground.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: 1500px 800px;
+  //   height: 800px;
+  // }
 }
 
 
