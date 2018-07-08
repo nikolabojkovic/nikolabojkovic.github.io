@@ -98,6 +98,24 @@ section h2 {
   line-height: 3.1rem;
 }
 
+.width-30-percent {
+  width: 40%;
+}
+
+.width-70-percent {
+  width: 60%;
+}
+
+.custom-text-align {
+  text-align: right;
+}
+
+@media (max-width: 575px) {
+  .custom-text-align {
+    text-align: center;
+  }
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -381,6 +399,16 @@ a:focus, a:hover, a:active {
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: #292b2d;
   border-color: #292b2d;
+}
+
+.progress {
+  margin-top: 10px;
+  height: 30px;
+}
+
+.progress div {
+  padding-left: 10px;
+  text-align: left;
 }
 
 #skills .skill {
