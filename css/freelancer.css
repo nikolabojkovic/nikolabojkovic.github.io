@@ -48,11 +48,11 @@ hr.star-light:after {
 }
 
 hr.star-dark {
-  border-color: #262b26;
+  border-color: #424547;
 }
 
 hr.star-dark:after {
-  color: #262b26;
+  color: #424547;
   background-color: white;
 }
 
@@ -327,12 +327,12 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #262b26;
+  background-color: #424547;
   color: #fff;
 }
 
 .copyright {
-  background-color: #0e100e;
+  background-color: #292b2d;
 }
 
 a {
@@ -352,7 +352,7 @@ a:focus, a:hover, a:active {
 }
 
 .bg-secondary {
-  background-color: #262b26 !important;
+  background-color: #424547 !important;
 }
 
 .text-primary {
@@ -360,7 +360,7 @@ a:focus, a:hover, a:active {
 }
 
 .text-secondary {
-  color: #262b26 !important;
+  color: #424547 !important;
 }
 
 .btn-primary {
@@ -374,15 +374,30 @@ a:focus, a:hover, a:active {
 }
 
 .btn-secondary {
-  background-color: #262b26;
-  border-color: #262b26;
+  background-color: #424547;
+  border-color: #424547;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  background-color: #0e100e;
-  border-color: #0e100e;
+  background-color: #292b2d;
+  border-color: #292b2d;
 }
 
 #skills .skill {
   margin: 10px;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../icomoon/icomoon.eot");
+  src: url("../icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("../icomoon/icomoon.woff") format("woff"), url("../icomoon/icomoon.ttf") format("truetype"), url("../icomoon/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icomoon-up-work::before {
+  content: '\e901';
+  position: relative;
+  top: 4px;
+  font-family: 'icomoon';
 }
