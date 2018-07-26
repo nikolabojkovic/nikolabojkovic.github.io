@@ -13,7 +13,6 @@
     method: "GET",
     dataType: "json",
     success: function (result) {
-        console.log("res", result);
         cv = result;
     },
     error: function (error) {
