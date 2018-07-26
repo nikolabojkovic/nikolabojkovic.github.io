@@ -1,5 +1,3 @@
-var cv;
-
 (function($) {
   "use strict"; // Start of use strict
 
@@ -73,35 +71,5 @@ var cv;
       $(this).removeClass("floating-label-form-group-with-focus");
     });
   });
-
-  jQuery.getJSON("../data/cv.json", function (result) {
-    cv = result;
-  });
-
-  $(document).on('click', '#download-cv',  function() {
-    
-    var blob = dataURItoBlob(cv.document);
-    var cvFile = new File([blob], cv.name, {type: cv.type});
-
-    //IE
-    if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-      window.navigator.msSaveBlob(cvFile, cvFile.name);
-      return;
-    } 
-
-    var fileUrl = URL.createObjectURL(cvFile);   
-    this.href = fileUrl;
-    this.download = cvFile.name;
-  });
-
-  var dataURItoBlob = function (dataURI) {
-    var bytes = [];
-    var utf8 = atob(dataURI);
-    for (var i = 0; i < utf8.length; i++) {
-        bytes.push(utf8.charCodeAt(i));
-    }
-
-    return new Blob([new Uint8Array(bytes)]);
-  };
 
 })(jQuery); // End of use strict
