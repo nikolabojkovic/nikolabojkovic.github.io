@@ -14,6 +14,9 @@
     dataType: "json",
     success: function (result) {
         cv = result;
+        $("#download-cv").removeAttr('disabled');
+        $("#download-cv-text").removeClass('d-none');
+        $("#loading-cv").addClass('d-none');
     },
     error: function (error) {
         console.log('error', error);
@@ -21,7 +24,10 @@
   });
 
   $(document).on('click', '#download-cv',  function() {
-    
+    if (cv === undefined) {
+        return;
+    }
+
     var blob = dataURItoBlob(cv.document);
     var cvFile = new File([blob], cv.name, {type: cv.type});
 
