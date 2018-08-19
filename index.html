@@ -429,7 +429,10 @@
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">
+                  <span id="send-message-text">Send</span>
+                  <span id="sending-email" class="d-none">Sending <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i></span>
+                </button>
                 <!-- <a href="mailto:nikolabojkovic@gmail.com?subject=SubjectEample&body=bodyExample" class="btn btn-primary btn-xl" id="sendMessage">Send</a> -->
               </div>
             </form>
@@ -445,7 +448,13 @@
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Location</h4>
             <p class="lead mb-0">11000 Belgrade, Serbia
-              <br></p>
+              <br>
+            </p>
+            <br />
+            <h4 class="text-uppercase mb-4">Tel:</h4>
+            <p> Call: 
+              <a href="tel: +381603434097" class="col-md-12">+381 60 34 34 097</a>
+            </p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
@@ -829,7 +838,7 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="js/contact_me.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>

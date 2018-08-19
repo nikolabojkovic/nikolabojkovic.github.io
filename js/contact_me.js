@@ -28,6 +28,11 @@ $(function() {
       // "https://developer-tool.com/api/contact.email"
       // http://localhost:5000/api/contact/email
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+     
+      // update button content
+      $("#send-message-text").addClass('d-none');
+      $("#sending-email").removeClass('d-none');
+
       $.ajax({
         url: "https://developer-tool.com/api/contact/email",
         type: "POST",
@@ -41,6 +46,11 @@ $(function() {
         }),
         cache: false,
         success: function() {
+          
+          // update button content
+          $("#sending-email").addClass('d-none');
+          $("#send-message-text").removeClass('d-none');
+
           // Success message
           $('#success').html("<div class='alert alert-success'>");
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -49,17 +59,20 @@ $(function() {
             .append("<strong>Your message has been sent. </strong>");
           $('#success > .alert-success')
             .append('</div>');
+
           //clear all fields
           $('#contactForm').trigger("reset");
         },
         error: function(error) {
           console.log('error', error);
+
           // Fail message
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
           $('#success > .alert-danger').append('</div>');
+
           //clear all fields
           $('#contactForm').trigger("reset");
         },
