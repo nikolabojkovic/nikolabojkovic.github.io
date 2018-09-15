@@ -81,13 +81,13 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="javascript:void(0)" id="download-cv">
-            <div id="download-cv-text" class="d-none">
+          <button class="btn btn-xl btn-outline-light" id="download-cv">
+            <div id="download-cv-text">
               <i class="fa fa-download mr-2"></i>
               Download CV
             </div>
-            <i id="loading-cv" class="fa fa-circle-o-notch fa-spin" style="font-size:36px"></i>
-          </a>
+            <i id="loading-cv" class="fa fa-circle-o-notch fa-spin d-none" style="font-size:36px"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -845,6 +845,9 @@
 
     <!-- Upload and download cv javascript -->
     <script src="js/cv.min.js"></script>
+
+    <!-- Debug purpose only -->
+    <!-- <script src="js/cv.js"></script> -->
 
   </body>
 
