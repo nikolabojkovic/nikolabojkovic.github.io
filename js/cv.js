@@ -2,7 +2,7 @@
     "use strict"; // Start of use strict
 
   // meta data
-  var apiUrl = "https://developer-tool.com/api/"
+  var apiUrl = "https://developer-tool.com/api/";
   // var apiUrl = "http://localhost:5000/api/"
 
   //   jQuery.getJSON("../data/cv.json", function (result) {
