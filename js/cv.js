@@ -15,7 +15,7 @@
 
     // get data
     $.ajax({
-      url: apiUrl + "download",
+      url: apiUrl + "cv/download",
       method: "GET",
       dataType: "json",
       success: function (cv) {    

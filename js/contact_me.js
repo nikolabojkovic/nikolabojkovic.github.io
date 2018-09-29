@@ -34,7 +34,7 @@ $(function() {
       $("#sending-email").removeClass('d-none');
 
       $.ajax({
-        url: "https://developer-tool.com/api/contact/email",
+        url: "https://developer-tool.com/api/contact/send/email",
         type: "POST",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
