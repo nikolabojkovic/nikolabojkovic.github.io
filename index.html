@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Software Developer</title>
-
+    <title>Software Developer - Nikola Bojkovic</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,23 +31,25 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">&ltNikolaBojkovic /&gt</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          <span class="text-primary">&lt/&gt</span> Nikola Bojkovic
+        </a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
+              <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">My skills</a>
+              <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">My skills</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -66,11 +68,17 @@
     <!-- About Section -->
     <section class="masthead bg-primary text-white mb-0" id="about">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">About me</h2>
+        <!-- <h2 class="text-center text-uppercase text-white">About me</h2> -->
         <h1 class="text-uppercase text-center mb-0">Nikola Bojkovic</h1>
         <h3 class="font-weight-light text-center mb-0">Software Developer</h3>
+        <h4 class="font-weight-light text-center mb-0">Full stack developer</h4>
         <div class="row">
-          <img class="img-fluid mb-5 d-block mx-auto" src="img/profile2.png" alt="">
+          <div class="col-12 col-sm-6 mt-3 mb-3 mx-auto">
+            <img class="img-fluid mb-5 d-block mx-auto" src="img/profile2.png" alt="">
+          </div>
+          <div class="col-12 col-md-6 mt-3 mb-3">
+            <canvas id="developmentChart" width="200" height="200"></canvas>
+          </div>
         </div>
         <div class="row">
           <div class="col-lg-4 ml-auto">
@@ -81,7 +89,7 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <button class="btn btn-xl btn-outline-light" id="download-cv">
+          <button class="btn btn-lg btn-outline-light" id="download-cv">
             <div id="download-cv-text">
               <i class="fa fa-download mr-2"></i>
               Download CV
@@ -160,64 +168,67 @@
         <h3 class="font-weight-light text-center mb-0">Languages</h3>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">C#</div>
+            <div class="progress bg-secondary-progress-bar border border border-light">
+              <div class="progress-bar bg-success progress-bar-animated" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">C#</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">HTML</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">HTML</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Javascript</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Javascript</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">C++</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">English</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">English</div>
             </div>
           </div>
         </div>
         <div class="row">
+          <div class="col-9 col-sm-11 ml-auto">
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Swift (IOS)</div>
+            </div>
+          </div>
+          <div class="col-3 col-sm-1 ml-auto">
+            <h3><span class="badge badge-secondary mt-2">New</span></h3>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Java</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">PHP</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Swift (IOS)</div>
             </div>
           </div>
         </div>
@@ -225,35 +236,35 @@
         <h3 class="font-weight-light text-center mb-0">Databases</h3>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">SQL</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">SQL</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Relatioanl databeses</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Relatioanl databeses</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">MSSql</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">MSSql</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">MySql</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">MySql</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Firebird</div>
             </div>
           </div>
@@ -262,63 +273,56 @@
         <h3 class="font-weight-light text-center mb-0">Frameworks</h3>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Entity Framework</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Entity Framework</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Angular 2+</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Bootstrap</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">SignalR</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Angular</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Bootstrap</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">SignalR</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">AngularJs</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">AKKA .Net</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JQuery</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">VueJs</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">VueJs</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">AKKA .Net</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Laravel</div>
             </div>
           </div>
@@ -327,21 +331,21 @@
         <h3 class="font-weight-light text-center mb-0">Subversion systems</h3>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">GIT</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">GIT</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">SVN</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar  progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">SVN</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">TFS</div>
             </div>
           </div>
@@ -350,15 +354,15 @@
         <h3 class="font-weight-light text-center mb-0">Development approach</h3>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
+            <div class="progress bg-progress-bar border border border-light">
               <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Agile development</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">SCRUM</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">SCRUM</div>
             </div>
           </div>
         </div>
@@ -366,23 +370,33 @@
         <h3 class="font-weight-light text-center mb-0">Software Design</h3>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Object oriented programming</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Object oriented programming</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Design patters</div>
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Design patters</div>
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-sm-12 ml-auto">
             <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Functional programming</div>
+              <div class="progress-bar  progress-bar-animated" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Functional programming</div>
             </div>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="col-9 col-sm-11 ml-auto">
+            <div class="progress bg-progress-bar border border border-light">
+              <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Domain Driven Design</div>
+            </div>
+          </div>
+          <div class="col-3 col-sm-1 ml-auto">
+            <h3><span class="badge badge-secondary mt-2">New</span></h3>
           </div>
         </div>
       </div>
@@ -429,7 +443,7 @@
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">
+                <button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton">
                   <span id="send-message-text">Send</span>
                   <span id="sending-email" class="d-none">Sending <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i></span>
                 </button>
@@ -836,6 +850,9 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+    <!-- ChartJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.min.js"></script>
@@ -845,6 +862,9 @@
 
     <!-- Upload and download cv javascript -->
     <script src="js/cv.min.js"></script>
+
+    <!-- Script for chatrs -->
+    <script src="js/development-charts.js"></script>
 
     <!-- Debug purpose only -->
     <!-- <script src="js/cv.js"></script> -->
