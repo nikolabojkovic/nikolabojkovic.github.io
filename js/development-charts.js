@@ -7,6 +7,7 @@ var myPieChart = new Chart(ctx,{
     type: 'doughnut',
     data: {
         datasets: [{
+            label: '# of years',
             data: [2.5, 1, 0.6],
             backgroundColor: [
                 'rgba(20, 155, 32, 0.8)',

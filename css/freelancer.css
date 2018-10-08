@@ -454,6 +454,11 @@ a:focus, a:hover, a:active {
   animation: fadein 3s ease-in;
 }
 
+.subtitle {
+  bottom: 44%;
+  left: 29%;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
