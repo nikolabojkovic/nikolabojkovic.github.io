@@ -137,7 +137,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #5697f8;
+  color: #424547;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -145,7 +145,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #5697f8;
+  color: #424547;
 }
 
 #mainNav .navbar-toggler {
@@ -173,11 +173,11 @@ section h2 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #5697f8;
+    background: #424547;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #5697f8;
+    background: #424547;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -435,8 +435,8 @@ a:focus, a:hover, a:active {
 }
 
 #developmentChart {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 450px;
+  max-width: 450px;
 }
 
 .chart-title {
