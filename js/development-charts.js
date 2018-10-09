@@ -4,7 +4,7 @@
 var ctx = $("#developmentChart");
 
 var myPieChart = new Chart(ctx,{
-    type: 'doughnut',
+    type: 'pie',
     data: {
         datasets: [{
             label: '# of years',
@@ -30,14 +30,20 @@ var myPieChart = new Chart(ctx,{
         ]
     },
     options: {
+        title: {
+            display: true,
+            text: '4 years experience',
+            fontColor: '#FFF',
+            fontStyle: 'bold',
+            fontSize: 18
+        },
         legend: {
             display: true,
             labels: {
                 fontColor: 'rgb(255, 255, 255)'
             },
-            position: 'top'
+            position: 'left'
         },
-        cutoutPercentage: 80,
         animation: { animateScale: true }
     }
 });
