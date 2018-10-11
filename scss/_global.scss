@@ -110,8 +110,26 @@ section {
   text-align: right;
 }
 
+.project-thumbnail {
+  width: 286px;
+  height: 180px;
+  margin: 0px 22px;
+}
+
 @media(max-width: 575px) {
   .custom-text-align {
     text-align: center;
   }
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 0px 0px 34px 3px rgba(61,60,60,1);
+  -moz-box-shadow: inset 0px 0px 24px 3px rgba(61,60,60,1);
+  box-shadow: inset 0px 0px 14px 3px rgba(61,60,60,1);
+}
+
+.progress-bar-shadow {
+  -webkit-box-shadow: inset 0px 0px 36px -9px rgba(37,37,61,1);
+  -moz-box-shadow: inset 0px 0px 36px -9px rgba(37,37,61,1);
+  box-shadow: inset 0px 0px 36px -9px rgba(37,37,61,1);
 }

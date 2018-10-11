@@ -67,3 +67,17 @@ a {
     text-align: left;
   }
 }
+
+.project-card {
+  min-width: 20rem;
+  max-width: 20rem;
+  min-height: 375px;
+}
+
+.card-continer {
+  min-width: 22rem;
+}
+
+.mfp-inline-holder .mfp-content {
+  width: 70%;
+}
