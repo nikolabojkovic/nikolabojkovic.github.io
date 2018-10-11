@@ -122,6 +122,18 @@ section h2 {
   }
 }
 
+.inner-shadow {
+  -webkit-box-shadow: inset 0px 0px 34px 3px #3d3c3c;
+  -moz-box-shadow: inset 0px 0px 24px 3px #3d3c3c;
+  box-shadow: inset 0px 0px 14px 3px #3d3c3c;
+}
+
+.progress-bar-shadow {
+  -webkit-box-shadow: inset 0px 0px 36px -9px #25253d;
+  -moz-box-shadow: inset 0px 0px 36px -9px #25253d;
+  box-shadow: inset 0px 0px 36px -9px #25253d;
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
