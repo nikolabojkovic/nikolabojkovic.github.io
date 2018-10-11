@@ -452,6 +452,30 @@ a:focus, a:hover, a:active {
   width: 70%;
 }
 
+.linkedin:hover i {
+  color: #4875B4;
+}
+
+.facebook:hover i {
+  color: #3B5998;
+}
+
+.linkedin:hover i {
+  color: #4875B4;
+}
+
+.upwork:hover i {
+  color: #33c93b;
+}
+
+.google-plus:hover i {
+  color: #C63D2D;
+}
+
+.twitter:hover i {
+  color: #33CCFF;
+}
+
 #skills .skill {
   margin: 10px;
 }
