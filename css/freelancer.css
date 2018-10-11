@@ -110,6 +110,12 @@ section h2 {
   text-align: right;
 }
 
+.project-thumbnail {
+  width: 286px;
+  height: 180px;
+  margin: 0px 22px;
+}
+
 @media (max-width: 575px) {
   .custom-text-align {
     text-align: center;
@@ -255,7 +261,7 @@ section h2 {
 
 .portfolio-modal .portfolio-modal-dialog {
   padding: 3rem 1rem;
-  min-height: calc(100vh - 2rem);
+  min-height: calc(90vh - 2rem);
   margin: 1rem calc(1rem - 8px);
   position: relative;
   z-index: 2;
@@ -280,7 +286,7 @@ section h2 {
 
 @media (min-width: 768px) {
   .portfolio-modal .portfolio-modal-dialog {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 5rem;
     margin: 3rem calc(3rem - 8px);
   }
@@ -418,6 +424,20 @@ a:focus, a:hover, a:active {
 .progress div {
   padding-left: 10px;
   text-align: left;
+}
+
+.project-card {
+  min-width: 20rem;
+  max-width: 20rem;
+  min-height: 375px;
+}
+
+.card-continer {
+  min-width: 22rem;
+}
+
+.mfp-inline-holder .mfp-content {
+  width: 70%;
 }
 
 #skills .skill {

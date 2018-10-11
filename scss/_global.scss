@@ -110,6 +110,12 @@ section {
   text-align: right;
 }
 
+.project-thumbnail {
+  width: 286px;
+  height: 180px;
+  margin: 0px 22px;
+}
+
 @media(max-width: 575px) {
   .custom-text-align {
     text-align: center;
