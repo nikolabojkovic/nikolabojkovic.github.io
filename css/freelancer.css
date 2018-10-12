@@ -491,8 +491,8 @@ a:focus, a:hover, a:active {
 }
 
 #developmentChart {
-  max-height: 450px;
-  max-width: 450px;
+  max-height: 402px;
+  max-width: 402px;
 }
 
 .chart-title {
