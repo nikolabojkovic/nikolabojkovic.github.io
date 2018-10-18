@@ -129,9 +129,9 @@ section h2 {
 }
 
 .progress-bar-shadow {
-  -webkit-box-shadow: inset 0px 0px 36px -9px #25253d;
-  -moz-box-shadow: inset 0px 0px 36px -9px #25253d;
-  box-shadow: inset 0px 0px 36px -9px #25253d;
+  -webkit-box-shadow: inset -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 #mainNav {
