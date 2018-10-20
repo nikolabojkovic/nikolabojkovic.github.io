@@ -82,6 +82,10 @@ section {
   height: 3.25rem;
   font-size: 1.25rem;
   line-height: 2rem;
+   color: $secondary;
+   border: 2px solid $secondary;
+  // border: 2px solid darken($primary, 10%);
+  // color: darken($primary, 10%);
 }
 
 // Scroll to Top Button
@@ -136,4 +140,62 @@ section {
   -webkit-box-shadow: inset -2px 2px 0px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: inset -2px 2px 0px 0px rgba(0,0,0,0.75);
   box-shadow: inset -2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+
+.linkedin {
+  &:hover {
+    border: 2px solid $linkedin;
+    background-color: $linkedin;
+    i {
+      color: $white;
+    }
+  }
+}
+.github {
+  &:hover {
+    border: 2px solid $github;
+    background-color: $github;
+    i {
+      color: $white;
+    }
+  }
+}
+.upwork {
+  &:hover {
+    border: 2px solid $upwork;
+    background-color: $upwork;
+    i {
+      color: $white;
+    }
+  }
+}
+.facebook {
+  &:hover {
+    border: 2px solid $facebook;
+    background-color: $facebook;
+    i {
+      color: $white;
+    }
+  }
+}
+.google-plus {
+  &:hover {
+    border: 2px solid $google-plus;
+    background-color: $google-plus;
+    i {
+      color: $white;
+    }
+  }
+}
+.twitter {
+  &:hover {
+    border: 2px solid $twitter;
+    background-color: $twitter;
+    i {
+      color: $white;
+    }
+  }
+}
+.chart{
+  background-color: darken($white, 5%);
 }

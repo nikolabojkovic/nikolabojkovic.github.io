@@ -3,6 +3,9 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   @include heading-font;
+  border-color: darken($white, 15%) !important;
+  background-color: darken($white, 5%) !important;
+
   .navbar-brand {
     color: $white;
   }
@@ -11,16 +14,20 @@
     letter-spacing: 0.0625rem;
     li.nav-item {
       a.nav-link {
-        color: $white;
+        background-color: $white;
+        border: 2px solid darken($secondary, 5%);
+        color: $secondary;
         &:hover {
-          color: $secondary;
+          background-color: darken($secondary, 5%);
+          color: $white;
         }
         &:active,
         &:focus {
-          color: $white;
+
         }
         &.active {
           color: $secondary;
+          border: none;
         }
       }
     }

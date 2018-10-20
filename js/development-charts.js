@@ -33,14 +33,14 @@ var myPieChart = new Chart(ctx,{
         title: {
             display: true,
             text: '4 years experience',
-            fontColor: '#FFF',
+            fontColor: '#333',
             fontStyle: 'bold',
             fontSize: 18
         },
         legend: {
             display: true,
             labels: {
-                fontColor: 'rgb(255, 255, 255)'
+                fontColor: 'rgb(20, 20, 20)'
             },
             position: 'left'
         },
