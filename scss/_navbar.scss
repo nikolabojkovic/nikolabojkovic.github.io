@@ -6,6 +6,12 @@
   border-color: darken($white, 15%) !important;
   background-color: darken($white, 5%) !important;
 
+  .shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
   .navbar-brand {
     color: $white;
   }
@@ -14,28 +20,17 @@
     letter-spacing: 0.0625rem;
     li.nav-item {
       a.nav-link {
-        background-color: $white;
-        border: 2px solid darken($secondary, 5%);
+        background-color: darken($white, 5%);
+        border: none;
         color: $secondary;
-        &:hover {
-          background-color: darken($secondary, 5%);
-          color: $white;
-        }
-        &:active,
-        &:focus {
-
-        }
-        &.active {
-          color: $secondary;
-          border: none;
-        }
       }
     }
   }
   .navbar-toggler {
     font-size: 80%;
     padding: 0.8rem;
-    border: 1px solid white !important;
+    color: darken(white, 50%) !important;
+    border: 1px solid darken(white, 50%) !important;
   }
 }
 @media(min-width:992px) {
@@ -53,6 +48,21 @@
     }
     .navbar-nav {
       margin-top: 0;
+      li.nav-item {
+        a.nav-link {
+          background-color: $white;
+          border: 2px solid darken($secondary, 5%);
+          color: $secondary;
+          &:hover {
+            background-color: darken($secondary, 5%);
+            color: $white;
+          }
+          &.active {
+            color: $secondary;
+            border: none;
+          }
+        }
+      }
     }
     .navbar-nav > li.nav-item > a.nav-link.active {
       color: $white;
