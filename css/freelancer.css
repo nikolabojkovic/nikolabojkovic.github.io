@@ -82,6 +82,8 @@ section h2 {
   height: 3.25rem;
   font-size: 1.25rem;
   line-height: 2rem;
+  color: #424547;
+  border: 2px solid #424547;
 }
 
 .scroll-to-top {
@@ -134,11 +136,71 @@ section h2 {
   box-shadow: inset -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
+.linkedin:hover {
+  border: 2px solid #4875B4;
+  background-color: #4875B4;
+}
+
+.linkedin:hover i {
+  color: #fff;
+}
+
+.github:hover {
+  border: 2px solid #424547;
+  background-color: #424547;
+}
+
+.github:hover i {
+  color: #fff;
+}
+
+.upwork:hover {
+  border: 2px solid #33c93b;
+  background-color: #33c93b;
+}
+
+.upwork:hover i {
+  color: #fff;
+}
+
+.facebook:hover {
+  border: 2px solid #3B5998;
+  background-color: #3B5998;
+}
+
+.facebook:hover i {
+  color: #fff;
+}
+
+.google-plus:hover {
+  border: 2px solid #C63D2D;
+  background-color: #C63D2D;
+}
+
+.google-plus:hover i {
+  color: #fff;
+}
+
+.twitter:hover {
+  border: 2px solid #33CCFF;
+  background-color: #33CCFF;
+}
+
+.twitter:hover i {
+  color: #fff;
+}
+
+.chart {
+  background-color: #f2f2f2;
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-weight: 700;
   font-family: 'Montserrat';
+  border-color: #d9d9d9 !important;
+  background-color: #f2f2f2 !important;
 }
 
 #mainNav .navbar-brand {
@@ -151,19 +213,19 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #fff;
-}
-
-#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  background-color: #fff;
+  border: 2px solid #36383a;
   color: #424547;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  background-color: #36383a;
   color: #fff;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #424547;
+  border: none;
 }
 
 #mainNav .navbar-toggler {
@@ -364,12 +426,14 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #424547;
+  background-color: #f2f2f2 !important;
+  border-color: #d9d9d9 !important;
   color: #fff;
 }
 
 .copyright {
-  background-color: #292b2d;
+  background-color: #cccccc;
+  font-size: 18px;
 }
 
 a {
@@ -388,8 +452,12 @@ a:focus, a:hover, a:active {
   background-color: #5697f8 !important;
 }
 
+.bg-white {
+  background-color: #fff !important;
+}
+
 .bg-progress-bar {
-  background-color: #3083f7 !important;
+  background-color: lightgray !important;
 }
 
 .bg-secondary-progress-bar {
@@ -450,30 +518,6 @@ a:focus, a:hover, a:active {
 
 .mfp-inline-holder .mfp-content {
   width: 70%;
-}
-
-.linkedin:hover i {
-  color: #4875B4;
-}
-
-.facebook:hover i {
-  color: #3B5998;
-}
-
-.linkedin:hover i {
-  color: #4875B4;
-}
-
-.upwork:hover i {
-  color: #33c93b;
-}
-
-.google-plus:hover i {
-  color: #C63D2D;
-}
-
-.twitter:hover i {
-  color: #33CCFF;
 }
 
 #skills .skill {

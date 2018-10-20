@@ -16,6 +16,10 @@ a {
   background-color: $primary !important;
 }
 
+.bg-white {
+  background-color: $white !important;
+}
+
 .bg-progress-bar {
   background-color: $progress-bar !important;
 }
@@ -80,28 +84,4 @@ a {
 
 .mfp-inline-holder .mfp-content {
   width: 70%;
-}
-
-.linkedin:hover i {
-  color: #4875B4
-}
-
-.facebook:hover i {
-  color: #3B5998
-}
-
-.linkedin:hover i {
-  color: #4875B4
-}
-
-.upwork:hover i {
-  color: rgb(51, 201, 59)
-}
-
-.google-plus:hover i {
-  color: #C63D2D
-}
-
-.twitter:hover i {
-  color: #33CCFF
 }
