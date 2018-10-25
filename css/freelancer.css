@@ -315,6 +315,7 @@ section h2 {
   position: relative;
   margin: 0px 15px;
   top: 3px;
+  cursor: pointer;
 }
 
 .navbar {
