@@ -1,6 +1,7 @@
 // Typography
 body {
   @include body-font;
+  background-color: darken($white, 2%);
 }
 
 h1,
@@ -52,7 +53,7 @@ hr.star-dark {
 }
 hr.star-dark:after {
   color: $secondary;
-  background-color: white;
+  background-color: $white;
 }
 
 // Section Padding Settings
@@ -84,6 +85,15 @@ section {
   line-height: 2rem;
   color: $secondary !important;
   border: 2px solid $secondary;
+}
+
+.btn-social-light {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: darken($white, 10%) !important;
+  border: 2px solid darken($white, 10%);
 }
 
 // Scroll to Top Button
@@ -200,6 +210,21 @@ section {
     }
   }
 }
-.chart{
+.bg-light{
   background-color: darken($white, 5%);
+}
+
+.body-dark {
+  background-color: lighten($black, 10%) !important;
+  color: darken($white, 10%);
+}
+
+.card-dark {
+  background-color: lighten($black, 5%) !important;
+}
+
+.light-spot {
+  position: relative;
+  margin: 0px 15px;
+  top: 3px;
 }

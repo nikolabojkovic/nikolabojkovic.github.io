@@ -33,19 +33,31 @@ var myPieChart = new Chart(ctx,{
         title: {
             display: true,
             text: '4 years experience',
-            fontColor: '#333',
+            fontColor: 'rgb(3, 3, 3)',
             fontStyle: 'bold',
             fontSize: 18
         },
         legend: {
             display: true,
             labels: {
-                fontColor: 'rgb(20, 20, 20)'
+                fontColor: 'rgb(3, 3, 3)'
             },
             position: 'left'
         },
         animation: { animateScale: true }
     }
+});
+
+$("#light-off").click(function() { 
+    myPieChart.options.legend.labels.fontColor = 'rgb(255, 255, 255)';
+    myPieChart.options.title.fontColor = 'rgb(255, 255, 255)';
+    myPieChart.update();
+});
+
+$("#light-on").click(function() { 
+    myPieChart.options.legend.labels.fontColor = 'rgb(3, 3, 3)';
+    myPieChart.options.title.fontColor = 'rgb(3, 3, 3)';
+    myPieChart.update();
 });
 
 })(jQuery); // End of use strict

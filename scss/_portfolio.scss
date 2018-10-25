@@ -30,6 +30,7 @@
 
 .portfolio-modal {
   .portfolio-modal-dialog {
+    background-color: $white;
     padding: 3rem 1rem;
     min-height: calc(90vh - 2rem);
     margin: 1rem calc(1rem - 8px);
@@ -60,4 +61,8 @@
       }
     }
   }
+}
+
+.portfolio-modal-dialog-dark {
+  background-color: $black !important;
 }

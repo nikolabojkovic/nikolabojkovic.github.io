@@ -72,4 +72,64 @@
     });
   });
 
+  $("#light-on").addClass('d-none');
+
+  // dark team events
+  $("#light-off").click(function() {
+      $("#light-off").addClass('d-none');
+      $("#light-on").removeClass('d-none');
+
+      var socialBtn; 
+      $("body").addClass('body-dark');
+      $("hr").addClass('bg-light');
+      $(".bg-progress-bar").addClass('bg-progress-bar-dark');
+      $(".bg-progress-bar").removeClass('bg-progress-bar');
+      $(".portfolio-modal-dialog").addClass('portfolio-modal-dialog-dark');
+
+      $(".card").addClass('card-dark');
+
+      // navbar
+      $("nav").addClass('navbar-dark');
+      $(".navbar-nav").addClass('navbar-nav-dark');
+      $(".nav-link").addClass('nav-link-dark');
+
+      // footer
+      $("footer").removeClass('footer')
+                 .addClass('footer-dark');
+      $(".copyright").addClass('copyright-dark');
+      socialBtn = $(".btn-social");
+      socialBtn.removeClass('btn-social');
+      socialBtn.addClass('btn-social-light');
+      
+  });
+
+  $("#light-on").click(function() {      
+      $("#light-on").addClass('d-none');
+      $("#light-off").removeClass('d-none');
+
+      var socialBtn;
+      $("body").removeClass('body-dark');
+      $("hr").removeClass('bg-light');
+      $(".bg-progress-bar-dark").addClass('bg-progress-bar');
+      $(".bg-progress-bar-dark").removeClass('bg-progress-bar-dark');
+      $(".portfolio-modal-dialog").removeClass('portfolio-modal-dialog-dark');
+
+      $(".card").removeClass('card-dark');
+
+      // navbar
+      $("nav").removeClass('navbar-dark');
+      $(".navbar-nav").removeClass('navbar-nav-dark');
+      $(".nav-link").removeClass('nav-link-dark');
+
+       // footer
+      $("footer").removeClass('footer-dark');
+      $("footer").addClass('footer');
+      $(".copyright").removeClass('copyright-dark');
+      
+      socialBtn = $(".btn-social-light");
+      socialBtn.removeClass('btn-social-light');
+      socialBtn.addClass('btn-social');
+      
+  });
+
 })(jQuery); // End of use strict

@@ -24,6 +24,10 @@ a {
   background-color: $progress-bar !important;
 }
 
+.bg-progress-bar-dark {
+  background-color: $progress-bar-dark !important;
+}
+
 .bg-secondary-progress-bar {
   background-color: $secondary-progress-bar !important;
 }
@@ -84,4 +88,8 @@ a {
 
 .mfp-inline-holder .mfp-content {
   width: 70%;
+}
+
+.form-control:focus {
+  background-color: transparent;
 }
