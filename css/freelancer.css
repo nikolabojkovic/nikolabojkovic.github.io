@@ -73,13 +73,13 @@ a:focus, a:hover, a:active {
 }
 
 .project-card {
-  min-width: 18rem;
-  max-width: 18rem;
+  min-width: 18.5rem;
+  max-width: 18.5rem;
   min-height: 375px;
 }
 
 .card-continer {
-  min-width: 18rem;
+  min-width: 18.5rem;
 }
 
 .mfp-inline-holder .mfp-content {
