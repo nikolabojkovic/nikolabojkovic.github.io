@@ -60,11 +60,10 @@
       margin-top: 0;
       li.nav-item {
         a.nav-link-dark {
-          background-color: lighten($black, 5%);
-          border-bottom: 2px solid lighten($black, 5%) !important;
+          border-bottom: 5px solid lighten($black, 5%) !important;
           color: $white;
           &:hover {
-            border-bottom: 2px solid darken($primary, 10%) !important;
+            border-bottom: 5px solid darken($primary, 35%) !important;
           }
           &.active {
             color: $white !important;
@@ -75,12 +74,11 @@
     }
     .navbar-nav > li.nav-item > a.nav-link-dark.active {
       color: $white !important;
-      background: darken($primary, 10%) !important;
+      border-bottom: 5px solid darken($primary, 10%) !important;
       &:active,
       &:focus,
       &:hover {
-        color: $white !important;
-        background: darken($primary, 10%) !important;
+        border-bottom: 5px solid darken($primary, 10%) !important;
       }
     }
   }
