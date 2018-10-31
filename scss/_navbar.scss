@@ -17,6 +17,7 @@
   }
 
   .navbar-brand {
+    font-size: 0.8em;
     color: $white;
     background-color: $secondary;
   }
@@ -40,6 +41,7 @@
 } /* end of small screen resolution */
 @media(min-width:992px) {
   #mainNav {
+    font-size: 0.7rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -55,11 +57,10 @@
       margin-top: 0;
       li.nav-item {
         a.nav-link {
-          background-color: darken($white, 5%);
-          border-bottom: 2px solid darken($white, 5%);
+          border-bottom: 5px solid darken($white, 5%);
           color: $secondary;
           &:hover {
-            border-bottom: 2px solid darken($secondary, 5%);
+            border-bottom: 5px solid lighten($secondary, 35%);
           }
           &.active {
             color: $secondary;
@@ -69,13 +70,11 @@
       }
     }
     .navbar-nav > li.nav-item > a.nav-link.active {
-      color: $white;
-      background: $secondary;
+      border-bottom: 5px solid $secondary;
       &:active,
       &:focus,
       &:hover {
-        color: $white;
-        background: $secondary;
+        border-bottom: 5px solid $secondary;
       }
     }
   }

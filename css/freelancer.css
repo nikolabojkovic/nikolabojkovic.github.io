@@ -73,13 +73,13 @@ a:focus, a:hover, a:active {
 }
 
 .project-card {
-  min-width: 20rem;
-  max-width: 20rem;
+  min-width: 18rem;
+  max-width: 18rem;
   min-height: 375px;
 }
 
 .card-continer {
-  min-width: 22rem;
+  min-width: 18rem;
 }
 
 .mfp-inline-holder .mfp-content {
@@ -160,7 +160,7 @@ section h2 {
 
 @media (min-width: 992px) {
   section h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
@@ -220,9 +220,24 @@ section h2 {
   margin: 0px 22px;
 }
 
+@media (max-width: 992px) {
+  .light-spot {
+    position: relative;
+    margin: 0px 25px !important;
+    top: 10px !important;
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 575px) {
   .custom-text-align {
     text-align: center;
+  }
+  .light-spot {
+    position: relative;
+    margin: 0px 15px !important;
+    top: 10px !important;
+    cursor: pointer;
   }
 }
 
@@ -313,7 +328,7 @@ section h2 {
 
 .light-spot {
   position: relative;
-  margin: 0px 15px;
+  margin: 0px 5px;
   top: 3px;
   cursor: pointer;
 }
@@ -338,6 +353,7 @@ section h2 {
 }
 
 .navbar .navbar-brand {
+  font-size: 0.8em;
   color: #fff;
   background-color: #424547;
 }
@@ -363,6 +379,7 @@ section h2 {
 /* end of small screen resolution */
 @media (min-width: 992px) {
   #mainNav {
+    font-size: 0.7rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -379,24 +396,21 @@ section h2 {
     margin-top: 0;
   }
   #mainNav .navbar-nav li.nav-item a.nav-link {
-    background-color: #f2f2f2;
-    border-bottom: 2px solid #f2f2f2;
+    border-bottom: 5px solid #f2f2f2;
     color: #424547;
   }
   #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-    border-bottom: 2px solid #36383a;
+    border-bottom: 5px solid #9a9ea1;
   }
   #mainNav .navbar-nav li.nav-item a.nav-link.active {
     color: #424547;
     border: none;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-    color: #fff;
-    background: #424547;
+    border-bottom: 5px solid #424547;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-    color: #fff;
-    background: #424547;
+    border-bottom: 5px solid #424547;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -472,12 +486,11 @@ section h2 {
     margin-top: 0;
   }
   .navbar-dark .navbar-nav li.nav-item a.nav-link-dark {
-    background-color: #0d0d0d;
-    border-bottom: 2px solid #0d0d0d !important;
+    border-bottom: 5px solid #0d0d0d !important;
     color: #fff;
   }
   .navbar-dark .navbar-nav li.nav-item a.nav-link-dark:hover {
-    border-bottom: 2px solid #2579f6 !important;
+    border-bottom: 5px solid #064095 !important;
   }
   .navbar-dark .navbar-nav li.nav-item a.nav-link-dark.active {
     color: #fff !important;
@@ -485,11 +498,10 @@ section h2 {
   }
   .navbar-dark .navbar-nav > li.nav-item > a.nav-link-dark.active {
     color: #fff !important;
-    background: #2579f6 !important;
+    border-bottom: 5px solid #2579f6 !important;
   }
   .navbar-dark .navbar-nav > li.nav-item > a.nav-link-dark.active:active, .navbar-dark .navbar-nav > li.nav-item > a.nav-link-dark.active:focus, .navbar-dark .navbar-nav > li.nav-item > a.nav-link-dark.active:hover {
-    color: #fff !important;
-    background: #2579f6 !important;
+    border-bottom: 5px solid #2579f6 !important;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -521,7 +533,7 @@ section h2 {
     padding-bottom: 6rem;
   }
   .masthead h1 {
-    font-size: 4.75em;
+    font-size: 2.75em;
     line-height: 4rem;
   }
   .masthead h2 {
