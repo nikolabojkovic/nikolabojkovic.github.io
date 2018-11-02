@@ -1,6 +1,12 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  var theme = localStorage.getItem('theme');
+  $("#light-on").addClass('d-none');
+  if (theme == 'dark') {
+    switchLightOff();
+  }
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -73,38 +79,18 @@
     });
   });
 
-  $("#light-on").addClass('d-none');
-
   // dark team events
   $("#light-off").click(function() {
-      $("#light-off").addClass('d-none');
-      $("#light-on").removeClass('d-none');
-
-      var socialBtn; 
-      $("body").addClass('body-dark');
-      $("hr").addClass('bg-light');
-      $(".bg-progress-bar").addClass('bg-progress-bar-dark');
-      $(".bg-progress-bar").removeClass('bg-progress-bar');
-      $(".portfolio-modal-dialog").addClass('portfolio-modal-dialog-dark');
-
-      $(".card").addClass('card-dark');
-
-      // navbar
-      $("nav").addClass('navbar-dark');
-      $(".navbar-nav").addClass('navbar-nav-dark');
-      $(".nav-link").addClass('nav-link-dark');
-
-      // footer
-      $("footer").removeClass('footer')
-                 .addClass('footer-dark');
-      $(".copyright").addClass('copyright-dark');
-      socialBtn = $(".btn-social");
-      socialBtn.removeClass('btn-social');
-      socialBtn.addClass('btn-social-light');
-      
+    switchLightOff();
+    localStorage.setItem('theme', 'dark');
   });
 
   $("#light-on").click(function() {      
+    switchLightOn();
+    localStorage.setItem('theme', 'light');
+  });
+
+  function switchLightOn() {
       $("#light-on").addClass('d-none');
       $("#light-off").removeClass('d-none');
 
@@ -129,10 +115,35 @@
       
       socialBtn = $(".btn-social-light");
       socialBtn.removeClass('btn-social-light');
-      socialBtn.addClass('btn-social');
-      
-  });
+      socialBtn.addClass('btn-social'); 
+  }
 
+  function switchLightOff() {
+      $("#light-off").addClass('d-none');
+      $("#light-on").removeClass('d-none');
+
+      var socialBtn; 
+      $("body").addClass('body-dark');
+      $("hr").addClass('bg-light');
+      $(".bg-progress-bar").addClass('bg-progress-bar-dark');
+      $(".bg-progress-bar").removeClass('bg-progress-bar');
+      $(".portfolio-modal-dialog").addClass('portfolio-modal-dialog-dark');
+
+      $(".card").addClass('card-dark');
+
+      // navbar
+      $("nav").addClass('navbar-dark');
+      $(".navbar-nav").addClass('navbar-nav-dark');
+      $(".nav-link").addClass('nav-link-dark');
+
+      // footer
+      $("footer").removeClass('footer')
+                 .addClass('footer-dark');
+      $(".copyright").addClass('copyright-dark');
+      socialBtn = $(".btn-social");
+      socialBtn.removeClass('btn-social');
+      socialBtn.addClass('btn-social-light');
+  }
   // preview profile
   $("#preview").click(function() {
     $("html, body").stop();
