@@ -48,16 +48,30 @@ var myPieChart = new Chart(ctx,{
     }
 });
 
+var theme = localStorage.getItem('theme');
+
+if (theme == 'dark') {
+  switchLightOff();
+}
+
 $("#light-off").click(function() { 
-    myPieChart.options.legend.labels.fontColor = 'rgb(255, 255, 255)';
-    myPieChart.options.title.fontColor = 'rgb(255, 255, 255)';
-    myPieChart.update();
+    switchLightOff();
 });
 
 $("#light-on").click(function() { 
+    switchLightOn();
+});
+
+function switchLightOn() {
     myPieChart.options.legend.labels.fontColor = 'rgb(3, 3, 3)';
     myPieChart.options.title.fontColor = 'rgb(3, 3, 3)';
     myPieChart.update();
-});
+}
+
+function switchLightOff() {
+    myPieChart.options.legend.labels.fontColor = 'rgb(255, 255, 255)';
+    myPieChart.options.title.fontColor = 'rgb(255, 255, 255)';
+    myPieChart.update();
+}
 
 })(jQuery); // End of use strict
