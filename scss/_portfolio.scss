@@ -31,7 +31,7 @@
 .portfolio-modal {
   .portfolio-modal-dialog {
     background-color: $white;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     min-height: calc(90vh - 2rem);
     margin: 1rem calc(1rem - 8px);
     position: relative;
@@ -54,7 +54,7 @@
   @media(min-width: 768px) {
     .portfolio-modal-dialog {
       min-height: 90vh;
-      padding: 5rem;
+      padding: 2rem;
       margin: 3rem calc(3rem - 8px);
       h2 {
         font-size: 3rem;

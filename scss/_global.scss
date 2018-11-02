@@ -14,7 +14,7 @@ h6 {
 }
 
 h1, h2 {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 // Custom Horizontal Rule with Star Icon
@@ -58,7 +58,7 @@ hr.star-dark:after {
 
 // Section Padding Settings
 section {
-  padding: 6rem 0;
+  padding: 2rem 0;
   h2 {
     font-size: 2.25rem;
     line-height: 2rem;
@@ -79,10 +79,10 @@ section {
 
 // Custom Rounded Social Button
 .btn-social {
-  width: 3.25rem;
-  height: 3.25rem;
-  font-size: 1.25rem;
-  line-height: 2rem;
+  width: 3.0rem;
+  height: 3.0rem;
+  font-size: 1.0rem;
+  line-height: 1.8rem;
   color: $secondary !important;
   border: 2px solid $secondary;
 }
