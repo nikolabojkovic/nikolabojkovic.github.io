@@ -466,7 +466,7 @@ section h2 {
   background-color: #fff;
 }
 
-.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:active {
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:active {
   color: #000;
 }
 
