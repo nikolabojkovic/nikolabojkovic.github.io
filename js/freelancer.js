@@ -7,9 +7,10 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
+        $("html, body").stop(true);
         $('html, body').animate({
           scrollTop: (target.offset().top - 70)
-        }, 1000, "easeInOutExpo");
+        }, 2000, "easeInOutExpo");
         return false;
       }
     }
@@ -131,5 +132,17 @@
       socialBtn.addClass('btn-social');
       
   });
+
+  // preview profile
+  $("#preview").click(function() {
+    $("html, body").stop();
+    $("html, body").animate({ scrollTop: $(document).height() - $(window).height() }, getDuration($(document).height() - $(window).height(), 2.5), "easeInOutSine");
+  });
+
+  function getDuration(target, rate) {
+    var currentTop = $(window).scrollTop(), distance;
+    distance = Math.abs(currentTop - target);
+    return distance * rate;
+  }
 
 })(jQuery); // End of use strict
