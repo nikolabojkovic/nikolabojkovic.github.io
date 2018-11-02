@@ -16,9 +16,11 @@
     }
 }
 
-#developmentChart {
-    max-height: 402px;
-    max-width: 402px;
+#developmentChart, .image-fixed-container  {
+    max-height: 412px;
+    max-width: 412px;
+    min-height: 312px;
+    min-width: 312px;
 }
 
 .chart-title {

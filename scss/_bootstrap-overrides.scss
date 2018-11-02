@@ -86,10 +86,40 @@ a {
   min-width: 18.5rem;
 }
 
+@media (max-width: 768px) {
+  .project-card {
+    min-width: 15.5rem;
+    max-width: 15.5rem;
+    min-height: 375px;
+  }
+  
+  .card-continer {
+    min-width: 15.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .mfp-inline-holder .mfp-content {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 420px) {
+
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+
+}
+
 .mfp-inline-holder .mfp-content {
-  width: 70%;
+  width: 90%;
 }
 
 .form-control:focus {
   background-color: transparent;
+}
+
+.portfolio-modal-dismiss {
+  z-index: 1001 !important;
 }
