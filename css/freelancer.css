@@ -248,6 +248,9 @@ section h2 {
     top: 10px !important;
     cursor: pointer;
   }
+  .about-text {
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -259,6 +262,9 @@ section h2 {
     margin: 0px 15px !important;
     top: 10px !important;
     cursor: pointer;
+  }
+  .about-text {
+    padding-top: 0px;
   }
 }
 
@@ -352,6 +358,12 @@ section h2 {
   margin: 0px 5px;
   top: 3px;
   cursor: pointer;
+}
+
+@media (min-width: 993px) {
+  .about-text {
+    padding-top: 110px;
+  }
 }
 
 .navbar {
