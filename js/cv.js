@@ -1,5 +1,5 @@
 (function($) {
-    "use strict"; // Start of use strict
+  "use strict"; // Start of use strict
 
   // meta data
   var apiUrl = "https://developer-tool.com/api/";
