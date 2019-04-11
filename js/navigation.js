@@ -1,5 +1,8 @@
 $(document).ready(function() {
     $('#mainNav').load('../pages/navigation/navigation.html', function () {
+        $(function () {
+            $('.light-spot').tooltip();
+        });
         // Collapse now if page is not at top
         navbarCollapse();
 
