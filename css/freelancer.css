@@ -800,6 +800,10 @@ form .row:first-child .floating-label-form-group-dark {
   right: 20px;
 }
 
+#skills section {
+  padding: 10px 0px;
+}
+
 #developmentChart, .image-fixed-container {
   max-height: 412px;
   max-width: 412px;
