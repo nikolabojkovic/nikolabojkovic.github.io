@@ -796,8 +796,12 @@ form .row:first-child .floating-label-form-group-dark {
 
 #skills .progress .badge {
   position: absolute;
-  bottom: 6px;
+  bottom: 3px;
   right: 20px;
+}
+
+#skills section {
+  padding: 10px 0px;
 }
 
 #developmentChart, .image-fixed-container {
