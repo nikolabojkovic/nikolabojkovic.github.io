@@ -5,6 +5,7 @@ $(document).ready(function() {
 });
 
 function createChart() {
+    var yearsOfExperiance = new Date().getFullYear() - new Date(2015, 1, 5).getFullYear();
     var ctx = $("#developmentChart");
 
     myPieChart = new Chart(ctx,{
@@ -36,7 +37,7 @@ function createChart() {
         options: {
             title: {
                 display: true,
-                text: '4 years experience',
+                text: yearsOfExperiance + ' years experience',
                 fontColor: 'rgb(3, 3, 3)',
                 fontStyle: 'bold',
                 fontSize: 18
