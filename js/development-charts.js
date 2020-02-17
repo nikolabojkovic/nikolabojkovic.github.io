@@ -1,19 +1,19 @@
 var myPieChart;
 var linearChart;
 
+var yearsOfExperience = new Date().getFullYear() - new Date(2015, 1, 5).getFullYear();
+
 $(document).ready(function() {
 
 });
 
 function createChart() {
-    var yearsOfExperience = new Date().getFullYear() - new Date(2015, 1, 5).getFullYear();
     var ctx = $("#developmentChart");
 
     myPieChart = new Chart(ctx,{
         type: 'pie',
         data: {
             datasets: [{
-                label: yearsOfExperience + ' of years',
                 data: [3, 2, 0.6],
                 backgroundColor: [
                     'rgba(20, 155, 32, 0.8)',
@@ -30,15 +30,15 @@ function createChart() {
         
             // These labels appear in the legend and in the tooltips when hovering different arcs
             labels: [
-                'Desktop app',
-                'Web',
-                'Mobile'
+                '.Net',
+                'Angular & VueJs',
+                'IOS (Swift)'
             ]
         },
         options: {
             title: {
                 display: true,
-                text: yearsOfExperience + ' years experience',
+                text: 'Programming languages',
                 fontColor: 'rgb(3, 3, 3)',
                 fontStyle: 'bold',
                 fontSize: 18
@@ -72,15 +72,14 @@ function createChart() {
 }
 
 function createStackChart() {
-    var yearsOfExperience = new Date().getFullYear() - new Date(2015, 1, 5).getFullYear();
     var ctx = $("#developmentStackChart");
 
     linearChart = new Chart(ctx,{
         type: 'bar',
         data: {
             datasets: [{
-                label: yearsOfExperience + ' of years',
-                data: [3, 5],
+                label: 'Number of experiance',
+                data: [yearsOfExperience - 2, yearsOfExperience],
                 backgroundColor: [
                     'rgba(20, 155, 32, 0.8)',
                     'rgba(54, 162, 235, 0.8)'
@@ -101,13 +100,13 @@ function createStackChart() {
         options: {
             title: {
                 display: true,
-                text: yearsOfExperience + ' years experience',
+                text: 'Web development stack',
                 fontColor: 'rgb(3, 3, 3)',
                 fontStyle: 'bold',
                 fontSize: 18
             },
             legend: {
-                display: true,
+                display: false,
                 labels: {
                     fontColor: 'rgb(3, 3, 3)'
                 },
@@ -115,9 +114,13 @@ function createStackChart() {
             },
             animation: { animateScale: true },
             scales: {
+                xAxes: [{
+                    stacked: false
+                }],
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        stacked: false
                     }
                 }]
             }

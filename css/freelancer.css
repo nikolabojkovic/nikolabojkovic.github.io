@@ -682,8 +682,6 @@ section h2 {
   -moz-transition: top 0.3s ease, opacity 0.3s ease;
   -ms-transition: top 0.3s ease, opacity 0.3s ease;
   transition: top 0.3s ease, opacity 0.3s ease;
-  vertical-align: middle;
-  vertical-align: baseline;
   opacity: 0;
 }
 
@@ -736,8 +734,6 @@ form .row:first-child .floating-label-form-group {
   -moz-transition: top 0.3s ease, opacity 0.3s ease;
   -ms-transition: top 0.3s ease, opacity 0.3s ease;
   transition: top 0.3s ease, opacity 0.3s ease;
-  vertical-align: middle;
-  vertical-align: baseline;
   opacity: 0;
 }
 
@@ -962,4 +958,9 @@ form .row:first-child .floating-label-form-group-dark {
 
 .form-switch input:checked + i::after {
   transform: translate3d(22px, 2px, 0);
+}
+
+.title {
+  font-weight: bold;
+  color: #5697f8;
 }
