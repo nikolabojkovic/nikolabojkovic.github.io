@@ -16,6 +16,22 @@ a {
   background-color: $primary !important;
 }
 
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-progress-bar {
+  background-color: $progress-bar !important;
+}
+
+.bg-progress-bar-dark {
+  background-color: $progress-bar-dark !important;
+}
+
+.bg-secondary-progress-bar {
+  background-color: $secondary-progress-bar !important;
+}
+
 .bg-secondary {
   background-color: $secondary !important;
 }
@@ -58,4 +74,52 @@ a {
     padding-left: 10px;
     text-align: left;
   }
+}
+
+.project-card {
+  min-width: 18.5rem;
+  max-width: 18.5rem;
+  min-height: 375px;
+}
+
+.card-continer {
+  min-width: 18.5rem;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    min-width: 15.5rem;
+    max-width: 15.5rem;
+    min-height: 375px;
+  }
+  
+  .card-continer {
+    min-width: 15.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .mfp-inline-holder .mfp-content {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 420px) {
+
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+
+}
+
+.mfp-inline-holder .mfp-content {
+  width: 90%;
+}
+
+.form-control:focus {
+  background-color: transparent;
+}
+
+.portfolio-modal-dismiss {
+  z-index: 1001 !important;
 }

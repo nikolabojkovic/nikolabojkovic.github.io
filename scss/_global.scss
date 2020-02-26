@@ -1,6 +1,7 @@
 // Typography
 body {
   @include body-font;
+  background-color: darken($white, 2%);
 }
 
 h1,
@@ -13,7 +14,7 @@ h6 {
 }
 
 h1, h2 {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 // Custom Horizontal Rule with Star Icon
@@ -52,19 +53,19 @@ hr.star-dark {
 }
 hr.star-dark:after {
   color: $secondary;
-  background-color: white;
+  background-color: $white;
 }
 
 // Section Padding Settings
 section {
-  padding: 6rem 0;
+  padding: 2rem 0;
   h2 {
     font-size: 2.25rem;
     line-height: 2rem;
   }
   @media (min-width: 992px) {
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       line-height: 2.5rem;
     }
   }
@@ -78,10 +79,21 @@ section {
 
 // Custom Rounded Social Button
 .btn-social {
+  width: 3.0rem;
+  height: 3.0rem;
+  font-size: 1.0rem;
+  line-height: 1.8rem;
+  color: $secondary !important;
+  border: 2px solid $secondary;
+}
+
+.btn-social-light {
   width: 3.25rem;
   height: 3.25rem;
   font-size: 1.25rem;
   line-height: 2rem;
+  color: darken($white, 10%) !important;
+  border: 2px solid darken($white, 10%);
 }
 
 // Scroll to Top Button
@@ -110,8 +122,141 @@ section {
   text-align: right;
 }
 
+.project-thumbnail {
+  width: 286px;
+  height: 180px;
+  margin: 0px 22px;
+}
+
+@media (max-width: 992px) {
+  .light-spot {
+    position: relative;
+    margin: 0px 25px !important;
+    top: 10px !important;
+    cursor: pointer;
+  }
+
+  .about-text {
+    padding-top: 50px;
+  }
+}
+
 @media(max-width: 575px) {
+
   .custom-text-align {
     text-align: center;
+  }
+
+  .light-spot {
+    position: relative;
+    margin: 0px 15px !important;
+    top: 10px !important;
+    cursor: pointer;
+  }
+
+  .about-text {
+    padding-top: 0px;
+  }
+}
+
+.proggress-bar-inner-shadow {
+  -webkit-box-shadow: inset 0px 0px 34px 3px rgb(94, 92, 92);
+  -moz-box-shadow: inset 0px 0px 24px 3px rgba(61,60,60,1);
+  box-shadow: inset 0px 0px 14px 3px rgba(61,60,60,1);
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 0px 0px 34px 3px rgb(133, 131, 131);
+  -moz-box-shadow: inset 0px 0px 24px 3px rgb(133, 131, 131);
+  box-shadow: inset 0px 0px 14px 3px rgb(133, 131, 131);
+}
+
+.progress-bar-shadow {
+  // -webkit-box-shadow: inset 0px 0px 36px -9px rgba(37,37,61,1);
+  // -moz-box-shadow: inset 0px 0px 36px -9px rgba(37,37,61,1);
+  // box-shadow: inset 0px 0px 36px -9px rgba(37,37,61,1);
+  
+  -webkit-box-shadow: inset -2px 2px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset -2px 2px 0px 0px rgba(0,0,0,0.75);
+  box-shadow: inset -2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+
+.linkedin {
+  &:hover {
+    border: 2px solid $linkedin;
+    background-color: $linkedin;
+    i {
+      color: $white;
+    }
+  }
+}
+.github {
+  &:hover {
+    border: 2px solid $github;
+    background-color: $github;
+    i {
+      color: $white;
+    }
+  }
+}
+.upwork {
+  &:hover {
+    border: 2px solid $upwork;
+    background-color: $upwork;
+    i {
+      color: $white;
+    }
+  }
+}
+.facebook {
+  &:hover {
+    border: 2px solid $facebook;
+    background-color: $facebook;
+    i {
+      color: $white;
+    }
+  }
+}
+.google-plus {
+  &:hover {
+    border: 2px solid $google-plus;
+    background-color: $google-plus;
+    i {
+      color: $white;
+    }
+  }
+}
+.twitter {
+  &:hover {
+    border: 2px solid $twitter;
+    background-color: $twitter;
+    i {
+      color: $white;
+    }
+  }
+}
+.bg-light{
+  background-color: darken($white, 5%);
+}
+
+.body-dark {
+  background-color: lighten($black, 10%) !important;
+  color: darken($white, 10%);
+}
+
+.card-dark {
+  background-color: lighten($black, 5%) !important;
+}
+
+.light-spot {
+  position: relative;
+  margin: 0px 5px;
+  top: 3px;
+  cursor: pointer;
+}
+
+@media (min-width: 993px) {
+  .about-text {
+    padding-top: 110px;
   }
 }

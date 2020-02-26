@@ -2,18 +2,18 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Software Developer</title>
-
+    <title>Software Developer - Nikola Bojkovic</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -23,811 +23,57 @@
 
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">&ltNikolaBojkovic /&gt</a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">My skills</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <nav class="navbar shadow navbar-expand-lg fixed-top" id="mainNav"></nav>
+    <!-- <div w3-include-html="pages/navigation/navigation.html"></div> -->
 
     <!-- Header -->
     <!-- <header class="masthead bg-primary text-white text-center with-image">
       <div class="container">
         <h1 class="text-uppercase mb-0">Nikola Bojkovic</h1>
-        <hr>
+       
         
       </div>
     </header> -->
 
     <!-- About Section -->
-    <section class="masthead bg-primary text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">About me</h2>
-        <h1 class="text-uppercase text-center mb-0">Nikola Bojkovic</h1>
-        <h3 class="font-weight-light text-center mb-0">Software Developer</h3>
-        <div class="row">
-          <img class="img-fluid mb-5 d-block mx-auto" src="img/profile2.png" alt="">
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">I am 25 years old with more then 3 years of working experiance as software developer. My first job was developing winForms application in C# along side C++ back-end part of the same application.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Now I am more related to web development, and I am currenty learning IOS development with swift. Feel free to check out my CV that you can download down below.</p>
-          </div>
-        </div>
-        <div class="text-center mt-4">
-          <button class="btn btn-xl btn-outline-light" id="download-cv">
-            <div id="download-cv-text">
-              <i class="fa fa-download mr-2"></i>
-              Download CV
-            </div>
-            <i id="loading-cv" class="fa fa-circle-o-notch fa-spin d-none" style="font-size:36px"></i>
-          </button>
-        </div>
-      </div>
-    </section>
+    <section class="masthead mb-0" id="about"></section>
+     <!-- <div w3-include-html="pages/about/about.html"></div> -->
     
     <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">My Projects</h2>
-        <hr>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/infoscreenQuorum.jpeg" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/mfs-r.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/index-initiative.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/weAuction.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/upWork.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="portfolio" id="portfolio"></section>
+    <!-- <div w3-include-html="pages/portfolio/portfolio.html"></div> -->
 
     <!-- Skills Section -->
-    <section class="bg-primary text-white mb-0" id="skills">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">My skills</h2>
-        <hr>
-        <h3 class="font-weight-light text-center mb-0">Languages</h3>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">C#</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">HTML</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Javascript</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">C++</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">English</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Java</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">PHP</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Swift (IOS)</div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3 class="font-weight-light text-center mb-0">Databases</h3>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">SQL</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Relatioanl databeses</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">MSSql</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">MySql</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Firebird</div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3 class="font-weight-light text-center mb-0">Frameworks</h3>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Entity Framework</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Angular 2+</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">SignalR</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Bootstrap</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">AngularJs</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JQuery</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">VueJs</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">AKKA .Net</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Laravel</div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3 class="font-weight-light text-center mb-0">Subversion systems</h3>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">GIT</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">SVN</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">TFS</div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3 class="font-weight-light text-center mb-0">Development approach</h3>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Agile development</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">SCRUM</div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3 class="font-weight-light text-center mb-0">Software Design</h3>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Object oriented programming</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Design patters</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 ml-auto">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Functional programming</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="mb-0" id="skills"></section>
+    <!-- <div w3-include-html="pages/skills/skills.html"></div> -->
 
+    <section id="contact"></section>
     <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-        <hr>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">
-                  <span id="send-message-text">Send</span>
-                  <span id="sending-email" class="d-none">Sending <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i></span>
-                </button>
-                <!-- <a href="mailto:nikolabojkovic@gmail.com?subject=SubjectEample&body=bodyExample" class="btn btn-primary btn-xl" id="sendMessage">Send</a> -->
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
+    <!-- <div w3-include-html="pages/contact/contact.html"></div> -->
 
     <!-- Footer -->
-    <footer class="footer text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">11000 Belgrade, Serbia
-              <br>
-            </p>
-            <br />
-            <h4 class="text-uppercase mb-4">Tel:</h4>
-            <p> Call: 
-              <a href="tel: +381603434097" class="col-md-12">+381 60 34 34 097</a>
-            </p>
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <div class="row">
-                <ul class="list-inline mb-0 mx-auto">
-                  <li class="list-inline-item">
-                    <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/nikola-bojkovic-4b4b2196/">
-                      <i class="fa fa-fw fa-linkedin"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/nikolabojkovic">
-                        <i class="fa fa-github"></i>
-                      </a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.upwork.com/freelancers/~018109885d206e601f">
-                        <i class="icomoon-up-work"></i>
-                      </a>
-                  </li>
-                </ul>
-            </div>
-            <div class="row">
-              <ul class="list-inline mb-0 mx-auto mt-2">
-                <li class="list-inline-item">
-                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/nikolabojkovic6">
-                    <i class="fa fa-fw fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://plus.google.com/101001035036525248332">
-                    <i class="fa fa-fw fa-google-plus"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/NikolaBojkovic6">
-                    <i class="fa fa-fw fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About my GitHub repositories</h4>
-            <p class="text-left lead mb-0">Fill free to check <a href="https://github.com/nikolabojkovic/nikolabojkovic.github.io">source code of this web site</a> and also for other interesting projects you can find on my GitHub account.
-              <a href="https://github.com/nikolabojkovic">Visit GitHub account</a>.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer class="footer inner-shadow text-center border-top" id="footer"></footer>
+    <!-- <div w3-include-html="pages/footer/footer.html"></div> -->
 
-    <div class="copyright py-4 text-center text-white">
+    <div class="copyright py-4 text-center">
       <div class="container">
-        <small>Copyright &copy; Nikola Bojkovic 2018</small>
+        <small class="">Copyright &copy; Nikola Bojkovic <span id="current-year"></span></small>
       </div>
     </div>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top d-lg-none position-fixed ">
+    <div class="scroll-to-top position-fixed ">
       <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
         <i class="fa fa-chevron-up"></i>
       </a>
     </div>
-
-    <!-- Portfolio Modals -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Financial App</h2>
-              <img class="img-fluid mb-5" src="img/infoscreenQuorum.jpeg" alt="">
-              <p class="mb-5 text-left">Quorum is a project developed by Infoscreen Cyprus.
-                 This is financial application with more then 20 modules related to management,
-                 banking, reporting, workflows and compoany compliance.
-                 As a junior software developer 
-                 I used to do bug fixing and implementing of new features on these modules.
-                 Front-end was based on WinForms application that was connected to C++ server via sockets.
-                 I spent almost 2 years developing these apps with other great developers.
-                 Thanks to great coworkers and this project I learned a lot about
-                 software development.
-              </p>
-             <div class="container">
-              <div class="row">
-                <div class="col-sm-9 mx-auto">
-                  <h5 class="text-center">Development technologies stack</h5>  
-                </div>
-                <div class="col-sm-6 col-md-8 col-lg-8 mx-auto">
-                  <ul class="text-left">
-                      <li>
-                      C#, .Net, WinForms
-                      </li>
-                      <li>
-                        C++
-                      </li>
-                      <li>
-                        MSSQL
-                      </li>
-                      <li>
-                        Firebird DB
-                      </li>
-                      <li>
-                        GIT
-                      </li>
-                      <li>
-                        Agile software development
-                      </li>
-                      <li>
-                        JIRA
-                      </li>
-                      <li>
-                        Visual Studio 2013/2015
-                      </li>
-                  </ul>
-                </div> 
-              </div>  
-             </div>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">FINANCIAL APP</h2>
-              <img class="img-fluid mb-5" src="img/mfs-r.png" alt="">
-              <p class="mb-5 text-left">
-                Microgen is a huge project related to management of the compoany internal staff.
-                Application was WinForms app connected to MsSql server.
-                I used to convert crystal report templates into
-                microsoft report templates and developed modules where these reports are displayed.
-                I spent more then a year on this project.
-              </p>
-              <div class="container">
-                  <div class="row">
-                    <div class="col-sm-9 mx-auto">
-                      <h5 class="text-center">Development technologies stack</h5>  
-                    </div>
-                    <div class="col-sm-6 col-md-8 col-lg-8 mx-auto">
-                      <ul class="text-left">
-                          <li>
-                            C#, .Net, WinForms
-                          </li>
-                          <li>
-                            Microsoft reports
-                          </li>
-                          <li>
-                            MSSQL
-                          </li>
-                          <li>
-                            SVN
-                          </li>
-                          <li>
-                            SCRUM
-                          </li>
-                          <li>
-                            JIRA
-                          </li>
-                          <li>
-                            Visual Studio 2015
-                          </li>
-                      </ul>
-                    </div> 
-                  </div>  
-                 </div>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Survey</h2>
-              <img class="img-fluid mb-5" src="img/index-initiative.png" alt="">
-              <p class="mb-5 text-left">
-                Index initiative web application is a survey tool to share survey qustions 
-                and collect and manage survey results
-                over the internet. This was small project approximately developed for about 3 moths.
-              </p>
-              <div class="container">
-                  <div class="row">
-                    <div class="col-sm-9 mx-auto">
-                      <h5 class="text-center">Development technologies stack</h5>  
-                    </div>
-                    <div class="col-sm-6 col-md-8 col-lg-8 mx-auto">
-                      <ul class="text-left">
-                          <li>
-                          C#, .Net Core
-                          </li>
-                          <li>
-                            Angular 5
-                          </li>
-                          <li>
-                            MSSQL
-                          </li>
-                          <li>
-                            SVN
-                          </li>
-                          <li>
-                            SCRUM
-                          </li>
-                          <li>
-                            JIRA
-                          </li>
-                          <li>
-                            Visual Studio 2017
-                          </li>
-                      </ul>
-                    </div> 
-                  </div>  
-                 </div>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Auction platform</h2>
-              <img class="img-fluid mb-5" src="img/weAuction.png" alt="">
-              <p class="mb-5 text-left">
-                WeAuction is auction platform project consisting of 3 parts.
-                <br />
-                <br />
-                Management - management of auctions and objects as well as crerking part of the auction floor.
-                <br />
-                <br />
-                Actual auction web page - allow tracking auctions and related details.
-                <br />
-                <br />
-                Auction widget - Real time updated custom element that can be installed on any web page.
-                Auction widget is used to place a bid or track current object state and price.
-              </p>
-              <div class="container">
-                  <div class="row">
-                    <div class="col-sm-9 mx-auto">
-                      <h5 class="text-center">Development technologies stack</h5>  
-                    </div>
-                    <div class="col-sm-6 col-md-8 col-lg-8 mx-auto">
-                      <ul class="text-left">
-                          <li>
-                          C#, .Net Core
-                          </li>
-                          <li>
-                            AKKA .Net
-                          </li>
-                          <li>
-                            SignalR Core
-                          </li>
-                          <li>
-                            Angular 6
-                          </li>
-                          <li>
-                            VueJs
-                          </li>
-                          <li>
-                            MSSQL
-                          </li>
-                          <li>
-                            SVN
-                          </li>
-                          <li>
-                            SCRUM
-                          </li>
-                          <li>
-                            JIRA
-                          </li>
-                          <li>
-                            Visual Studio 2017
-                          </li>
-                      </ul>
-                    </div> 
-                  </div>  
-                 </div>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Freelance projects</h2>
-              <img class="img-fluid mb-5" src="img/upWork.png" alt="">
-              <p class="mb-5 text-left">
-                I used to develope a couple of small projects on upWork platform.
-                <br />
-                - Connect to web Api and get and parse XML data with JQuery
-                <br />
-                - Create single page web application with wordPress
-                <br /> 
-                - Integrate web api with web page form for booking hotel rooms
-              </p>
-              <div class="container">
-                  <div class="row">
-                    <div class="col-sm-9 mx-auto">
-                      <h5 class="text-center">Development technologies stack</h5>  
-                    </div>
-                    <div class="col-sm-6 col-md-8 col-lg-8 mx-auto">
-                      <ul class="text-left">
-                          <li>
-                            C#, .Net
-                          </li>
-                          <li>
-                            Javascript
-                          </li>
-                          <li>
-                            Web Api
-                          </li>
-                          <li>
-                            JQuery
-                          </li>
-                      </ul>
-                    </div> 
-                  </div>  
-                 </div>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -836,19 +82,35 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.min.js"></script>
+    <!-- ChartJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
+    <!-- Pages -->
     <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
-
-    <!-- Upload and download cv javascript -->
+    <!-- Script for chatrs -->       
+    <script src="js/jqBootstrapValidation.min.js"></script>
+    <script src="js/contact_me.min.js"></script> 
     <script src="js/cv.min.js"></script>
+    <script src="js/development-charts.min.js"></script>
+    <script src="js/navigation.min.js"></script>
+    <script src="js/portfolio.min.js"></script>
+    <script src="js/about.min.js"></script>
+    <script src="js/skills.min.js"></script>
+    <script src="js/footer.min.js"></script>
+    <script src="js/freelancer.min.js"></script>
+    
 
     <!-- Debug purpose only -->
-    <!-- <script src="js/cv.js"></script> -->
-
+    <!-- <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/contact_me.js"></script>  
+    <script src="js/development-charts.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/cv.js"></script>
+    <script src="js/freelancer.js"></script> -->
   </body>
 
 </html>
