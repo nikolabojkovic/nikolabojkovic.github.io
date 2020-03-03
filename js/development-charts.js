@@ -32,13 +32,13 @@ function createChart() {
             labels: [
                 '.Net',
                 'Angular & VueJs',
-                'IOS (Swift)'
+                'Swift (IOS)'
             ]
         },
         options: {
             title: {
                 display: true,
-                text: 'Programming languages',
+                text: 'Tech stack',
                 fontColor: 'rgb(3, 3, 3)',
                 fontStyle: 'bold',
                 fontSize: 18
@@ -78,7 +78,7 @@ function createStackChart() {
         type: 'bar',
         data: {
             datasets: [{
-                label: 'Number of experiance',
+                label: 'Experience in years',
                 data: [yearsOfExperience - 2, yearsOfExperience],
                 backgroundColor: [
                     'rgba(20, 155, 32, 0.8)',
@@ -93,14 +93,14 @@ function createStackChart() {
         
             // These labels appear in the legend and in the tooltips when hovering different arcs
             labels: [
-                'Front-end',
-                'Back-end'
+                'Frontend',
+                'Backend'
             ]
         },
         options: {
             title: {
                 display: true,
-                text: 'Web development stack',
+                text: 'Backend vs Frontend experience',
                 fontColor: 'rgb(3, 3, 3)',
                 fontStyle: 'bold',
                 fontSize: 18
@@ -115,13 +115,23 @@ function createStackChart() {
             animation: { animateScale: true },
             scales: {
                 xAxes: [{
-                    stacked: false
+                    stacked: false,
+                    gridLines:{
+                        display:false
+                    },
                 }],
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
+                        stepSize: 1,
+                        callback: function(value) {
+                            return value + ' year(s)';
+                        },
                         stacked: false
-                    }
+                    },
+                    gridLines:{
+                        color:"#DDDDD"
+                    },
                 }]
             }
         }
