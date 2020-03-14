@@ -4,13 +4,11 @@ $(document).ready(function () {
             name: 'Languages',
             skills: [
                 { name: 'C#', percentage: '95', backgroundColor: 'success' },
-                { name: 'HTML', percentage: '85', backgroundColor: 'default' },
                 { name: 'Javascript', percentage: '95', backgroundColor: 'default' },
+                { name: 'HTML', percentage: '85', backgroundColor: 'default' },
                 { name: 'CSS', percentage: '85', backgroundColor: 'default' },
                 { name: 'C++', percentage: '75', backgroundColor: 'default' },
-                { name: 'Swift (IOS)', percentage: '60', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'} },
-                { name: 'Java', percentage: '50', backgroundColor: 'default' },
-                { name: 'PHP', percentage: '50', backgroundColor: 'default' }
+                { name: 'Swift (IOS)', percentage: '60', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'} }
             ]
         },
         {
@@ -29,11 +27,10 @@ $(document).ready(function () {
                 { name: 'Entity Framework Core', percentage: '90', backgroundColor: 'default'},
                 { name: 'Bootstrap', percentage: '90', backgroundColor: 'default'},
                 { name: 'Angular 2+', percentage: '85', backgroundColor: 'default'},
-                { name: 'SignalR', percentage: '80', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
+                { name: 'SignalR Core', percentage: '80', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
                 { name: 'AKKA .Net', percentage: '80', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
                 { name: 'JQuery', percentage: '75', backgroundColor: 'default'},
-                { name: 'VueJs', percentage: '85', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
-                { name: 'Laravel', percentage: '40', backgroundColor: 'default'}
+                { name: 'VueJs', percentage: '85', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}}
             ]
         },
         {
@@ -57,8 +54,8 @@ $(document).ready(function () {
                 { name: 'Object oriented programming', percentage: '90', backgroundColor: 'default'},
                 { name: 'Design patters', percentage: '50', backgroundColor: 'default'},
                 { name: 'Domain Driven Design', percentage: '70', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
-                { name: 'Test Driven Development', percentage: '60', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
-                { name: 'Onion Architecture', percentage: '80', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}}
+                { name: 'Test Driven Development', percentage: '80', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}},
+                { name: 'Clean (Onion) Architecture', percentage: '90', backgroundColor: 'default', badge: { text: 'New', color: 'secondary'}}
             ]
         },
         {

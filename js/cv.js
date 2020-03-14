@@ -1,6 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  // meta data
   var apiUrl = "http://developer-tool.com/api/";
   // var apiUrl = "http://localhost:5000/api/"
 
