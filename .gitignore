@@ -1,3 +1,46 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-node_modules
+# dependencies
+*/node_modules
 
+# compiled output
+/nikolabojkovicAngular/dist
+/nikolabojkovicAngular/tmp
+/nikolabojkovicAngular/out-tsc
+# Only exists if Bazel was run
+/nikolabojkovicAngular/bazel-out
+
+# profiling files
+/nikolabojkovicAngular/chrome-profiler-events*.json
+/nikolabojkovicAngular/speed-measure-plugin*.json
+
+# IDEs and editors
+/nikolabojkovicAngular/.idea
+/nikolabojkovicAngular/.project
+/nikolabojkovicAngular/.classpath
+/nikolabojkovicAngular/.c9/
+/nikolabojkovicAngular/*.launch
+/nikolabojkovicAngular/.settings/
+/nikolabojkovicAngular/*.sublime-workspace
+
+# IDE - VSCode
+/nikolabojkovicAngular/.vscode/*
+/nikolabojkovicAngular/!.vscode/settings.json
+/nikolabojkovicAngular/!.vscode/tasks.json
+/nikolabojkovicAngular/!.vscode/launch.json
+/nikolabojkovicAngular/!.vscode/extensions.json
+/nikolabojkovicAngular/.history/*
+
+# misc
+/nikolabojkovicAngular/.sass-cache
+/nikolabojkovicAngular/connect.lock
+/nikolabojkovicAngular/coverage
+/nikolabojkovicAngular/libpeerconnection.log
+/nikolabojkovicAngular/npm-debug.log
+/nikolabojkovicAngular/yarn-error.log
+/nikolabojkovicAngular/testem.log
+/nikolabojkovicAngular/typings
+
+# System Files
+/nikolabojkovicAngular/.DS_Store
+/nikolabojkovicAngular/Thumbs.db
