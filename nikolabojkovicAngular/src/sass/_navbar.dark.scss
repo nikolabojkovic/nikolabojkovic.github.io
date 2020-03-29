@@ -1,0 +1,86 @@
+// Styling for the navbar
+.navbar-dark {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include heading-font;
+  border-color: lighten($black, 15%) !important;
+  background-color: lighten($black, 5%) !important;
+
+  span {
+    color: $white;
+  }
+
+  .shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .navbar-brand {
+    color: $black;
+    background-color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+    }
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+    li.nav-item {
+      a.nav-link-dark {
+        background-color: lighten($black, 5%) !important;
+        border: none;
+        color: $white !important;
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+    color: lighten($black, 50%);
+    border: 1px solid lighten($black, 50%);
+  }
+} /* end of small screen resolution */
+@media(min-width:992px) {
+  .navbar-dark {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: font-size 0.3s;
+      -moz-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    .navbar-nav {
+      margin-top: 0;
+      li.nav-item {
+        a.nav-link-dark {
+          border-bottom: 5px solid lighten($black, 5%) !important;
+          color: $white;
+          &:hover {
+            border-bottom: 5px solid darken($primary, 35%) !important;
+          }
+          &.active {
+            color: $white !important;
+            border: none;
+          }
+        }
+      }
+    }
+    .navbar-nav > li.nav-item > a.nav-link-dark.active {
+      color: $white !important;
+      border-bottom: 5px solid darken($primary, 10%) !important;
+      &:active,
+      &:focus,
+      &:hover {
+        border-bottom: 5px solid darken($primary, 10%) !important;
+      }
+    }
+  }
+}
