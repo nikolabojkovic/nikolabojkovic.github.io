@@ -3,12 +3,11 @@ import { ThemeService } from '../theme/theme.service';
 import { Theme } from '../theme/theme';
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss']
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
-
+export class FooterComponent implements OnInit, OnDestroy {
     constructor(public themeService: ThemeService) { }
 
     theme =  this.themeService.active;
@@ -21,14 +20,5 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         this.themeService.themeChanged.unsubscribe();
-    }
-
-    changeTheme(theme: string) {
-        // TODO: remove if else
-        if (theme === 'light') {
-            this.themeService.setLightTheme();
-        } else if (theme === 'dark') {
-            this.themeService.setDarkTheme();
-        }
     }
 }

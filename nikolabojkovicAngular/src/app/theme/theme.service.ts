@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Theme } from './theme';
 import { light } from './themes/light.theme';
 import { dark } from './themes/dark.theme';
@@ -8,10 +8,17 @@ import { dark } from './themes/dark.theme';
 })
 export class ThemeService {
 
-  private active: Theme = light;
+  public active: Theme = light;
   private availableThemes: Theme[] = [light, dark];
+  public themeChanged: EventEmitter<Theme> = new EventEmitter<Theme>();
 
-  constructor() { }
+  constructor() {
+    const current = localStorage.getItem('theme');
+
+    if (current) {
+      this.active = JSON.parse(current);
+    }
+   }
 
   isDarkTheme(): boolean {
     return this.active.name === dark.name;
@@ -27,6 +34,7 @@ export class ThemeService {
 
   setActiveTheme(theme: Theme): void {
     this.active = theme;
+    localStorage.setItem('theme', JSON.stringify(this.active));
 
     Object.keys(this.active.properties).forEach(property => {
       document.documentElement.style.setProperty(
@@ -34,5 +42,7 @@ export class ThemeService {
         this.active.properties[property]
       );
     });
+
+    this.themeChanged.emit(this.active);
   }
 }

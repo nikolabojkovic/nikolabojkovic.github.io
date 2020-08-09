@@ -1,0 +1,16 @@
+@import '../../styles.scss';
+
+.footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: darken($white, 5%) !important;
+    border-color: darken($white, 15%) !important;
+    color: lighten($secondary, 10%);
+  }
+  
+.copyright {
+  background-color: darken($white, 20%);
+  font-size: 18px;
+}
+
+  

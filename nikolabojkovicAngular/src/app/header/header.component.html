@@ -1,4 +1,4 @@
-<nav [ngClass] = "'navbar' + theme" class="shadow navbar-expand-lg fixed-top" id="mainNav">
+<nav [ngClass] = "'navbar' + theme.cssValue" class="navbar shadow navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
       <div>
         <a id="preview" class="navbar-brand js-scroll-trigger border p-2 rounded" href="#page-top">
@@ -11,12 +11,14 @@
            class="light-spot fa fa-lightbulb"
            style="font-size: 32px;"
            data-toggle="tooltip" data-placement="right" title="Switch lights off" tabindex="0"
-           (click)="changeTheme('')"></i>
+           *ngIf="themeService.active.name === 'light'"
+           (click)="changeTheme('dark')"></i>
         <i id="light-on" 
            class="light-spot fa fa-lightbulb" 
            style="font-size: 32px;color:white"
            data-toggle="tooltip" data-placement="right" title="Switch lights on" tabindex="0"
-           (click)="changeTheme('-dark')"></i>
+           *ngIf="themeService.active.name === 'dark'"
+           (click)="changeTheme('light')"></i>
     
         <button class="float-right navbar-toggler navbar-toggler-right text-uppercase rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
