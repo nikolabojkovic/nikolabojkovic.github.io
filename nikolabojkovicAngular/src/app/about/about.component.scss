@@ -9,3 +9,33 @@
 .about-section {
     padding-top: 160px;
 }
+
+.row {
+    h4 {
+        display: block;
+    }
+
+    ul {
+        width: 210px;
+    }
+
+    .technologies-list {
+        width: 255px;
+    }
+
+    .label-text {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 425px) {
+    .label-text {
+        text-align: left;
+    }
+}
+
+@media (min-width: 426px) {
+    .label-text {
+        text-align: right;
+    }
+}

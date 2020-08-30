@@ -4,45 +4,50 @@
     <h2 class="text-uppercase text-center">Angular/.Net Developer</h2>
     <h4 class="text-center">Nikola Bojkovic</h4>
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-6 mt-3 mb-3 mx-auto">
-        <img class="img-fluid mx-auto mb-5 d-block inner-shadow rounded p-1" src="../../assets/img/profile2.png" alt="">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-6 mt-3 mb-3 mx-auto">
+        <img class="img-fluid mx-auto mb-5 d-block p-1" src="../../assets/img/profile/profile-linked-in.jpeg" alt="">
       </div>
-      <div class="col-12 col-sm-6 lead">
+      <div class="col-12 col-md-8 col-lg-6 lead">
         <div class="row pt-5">
           <h4 class="col-12 text-center">Basic info</h4>
         </div>
           <div class="row">
-            <div class="col-12 col-sm-4">Experiance:</div>
+            <div class="col-12 col-sm-4 label-text">Experiance:</div>
             <div class="col-8">Full stack software developer</div>
           </div>
           <div class="row">
-            <div class="col-12 col-sm-4">Email:</div>
+            <div class="col-12 col-sm-4 label-text">Email:</div>
             <div class="col-12 col-sm-8">nikolabojkovic@gmail.com</div>
           </div>
           <div class="row">
-            <div class="col-12 col-sm-4">Skype name:</div>
+            <div class="col-12 col-sm-4 label-text">Skype:</div>
             <div class="col-12 col-sm-8">nikola.bojkovic6</div>
           </div>
           <div class="row">
-            <div class="col-12 col-sm-4">Address:</div>
+            <div class="col-12 col-sm-4 label-text">Address:</div>
             <div class="col-12 col-sm-8">Belgrade (Serbia)</div>
           </div>
           <div class="row justify-content-center mt-5 mb-5">
-            <button class="btn btn-lg btn-outline-primary shadow" id="download-cv">
-              <div id="download-cv-text">
+            <button class="btn btn-lg btn-outline-primary shadow" 
+                    id="download-cv"
+                    (click)="downloadResume()"
+                    [disabled]="downloadInProgreess">
+              <div [hidden]='downloadInProgreess'>
                 <i class="fa fa-download mr-2"></i>
                 Download CV
               </div>
-              <i id="loading-cv" class="fa fa-circle-o-notch fa-spin d-none" style="font-size:36px"></i>
+              <i class="fa fa-circle-o-notch fa-spin" 
+                 style="font-size:36px"
+                 [hidden]='!downloadInProgreess'></i>
             </button>
           </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row mt-auto">
       <div class="col-12 col-sm-12 col-md-6">
-        <div class="about-text lead">
-          <h4>Technical stack details</h4>
-          <ul>
+        <div class="row justify-content-center mt-md-5">
+          <h4 class="col-md-12 text-center">Technical stack details</h4>
+          <ul class="technologies-list">
             <li><b>.Net Core</b> (RESTFull api)</li>
             <li><b>Angular</b> (Signle page application)</li>
             <li><b>Agile methodologies</b> (Scrum, Kangan)</li>
@@ -50,27 +55,31 @@
         </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 mt-3 mb-3">
-        <app-pie-chart></app-pie-chart>       
+        <div class="row justify-content-center">
+          <app-pie-chart></app-pie-chart>    
+        </div>   
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-6">
-        <app-vertical-bar-chart></app-vertical-bar-chart>
+      <div class="col-12 col-sm-12 col-md-5 mt-4">
+        <div class="row justify-content-center">
+          <app-vertical-bar-chart></app-vertical-bar-chart>
+        </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 ">
-        <div class="about-text">
-          <h4 class="text-center mr-5">Backend</h4>
-          <div class="">
+      <div class="col-12 col-sm-12 col-md-7">   
+        <div class="row justify-content-center mt-5">
+          <div class="col-12 col-md-6">
+            <h4 class="mr-5 col-md-12 text-center">Backend</h4>
             <ul>
-              <li>Clean (Onion) architecture</li>
+              <li>Onion architecture</li>
               <li>SOLID</li>
               <li>OOP</li>
               <li>.Net Core</li>
               <li>Microservices</li>
             </ul>
-          </div>
-          <h4 class="text-center mr-5">Frontend</h4>
-          <div class="">
+          </div>    
+          <div class="col-12 col-md-6">
+            <h4 class="mr-5 col-md-12 text-center">Frontend</h4>
             <ul>
               <li>Angular</li>
               <li>VueJs</li>
@@ -78,8 +87,8 @@
               <li>SignalR</li>
               <li>Web components</li>
             </ul>
-          </div>
-        </div>
+          </div>   
+        </div>           
       </div>
     </div>
   </div>

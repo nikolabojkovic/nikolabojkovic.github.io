@@ -22,12 +22,12 @@ export class PieChartComponent implements OnInit {
         }
       ];
 
-    view: any[] = [450, 250];
+    view: any[] = [350, 350];
 
     // options
     gradient = true;
-    showLegend = false;
-    showLabels = true;
+    showLegend = true;
+    showLabels = false;
     isDoughnut = true;
     legendPosition = 'below';
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/theme/theme.service';
+import { Theme } from 'src/app/theme/theme';
 
 @Component({
     selector: 'app-vertical-bar-chart',
@@ -9,37 +11,39 @@ export class VerticalBarChartComponent implements OnInit {
 
   data: any[] = [
     {
-      name: 'Germany',
-      value: 8940000
+      name: 'FRONTEND',
+      value: 3
     },
     {
-      name: 'USA',
-      value: 5000000
-    },
-    {
-      name: 'France',
-      value: 7200000
+      name: 'BACKEND',
+      value: 5
     }
   ];
 
-  view: any[] =  [450, 250];
+  view: any[] =  [350, 350];
 
   // options
   showXAxis = true;
   showYAxis = true;
   gradient = false;
   showLegend = false;
-  showXAxisLabel = true;
-  xAxisLabel = 'Country';
+  showXAxisLabel = false;
+  xAxisLabel = 'Side';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
+  yAxisLabel = 'Years of experiance';
   legendPosition = 'below';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-    constructor() { }
+  constructor(public themeService: ThemeService) { }
 
-    ngOnInit(): void { }
+  theme =  this.themeService.active;
+
+  ngOnInit(): void {
+      this.themeService.themeChanged.subscribe((theme: Theme) => {
+          this.theme = theme;
+      });
+  }
 }

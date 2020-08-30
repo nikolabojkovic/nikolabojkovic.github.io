@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { PieChartComponent } from './about/charts/pie-chart/pie-chart.component';
 import { VerticalBarChartComponent } from './about/charts/vertial-bar-chart/vertical-bar-chart.component';
+import { ResumeService } from './about/resume.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,13 @@ import { VerticalBarChartComponent } from './about/charts/vertial-bar-chart/vert
   ],
   imports: [
     FormsModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     NgxChartsModule,
   ],
-  providers: [],
+  providers: [ResumeService],
   bootstrap: [
     AppComponent
   ]
