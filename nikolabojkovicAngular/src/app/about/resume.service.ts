@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Resume } from './resume.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/internal/operators/map';
+import { environment } from './../../environments/environment';
 
 @Injectable()
 export class ResumeService {
@@ -10,7 +11,7 @@ export class ResumeService {
     constructor(private http: HttpClient) { }
 
     donloadResume(): Observable<File> {
-        return this.http.get<Resume>('http://developer-tool.com/api/cv/download')
+        return this.http.get<Resume>(`${environment.WEB_API}/api/cv/download`)
                    .pipe(map((resume: Resume) => this.convertToFile(resume)));
     }
 

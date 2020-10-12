@@ -1,11 +1,9 @@
 <nav [ngClass] = "'navbar' + theme.cssValue" class="navbar shadow navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
-      <div>
-        <a id="preview" class="navbar-brand js-scroll-trigger border p-2 rounded" href="#page-top">
-          <span class="text-primary" [innerHTML]="'&lt/&gt'"></span> Click to preview
-        </a>
-      </div>
-    
+      <button id="preview" class="btn btn-lg btn-outline-primary shadow mr-3">
+        <i class="fa fa-eye mr-2"></i>
+        Preview
+      </button>    
       <div>
         <i id="light-off"
            class="light-spot fa fa-lightbulb"
@@ -27,16 +25,16 @@
       <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link py-2 px-0 px-lg-3" href="#about">About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
+            <a class="nav-link py-2 px-0 px-lg-3" href="#portfolio">Projects</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">My skills</a>
+            <a class="nav-link py-2 px-0 px-lg-3" href="#skills">My skills</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-2 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link py-2 px-0 px-lg-3" href="#contact">Contact</a>
           </li>
         </ul>
       </div>

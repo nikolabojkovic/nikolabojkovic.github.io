@@ -77,25 +77,6 @@ section {
   font-size: 1.25rem;
 }
 
-// Custom Rounded Social Button
-.btn-social {
-  width: 3.0rem;
-  height: 3.0rem;
-  font-size: 1.0rem;
-  line-height: 1.8rem;
-  color: $secondary !important;
-  border: 2px solid $secondary;
-}
-
-.btn-social-light {
-  width: 3.25rem;
-  height: 3.25rem;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  color: darken($white, 10%) !important;
-  border: 2px solid darken($white, 10%);
-}
-
 // Scroll to Top Button
 .scroll-to-top {
   z-index: 1042;

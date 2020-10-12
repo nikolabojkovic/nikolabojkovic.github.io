@@ -11,4 +11,15 @@
   color: $white;
   font-size: 18px;
 }
+
+.btn-social-dark {
+  width: 3.0rem;
+  height: 3.0rem;
+  font-size: 1.0rem;
+  line-height: 1.8rem;
+  margin: 10px;
+  color: darken($white, 10%);
+  border: 2px solid darken($white, 10%);
+}
+
   

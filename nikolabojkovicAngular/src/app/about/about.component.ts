@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResumeService } from './resume.service';
+import { AboutModel } from './about.model';
 
 @Component({
     selector: 'app-about',
@@ -9,6 +10,8 @@ import { ResumeService } from './resume.service';
 export class AboutComponent implements OnInit {
 
     downloadInProgreess = false;
+    about: AboutModel;
+
 
     constructor(private resumeService: ResumeService) { }
 

@@ -16,7 +16,7 @@ export class VerticalBarChartComponent implements OnInit {
     },
     {
       name: 'BACKEND',
-      value: 5
+      value: 6
     }
   ];
 

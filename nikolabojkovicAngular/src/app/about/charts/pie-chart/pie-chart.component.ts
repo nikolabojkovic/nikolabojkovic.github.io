@@ -10,15 +10,15 @@ export class PieChartComponent implements OnInit {
     data = [
         {
           name: '.Net',
-          value: 3
+          value: 60
         },
         {
           name: 'Angular & VueJs',
-          value: 2
+          value: 30
         },
         {
           name: 'Swift (IOS)',
-          value: 0.6
+          value: 10
         }
       ];
 
@@ -30,6 +30,7 @@ export class PieChartComponent implements OnInit {
     showLabels = false;
     isDoughnut = true;
     legendPosition = 'below';
+    legendTitle = 'Tech Stack (%)';
 
     colorScheme = {
         domain: [

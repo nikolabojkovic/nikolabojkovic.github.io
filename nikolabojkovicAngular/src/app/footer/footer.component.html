@@ -1,4 +1,4 @@
-<footer [ngClass] = "'footer' + theme.cssValue" class="inner-shadow text-center border-top" id="footer">
+<footer [ngClass] = "'footer' + theme.cssValue" class="inner-shadow text-center border-top mt-4" id="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-5 mb-lg-0">
@@ -9,43 +9,14 @@
             </div>
             <div class="col-md-4 mb-5 mb-lg-0">
                 <h6 class="text-uppercase mb-4">Around the Web</h6>
-                <div class="row">
-                    <ul class="list-inline mb-0 mx-auto">
-                    <li class="list-inline-item">
-                        <a class="btn btn-social linkedin shadow text-center rounded-circle" href="https://www.linkedin.com/in/nikola-bojkovic-4b4b2196/">
-                        <i class="fa fa-fw fa-linkedin"></i>
+                <div class="row justify-content-center social-network-container">      
+                    <div *ngFor="let network of socialNetworks; index" class="">
+                        <a [ngClass] = "['btn-social' + theme.cssValue, network.name]" 
+                            class="btn shadow text-center rounded-circle"
+                            [href]="network.name">
+                            <i class="fa fa-fw" [ngClass]="'fa-' + network.name"></i>
                         </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-social github shadow text-center rounded-circle" href="https://github.com/nikolabojkovic">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-social upwork shadow text-center rounded-circle" href="https://www.upwork.com/freelancers/~018109885d206e601f">
-                            <i class="icomoon-up-work"></i>
-                        </a>
-                    </li>
-                    </ul>
-                </div>
-                <div class="row">
-                    <ul class="list-inline mb-0 mx-auto mt-2">
-                        <li class="list-inline-item">
-                            <a class="btn btn-social facebook shadow text-center rounded-circle" href="https://www.facebook.com/nikolabojkovic6">
-                                <i class="fa fa-fw fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-social google-plus shadow text-center rounded-circle" href="https://plus.google.com/101001035036525248332">
-                                <i class="fa fa-fw fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-social twitter shadow text-center rounded-circle" href="https://twitter.com/NikolaBojkovic6">
-                                <i class="fa fa-fw fa-twitter"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -58,6 +29,6 @@
 </footer>
 <div [ngClass] = "'copyright' + theme.cssValue"  class="py-4 text-center">
     <div class="container">
-        <small class="">Copyright &copy; Nikola Bojkovic <span id="current-year"></span></small>
+        <small class="">Copyright &copy; Nikola Bojkovic {{fromYear}}-{{currentYear}}</small>
     </div>
 </div>
