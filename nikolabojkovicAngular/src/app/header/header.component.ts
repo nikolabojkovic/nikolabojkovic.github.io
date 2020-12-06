@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ThemeService } from '../theme/theme.service';
 import { Theme } from '../theme/theme';
+import { PageScrollService } from 'ngx-page-scroll-core';
+import { Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
     selector: 'app-header',
@@ -9,7 +12,10 @@ import { Theme } from '../theme/theme';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-    constructor(public themeService: ThemeService) { }
+    constructor(
+         public themeService: ThemeService,
+         private pageScrollService: PageScrollService,
+         @Inject(DOCUMENT) private document: any) { }
 
     theme =  this.themeService.active;
 
@@ -30,5 +36,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
         } else if (theme === 'dark') {
             this.themeService.setDarkTheme();
         }
+    }
+
+    preview(): void
+    {
+        this.pageScrollService.scroll({
+            document: this.document,
+            scrollTarget: document.getElementById('footer'),
+            duration: 10000,
+          });
     }
 }

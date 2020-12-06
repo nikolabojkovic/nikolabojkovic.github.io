@@ -12,7 +12,7 @@ export class VerticalBarChartComponent implements OnInit {
   data: any[] = [
     {
       name: 'FRONTEND',
-      value: 3
+      value: 4
     },
     {
       name: 'BACKEND',
