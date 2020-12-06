@@ -22,11 +22,11 @@ export class FooterComponent implements OnInit, OnDestroy {
         this.fromYear = '2019';
         this.currentYear = new Date().getFullYear() + '';
         this.socialNetworks = [
-            { name: 'linkedin', hrof: 'https://www.linkedin.com/in/nikola-bojkovic-4b4b2196/'},
-            { name: 'github', hrof: 'https://github.com/nikolabojkovic'},
+            { name: 'linkedin', link: 'https://linkedin.com/in/nikola-bojkovic-full-stack-dev'},
+            { name: 'github', link: 'https://github.com/nikolabojkovic'},
          //   { name: 'icomoon-up-work', hrof: 'https://www.upwork.com/freelancers/~018109885d206e601f'},
-            { name: 'facebook', hrof: 'https://www.facebook.com/nikolabojkovic6'},
-            { name: 'twitter', hrof: 'https://plus.google.com/101001035036525248332'}
+            { name: 'facebook', link: 'https://www.facebook.com/nikolabojkovic6'},
+            { name: 'twitter', link: 'https://plus.google.com/101001035036525248332'}
         ];
     }
 

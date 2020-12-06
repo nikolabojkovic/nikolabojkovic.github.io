@@ -11,7 +11,7 @@ export class ResumeService {
     constructor(private http: HttpClient) { }
 
     donloadResume(): Observable<File> {
-        return this.http.get<Resume>(`${environment.WEB_API}/api/cv/download`)
+        return this.http.get<Resume>(`${window.location.protocol}//${environment.WEB_API}/api/cv/download`)
                    .pipe(map((resume: Resume) => this.convertToFile(resume)));
     }
 

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  WEB_API: 'http://developer-tool.com'
+  WEB_API: 'developer-tool.com'
 };
 
 /*

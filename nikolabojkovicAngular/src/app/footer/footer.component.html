@@ -13,7 +13,7 @@
                     <div *ngFor="let network of socialNetworks; index" class="">
                         <a [ngClass] = "['btn-social' + theme.cssValue, network.name]" 
                             class="btn shadow text-center rounded-circle"
-                            [href]="network.name">
+                            [href]="network.link">
                             <i class="fa fa-fw" [ngClass]="'fa-' + network.name"></i>
                         </a>
                     </div>
