@@ -24,9 +24,9 @@ export class FooterComponent implements OnInit, OnDestroy {
         this.socialNetworks = [
             { name: 'linkedin', link: 'https://linkedin.com/in/nikola-bojkovic-full-stack-dev'},
             { name: 'github', link: 'https://github.com/nikolabojkovic'},
-         //   { name: 'icomoon-up-work', hrof: 'https://www.upwork.com/freelancers/~018109885d206e601f'},
+        // { name: 'icomoon-up-work', hrof: 'https://www.upwork.com/freelancers/~018109885d206e601f'},
             { name: 'facebook', link: 'https://www.facebook.com/nikolabojkovic6'},
-            { name: 'twitter', link: 'https://plus.google.com/101001035036525248332'}
+            { name: 'twitter', link: 'https://twitter.com/NikolaBojkovic6'}
         ];
     }
 
