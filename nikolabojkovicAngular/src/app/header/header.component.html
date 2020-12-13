@@ -1,0 +1,42 @@
+<nav [ngClass] = "'navbar' + theme.cssValue" class="navbar shadow navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+      <button (click)="preview()" id="preview" class="btn btn-lg btn-outline-primary shadow mr-3">
+        <i class="fa fa-eye mr-2"></i>
+        Preview
+      </button>    
+      <div>
+        <i id="light-off"
+           class="light-spot fa fa-lightbulb"
+           style="font-size: 32px;"
+           data-toggle="tooltip" data-placement="right" title="Switch lights off" tabindex="0"
+           *ngIf="themeService.active.name === 'light'"
+           (click)="changeTheme('dark')"></i>
+        <i id="light-on" 
+           class="light-spot fa fa-lightbulb" 
+           style="font-size: 32px;color:white"
+           data-toggle="tooltip" data-placement="right" title="Switch lights on" tabindex="0"
+           *ngIf="themeService.active.name === 'dark'"
+           (click)="changeTheme('light')"></i>
+    
+        <button class="float-right navbar-toggler navbar-toggler-right text-uppercase rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
+        <!-- <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-2 px-0 px-lg-3" pageScroll href="about">About</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-2 px-0 px-lg-3" pageScroll href="projects-section">Projects</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-2 px-0 px-lg-3" href="#skills">My skills</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-2 px-0 px-lg-3" href="#contact">Contact</a>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+</nav>
