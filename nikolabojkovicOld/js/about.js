@@ -9,4 +9,6 @@ $(document).ready(function() {
         $('#address').text("Vojvode Stepe 252, 11000 Begorad");
         $('#years-of-experience').text(new Date().getFullYear() - new Date(2015, 1, 5).getFullYear());
     });
-});
+}); 
+
+// test comment 
