@@ -5,4 +5,17 @@
    <div>
       {{ 'Hello World' | translate }}
       {{ 'match' | translate}}
+      {{  storage | translate}}
+   </div>
+
+   <button (click) = "changeToEnglish()" type = "button" class = 'btn btn-primary'>
+      {{ 'English' | translate}}
+   </button>
+   <button (click) = "changeToSerbian()" type = "button" class = 'btn btn-primary'>
+      {{ 'Serbian' | translate}}
+   </button>
+
+   <div #site>
+      <p>Parent</p>
+      <app-header [site] = 'this'></app-header>
    </div>

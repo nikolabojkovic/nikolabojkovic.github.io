@@ -1,4 +1,7 @@
 {
     "Hello World": "Hello World - translated",
-    "match": "match - translated"
+    "match": "match - translated",
+    "English": "English",
+    "Serbian": "Serbian",
+    "Storage is place where you store an information":"Storage is place where you store an information"
 }

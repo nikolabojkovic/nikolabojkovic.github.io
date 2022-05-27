@@ -1,4 +1,7 @@
 {
     "Hello World": "Pozdrav",
-    "match": "mec"
+    "match": "mec",
+    "English": "Engleski",
+    "Serbian": "Srpski",
+    "Storage is place where you store an information":"Storage ti je magacin"
 }
