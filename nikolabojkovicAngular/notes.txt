@@ -1,6 +1,0 @@
-// bootstrap
-https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
-
-// custom themes
-https://medium.com/angular-in-depth/build-truly-dynamic-theme-with-css-variables-539516e95837
-https://www.freecodecamp.org/news/how-to-create-themes-for-your-angular-7-apps-using-css-variables-69251690e9c5/#8b88
