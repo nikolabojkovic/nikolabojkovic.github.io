@@ -1,0 +1,22 @@
+@import "../styles.scss";
+
+.color-primary {
+    color: var(--text-primary-color);
+    background-color: var(--background-primary-color);
+}
+
+.color-secondary {
+    color: var(--text-secondary-color);
+    background-color: var(--background-secondary-color);
+}
+
+.color-ternary {
+    color: var(--text-ternary-color);
+    background-color: var(--background-secondary-color);
+}
+
+.background-primary-gradient {
+    background: var(--background-primary-gradient);
+    width: 200px;
+    height: 200px;
+}

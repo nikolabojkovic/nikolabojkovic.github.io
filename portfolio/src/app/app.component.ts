@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Component} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,38 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Portfolio';
+  storage = 'Storage is place where you store an information';
+
   // faCoffee = faCoffee;                   font-awesome variable
 
-  constructor(translate: TranslateService) {
+  constructor(private translate: TranslateService,
+              private themeService: ThemeService) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en-US');
 
      // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('srb-LT');
-}
+  }
+  
+
+  changeToEnglish(): void {
+    this.translate.use('en-US');
+  }
+
+  changeToSerbian(): void {
+    this.translate.use('srb-LT');
+  }
+
+
+  ngOnInit(): void {
+
+  }
+
+  setDarkTheme(): void {
+    this.themeService.setDarkTheme();
+  }
+
+  setLightTheme(): void {
+    this.themeService.setLightTheme();
+  }
 }
