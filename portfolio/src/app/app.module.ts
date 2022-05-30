@@ -10,7 +10,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './SharedFolder/header/header/header.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {

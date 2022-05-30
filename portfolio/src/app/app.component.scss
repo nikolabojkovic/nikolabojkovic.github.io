@@ -1,12 +1,13 @@
+@import "../styles.scss";
 .theme-light {
-    --color-primary: black;
-    --color-secondary: white;
+    $primary: black;
+    $secondary: white;
 }
 .theme-dark {
-    --color-primary: white;
-    --color-secondary: black;
+    $primary: white;
+    $secondary: black;
 }
 p {
-    color:var(--color-primary);
-    background-color: var(--color-secondary);
+    color: $primary;
+    background-color: $secondary;
 }
