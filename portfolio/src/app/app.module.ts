@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './shared/header/header.component';
+import { ThemeService } from './shared/services/theme.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
   })
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,5 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Component} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -24,48 +23,15 @@ export class AppComponent {
 
   changeToEnglish(): void {
     this.translate.use('en-US');
-    this.setUpThemeDark();
   }
 
   changeToSerbian(): void {
     this.translate.use('srb-LT');
-    this.setUpThemeLight();
   }
 
 
   ngOnInit(): void {
 
-  }
-
-  @ViewChild('site')
-  site!: ElementRef;
-
-
-  implementTheme(): void {
-    let theme = localStorage.getItem("Theme");
-    if(theme == null) {
-        // Dark theme deafault
-        localStorage.setItem("Theme","Dark");
-        this.setUpThemeDark();
-    } else if (theme == "Dark"){
-        // Dark theme
-        this.setUpThemeDark();
-    } else {
-        // Light theme
-        this.setUpThemeLight();
-    }
-  }
-
-  setUpThemeDark(): void {
-    localStorage.setItem("Theme","Dark");
-    this.site.nativeElement.classList.add("theme-dark");
-    this.site.nativeElement.classList.remove("theme-light");
-  }
-  
-  setUpThemeLight(): void {
-    localStorage.setItem("Theme","Light");
-    this.site.nativeElement.classList.remove("theme-dark");
-    this.site.nativeElement.classList.add("theme-light");
   }
 
 }

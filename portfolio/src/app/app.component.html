@@ -2,21 +2,25 @@
    <!--   <fa-icon [icon]="['fas', 'arrow-rotate-right']"></fa-icon>  Solid icons  6.0 -->
    <!--   <fa-icon [icon]="['far', 'chess-bishop']"></fa-icon>        Regular icons 6.0 -->
 
-   <div>
+   <!-- <div>
       {{ 'Hello World' | translate }}
       {{ 'match' | translate}}
       {{  storage | translate}}
-   </div>
+   </div> -->
 
-   <button (click) = "changeToEnglish()" type = "button" class = 'btn btn-primary'>
+   <!-- <button (click) = "changeToEnglish()" type = "button" class = 'btn btn-primary'>
       {{ 'English' | translate}}
    </button>
    <button (click) = "changeToSerbian()" type = "button" class = 'btn btn-primary'>
       {{ 'Serbian' | translate}}
-   </button>
+   </button> -->
 
-   <div #site>
-      <p>Parent</p>
-      <app-header [site] = 'this'></app-header>
+   <div>
+      <p class="color-primary">text-primary</p>
+      <p class="color-secondary">text-secondary</p>
+      <p class="color-ternary">text-ternary</p>
+      <div class="background-primary-gradient"></div>
+      <app-header></app-header>
+      <img src="../assets/images/banner/Nikola-Bojkovic-profile-image.png" width="484" height="506">
    </div>
-   <img src="../assets/images/banner/Nikola-Bojkovic-profile-image.png" width="484" height="506">
+

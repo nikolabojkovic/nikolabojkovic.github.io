@@ -1,5 +1,5 @@
-import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { empty } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -8,23 +8,17 @@ import { empty } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
- 
+    this.themeService.loadCurrentTheme();
   }
 
-
-  //Themes
-  @Input() site: any;
-  
-  implementThemeSite(): void {
-    this.site.implementTheme();
-  }
   setUpThemeDarkSite(): void {
-    this.site.setUpThemeDark();
+    this.themeService.setDarkTheme();
   }
+
   setUpThemeLightSite(): void {
-    this.site.setUpThemeLight();
+    this.themeService.setLightTheme();
   }
 }

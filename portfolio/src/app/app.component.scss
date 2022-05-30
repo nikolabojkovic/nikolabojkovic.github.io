@@ -1,13 +1,22 @@
 @import "../styles.scss";
-.theme-light {
-    $primary: black;
-    $secondary: white;
+
+.color-primary {
+    color: var(--text-primary-color);
+    background-color: var(--background-primary-color);
 }
-.theme-dark {
-    $primary: white;
-    $secondary: black;
+
+.color-secondary {
+    color: var(--text-secondary-color);
+    background-color: var(--background-secondary-color);
 }
-p {
-    color: $primary;
-    background-color: $secondary;
+
+.color-ternary {
+    color: var(--text-ternary-color);
+    background-color: var(--background-secondary-color);
+}
+
+.background-primary-gradient {
+    background: var(--background-primary-gradient);
+    width: 200px;
+    height: 200px;
 }
