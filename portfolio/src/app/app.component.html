@@ -16,11 +16,13 @@
    </button> -->
 
    <div>
+      <app-header></app-header>
       <p class="color-primary">text-primary</p>
       <p class="color-secondary">text-secondary</p>
       <p class="color-ternary">text-ternary</p>
       <div class="background-primary-gradient"></div>
-      <app-header></app-header>
+      <button (click)=setDarkTheme() type="button" class="btn btn-primary">Dark (from app component)</button>
+      <button (click)=setLightTheme() type="button" class="btn btn-primary">Light (from app component)</button>
       <img src="../assets/images/banner/Nikola-Bojkovic-profile-image.png" width="484" height="506">
    </div>
 

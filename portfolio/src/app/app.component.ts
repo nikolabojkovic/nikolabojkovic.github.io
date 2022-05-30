@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ export class AppComponent {
 
   // faCoffee = faCoffee;                   font-awesome variable
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,
+              private themeService: ThemeService) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en-US');
 
@@ -34,4 +36,11 @@ export class AppComponent {
 
   }
 
+  setDarkTheme(): void {
+    this.themeService.setDarkTheme();
+  }
+
+  setLightTheme(): void {
+    this.themeService.setLightTheme();
+  }
 }
