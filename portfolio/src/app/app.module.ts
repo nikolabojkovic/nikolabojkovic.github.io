@@ -10,6 +10,15 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { HomePageComponent } from './home/home.page.component';
+import { BannerComponent } from './home/banner/banner.component';
+import { HomeService } from './home/home.service';
+import { ContactPageComponent } from './contact/contact.page.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
+import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -18,7 +27,15 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    HomePageComponent,
+    BannerComponent,
+    ContactPageComponent,
+    ContactFormComponent,
+    ContactInfoComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
