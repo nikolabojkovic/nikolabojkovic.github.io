@@ -19,6 +19,7 @@ import { ContactPageComponent } from './contact/contact.page.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
+import { SettingsService } from './shared/services/settings.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -50,7 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
   })
   ],
-  providers: [],
+  providers: [SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

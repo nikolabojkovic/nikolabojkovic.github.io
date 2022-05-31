@@ -1,2 +1,37 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
+
+:root {
+    --text-primary-color: #FFFFFF;
+    --text-secondary-color: #BE1E1E;
+    --text-ternary-color: #BEB2B2;
+
+    --background-primary-color: #232324;
+    --background-secondary-color: #000000;
+    --background-primary-gradient: linear-gradient(125deg, rgba(27,27,28,1) 50%, rgba(45,44,44,1) 100%);
+}
+
+.theme-light {
+    --text-primary-color: #000000;
+    --text-secondary-color: #24C6D0;
+    --text-ternary-color: #727272;
+
+    --background-primary-color: #EDEDED;
+    --background-secondary-color: #E1E1E1;
+    --background-primary-gradient: linear-gradient(125deg, rgba(226,225,225,1) 50%, rgba(198,198,198,1) 100%);
+}
+
+.theme-dark {
+    --text-primary-color: #FFFFFF;
+    --text-secondary-color: #BE1E1E;
+    --text-ternary-color: #BEB2B2;
+
+    --background-primary-color: #232324;
+    --background-secondary-color: #000000;
+    --background-primary-gradient: linear-gradient(126deg, rgba(27,27,28,1) 50%, rgba(45,44,44,1) 100%);
+}
+
+p {
+    transition: color 1s;
+    transition: background-color 1s;
+}

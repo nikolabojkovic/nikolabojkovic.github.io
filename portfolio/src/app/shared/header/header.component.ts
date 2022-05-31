@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private settingsService: SettingsService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  onDarkThemeClick(): void {
+    this.settingsService.setDarkTheme();
+  }
+
+  onLightThemeClick(): void {
+    this.settingsService.setLightTheme();
   }
 
 }

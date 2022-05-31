@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { SettingsService } from "../shared/services/settings.service";
 import { HomeService } from "./home.service";
 
 @Component({
@@ -8,7 +9,26 @@ import { HomeService } from "./home.service";
 })
 export class HomePageComponent {
 
-    constructor(private homeService: HomeService) {
-
-    }
+    constructor(private settingsService: SettingsService, 
+                private homeService: HomeService) {
+        this.settingsService.loadSettings();
+      }
+      
+      ngOnInit(): void { }
+    
+      onEnglishLanguageClick(): void {
+        this.settingsService.setLanguage('en-US');
+      }
+    
+      onSerbianLanguageClick(): void {
+        this.settingsService.setLanguage('srb-LT');
+      }
+    
+      onDarkThemeClick(): void {
+        this.settingsService.setDarkTheme();
+      }
+    
+      onLightThemeClick(): void {
+        this.settingsService.setLightTheme();
+      }
 }
