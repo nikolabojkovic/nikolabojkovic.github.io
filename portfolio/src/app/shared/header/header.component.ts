@@ -8,15 +8,16 @@ import { SettingsService } from '../services/settings.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private themeService: SettingsService) { }
+  constructor(private settingsService: SettingsService) { }
 
   ngOnInit(): void { }
 
   onDarkThemeClick(): void {
-    this.themeService.setDarkTheme();
+    this.settingsService.setDarkTheme();
   }
 
   onLightThemeClick(): void {
-    this.themeService.setLightTheme();
+    this.settingsService.setLightTheme();
   }
+
 }
