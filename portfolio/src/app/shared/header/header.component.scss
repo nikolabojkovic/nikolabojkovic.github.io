@@ -1,1 +1,130 @@
 @import "../../../styles.scss";
+
+@font-face {
+   font-family: 'Inter';
+   src: local('Inter'), url(../../../assets/fonts/inter/Inter-ExtraBold.ttf) format('truetype');
+  }
+  
+@font-face {
+  font-family: 'Inter-links';
+  src: local('Inter'), url(../../../assets/fonts/inter/Inter-Medium.ttf) format('truetype');
+}
+  
+// body {
+//   margin:0;
+//   background-color: rgb(0, 0
+// }
+  
+ul {
+  list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+//    background-color: rgb(0, 0, 0);
+   margin-left: 70px;
+}
+  
+li {
+  float: left;
+  padding: 15px;
+  padding-top: 30px;
+}
+  
+.links, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 5px solid transparent;
+  font-size: 14px;
+  font-family: "Inter-links";
+  font-style: normal;
+  font-weight: 500;
+}
+  
+.dropdownlinks{
+  display: inline-block;
+  color: var(--text-ternary-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 5px solid transparent;
+  font-size: 14px;
+  font-family: "Inter-links";
+  font-style: normal;
+}
+  
+li a .dropdownlinks:hover {
+//    background-color: rgb(0, 0, 0);
+}
+  
+.links:hover, .dropdown:hover .dropbtn {
+//   background-color: rgb(0, 0, 0);
+  color: var(--text-primary-color);
+}
+  
+li.dropdown {
+   display: inline-block;
+}
+  
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: var(--background-primary-color);
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  // z-index: 1;
+}
+  
+.dropdown-content a {
+  color: var(--text-ternary-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+  
+.dropdown-content a:hover {
+  background-color: var(--background-primary-color);
+  color: var(--text-primary-color);
+}
+  
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+.header-logo {
+  font-size: 36px;
+  font-family: "Inter";
+  font-weight: 800;
+  padding-left: 50px;
+  color: var(--text-primary-color);
+}
+  
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+}
+  
+.menu {
+  padding-right: 10px;
+ }
+  
+.red-color-logo-text {
+  color: var(--text-secondary-color);
+}
+  
+.active-menu-item {
+  color: var(--text-secondary-color);
+}
+  
+.default-menu-item {
+  color: var(--text-ternary-color);
+}
+  
+.menu-links {
+  
+ }
+  
