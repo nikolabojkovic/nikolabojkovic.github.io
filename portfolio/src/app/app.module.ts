@@ -20,6 +20,12 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
 import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 import { SettingsService } from './shared/services/settings.service';
+import { FeatureComponent } from './feature/feature.page.component';
+import { ResumeComponent } from './resume/resume.page.component';
+import { FeaturesSectionComponent } from './home/features-section/features-section.component';
+import { ResumeSectionComponent } from './home/resume-section/resume-section.component';
+import { PortfolioSectionComponent } from './home/portfolio-section/portfolio-section.component';
+import { ClientsSectionComponent } from './home/clients-section/clients-section.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,7 +42,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactPageComponent,
     ContactFormComponent,
     ContactInfoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FeatureComponent,
+    ResumeComponent,
+    FeaturesSectionComponent,
+    ResumeSectionComponent,
+    PortfolioSectionComponent,
+    ClientsSectionComponent
   ],
   imports: [
     BrowserModule,
