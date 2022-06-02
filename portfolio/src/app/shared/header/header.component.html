@@ -5,3 +5,46 @@
 <p>header works!</p>
 <button (click) = "onDarkThemeClick()" type = "button" class = "btn btn-primary">Dark (from header)</button>
 <button (click) = "onLightThemeClick()" type = "button" class = "btn btn-primary">Light (from header)</button>
+
+<div>
+    <div class="header-container">
+     <div>
+       <p class="header-logo"><span class="red-color-logo-text">NBO</span> Development</p>
+     </div> 
+       <div class="menu">
+         <ul>
+           <li><a #refEl (click)="activatelink(refEl)" class="links default-menu-item menu-links">HOME</a></li>
+           <li class="dropdown">
+               <a #refEl (click)="activatelink(refEl)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links">FEATURES</a>
+                 <div class="dropdown-content">
+                   <a class= "dropdownlinks" href="#">DEVELOPMENT STRATEGY</a>
+                   <a class= "dropdownlinks" href="#">SOFTWARE ARHITECTURE</a>
+                   <a class= "dropdownlinks" href="#">PROJECT IMPLEMENTATION</a>
+                   <a class= "dropdownlinks" href="#">MENTORING</a>
+                   <a class= "dropdownlinks" href="#">LEADERSHIP</a>
+                   <a class= "dropdownlinks" href="#">CONSULTING</a>
+                 </div>   
+           <li class="dropdown">
+            <a #refEl (click)="activatelink(refEl)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links">RESUME</a>
+             <div class="dropdown-content">
+                <a class= "dropdownlinks" href="#">UNIVERSITY</a>
+                <a class= "dropdownlinks" href="#">INFOSCREN/MIGROGEN</a>  
+                <a class= "dropdownlinks" href="#">NULTIEN</a> 
+                <a class= "dropdownlinks" href="#">INTELISALE</a> 
+                <a class= "dropdownlinks" href="#">ORION INOVATION</a>  
+             </div>      
+           <li><a #refEl class="links default-menu-item menu-links" (click)="activatelink(refEl)" href="#">PORTFOLIO</a></li>
+           <li><a #refEl class="links default-menu-item menu-links" (click)="activatelink(refEl)" href="#">CLIENTS</a></li>
+           <li><a #refEl class="links default-menu-item menu-links" (click)="activatelink(refEl)" href="#">CONTACT</a></li>
+           <li><a #refEl class="links default-menu-item menu-links" (click)="activatelink(refEl)" href="#">GITHUB</a></li>
+           <li class="dropdown">
+             <a #refEl (click)="activatelink(refEl)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links" >THEMES</a>
+               <div class="dropdown-content">
+                 <a href="#">LIGHT</a>
+                 <a href="#">DARK</a>
+               </div>
+           </li>
+         </ul>
+       </div> 
+     </div>
+   </div>

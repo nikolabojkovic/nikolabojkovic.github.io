@@ -35,3 +35,7 @@ p {
     transition: color 1s;
     transition: background-color 1s;
 }
+
+body {
+    background-color: var(--background-primary-color);
+}
