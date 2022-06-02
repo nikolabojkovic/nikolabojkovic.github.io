@@ -19,7 +19,6 @@ ul {
   list-style-type: none;
    margin: 0;
    padding: 0;
-   overflow: hidden;
 //    background-color: rgb(0, 0, 0);
    margin-left: 70px;
 }
@@ -58,11 +57,14 @@ li a .dropdownlinks:hover {
 //    background-color: rgb(0, 0, 0);
 }
   
-.links:hover, .dropdown:hover .dropbtn {
+.links:hover:not(.active-menu-item), .dropdown:hover .dropbtn:not(.active-menu-item) {
 //   background-color: rgb(0, 0, 0);
   color: var(--text-primary-color);
 }
-  
+.links:hover, .dropdown:hover .dropbtn {
+    //   background-color: rgb(0, 0, 0);
+      color: var(--text-secondary-color);
+}
 li.dropdown {
    display: inline-block;
 }
@@ -128,3 +130,17 @@ li.dropdown {
   
  }
   
+ .header-container-holder {
+     position: relative;
+ }
+
+ /*
+ .menu-mobile {
+     width: 500px;
+     height: 100%;
+     background-color: green;
+     position: absolute;
+     top:0;
+     left:0;
+ }
+ */
