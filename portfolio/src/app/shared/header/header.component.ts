@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   togglerActivated = false;
   featuresMenu = false;
   menuResume = false;
+  menuShadow = false;
+  menuThemes = false;
 
   constructor(private settingsService: SettingsService) { }
 
@@ -36,21 +38,30 @@ export class HeaderComponent implements OnInit {
 
   toggleMobileMenu(): void {
     let menu = document.getElementById("menuMobile") as HTMLElement;
-
+    let menuShadow = document.getElementById("menuShadow") as HTMLElement;
     if(this.togglerActivated == false) {
       menu.style.left = "0px";
       menu.style.transitionDuration = "600ms";
       this.togglerActivated = true;
     } else {
-      menu.style.left = "-500px";
+      menu.style.left = "-414px";
       menu.style.transitionDuration = "600ms";
       this.togglerActivated = false;
     }
     this.closeRestOfMenus();
+    if(this.menuShadow == false) {
+      menuShadow.style.display = "block";
+      this.menuShadow = true;
+    } else {
+      menuShadow.style.display = "none";
+      this.menuShadow = false;
+    }
+    this.resetLinks();
   }
 
   hideMobileMenu(): void {
     let menu = document.getElementById("menuMobile") as HTMLElement;
+    let menuShadow = document.getElementById("menuShadow") as HTMLElement;
     if(this.togglerActivated == false) {
       menu.style.left = "0px";
       menu.style.transitionDuration = "600ms";
@@ -61,6 +72,14 @@ export class HeaderComponent implements OnInit {
       this.togglerActivated = false;
     }
     this.closeRestOfMenus();
+    if(this.menuShadow == false) {
+      menuShadow.style.display = "block";
+      this.menuShadow = true;
+    } else {
+      menuShadow.style.display = "none";
+      this.menuShadow = false;
+    }
+    this.resetLinks();
   }
 
   activatelinkMobile(itemMobile: HTMLElement): void {
@@ -75,11 +94,19 @@ export class HeaderComponent implements OnInit {
     console.log(itemMobile);
 
   }
+  
+  resetLinks():  void {
+    let menu = document.getElementsByClassName("mobile-headers");
+    for(let i = 0 ;i<menu.length ;i ++) {
+      menu[i].classList.remove("menu-items-mobile-active");
+      menu[i].classList.add("menu-items-mobile-default");
+    }
+  }
 
   displayFeatures(): void {
     let menu = document.getElementById("featuresMenu") as HTMLElement;
     if(this.featuresMenu == true) {
-
+      this.resetLinks();
     } else {
       this.closeRestOfMenus();
     }
@@ -92,10 +119,11 @@ export class HeaderComponent implements OnInit {
     }
 
   }
+
   displayResume(): void {
     let menu = document.getElementById("resumeMenu") as HTMLElement;
     if(this.menuResume == true) {
-
+      this.resetLinks();
     } else {
       this.closeRestOfMenus();
     }
@@ -111,6 +139,7 @@ export class HeaderComponent implements OnInit {
   closeRestOfMenus(): void {
     this.closeFeatures();
     this.closeResume();
+    this.closeThemes();
   }
   
   closeFeatures(): void {
@@ -122,5 +151,26 @@ export class HeaderComponent implements OnInit {
     let menu = document.getElementById("resumeMenu") as HTMLElement;
     menu.style.display = 'none';
     this.menuResume = false;
+  }
+
+  closeThemes(): void {
+    let menu = document.getElementById("themesMenu") as HTMLElement;
+    menu.style.display = 'none';
+    this.menuThemes = false;
+  }
+  displayThemes(): void {
+    let menu = document.getElementById("themesMenu") as HTMLElement;
+    if(this.menuThemes == true) {
+
+    } else {
+      this.closeRestOfMenus();
+    }
+    if(this.menuThemes == false) {
+      menu.style.display = "block";
+      this.menuThemes = true;
+    } else {
+      menu.style.display = "none";
+      this.menuThemes = false;
+    }
   }
 }
