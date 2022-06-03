@@ -14,7 +14,7 @@ ul {
   list-style-type: none;
    margin: 0;
    padding: 0;
-   margin-left: 70px;
+   margin-left: 10px;
 }
   
 li {
@@ -26,7 +26,7 @@ li {
 .links, .dropbtn {
   display: inline-block;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 5px;
   text-decoration: none;
   border-bottom: 5px solid transparent;
   font-size: 14px;
@@ -93,6 +93,7 @@ li.dropdown {
   font-weight: 800;
   padding-left: 50px;
   color: var(--text-primary-color);
+  margin-bottom: 0px;
 }
 
 .header-logo-mobile {
@@ -107,7 +108,7 @@ li.dropdown {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
 }
   
 .menu {
@@ -308,6 +309,36 @@ li.dropdown {
       display: block;
     }
  }
+
+ @media only screen and (min-width:992px) and (max-width:1440px) {
+  .menu {
+    display: block;
+  }
+
+  li {
+      float: left;
+      padding: 10px 5px;
+      padding-bottom: 0px;
+    }
+
+    .header-logo {
+      font-size: 30px;
+      font-family: "Inter";
+      padding-left: 10px;
+      color: var(--text-primary-color);
+      margin: 0px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+
+
+}
 
  //Tablet View
 
