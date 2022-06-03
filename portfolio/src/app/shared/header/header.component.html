@@ -1,12 +1,19 @@
 <p>header works!</p>
 <button (click) = "onDarkThemeClick()" type = "button" class = "btn btn-primary">Dark (from header)</button>
 <button (click) = "onLightThemeClick()" type = "button" class = "btn btn-primary">Light (from header)</button>
+<div class = "menu-shadow">
+       
+</div> 
 
 <div class = "header-container-holder">
     <div class="header-container">
      <div>
-       <p class="header-logo"><span class="red-color-logo-text">NBO</span> Development</p>
-     </div> 
+         <p class="header-logo"><span class="red-color-logo-text">NBO</span> Development</p>
+     </div>
+     <div class = "toggle-button" (click) = "toggleMobileMenu()">
+         <fa-icon class = "toggler-icon-start" [icon]="['fas', 'bars']"></fa-icon> 
+         <fa-icon class = "toggler-icon-end" [icon]="['fas', 'bars']"></fa-icon> 
+     </div>
        <div class="menu">
          <ul>
            <li><a #refEl (click)="activatelink(refEl)" class="links default-menu-item menu-links" [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
@@ -47,7 +54,49 @@
 
 
 
-   <!--   <div class = 'menu-mobile'>
+   <div id = "menuMobile" class = 'menu-mobile menu-mobile-hide'>
+     <div class = "mobile-header-logo-holder">
+        <div class = "mobile-header-logo">
+            <div>
+                <p class="header-logo-mobile"><span class="red-color-logo-text">NBO</span> Development</p>
+            </div>
+            <button  type = "button" class = 'btn-close btn-close-white btn-close-class' (click) = "hideMobileMenu()">
 
+            </button>
+        </div>
+        <div class = "menu-items-mobile">
+            <ul>
+              <li><a #mobileItemRef1 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef1)" href="javascript:void(0)">HOME</a></li>
+              <li><a #mobileItemRef2 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef2); displayFeatures();" href="javascript:void(0)">FEATURES</a>
+                <div  id = featuresMenu class = "dropdown-menu-mobile">
+                    <ul>
+                        <li><a class = "menu-dropdown-item-mobile-default">DEVELOPMENT STRATEGY</a></li>
+                        <li><a class = "menu-dropdown-item-mobile-default">SOFTWARE ARCHITECTURE</a></li>
+                        <li><a class = "menu-dropdown-item-mobile-default">PROJECT IMPLEMENTATION</a></li>
+                        <li><a class = "menu-dropdown-item-mobile-default">MENTORING</a></li>
+                        <li><a class = "menu-dropdown-item-mobile-default">LEADERSHIP</a></li>
+                        <li><a class = "menu-dropdown-item-mobile-default">CONSULTING</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li><a #mobileItemRef3 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef3); displayResume();" href="javascript:void(0)">RESUME</a>
+                <div  id = resumeMenu class = "dropdown-menu-mobile">
+                  <ul>
+                      <li><a class = "menu-dropdown-item-mobile-default">UNIVERSITY</a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default">INFOSCREN/MIGROGEN</a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default">NULTIEN</a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default">INTELISALE</a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default">ORION INOVATION</a></li>
+                  </ul>
+              </div>
+              </li>
+              <li><a #mobileItemRef4 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef4)" href="javascript:void(0)">PORTFOLIO</a></li>
+              <li><a #mobileItemRef5 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef5)" href="javascript:void(0)">CLIENTS</a></li>
+              <li><a #mobileItemRef6 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef6)" href="javascript:void(0)">CONTACT</a></li>
+              <li><a #mobileItemRef7 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef7)" href="javascript:void(0)">GITHUB</a></li>
+              <li><a #mobileItemRef8 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef8)" href="javascript:void(0)">THEMES</a></li>
+            </ul>
+        </div>
+     </div>
    </div>
-   -->
+  
