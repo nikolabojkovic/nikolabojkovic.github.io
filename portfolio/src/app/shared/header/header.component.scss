@@ -10,17 +10,11 @@
   src: local('Inter'), url(../../../assets/fonts/inter/Inter-Medium.ttf) format('truetype');
 }
   
-// body {
-//   margin:0;
-//   background-color: rgb(0, 0
-// }
-  
 ul {
   list-style-type: none;
    margin: 0;
    padding: 0;
-//    background-color: rgb(0, 0, 0);
-   margin-left: 70px;
+   margin-left: 10px;
 }
   
 li {
@@ -32,7 +26,7 @@ li {
 .links, .dropbtn {
   display: inline-block;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 5px;
   text-decoration: none;
   border-bottom: 5px solid transparent;
   font-size: 14px;
@@ -54,27 +48,25 @@ li {
 }
   
 li a .dropdownlinks:hover {
-//    background-color: rgb(0, 0, 0);
 }
   
 .links:hover:not(.active-menu-item), .dropdown:hover .dropbtn:not(.active-menu-item) {
-//   background-color: rgb(0, 0, 0);
   color: var(--text-primary-color);
 }
 .links:hover, .dropdown:hover .dropbtn {
-    //   background-color: rgb(0, 0, 0);
-      color: var(--text-secondary-color);
+  color: var(--text-secondary-color);
 }
+
 li.dropdown {
-   display: inline-block;
+  display: inline-block;
 }
   
 .dropdown-content {
-   display: none;
-   position: absolute;
-   background-color: var(--background-primary-color);
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  background-color: var(--background-primary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   // z-index: 1;
 }
   
@@ -87,7 +79,7 @@ li.dropdown {
 }
   
 .dropdown-content a:hover {
-  background-color: var(--background-primary-color);
+  background-color: var(--background-secondary-color);
   color: var(--text-primary-color);
 }
   
@@ -101,13 +93,22 @@ li.dropdown {
   font-weight: 800;
   padding-left: 50px;
   color: var(--text-primary-color);
+  margin-bottom: 0px;
+}
+
+.header-logo-mobile {
+  font-size: 28px;
+  font-family: "Inter";
+  font-weight: 800;
+  padding-left: 50px;
+  color: var(--text-primary-color);
 }
   
 .header-container {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
 }
   
 .menu {
@@ -128,19 +129,277 @@ li.dropdown {
   
 .menu-links {
   
- }
+}
   
- .header-container-holder {
-     position: relative;
+.header-container-holder {
+  position: relative;
+}
+
+.toggle-button {
+  display: none;
+  position: absolute;
+  right: 60px;
+  color: var(--text-secondary-color);
+  cursor: pointer;
+}
+
+.toggler-icon-start {
+  font-size: 30px;
+}
+
+.toggler-icon-end {
+  font-size: 30px;
+  margin-left: -12px;
+}
+ 
+.menu-mobile {
+  width: 414px;
+  height: 100%;
+  background-color: var(--background-primary-color);
+  position: fixed;
+  top:0;
+  left:-414px;
+  z-index: 11;
  }
 
- /*
- .menu-mobile {
-     width: 500px;
-     height: 100%;
-     background-color: green;
-     position: absolute;
-     top:0;
-     left:0;
+.mobile-header-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px 0px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--text-ternary-color);
+}
+
+.mobile-header-logo-holder {
+  width: 100%;
+  padding:20px 37px;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.btn-close-class {
+
+}
+
+.menu-items-mobile {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+}
+
+.menu-items-mobile ul {
+  padding:0;
+  margin: 0;
+}
+
+.menu-items-mobile ul li {
+  margin: 0;
+  padding:0;
+  float: left;
+  clear:left;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.menu-items-mobile ul li a {
+  display: block;
+  font-family: "Inter-links";
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-items-mobile ul li a:hover {
+  color:var(--text-secondary-color);
+}
+
+.menu-items-mobile-default {
+  color: var(--text-ternary-color);
+}
+
+.menu-items-mobile-active {
+  color: var(--text-secondary-color);
+}
+
+.mobile-headers {
+  
+}
+
+.dropdown-menu-mobile {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  display: block;
+  margin-top: 5px;
+  display: none;
+}
+
+.dropdown-menu-mobile ul {
+  padding: 0;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.dropdown-menu-mobile ul li {
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.menu-dropdown-item-mobile-default {
+  color: var(--text-ternary-color);
+}
+
+.dropdown-menu-mobile ul li a {
+  font-family: "Inter-links";
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-close-mobile {
+  color:var(--text-secondary-color);
+  font-size: 45px;
+}
+
+.menu-mobile-shadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  left:0;    
+  top:0;                         // Shadows 10 +
+  z-index: 10;
+  display: none;
+}
+
+.item-light-container {
+  display: flex;
+  flex-direction: row;
+  width: 70px;
+  height: 20px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.item-light-container span {
+  float: right;
+}
+
+.item-light-container p {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.themes-ul li {
+  padding-bottom: 0;
+  margin-bottom: 0 !important;
+}
+
+.themes-icons {
+  font-size:17px;
+  margin-bottom: 10px;
+}
+ // Desktop View
+
+ @media only screen and (min-width:1440px) {
+    .menu {
+      display: block;
+    }
  }
- */
+
+ @media only screen and (min-width:992px) and (max-width:1440px) {
+  .menu {
+    display: block;
+  }
+
+  li {
+      float: left;
+      padding: 10px 5px;
+      padding-bottom: 0px;
+    }
+
+    .header-logo {
+      font-size: 30px;
+      font-family: "Inter";
+      padding-left: 10px;
+      color: var(--text-primary-color);
+      margin: 0px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+
+
+}
+
+ //Tablet View
+
+ @media only screen and (min-width:500px) and (max-width:992px) {
+    .menu {
+      display: none;
+    }
+    
+    .toggle-button  {
+      display: block;
+    }
+
+    .header-container {
+      width: 100%;
+    }
+
+    .header-logo-mobile {
+      margin-bottom: 0px;
+      padding-left:0px;
+    }
+    .header-logo {
+      margin-bottom: 0px;
+    }
+}
+
+//Mobile View
+
+@media only screen and (max-width: 500px) {
+  .menu {
+    display: none;
+  }
+  
+  .toggle-button  {
+    display: block;
+    right: 30px;
+  }
+
+  .header-container {
+    width: 100%;
+  }
+
+  .header-logo {
+    margin-bottom: 0px;
+    padding-left:30px;
+  }
+
+  .menu-mobile {
+    width: 100%;
+    left:-100%;
+  }
+  .header-logo-mobile {
+    font-size: 30px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+  .header-logo {
+    margin-bottom: 0px;
+    font-size: 32px;
+  }
+
+  .menu-items-mobile ul li a {
+    font-size: 15px;
+  }
+}
