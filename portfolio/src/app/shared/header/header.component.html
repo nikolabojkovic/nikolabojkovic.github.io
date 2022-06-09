@@ -41,10 +41,10 @@
            <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6)" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
            <li><a #refEl7 class="links default-menu-item menu-links" (click)="activatelink(refEl7)" href="javascript:void(0)">GITHUB</a></li>
            <li class="dropdown">
-             <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links" >THEMES</a>
+             <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links" ><fa-icon class="themes-icon-secondary" [icon]="['fas', 'gear']"></fa-icon></a>
                <div class="dropdown-content">
-                 <a href="#">LIGHT</a>
-                 <a href="#">DARK</a>
+                 <a href="#"><div class="light-theme"><p class="theme-text">LIGHT</p><fa-icon class="theme-colors themes-icons-primary " [icon]="['far', 'sun']"></fa-icon></div></a>
+                 <a href="#"><div class="dark-theme"><p class="theme-text">DARK</p><fa-icon class="theme-colors themes-icons-primary "  [icon]="['far', 'moon']"></fa-icon></div></a>
                </div>
            </li>
          </ul>
