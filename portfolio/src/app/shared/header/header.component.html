@@ -18,33 +18,33 @@
          <ul>
            <li><a #refEl (click)="activatelink(refEl)" class="links default-menu-item menu-links" [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
            <li class="dropdown">
-               <a #refEl2 (click)="activatelink(refEl2)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links">FEATURES</a>
+               <a #refEl2 (click)="activatelink(refEl2)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links">FEATURES</a>
                  <div class="dropdown-content">
-                   <a class= "dropdownlinks" href="#">DEVELOPMENT STRATEGY</a>
-                   <a class= "dropdownlinks" href="#">SOFTWARE ARHITECTURE</a>
-                   <a class= "dropdownlinks" href="#">PROJECT IMPLEMENTATION</a>
-                   <a class= "dropdownlinks" href="#">MENTORING</a>
-                   <a class= "dropdownlinks" href="#">LEADERSHIP</a>
-                   <a class= "dropdownlinks" href="#">CONSULTING</a>
+                   <a class= "dropdown-links" href="#">DEVELOPMENT STRATEGY</a>
+                   <a class= "dropdown-links" href="#">SOFTWARE ARHITECTURE</a>
+                   <a class= "dropdown-links" href="#">PROJECT IMPLEMENTATION</a>
+                   <a class= "dropdown-links" href="#">MENTORING</a>
+                   <a class= "dropdown-links" href="#">LEADERSHIP</a>
+                   <a class= "dropdown-links" href="#">CONSULTING</a>
                  </div>   
            <li class="dropdown">
-            <a #refEl3 (click)="activatelink(refEl3)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links">RESUME</a>
+            <a #refEl3 (click)="activatelink(refEl3)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links">RESUME</a>
              <div class="dropdown-content">
-                <a class= "dropdownlinks" href="#">UNIVERSITY</a>
-                <a class= "dropdownlinks" href="#">INFOSCREN/MIGROGEN</a>  
-                <a class= "dropdownlinks" href="#">NULTIEN</a> 
-                <a class= "dropdownlinks" href="#">INTELISALE</a> 
-                <a class= "dropdownlinks" href="#">ORION INOVATION</a>  
+                <a class= "dropdown-links" href="#">UNIVERSITY</a>
+                <a class= "dropdown-links" href="#">INFOSCREN/MIGROGEN</a>  
+                <a class= "dropdown-links" href="#">NULTIEN</a> 
+                <a class= "dropdown-links" href="#">INTELISALE</a> 
+                <a class= "dropdown-links" href="#">ORION INOVATION</a>  
              </div>      
            <li><a #refEl4 class="links default-menu-item menu-links" (click)="activatelink(refEl4)" href="javascript:void(0)">PORTFOLIO</a></li>
            <li><a #refEl5 class="links default-menu-item menu-links" (click)="activatelink(refEl5)" href="javascript:void(0)">CLIENTS</a></li>
            <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6)" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
            <li><a #refEl7 class="links default-menu-item menu-links" (click)="activatelink(refEl7)" href="javascript:void(0)">GITHUB</a></li>
            <li class="dropdown">
-             <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links" ><fa-icon class="themes-icon-secondary" [icon]="['fas', 'gear']"></fa-icon></a>
+             <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links" ><fa-icon class="themes-icon-primary" [icon]="['fas', 'gear']"></fa-icon></a>
                <div class="dropdown-content">
-                 <a href="#"><div class="light-theme"><p class="theme-text">LIGHT</p><fa-icon class="theme-colors themes-icons-primary " [icon]="['far', 'sun']"></fa-icon></div></a>
-                 <a href="#"><div class="dark-theme"><p class="theme-text">DARK</p><fa-icon class="theme-colors themes-icons-primary "  [icon]="['far', 'moon']"></fa-icon></div></a>
+                 <a href="#"><div class="settings-item theme-text">LIGHT<fa-icon class="theme-colors themes-icons-secondary" [icon]="['far', 'sun']"></fa-icon></div></a>
+                 <a href="#"><div class="settings-item theme-text">DARK<fa-icon class="theme-colors themes-icons-secondary"  [icon]="['far', 'moon']"></fa-icon></div></a>
                </div>
            </li>
          </ul>
