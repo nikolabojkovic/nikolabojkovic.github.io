@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { SettingsService } from './shared/services/settings.service';
 
 @Component({
@@ -9,6 +9,10 @@ import { SettingsService } from './shared/services/settings.service';
 export class AppComponent {
   title = 'Portfolio';
   storage = 'Storage is place where you store an information';
+
+  ngOnInit(): void {
+
+  }
 
   // faCoffee = faCoffee;                   font-awesome variable
 }

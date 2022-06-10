@@ -4,11 +4,21 @@
    <!--       <fa-icon [icon]="['far', 'sun']"></fa-icon>
               <fa-icon [icon]="['far', 'moon']"></fa-icon>    
               <span><fa-icon style = 'color:red;' [icon]="['fas', 'gear']"></fa-icon></span>
+              <i class="fa-brands fa-facebook-f"></i>
+              <fa-icon [icon] = "[fas','brands facebook-f']"></fa-icon>
+              <i class="fa-brands fa-facebook"></i>
    <div #menuShadow class = "menu-shadow">
        
    </div> 
    -->
 
-   <app-header></app-header>
-   <router-outlet></router-outlet>
+   <div class = "site-container">
+      <div id = "siteContainerTop" class = "site-container-top">
+         <div class = 'view-container'>
+            <app-header></app-header>
+            <router-outlet></router-outlet>
+         </div>
+      </div>
+   </div>
+
  

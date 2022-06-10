@@ -16,7 +16,7 @@
      </div>
        <div class="menu">
          <ul>
-           <li><a #refEl (click)="activatelink(refEl)" class="links default-menu-item menu-links" [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
+           <li><a #refEl (click)="activatelink(refEl);" class="links default-menu-item menu-links" [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
            <li class="dropdown">
                <a #refEl2 (click)="activatelink(refEl2)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links">FEATURES</a>
                  <div class="dropdown-content">
@@ -38,7 +38,7 @@
              </div>      
            <li><a #refEl4 class="links default-menu-item menu-links" (click)="activatelink(refEl4)" href="javascript:void(0)">PORTFOLIO</a></li>
            <li><a #refEl5 class="links default-menu-item menu-links" (click)="activatelink(refEl5)" href="javascript:void(0)">CLIENTS</a></li>
-           <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6)" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
+           <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6);" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
            <li><a #refEl7 class="links default-menu-item menu-links" (click)="activatelink(refEl7)" href="javascript:void(0)">GITHUB</a></li>
            <li class="dropdown">
              <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropbtn default-menu-item menu-links" >THEMES</a>
@@ -66,7 +66,7 @@
          </div>
          <div class = "menu-items-mobile">
              <ul>
-               <li><a #mobileItemRef1 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef1); hideMobileMenu()" href="javascript:void(0)"  [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
+               <li><a #mobileItemRef1 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef1); hideMobileMenu();" href="javascript:void(0)"  [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
                <li><a #mobileItemRef2 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef2); displayFeatures();" href="javascript:void(0)">FEATURES</a>
                  <div  id = featuresMenu class = "dropdown-menu-mobile">
                      <ul>
@@ -92,13 +92,13 @@
                </li>
                <li><a #mobileItemRef4 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef4)" href="javascript:void(0)">PORTFOLIO</a></li>
                <li><a #mobileItemRef5 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef5)" href="javascript:void(0)">CLIENTS</a></li>
-               <li><a #mobileItemRef6 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef6); hideMobileMenu()" href="javascript:void(0)"  [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
+               <li><a #mobileItemRef6 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef6); hideMobileMenu();" href="javascript:void(0)"  [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
                <li><a #mobileItemRef7 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef7)" href="javascript:void(0)">GITHUB</a></li>
                <li><a #mobileItemRef8 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef8); displayThemes()" href="javascript:void(0)">THEMES</a>
                 <div  id = themesMenu class = "dropdown-menu-mobile">
                   <ul class = "themes-ul">
-                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onLightThemeClick(); hideMobileMenu(); resetLinks()" ><div class = 'item-light-container'><p>LIGHT</p> <span><fa-icon class = "themes-icons" [icon]="['far', 'sun']"></fa-icon> </span></div></a></li>
-                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onDarkThemeClick(); hideMobileMenu(); resetLinks()"><div class = 'item-light-container'><p>DARK</p> <span><fa-icon  class = "themes-icons"  [icon]="['far', 'moon']"></fa-icon> </span></div></a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onLightThemeClick(); hideMobileMenu(); resetLinks();" ><div class = 'item-light-container'><p>LIGHT</p> <span><fa-icon class = "themes-icons" [icon]="['far', 'sun']"></fa-icon> </span></div></a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onDarkThemeClick(); hideMobileMenu(); resetLinks();"><div class = 'item-light-container'><p>DARK</p> <span><fa-icon  class = "themes-icons"  [icon]="['far', 'moon']"></fa-icon> </span></div></a></li>
                   </ul>
                 </div>
                </li>

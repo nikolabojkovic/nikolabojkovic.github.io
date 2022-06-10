@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   menuResume = false;
   menuShadow = false;
   menuThemes = false;
+  homePageActive = true;
 
   constructor(private settingsService: SettingsService) { }
 
