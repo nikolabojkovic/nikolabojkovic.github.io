@@ -11,7 +11,15 @@ export class AppComponent {
   storage = 'Storage is place where you store an information';
 
   ngOnInit(): void {
+    this.settingsService.homeShadowID = this.sendHomeShadow();
+  }
 
+  constructor(private settingsService: SettingsService) {
+      
+  }
+
+  sendHomeShadow(): HTMLElement {
+      return document.getElementById("siteContainerTop") as HTMLElement;
   }
 
   // faCoffee = faCoffee;                   font-awesome variable

@@ -8,10 +8,16 @@ import { Settings } from '../models/settings.model';
 export class SettingsService {
 
     settings: Settings;
+    homeShadow: any;
+    homeShadowID: any;
 
     constructor(private translate: TranslateService) {
         translate.setDefaultLang('en-US');
         this.settings = new Settings('Dark', 'en-US');
+    }
+    
+    homePageActivated(): void {
+        this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     }
 
     loadSettings(): void {
@@ -22,6 +28,7 @@ export class SettingsService {
             this.settings = new Settings(storage.theme, storage.language);
         }
 
+        this.homePageActivated();
         this.loadTheme();
         this.loadLanguage();
     }

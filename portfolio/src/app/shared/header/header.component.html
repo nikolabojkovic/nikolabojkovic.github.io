@@ -1,6 +1,5 @@
-<p>header works!</p>
-<button (click) = "onDarkThemeClick()" type = "button" class = "btn btn-primary">Dark (from header)</button>
-<button (click) = "onLightThemeClick()" type = "button" class = "btn btn-primary">Light (from header)</button>
+
+
 <div id = 'menuShadow' class = 'menu-mobile-shadow' (click) = "hideMobileMenu()">
 
 </div>
@@ -16,7 +15,7 @@
      </div>
        <div class="menu">
          <ul>
-           <li><a #refEl (click)="activatelink(refEl);" class="links default-menu-item menu-links" [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
+           <li><a #refEl (click)="activatelink(refEl); homePageActivated();" class="links default-menu-item menu-links" [routerLink]="['/home']" routerLinkActive="active">HOME</a></li>
            <li class="dropdown">
                <a #refEl2 (click)="activatelink(refEl2)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links">FEATURES</a>
                  <div class="dropdown-content">
@@ -38,7 +37,7 @@
              </div>      
            <li><a #refEl4 class="links default-menu-item menu-links" (click)="activatelink(refEl4)" href="javascript:void(0)">PORTFOLIO</a></li>
            <li><a #refEl5 class="links default-menu-item menu-links" (click)="activatelink(refEl5)" href="javascript:void(0)">CLIENTS</a></li>
-           <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6);" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
+           <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6); homePageDeactivated();" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
            <li><a #refEl7 class="links default-menu-item menu-links" (click)="activatelink(refEl7)" href="javascript:void(0)">GITHUB</a></li>
            <li class="dropdown">
              <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links" ><fa-icon class="themes-icon-primary" [icon]="['fas', 'gear']"></fa-icon></a>

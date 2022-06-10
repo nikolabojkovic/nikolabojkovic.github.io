@@ -49,21 +49,21 @@ export class BannerComponent implements OnInit {
           case 1: text.innerHTML = row[0];
           textInRow = 2;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "20%");
+            r.style.setProperty("--text-shadow-length", "21%");
           }
           break;
 
           case 2: text.innerHTML = row[1];
           textInRow = 3;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "20%");
+            r.style.setProperty("--text-shadow-length", "52%");
           }
           break;
 
           case 3: text.innerHTML = row[2];
           textInRow = 1;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "20%");
+            r.style.setProperty("--text-shadow-length", "79%");
           }
           break;
         }
@@ -72,7 +72,7 @@ export class BannerComponent implements OnInit {
 
   resetAnimations(): void {
       let r = document.querySelector(':root') as HTMLElement;
-      r.style.setProperty("--text-shadow-length", "32%");
+      r.style.setProperty("--text-shadow-length", "22%");
       console.log('clear');
   }
 

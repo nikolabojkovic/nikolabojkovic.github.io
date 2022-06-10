@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   menuThemes = false;
   homePageActive = true;
 
+  
   constructor(private settingsService: SettingsService) { }
 
   ngOnInit(): void { }
@@ -26,6 +27,15 @@ export class HeaderComponent implements OnInit {
   onLightThemeClick(): void {
     this.settingsService.setLightTheme();
   }
+
+  homePageActivated(): void {
+    this.settingsService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
+  }
+
+  homePageDeactivated(): void {
+    this.settingsService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
+  }
+
 
    activatelink(linkitem: HTMLElement) {
     let menuitems = document.getElementsByClassName('menu-links');
