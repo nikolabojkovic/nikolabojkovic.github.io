@@ -2,13 +2,7 @@
 @import "~font-awesome/css/font-awesome.min.css";
 
 :root {
-    --text-primary-color: #FFFFFF;
-    --text-secondary-color: #BE1E1E;
-    --text-ternary-color: #BEB2B2;
-
-    --background-primary-color: #232324;
-    --background-secondary-color: #000000;
-    --background-primary-gradient: linear-gradient(125deg, rgba(27,27,28,1) 50%, rgba(45,44,44,1) 100%);
+    --text-shadow-length: 10%;
 }
 
 .theme-light {

@@ -62,11 +62,11 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  left: -90px;
   background-color: var(--background-primary-color);
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   font-size: 12px;
+  z-index: 6;
 }
   
 .dropdown-content a {
@@ -129,6 +129,7 @@ li.dropdown {
     
 .header-container-holder {
   position: relative;
+  padding-top:20px;
 }
 
 .toggle-button {
@@ -319,6 +320,11 @@ li.dropdown {
   position: relative;
   bottom: 3px;
 }
+
+.menu-links, .btn-close-class, .mobile-headers  {
+  //Used
+}
+
 
  // Desktop View
 
