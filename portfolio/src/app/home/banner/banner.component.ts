@@ -1,5 +1,5 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
-
+import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -12,6 +12,10 @@ export class BannerComponent implements OnInit {
   interval: any;
   WIDE_SCREEEN_SIZE: number = 1500;
 
+  facebook =  faFacebookF;
+  instagram = faInstagram;
+  twitter = faTwitter;
+  linkedin = faLinkedinIn;
   ngOnInit(): void {
 
     this.resetAnimations();

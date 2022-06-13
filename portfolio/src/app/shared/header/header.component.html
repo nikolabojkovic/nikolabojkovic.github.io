@@ -10,8 +10,8 @@
          <p class="header-logo"><span class="red-color-logo-text">NBO</span> Development</p>
      </div>
      <div class = "toggle-button" (click) = "toggleMobileMenu()">
-         <fa-icon class = "toggler-icon-start" [icon]="['fas', 'bars']"></fa-icon> 
-         <fa-icon class = "toggler-icon-end" [icon]="['fas', 'bars']"></fa-icon> 
+         <fa-icon class = "toggler-icon-start" [icon]="bar"></fa-icon> 
+         <fa-icon class = "toggler-icon-end" [icon]="bar"></fa-icon> 
      </div>
        <div class="menu">
          <ul>
@@ -40,10 +40,10 @@
            <li><a #refEl6 class="links default-menu-item menu-links" (click)="activatelink(refEl6); homePageDeactivated();" href="javascript:void(0)" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
            <li><a #refEl7 class="links default-menu-item menu-links" (click)="activatelink(refEl7)" href="javascript:void(0)">GITHUB</a></li>
            <li class="dropdown">
-             <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links" ><fa-icon class="themes-icon-primary" [icon]="['fas', 'gear']"></fa-icon></a>
+             <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links" ><fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon></a>
                <div class="dropdown-content">
-                 <a href="#"><div class="settings-item theme-text">LIGHT<fa-icon class="theme-colors themes-icons-secondary" [icon]="['far', 'sun']"></fa-icon></div></a>
-                 <a href="#"><div class="settings-item theme-text">DARK<fa-icon class="theme-colors themes-icons-secondary"  [icon]="['far', 'moon']"></fa-icon></div></a>
+                 <a href="#"><div class="settings-item theme-text">LIGHT<fa-icon class="theme-colors themes-icons-secondary" [icon]="sun"></fa-icon></div></a>
+                 <a href="#"><div class="settings-item theme-text">DARK<fa-icon class="theme-colors themes-icons-secondary"  [icon]="moon"></fa-icon></div></a>
                </div>
            </li>
          </ul>
@@ -61,7 +61,7 @@
              <div>
                  <p class="header-logo-mobile"><span class="red-color-logo-text">NBO</span> Development</p>
              </div>
-             <fa-icon (click) = "hideMobileMenu();" class = "btn-close-mobile" [icon]="['fas', 'xmark']"></fa-icon> 
+             <fa-icon (click) = "hideMobileMenu();" class = "btn-close-mobile" [icon]="closeBtn"></fa-icon> 
          </div>
          <div class = "menu-items-mobile">
              <ul>
@@ -96,8 +96,8 @@
                <li><a #mobileItemRef8 class = "menu-items-mobile-default mobile-headers" (click) = "activatelinkMobile(mobileItemRef8); displayThemes()" href="javascript:void(0)">THEMES</a>
                 <div  id = themesMenu class = "dropdown-menu-mobile">
                   <ul class = "themes-ul">
-                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onLightThemeClick(); hideMobileMenu(); resetLinks();" ><div class = 'item-light-container'><p>LIGHT</p> <span><fa-icon class = "themes-icons" [icon]="['far', 'sun']"></fa-icon> </span></div></a></li>
-                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onDarkThemeClick(); hideMobileMenu(); resetLinks();"><div class = 'item-light-container'><p>DARK</p> <span><fa-icon  class = "themes-icons"  [icon]="['far', 'moon']"></fa-icon> </span></div></a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onLightThemeClick(); hideMobileMenu(); resetLinks();" ><div class = 'item-light-container'><p>LIGHT</p> <span><fa-icon class = "themes-icons" [icon]="sun"></fa-icon> </span></div></a></li>
+                      <li><a class = "menu-dropdown-item-mobile-default" (click) = "onDarkThemeClick(); hideMobileMenu(); resetLinks();"><div class = 'item-light-container'><p>DARK</p> <span><fa-icon  class = "themes-icons"  [icon]="moon"></fa-icon> </span></div></a></li>
                   </ul>
                 </div>
                </li>
