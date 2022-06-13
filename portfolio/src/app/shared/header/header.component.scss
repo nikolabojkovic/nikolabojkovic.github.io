@@ -1,14 +1,4 @@
 @import "../../../styles.scss";
-
-@font-face {
-   font-family: 'Inter';
-   src: local('Inter'), url(../../../assets/fonts/inter/Inter-ExtraBold.ttf) format('truetype');
-}
-  
-@font-face {
-  font-family: 'Inter-links';
-  src: local('Inter'), url(../../../assets/fonts/inter/Inter-Medium.ttf) format('truetype');
-}
   
 ul {
   list-style-type: none;
