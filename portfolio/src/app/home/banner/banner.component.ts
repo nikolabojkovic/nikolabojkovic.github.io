@@ -10,7 +10,7 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   interval: any;
-
+  WIDE_SCREEEN_SIZE: number = 1500;
 
   ngOnInit(): void {
 
@@ -27,7 +27,7 @@ export class BannerComponent implements OnInit {
   isItBigScreen(): boolean {
     let rootElement = document.querySelector(':root') as HTMLElement;
     let shadow = document.getElementById("shadowText") as HTMLElement;
-    if(window.innerWidth < 1500) {
+    if(window.innerWidth < this.WIDE_SCREEEN_SIZE) {
       rootElement.style.setProperty("--text-shadow-length" , "0%");
       shadow.style.borderLeft = "0px solid transparent";
       return false;
