@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../services/settings.service';
+import { faSun, faMoon} from '@fortawesome/free-regular-svg-icons';
+import { faXmark, faBars, faGear} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
 
   togglerActivated = false;
@@ -15,7 +18,12 @@ export class HeaderComponent implements OnInit {
   menuThemes = false;
   homePageActive = true;
 
-  
+  sun = faSun;
+  moon = faMoon;
+  bar = faBars;
+  gear = faGear
+  closeBtn = faXmark;
+
   constructor(private settingsService: SettingsService) { }
 
   ngOnInit(): void { }
