@@ -1,10 +1,12 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
+
 export class BannerComponent implements OnInit {
 
   constructor() { }
@@ -16,6 +18,7 @@ export class BannerComponent implements OnInit {
   instagram = faInstagram;
   twitter = faTwitter;
   linkedin = faLinkedinIn;
+
   ngOnInit(): void {
 
     this.resetAnimations();
