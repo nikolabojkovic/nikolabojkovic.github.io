@@ -1,4 +1,5 @@
 @import "../../../styles.scss";
+@import "../../home/banner/banner.component.scss";
 
 @font-face {
    font-family: 'Inter';
@@ -171,15 +172,17 @@ li.dropdown {
 
 .mobile-header-logo-holder {
   width: 100%;
+  height: auto;
   padding:20px 37px;
   display: flex;
   flex-direction: column;
   z-index: 4;
+  margin-bottom: 20px;
 }
 
 .menu-items-mobile {
   width: 100%;
-  height: 400px;
+  height: auto;
   margin-top: 40px;
 }
 
@@ -218,7 +221,7 @@ li.dropdown {
 
 .dropdown-menu-mobile {
   width: 100%;
-  height: 190px;
+  height: 60px;
   position: relative;
   display: block;
   margin-top: 5px;
@@ -290,6 +293,7 @@ li.dropdown {
 .themes-icons {
   font-size:17px;
   margin-bottom: 10px;
+  color:var(--text-ternary-color);
 }
 
 .themes-icons-secondary {
@@ -299,7 +303,7 @@ li.dropdown {
 }
 
 .theme-colors {
-  color: var (--text-primary-color)
+  color: var (--text-primary-color)č
 }
 
 .settings-item {
@@ -324,6 +328,7 @@ li.dropdown {
 .menu-links, .btn-close-class, .mobile-headers  {
   //Used
 }
+
 
 
  // Desktop View
