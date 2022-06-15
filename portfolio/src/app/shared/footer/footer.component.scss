@@ -1,0 +1,37 @@
+@import "../../../styles.scss";
+
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 268px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-paragraph-primary {
+    font-size: 16px;
+    font-family: "Inter";
+    margin-bottom: 0px;
+    color: var(--text-primary-color)
+}
+
+.footer-paragraph-ternary {
+    font-size: 12px;
+    font-family: "Inter-links";
+    margin-top: 5px;
+    color: var(--text-ternary-color)
+}
+
+.footer-text-secondary {
+    color: var(--text-secondary-color)
+}
