@@ -186,7 +186,6 @@
 
 @media only screen and (max-width:1374px) {
     .banner-container {
-        padding-left:100px;
     }
 
     .banner-container__photo-container {
@@ -197,7 +196,6 @@
 
 @media only screen and (min-width:830px) and (max-width:1034px) {
     .banner-container {
-        padding-left: 30px;
         height: 550px;
     }
 
@@ -223,8 +221,8 @@
 
 @media only screen and (min-width:768px) and (max-width: 829px) {
     .banner-container {
-        padding-left: 20px;
         height: 536px;
+        padding-left: 30px;
     }
 
     .banner-container__photo-container {
@@ -306,6 +304,7 @@
     .media-container__text {
        margin: auto;
     }
+    
     .media-container__text-mobile {
         margin-left:0;
     }

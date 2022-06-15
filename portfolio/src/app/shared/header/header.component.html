@@ -41,9 +41,9 @@
            <li><a #refEl7 class="links default-menu-item menu-links" (click)="activatelink(refEl7)" href="javascript:void(0)">GITHUB</a></li>
            <li class="dropdown">
              <a #refEl8 (click)="activatelink(refEl8)" href="javascript:void(0)" class="dropdown-button default-menu-item menu-links" ><fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon></a>
-               <div class="dropdown-content">
-                 <a href="#"><div class="settings-item theme-text">LIGHT<fa-icon class="theme-colors themes-icons-secondary" [icon]="sun"></fa-icon></div></a>
-                 <a href="#"><div class="settings-item theme-text">DARK<fa-icon class="theme-colors themes-icons-secondary"  [icon]="moon"></fa-icon></div></a>
+               <div class="dropdown-content-theme">
+                 <a (click) = "onLightThemeClick(); hideMobileMenu(); resetLinks();"  href="#"><div class="settings-item theme-text">LIGHT<fa-icon class="theme-colors themes-icons-secondary" [icon]="sun"></fa-icon></div></a>
+                 <a (click) = "onDarkThemeClick(); hideMobileMenu(); resetLinks();" href="#"><div class="settings-item theme-text">DARK<fa-icon class="theme-colors themes-icons-secondary"  [icon]="moon"></fa-icon></div></a>
                </div>
            </li>
          </ul>
