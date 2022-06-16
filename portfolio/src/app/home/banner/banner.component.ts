@@ -20,11 +20,9 @@ export class BannerComponent implements OnInit {
   linkedin = faLinkedinIn;
 
   ngOnInit(): void {
-
     this.resetAnimations();
     this.changeBannerText();
     this.isItBigScreen();
-
   }
 
   ngOnDestroy(): void {
@@ -82,5 +80,4 @@ export class BannerComponent implements OnInit {
       r.style.setProperty("--text-shadow-length", "22%");
       console.log('clear');
   }
-
 }
