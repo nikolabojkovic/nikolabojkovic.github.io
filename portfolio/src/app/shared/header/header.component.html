@@ -1,19 +1,28 @@
 
 
 <div 
-  id = 'menuShadow' 
-  class = 'menu-mobile-shadow' 
-  (click) = "hideMobileMenu()"
+  id='menuShadow' 
+  class='menu-mobile-shadow' 
+  (click)="hideMobileMenu()"
   >
 </div>
-<div class = "header-container-holder">
+<div class="header-container-holder">
   <div class="header-container">
     <div class="header-logo">
       <span class="red-color-logo-text">NBO</span> Development
     </div>
-    <div class = "toggle-button" (click) = "toggleMobileMenu()">
-        <fa-icon class = "toggler-icon-start" [icon]="bar"></fa-icon> 
-        <fa-icon class = "toggler-icon-end" [icon]="bar"></fa-icon> 
+    <div 
+      class="toggle-button"
+      (click)="toggleMobileMenu()"
+      >
+        <fa-icon 
+          class="toggler-icon-start"
+          [icon]="bar">
+        </fa-icon> 
+        <fa-icon 
+          class="toggler-icon-end"
+          [icon]="bar">
+        </fa-icon> 
     </div>
     <div class="menu">
       <ul>
@@ -54,11 +63,11 @@
                 RESUME
             </a>
             <div class="dropdown-content">
-              <a class= "dropdown-links">UNIVERSITY</a>
-              <a class= "dropdown-links">INFOSCREN/MIGROGEN</a>  
-              <a class= "dropdown-links">NULTIEN</a> 
-              <a class= "dropdown-links">INTELISALE</a> 
-              <a class= "dropdown-links">ORION INOVATION</a>  
+              <a class="dropdown-links">UNIVERSITY</a>
+              <a class="dropdown-links">INFOSCREN/MIGROGEN</a>  
+              <a class="dropdown-links">NULTIEN</a> 
+              <a class="dropdown-links">INTELISALE</a> 
+              <a class="dropdown-links">ORION INOVATION</a>  
             </div>   
           </li>   
           <li>
@@ -100,12 +109,12 @@
                 GITHUB
             </a>
           </li>
-            <li class="dropdown">
+          <li class="dropdown">
             <a 
             #refEl8 
             (click)="activatelink(refEl8)"
             class="dropdown-button default-menu-item menu-links"
-              >
+            >
               <fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon>
             </a>
             <div class="dropdown-content-theme">
@@ -116,6 +125,7 @@
                     class="theme-colors themes-icons-secondary" 
                     [icon]="sun"
                     >
+                    asdasd
                   </fa-icon>
                 </div>
               </a>
@@ -148,7 +158,7 @@
             </div>
             <fa-icon (click)="hideMobileMenu();" class="btn-close-mobile" [icon]="closeBtn"></fa-icon> 
         </div>
-        <div class = "menu-items-mobile">
+        <div class="menu-items-mobile">
             <ul>
               <li>
                 <a 
@@ -207,23 +217,79 @@
                   PORTFOLIO
                 </a>
               </li>
-              <li><a #mobileItemRef5 class="menu-items-mobile-default mobile-headers" (click)="activatelinkMobile(mobileItemRef5)">CLIENTS</a></li>
-              <li><a #mobileItemRef6 class="menu-items-mobile-default mobile-headers" (click)="activatelinkMobile(mobileItemRef6); hideMobileMenu();" [routerLink]="['/contact']" routerLinkActive="active">CONTACT</a></li>
-              <li><a #mobileItemRef7 class="menu-items-mobile-default mobile-headers" (click)="activatelinkMobile(mobileItemRef7)" href="https://github.com/nikolabojkovic" target="_blank">GITHUB</a></li>
-              <li><a #mobileItemRef8 class="menu-items-mobile-default mobile-headers" (click)="activatelinkMobile(mobileItemRef8); displayThemes()">THEMES</a>
-              <div  id=themesMenu class="dropdown-menu-mobile">
+              <li>
+                <a 
+                  #mobileItemRef5
+                  class="menu-items-mobile-default mobile-headers"
+                  (click)="activatelinkMobile(mobileItemRef5)"
+                  >
+                  CLIENTS
+                </a>
+              </li>
+              <li>
+                <a 
+                  #mobileItemRef6
+                  class="menu-items-mobile-default mobile-headers"
+                  (click)="activatelinkMobile(mobileItemRef6); hideMobileMenu();"
+                  [routerLink]="['/contact']"
+                  routerLinkActive="active"
+                  >
+                  CONTACT
+                </a>
+              </li>
+              <li>
+                <a
+                  #mobileItemRef7
+                  class="menu-items-mobile-default mobile-headers"
+                  (click)="activatelinkMobile(mobileItemRef7)"
+                  href="https://github.com/nikolabojkovic"
+                  target="_blank"
+                  >
+                  GITHUB
+                </a>
+              </li>
+              <li>
+                <a
+                  #mobileItemRef8
+                  class="menu-items-mobile-default mobile-headers"
+                  (click)="activatelinkMobile(mobileItemRef8); displayThemes()"
+                  >
+                  THEMES
+                </a>
+              <div  
+                id=themesMenu
+                class="dropdown-menu-mobile">
                 <ul class="themes-ul">
                     <li>
-                      <a class="menu-dropdown-item-mobile-default" (click) = "onLightThemeClick(); hideMobileMenu(); resetLinks();">
+                      <a 
+                        class="menu-dropdown-item-mobile-default"
+                        (click)="onLightThemeClick(); hideMobileMenu(); resetLinks();">
                         <div class='item-light-container'>
-                          <p>LIGHT</p> <span><fa-icon class = "themes-icons" [icon]="sun"></fa-icon> </span>
+                          <p>LIGHT</p>
+                          <span>
+                            <fa-icon
+                              class="themes-icons"
+                              [icon]="sun"
+                            >
+                            </fa-icon>
+                          </span>
                         </div>
                       </a>
                     </li>
                     <li>
-                      <a class = "menu-dropdown-item-mobile-default" (click) = "onDarkThemeClick(); hideMobileMenu(); resetLinks();">
-                        <div class = 'item-light-container'>
-                          <p>DARK</p> <span><fa-icon  class = "themes-icons"  [icon]="moon"></fa-icon> </span>
+                      <a 
+                        class="menu-dropdown-item-mobile-default"
+                        (click)="onDarkThemeClick(); hideMobileMenu(); resetLinks();"
+                        >
+                        <div class='item-light-container'>
+                          <p>DARK</p>
+                          <span>
+                            <fa-icon
+                              class="themes-icons"
+                              [icon]="moon"
+                            >
+                            </fa-icon>
+                          </span>
                         </div>
                       </a>
                     </li>
@@ -233,31 +299,44 @@
             </ul>
         </div>
   </div>
-  <div class = 'media-container-mobile-holder'>
-      <div class = "media-container-mobile">
-        <p class = "media-container__text-mobile">FIND ME ON</p>
-        <div class = "links-container">
+  <div class='media-container-mobile-holder'>
+      <div class="media-container-mobile">
+        <p class="media-container__text-mobile">FIND ME ON</p>
+        <div class="links-container">
             <a>
-                <div class = "link-container">
-                    <fa-icon class = "icons-links" [icon] = "facebook"></fa-icon>
+                <div class="link-container">
+                    <fa-icon 
+                      class="icons-links"
+                      [icon]="facebook">
+                    </fa-icon>
                 </div>
             </a>
             <a>
-            <div class = "link-container">
-                <fa-icon class = "icons-links" [icon] = "instagram"></fa-icon>
-            </div>
+              <div class="link-container">
+                  <fa-icon class="icons-links"
+                    [icon]="instagram">
+                  </fa-icon>
+              </div>
             </a>
             <a>
-            <div class = "link-container">
-                <fa-icon class = "icons-links" [icon] = "twitter"></fa-icon>
-            </div>
+              <div class="link-container">
+                  <fa-icon
+                    class="icons-links"
+                    [icon]="twitter"
+                  >
+                  </fa-icon>
+              </div>
             </a>
             <a>
-            <div class = "link-container">
-                <fa-icon class = "icons-links" [icon] = "linkedin"></fa-icon>
-            </div>
+              <div class="link-container">
+                  <fa-icon
+                    class="icons-links"
+                    [icon]="linkedin"
+                  >
+                  </fa-icon>
+              </div>
             </a>
-        </div>
+          </div>
         </div>
   </div>
 </div>
