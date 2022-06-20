@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HeaderComponent } from './shared/header/header.component';
+import { StandardHeaderComponent } from './shared/header/standard-header/standard-header.component';
 import { HomePageComponent } from './home/home.page.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { HomeService } from './home/home.service';
@@ -24,6 +24,7 @@ import { FeaturesSectionComponent } from './home/features-section/features-secti
 import { ResumeSectionComponent } from './home/resume-section/resume-section.component';
 import { PortfolioSectionComponent } from './home/portfolio-section/portfolio-section.component';
 import { ClientsSectionComponent } from './home/clients-section/clients-section.component';
+import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,7 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+    StandardHeaderComponent,
     HomePageComponent,
     BannerComponent,
     ContactPageComponent,
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FeaturesSectionComponent,
     ResumeSectionComponent,
     PortfolioSectionComponent,
-    ClientsSectionComponent
+    ClientsSectionComponent,
+    MobileHeaderComponent
   ],
   imports: [
     BrowserModule,

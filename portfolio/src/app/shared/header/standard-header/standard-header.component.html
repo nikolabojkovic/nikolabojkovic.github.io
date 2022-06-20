@@ -1,0 +1,152 @@
+
+
+<div 
+  id='menuShadow' 
+  class='menu-mobile-shadow' 
+  (click)="hideMobileMenu()"
+  >
+</div>
+<div class="header-container-holder">
+  <div class="header-container">
+    <div class="header-logo">
+      <span class="red-color-logo-text">NBO</span> Development
+    </div>
+    <div 
+      class="toggle-button"
+      (click)="toggleMobileMenu()"
+      >
+        <fa-icon 
+          class="toggler-icon-start"
+          [icon]="bar">
+        </fa-icon> 
+        <fa-icon 
+          class="toggler-icon-end"
+          [icon]="bar">
+        </fa-icon> 
+    </div>
+    <div class="menu">
+      <ul>
+          <li>
+            <a 
+              #refEl 
+              (click)="activatelink(refEl); homePageActivated();" 
+              class="links default-menu-item menu-links" 
+              [routerLink]="['/home']" 
+              routerLinkActive="active"
+              >
+                HOME
+            </a>
+          </li>
+          <li class="dropdown">
+            <a 
+              #refEl2 
+              (click)="activatelink(refEl2)" 
+              class="dropdown-button default-menu-item menu-links"
+              >
+                FEATURES
+            </a>
+              <div class="dropdown-content">
+                <a class= "dropdown-links">DEVELOPMENT STRATEGY</a>
+                <a class= "dropdown-links">SOFTWARE ARHITECTURE</a>
+                <a class= "dropdown-links">PROJECT IMPLEMENTATION</a>
+                <a class= "dropdown-links">MENTORING</a>
+                <a class= "dropdown-links">LEADERSHIP</a>
+                <a class= "dropdown-links">CONSULTING</a>
+              </div>
+          </li>
+          <li class="dropdown">
+            <a 
+              #refEl3 
+              (click)="activatelink(refEl3)" 
+              class="dropdown-button default-menu-item menu-links"
+              >
+                RESUME
+            </a>
+            <div class="dropdown-content">
+              <a class="dropdown-links">UNIVERSITY</a>
+              <a class="dropdown-links">INFOSCREN/MIGROGEN</a>  
+              <a class="dropdown-links">NULTIEN</a> 
+              <a class="dropdown-links">INTELISALE</a> 
+              <a class="dropdown-links">ORION INOVATION</a>  
+            </div>   
+          </li>   
+          <li>
+            <a 
+              #refEl4 
+              class="links default-menu-item menu-links" 
+              (click)="activatelink(refEl4)"
+              >
+                PORTFOLIO
+            </a>
+          </li>
+          <li>
+            <a 
+              #refEl5 
+              class="links default-menu-item menu-links" 
+              (click)="activatelink(refEl5)"
+              >
+                CLIENTS
+            </a>
+          </li>
+          <li>
+              <a 
+                #refEl6 
+                class="links default-menu-item menu-links" 
+                (click)="activatelink(refEl6); homePageDeactivated();" 
+                [routerLink]="['/contact']" 
+                routerLinkActive="active"
+                >
+                  CONTACT
+              </a>
+            </li>
+          <li>
+            <a 
+              #refEl7 
+              class="links default-menu-item menu-links"
+              (click)="activatelink(refEl7)"
+              href="https://github.com/nikolabojkovic" target="_blank"
+              >
+                GITHUB
+            </a>
+          </li>
+          <li class="dropdown">
+            <a 
+            #refEl8 
+            (click)="activatelink(refEl8)"
+            class="dropdown-button default-menu-item menu-links"
+            >
+              <fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon>
+            </a>
+            <div class="dropdown-content-theme">
+              <a (click)="onLightThemeClick();">
+                <div class="settings-item theme-text">
+                  LIGHT
+                  <fa-icon 
+                    class="theme-colors themes-icons-secondary" 
+                    [icon]="sun"
+                    >
+                    asdasd
+                  </fa-icon>
+                </div>
+              </a>
+              <a (click)="onDarkThemeClick();">
+                <div class="settings-item theme-text">
+                  DARK
+                  <fa-icon 
+                    class="theme-colors themes-icons-secondary" 
+                    [icon]="moon"
+                    >
+                  </fa-icon>
+                </div>
+              </a>
+            </div>
+          </li>
+      </ul>
+    </div> 
+  </div>
+</div>
+
+<app-mobile-header></app-mobile-header>
+
+  
+  

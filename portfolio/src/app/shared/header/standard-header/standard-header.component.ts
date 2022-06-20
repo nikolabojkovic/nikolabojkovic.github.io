@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { SettingsService } from '../services/settings.service';
+import { SettingsService } from '../../services/settings.service';
 import { faXmark, faBars, faGear, faSun, faMoon} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  templateUrl: './standard-header.component.html',
+  styleUrls: ['./standard-header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
+export class StandardHeaderComponent implements OnInit {
 
-  togglerActivated = false;
   featuresMenu = false;
   menuResume = false;
-  menuShadow = false;
-  menuThemes = false;
-  homePageActive = true;
 
   facebook =  faFacebookF;
   instagram = faInstagram;
@@ -62,22 +58,22 @@ export class HeaderComponent implements OnInit {
   toggleMobileMenu(): void {
     let menu = document.getElementById("menuMobile") as HTMLElement;
     let menuShadow = document.getElementById("menuShadow") as HTMLElement;
-    if(this.togglerActivated == false) {
+    if(this.settingsService.togglerActivated == false) {
       menu.style.left = "0px";
       menu.style.transitionDuration = "600ms";
-      this.togglerActivated = true;
+      this.settingsService.togglerActivated  = true;
     } else {
       menu.style.left = "-414px";
       menu.style.transitionDuration = "600ms";
-      this.togglerActivated = false;
+      this.settingsService.togglerActivated = false;
     }
     this.closeRestOfMenus();
-    if(this.menuShadow == false) {
+    if(this.settingsService.menuShadow == false) {
       menuShadow.style.display = "block";
-      this.menuShadow = true;
+      this.settingsService.menuShadow = true;
     } else {
       menuShadow.style.display = "none";
-      this.menuShadow = false;
+      this.settingsService.menuShadow = false;
     }
     this.resetLinks();
   }
@@ -85,22 +81,22 @@ export class HeaderComponent implements OnInit {
   hideMobileMenu(): void {
     let menu = document.getElementById("menuMobile") as HTMLElement;
     let menuShadow = document.getElementById("menuShadow") as HTMLElement;
-    if(this.togglerActivated == false) {
+    if(this.settingsService.togglerActivated == false) {
       menu.style.left = "0px";
       menu.style.transitionDuration = "600ms";
-      this.togglerActivated = true;
+      this.settingsService.togglerActivated  = true;
     } else {
       menu.style.left = "-100%";
       menu.style.transitionDuration = "600ms";
-      this.togglerActivated = false;
+      this.settingsService.togglerActivated  = false;
     }
     this.closeRestOfMenus();
-    if(this.menuShadow == false) {
+    if(this.settingsService.menuShadow== false) {
       menuShadow.style.display = "block";
-      this.menuShadow = true;
+      this.settingsService.menuShadow = true;
     } else {
       menuShadow.style.display = "none";
-      this.menuShadow = false;
+      this.settingsService.menuShadow= false;
     }
     this.resetLinks();
   }
@@ -179,21 +175,22 @@ export class HeaderComponent implements OnInit {
   closeThemes(): void {
     let menu = document.getElementById("themesMenu") as HTMLElement;
     menu.style.display = 'none';
-    this.menuThemes = false;
+    this.settingsService.menuThemes = false;
   }
+
   displayThemes(): void {
     let menu = document.getElementById("themesMenu") as HTMLElement;
-    if(this.menuThemes == true) {
+    if(this.settingsService.menuThemes == true) {
 
     } else {
       this.closeRestOfMenus();
     }
-    if(this.menuThemes == false) {
+    if(this.settingsService.menuThemes == false) {
       menu.style.display = "block";
-      this.menuThemes = true;
+      this.settingsService.menuThemes = true;
     } else {
       menu.style.display = "none";
-      this.menuThemes = false;
+      this.settingsService.menuThemes = false;
     }
   }
 }

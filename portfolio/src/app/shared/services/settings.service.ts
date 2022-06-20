@@ -10,6 +10,10 @@ export class SettingsService {
     settings: Settings;
     homeShadow: any;
     homeShadowID: any;
+    menuThemes = false;
+    togglerActivated = false;
+    menuShadow = false;
+    homePageActive = true;
 
     constructor(private translate: TranslateService) {
         translate.setDefaultLang('en-US');
