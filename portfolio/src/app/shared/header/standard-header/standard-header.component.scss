@@ -119,6 +119,7 @@ li.dropdown {
   margin-bottom: 0px;
 }
 
+  /*moje*/
 .header-logo-mobile {
   font-size: 28px;
   font-family: "Inter";
@@ -126,6 +127,8 @@ li.dropdown {
   padding-left: 50px;
   color: var(--text-primary-color);
 }
+
+  /*moje*/
   
 .header-container {
   display: flex;
@@ -149,7 +152,7 @@ li.dropdown {
 .default-menu-item {
   color: var(--text-ternary-color);
 }
-    
+  /*moje*/    
 .header-container-holder {
   position: relative;
   padding-top:20px;
@@ -345,7 +348,9 @@ li.dropdown {
   bottom: 3px;
 }
 
-.menu-links, .btn-close-class, .mobile-headers  {
+.menu-links,
+.btn-close-class,
+.mobile-headers {
   cursor: pointer;
 }
 
