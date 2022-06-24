@@ -21,6 +21,9 @@ export class SettingsService {
     }
     
     homePageActivated(): void {
+        if(this.homeShadowID == undefined) {
+            return;
+        }
         this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     }
 

@@ -90,6 +90,5 @@ export class MobileHeaderComponent implements OnInit {
   displayThemes(): void {
     this.headerService.displayThemesOn();
   }
-  
 }
 

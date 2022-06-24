@@ -15,7 +15,7 @@ export class AppComponent {
   }
 
   constructor(private settingsService: SettingsService) {
-      
+    this.settingsService.loadSettings();
   }
 
   sendHomeShadow(): HTMLElement {
