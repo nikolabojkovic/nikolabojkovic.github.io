@@ -77,7 +77,7 @@ export class HeaderService {
         menu.style.display = 'none';
         this.settingsService.menuThemes = false;
     }
-    
+     
     displayFeaturesOn(): void {
         let menu = document.getElementById("featuresMenu") as HTMLElement;
         if(this.featuresMenu == true) {

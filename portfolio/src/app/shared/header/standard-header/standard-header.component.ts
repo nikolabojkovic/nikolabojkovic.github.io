@@ -45,7 +45,6 @@ export class StandardHeaderComponent implements OnInit {
     this.settingsService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
   }
 
-
   activatelink(linkitem: HTMLElement) {
     this.headerService.activateLink(linkitem);
   }

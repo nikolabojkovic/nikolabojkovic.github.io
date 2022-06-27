@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { SettingsService } from "../shared/services/settings.service";
+import { SettingsService } from "../../../shared/services/settings.service";
 import { HomeService } from "./home.service";
 
 @Component({
@@ -11,7 +11,7 @@ export class HomePageComponent {
 
     constructor(private settingsService: SettingsService, 
                 private homeService: HomeService) {
-        this.settingsService.loadSettings();
+                  
       }
       
       ngOnInit(): void { }
