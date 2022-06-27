@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: ContactPageComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ContactModuleRoutingModule { }
+export class ContactRoutingModule { }

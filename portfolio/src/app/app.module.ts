@@ -14,8 +14,6 @@ import { HomePageComponent } from './modules/home/home-page/home.page.component'
 import { HomeService } from './modules/home/home-page/home.service';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 import { SettingsService } from './shared/services/settings.service';
-import { FeatureComponent } from './feature/feature.page.component';
-import { ResumeComponent } from './resume/resume.page.component';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
 
 
@@ -29,8 +27,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     StandardHeaderComponent,
     PageNotFoundComponent,
-    FeatureComponent,
-    ResumeComponent,
     MobileHeaderComponent
   ],
   imports: [

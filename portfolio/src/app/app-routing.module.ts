@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full',redirectTo: 'home' },
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
   { path: 'page404',component: PageNotFoundComponent },
-  { path: 'contact', loadChildren: () => import('./modules/contact/contact-module.module').then(m => m.ContactModule) },
+  { path: 'contact', loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule) },
   { path: '**',redirectTo: 'page404' }
 ];
 
