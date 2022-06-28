@@ -3,6 +3,7 @@ import { SettingsService } from '../../services/settings.service';
 import { faXmark, faBars, faGear, faSun, faMoon} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { HeaderService } from '../../services/header.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './standard-header.component.html',
@@ -27,14 +28,78 @@ export class StandardHeaderComponent implements OnInit {
 
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.checkTheme();
+    this.homePageActivated();
+    this.checkActiveMenuItem();
+  }
+
+  checkActiveMenuItem(): void {
+    let activeMenuItem = this.headerService.loadActiveMenuItem();
+    var value;
+    switch(activeMenuItem) {
+      case "1":
+        value = document.getElementById("HomeID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+      case "2":
+        value = document.getElementById("FeaturesID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+      case "3":
+        value = document.getElementById("ResumeID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+      case "4":
+        value = document.getElementById("PortfolioID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+      case "5":
+        value = document.getElementById("ClientsID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+      case "6":
+        value = document.getElementById("ContactID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+      case "7":
+        value = document.getElementById("GithubID") as HTMLElement;
+        this.setActiveMenuItem(value);
+        break;
+    }
+  }
+
+  setActiveMenuItem(value: HTMLElement): void {
+    value.classList.remove('default-menu-item')
+    value.classList.add('active-menu-item');
+  }
+
+  checkTheme(): void {
+    if(this.settingsService.settings.theme == "Dark") {
+      this.onDarkThemeClick();
+    } else {
+      this.onLightThemeClick();
+    }
+  }
 
   onDarkThemeClick(): void {
+    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
+    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
     this.settingsService.setDarkTheme();
+
+    darkButton?.classList.remove("default");
+    darkButton?.classList.add("active");
+    lightButton?.classList.remove("active");
   }
 
   onLightThemeClick(): void {
+    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
+    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
     this.settingsService.setLightTheme();
+
+    lightButton?.classList.remove("default");
+    lightButton?.classList.add("active");
+    darkButton?.classList.remove("active");
   }
 
   homePageActivated(): void {

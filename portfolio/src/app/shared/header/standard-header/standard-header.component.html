@@ -26,22 +26,24 @@
       <ul>
           <li>
             <a 
-              #refEl 
+              #refEl
+              id="HomeID" 
               (click)="activatelink(refEl); homePageActivated();" 
               class="links default-menu-item menu-links" 
               [routerLink]="['/home']" 
               routerLinkActive="active"
               >
-                HOME
+                {{ 'HOME' | translate }}
             </a>
           </li>
           <li class="dropdown">
             <a 
               #refEl2 
+              id="FeaturesID"
               (click)="activatelink(refEl2)" 
               class="dropdown-button default-menu-item menu-links"
               >
-                FEATURES
+                {{ 'FEATURES' | translate }}
             </a>
               <div class="dropdown-content">
                 <a class= "dropdown-links">DEVELOPMENT STRATEGY</a>
@@ -54,11 +56,12 @@
           </li>
           <li class="dropdown">
             <a 
-              #refEl3 
+              #refEl3
+              id="ResumeID"
               (click)="activatelink(refEl3)" 
               class="dropdown-button default-menu-item menu-links"
               >
-                RESUME
+                {{ 'RESUME' | translate }}
             </a>
             <div class="dropdown-content">
               <a class="dropdown-links">UNIVERSITY</a>
@@ -71,6 +74,7 @@
           <li>
             <a 
               #refEl4 
+              id="PortfolioID"
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl4)"
               >
@@ -80,6 +84,7 @@
           <li>
             <a 
               #refEl5 
+              id="ClientsID"
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl5)"
               >
@@ -89,6 +94,7 @@
           <li>
               <a 
                 #refEl6 
+                id="ContactID"
                 class="links default-menu-item menu-links" 
                 (click)="activatelink(refEl6); homePageDeactivated();" 
                 [routerLink]="['/contact']" 
@@ -100,6 +106,7 @@
           <li>
             <a 
               #refEl7 
+              id="GithubID"
               class="links default-menu-item menu-links"
               (click)="activatelink(refEl7)"
               href="https://github.com/nikolabojkovic" target="_blank"
@@ -116,7 +123,11 @@
               <fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon>
             </a>
             <div class="dropdown-content-theme">
-              <a (click)="onLightThemeClick();">
+              <a 
+                id="lightThemeID" 
+                (click)="onLightThemeClick();"
+                class="default"
+              >
                 <div class="settings-item theme-text">
                   LIGHT
                   <fa-icon 
@@ -127,7 +138,11 @@
                   </fa-icon>
                 </div>
               </a>
-              <a (click)="onDarkThemeClick();">
+              <a
+                id="darkThemeID" 
+                (click)="onDarkThemeClick();"
+                class="default"
+              >
                 <div class="settings-item theme-text">
                   DARK
                   <fa-icon 

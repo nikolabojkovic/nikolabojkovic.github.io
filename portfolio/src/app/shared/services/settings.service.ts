@@ -54,6 +54,8 @@ export class SettingsService {
         localStorage.setItem("settings", JSON.stringify(this.settings));
     }
 
+
+
     setLanguage(language: string): void {
         this.translate.use(language);
         this.settings.setLanguage(language);
