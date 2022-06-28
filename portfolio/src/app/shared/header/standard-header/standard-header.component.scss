@@ -25,12 +25,21 @@ li {
   font-family: "Inter-links";
   font-style: normal;
   font-weight: 500;
+  cursor: pointer;
 }
+
 .themes-icons-secondary {
   font-size:15px;
   position: absolute;
   right: 0px;
   margin-right: 5px;
+}
+
+.themes-icon-primary {
+  font-size: 15px;
+  color: var(--text-ternary-color);
+  position: relative;
+  bottom: 3px;
 }
   
 .dropdown-links{
@@ -84,14 +93,13 @@ li.dropdown {
 }
   
 .dropdown-content a{
-  color: var(--text-ternary-color);
   text-decoration: none;
   display: block;
   text-align: left;
   font-size: 12px;
 }
 
-.dropdown-content-theme a {
+.dropdown-content-theme a  {
   color: var(--text-ternary-color);
   padding: 14px 10px;
   text-decoration: none;
@@ -99,9 +107,24 @@ li.dropdown {
   text-align: left;
   font-size: 12px;
 }
+
+.dropdown-content-theme a.default{
+  background-color: var(--background-primary-color);
+}
+.dropdown-content-theme a.active{
+  background-color: var(--background-primary-color);
+  color:var(--text-secondary-color);
+}
+
   
 .dropdown-content a:hover,
 .dropdown-content-theme a:hover {
+  background-color: var(--background-secondary-color);
+  color: var(--text-secondary-color);
+}
+
+.dropdown-content a:hover,
+.dropdown-content-theme a:hover:not(.active) {
   background-color: var(--background-secondary-color);
   color: var(--text-primary-color);
 }
@@ -111,6 +134,9 @@ li.dropdown {
   display: block;
 }
   
+.dropdown-content a.selected {
+  color: var(--text-primary-color);
+}
 .header-logo {
   font-size: 36px;
   font-family: "Inter";
