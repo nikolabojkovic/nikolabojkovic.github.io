@@ -5,6 +5,7 @@ import { Settings } from '../models/settings.model';
 @Injectable({
     providedIn: 'root'
 })
+
 export class SettingsService {
 
     settings: Settings;
@@ -26,6 +27,7 @@ export class SettingsService {
         }
         this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     }
+    
 
     loadSettings(): void {
         let settingsAsString = localStorage.getItem("settings");

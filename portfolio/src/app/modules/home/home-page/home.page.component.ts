@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
 import { SettingsService } from "../../../shared/services/settings.service";
 import { HomeService } from "./home.service";
-
+import { OnInit } from "@angular/core";
+import { OnDestroy } from "@angular/core";
 @Component({
     selector: "app-home",
     templateUrl: "./home.page.component.html",
@@ -14,7 +15,9 @@ export class HomePageComponent {
                   
       }
       
-      ngOnInit(): void { }
+      ngOnInit(): void {
+   
+      }
     
       onEnglishLanguageClick(): void {
         this.settingsService.setLanguage('en-US');
@@ -30,5 +33,9 @@ export class HomePageComponent {
     
       onLightThemeClick(): void {
         this.settingsService.setLightTheme();
+      }
+
+      ngOnDestroy(): void {
+        console.log("OnDestroy executed");
       }
 }
