@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { ResumeRoutingModule } from './resume.routing.module';
-import { ResumeComponent } from './resume-item/resume.page.component';
+import { ResumeComponent } from './resume-page/resume.page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ResumeComponent } from './resume-item/resume.page.component';
   imports: [
     CommonModule,
     ResumeRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule
   ]
 })
 export class ResumeModule { }

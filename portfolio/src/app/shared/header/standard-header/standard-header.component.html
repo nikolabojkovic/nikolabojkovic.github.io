@@ -46,12 +46,12 @@
                 {{ 'FEATURES' | translate }}
             </a>
               <div class="dropdown-content">
-                <a class= "dropdown-links">DEVELOPMENT STRATEGY</a>
-                <a class= "dropdown-links">SOFTWARE ARHITECTURE</a>
-                <a class= "dropdown-links">PROJECT IMPLEMENTATION</a>
-                <a class= "dropdown-links">MENTORING</a>
-                <a class= "dropdown-links">LEADERSHIP</a>
-                <a class= "dropdown-links">CONSULTING</a>
+                <a class= "dropdown-links">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
+                <a class= "dropdown-links">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
+                <a class= "dropdown-links">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
+                <a class= "dropdown-links">{{ 'MENTORING' | translate }}</a>
+                <a class= "dropdown-links">{{ 'LEADERSHIP' | translate }}</a>
+                <a class= "dropdown-links">{{ 'CONSULTING' | translate }}</a>
               </div>
           </li>
           <li class="dropdown">
@@ -64,11 +64,11 @@
                 {{ 'RESUME' | translate }}
             </a>
             <div class="dropdown-content">
-              <a class="dropdown-links">UNIVERSITY</a>
-              <a class="dropdown-links">INFOSCREN/MIGROGEN</a>  
-              <a class="dropdown-links">NULTIEN</a> 
-              <a class="dropdown-links">INTELISALE</a> 
-              <a class="dropdown-links">ORION INOVATION</a>  
+              <a class="dropdown-links">{{ 'UNIVERSITY' | translate }}</a>
+              <a class="dropdown-links">{{ 'INFOSCREN/MIGROGEN' | translate }}</a>  
+              <a class="dropdown-links">{{ 'NULTIEN' | translate }}</a> 
+              <a class="dropdown-links">{{ 'INTELISALE' | translate }}</a> 
+              <a class="dropdown-links">{{ 'ORION INOVATION' | translate }}</a>  
             </div>   
           </li>   
           <li>
@@ -78,7 +78,7 @@
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl4)"
               >
-                PORTFOLIO
+                {{ 'PORTFOLIO' | translate }}
             </a>
           </li>
           <li>
@@ -88,7 +88,7 @@
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl5)"
               >
-                CLIENTS
+                {{ 'CLIENTS' | translate }}
             </a>
           </li>
           <li>
@@ -100,7 +100,7 @@
                 [routerLink]="['/contact']" 
                 routerLinkActive="active"
                 >
-                  CONTACT
+                 {{ 'CONTACT' | translate }}
               </a>
             </li>
           <li>
@@ -111,7 +111,7 @@
               (click)="activatelink(refEl7)"
               href="https://github.com/nikolabojkovic" target="_blank"
               >
-                GITHUB
+                {{ 'GITHUB' | translate }}
             </a>
           </li>
           <li class="dropdown">
@@ -129,7 +129,7 @@
                 class="default"
               >
                 <div class="settings-item theme-text">
-                  LIGHT
+                  {{ 'LIGHT' | translate }}
                   <fa-icon 
                     class="theme-colors themes-icons-secondary" 
                     [icon]="sun"
@@ -144,7 +144,7 @@
                 class="default"
               >
                 <div class="settings-item theme-text">
-                  DARK
+                  {{ 'DARK' | translate }}
                   <fa-icon 
                     class="theme-colors themes-icons-secondary" 
                     [icon]="moon"

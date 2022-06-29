@@ -9,6 +9,7 @@ import { ClientsSectionComponent } from './home-page/clients-section/clients-sec
 import { BannerComponent } from './home-page/banner/banner.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './home-page/home.page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomePageComponent } from './home-page/home.page.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule
   ]
 })
 export class HomeModule { }

@@ -13,7 +13,6 @@ export class BannerComponent implements OnInit {
 
   interval: any;
   WIDE_SCREEEN_SIZE: number = 1500;
-
   facebook =  faFacebookF;
   instagram = faInstagram; 
   twitter = faTwitter;
