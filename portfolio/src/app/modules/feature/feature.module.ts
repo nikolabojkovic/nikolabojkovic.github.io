@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { FeatureRoutingModule } from './feature.routing.module';
-import { FeatureComponent } from './feature-item/feature.page.component';
+import { FeatureComponent } from './feature-page/feature.page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { FeatureComponent } from './feature-item/feature.page.component';
   imports: [
     CommonModule,
     FeatureRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule
   ]
 })
 export class FeatureModule { }

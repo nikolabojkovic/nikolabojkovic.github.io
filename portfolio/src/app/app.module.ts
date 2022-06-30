@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -10,12 +9,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer.component';
 import { StandardHeaderComponent } from './shared/header/standard-header/standard-header.component';
-import { HomePageComponent } from './modules/home/home-page/home.page.component';
-import { HomeService } from './modules/home/home-page/home.service';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 import { SettingsService } from './shared/services/settings.service';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
-import { HeaderService } from './shared/services/header.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {

@@ -21,7 +21,7 @@
                     [routerLink]="['/home']" 
                     routerLinkActive="active"
                     >
-                      HOME
+                    {{ 'HOME' | translate }}
                   </a>
                 </li>
                 <li>
@@ -30,16 +30,16 @@
                     class="menu-items-mobile-default mobile-headers" 
                     (click)="activatelinkMobile(mobileItemRef2); displayFeatures();"
                     >
-                    FEATURES
+                    {{ 'FEATURES' | translate }}
                   </a>
                   <div id=featuresMenu class="dropdown-menu-mobile">
                     <ul>
-                      <li><a class="menu-dropdown-item-mobile-default">DEVELOPMENT STRATEGY</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">SOFTWARE ARCHITECTURE</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">PROJECT IMPLEMENTATION</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">MENTORING</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">LEADERSHIP</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">CONSULTING</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'DEVELOPMENT STRATEGY' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'SOFTWARE ARCHITECTURE' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'PROJECT IMPLEMENTATION' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'MENTORING' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'LEADERSHIP' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'CONSULTING' | translate }}</a></li>
                       </ul>
                   </div>
                 </li>
@@ -49,15 +49,15 @@
                     class="menu-items-mobile-default mobile-headers" 
                     (click)="activatelinkMobile(mobileItemRef3); displayResume();"
                     >
-                    RESUME
+                    {{ 'RESUME' | translate }}
                   </a>
                   <div id=resumeMenu class="dropdown-menu-mobile">
                     <ul>
-                      <li><a class="menu-dropdown-item-mobile-default">UNIVERSITY</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">INFOSCREN/MIGROGEN</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">NULTIEN</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">INTELISALE</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">ORION INOVATION</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'UNIVERSITY' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'INFOSCREN/MIGROGEN' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'NULTIEN' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'INTELISALE' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'ORION INOVATION' | translate }}</a></li>
                     </ul>
                   </div>
                 </li>
@@ -67,7 +67,7 @@
                     class="menu-items-mobile-default mobile-headers" 
                     (click)="activatelinkMobile(mobileItemRef4)"
                     >
-                    PORTFOLIO
+                    {{ 'PORTFOLIO' | translate }}
                   </a>
                 </li>
                 <li>
@@ -76,7 +76,7 @@
                     class="menu-items-mobile-default mobile-headers"
                     (click)="activatelinkMobile(mobileItemRef5)"
                     >
-                    CLIENTS
+                    {{ 'CLIENTS' | translate }}
                   </a>
                 </li>
                 <li>
@@ -87,7 +87,7 @@
                     [routerLink]="['/contact']"
                     routerLinkActive="active"
                     >
-                    CONTACT
+                    {{ 'CONTACT' | translate }}
                   </a>
                 </li>
                 <li>
@@ -98,7 +98,7 @@
                     href="https://github.com/nikolabojkovic"
                     target="_blank"
                     >
-                    GITHUB
+                    {{ 'GITHUB' | translate }}
                   </a>
                 </li>
                 <li>
@@ -107,7 +107,7 @@
                     class="menu-items-mobile-default mobile-headers"
                     (click)="activatelinkMobile(mobileItemRef8); displayThemes()"
                     >
-                    THEMES
+                    {{ 'THEMES' | translate }}
                   </a>
                 <div  
                   id=themesMenu
@@ -118,7 +118,7 @@
                           class="menu-dropdown-item-mobile-default"
                           (click)="onLightThemeClick(); hideMobileMenu(); resetLinks();">
                           <div class='item-light-container'>
-                            <p>LIGHT</p>
+                            <p>{{ 'LIGHT' | translate }}</p>
                             <span>
                               <fa-icon
                                 class="themes-icons"
@@ -135,7 +135,7 @@
                           (click)="onDarkThemeClick(); hideMobileMenu(); resetLinks();"
                           >
                           <div class='item-light-container'>
-                            <p>DARK</p>
+                            <p>{{ 'DARK' | translate }}</p>
                             <span>
                               <fa-icon
                                 class="themes-icons"
@@ -154,7 +154,7 @@
     </div>
     <div class='media-container-mobile-holder'>
         <div class="media-container-mobile">
-          <p class="media-container__text-mobile">FIND ME ON</p>
+          <p class="media-container__text-mobile">{{ 'FIND ME ON' | translate }}</p>
           <div class="links-container">
               <a>
                   <div class="link-container">
