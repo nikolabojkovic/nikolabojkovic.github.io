@@ -13,6 +13,7 @@ export class HeaderService {
 
     featuresMenu = false;
     menuResume = false;
+    homeShadowID: any;
 
     activateLink(Element: HTMLElement): void {
         let menuitems = document.getElementsByClassName('menu-links');
@@ -22,7 +23,12 @@ export class HeaderService {
         }
         Element.classList.remove('default-menu-item')
         Element.classList.add('active-menu-item');
-        this.activeMenuItem(Element);
+        this.SaveMenuItem(Element);
+    }
+    
+
+    HomePageDeactivated(): void {
+      this.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
     }
 
     toogleMobileMneuOn(): void {
@@ -161,37 +167,15 @@ export class HeaderService {
         }
     }
 
-    activeMenuItem(value: HTMLElement): void {
-      switch(value.innerText) {
-        case "HOME": 
-          window.localStorage.setItem("ActiveMenuItem", "1");
-          break;
-        case "FEATURES":
-          window.localStorage.setItem("ActiveMenuItem", "2");
-          break;
-        case "RESUME":
-          window.localStorage.setItem("ActiveMenuItem", "3");
-          break;
-        case "PORTFOLIO":
-          window.localStorage.setItem("ActiveMenuItem", "4");
-          break;
-        case "CLIENTS":
-          window.localStorage.setItem("ActiveMenuItem", "5");
-          break;
-        case "CONTACT":
-          window.localStorage.setItem("ActiveMenuItem", "6");
-          break;
-        case "GITHUB":
-          window.localStorage.setItem("ActiveMenuItem", "7");
-          break;
-      }
+    SaveMenuItem(element: HTMLElement): void {
+      window.sessionStorage.setItem("ActiveMenuItem", element.id);
     }
 
     loadActiveMenuItem(): string {
-      let activeItem = window.localStorage.getItem("ActiveMenuItem");
+      let activeItem = window.sessionStorage.getItem("ActiveMenuItem");
 
       if(activeItem == null) {
-        return "1";
+        return "home";
       }
       return activeItem;
     }

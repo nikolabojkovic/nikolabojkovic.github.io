@@ -27,7 +27,7 @@
           <li>
             <a 
               #refEl
-              id="HomeID" 
+              id="home" 
               (click)="activatelink(refEl); homePageActivated();" 
               class="links default-menu-item menu-links" 
               [routerLink]="['/home']" 
@@ -39,7 +39,7 @@
           <li class="dropdown">
             <a 
               #refEl2 
-              id="FeaturesID"
+              id="features"
               (click)="activatelink(refEl2)" 
               class="dropdown-button default-menu-item menu-links"
               >
@@ -57,7 +57,7 @@
           <li class="dropdown">
             <a 
               #refEl3
-              id="ResumeID"
+              id="resume"
               (click)="activatelink(refEl3)" 
               class="dropdown-button default-menu-item menu-links"
               >
@@ -74,7 +74,7 @@
           <li>
             <a 
               #refEl4 
-              id="PortfolioID"
+              id="portfolio"
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl4)"
               >
@@ -84,7 +84,7 @@
           <li>
             <a 
               #refEl5 
-              id="ClientsID"
+              id="clients"
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl5)"
               >
@@ -94,7 +94,7 @@
           <li>
               <a 
                 #refEl6 
-                id="ContactID"
+                id="contact"
                 class="links default-menu-item menu-links" 
                 (click)="activatelink(refEl6); homePageDeactivated();" 
                 [routerLink]="['/contact']" 
@@ -106,7 +106,7 @@
           <li>
             <a 
               #refEl7 
-              id="GithubID"
+              id="github"
               class="links default-menu-item menu-links"
               (click)="activatelink(refEl7)"
               href="https://github.com/nikolabojkovic" target="_blank"

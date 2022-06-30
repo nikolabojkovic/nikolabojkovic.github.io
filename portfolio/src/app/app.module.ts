@@ -15,6 +15,7 @@ import { HomeService } from './modules/home/home-page/home.service';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 import { SettingsService } from './shared/services/settings.service';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
+import { HeaderService } from './shared/services/header.service';
 
 
 export function HttpLoaderFactory(http: HttpClient) {

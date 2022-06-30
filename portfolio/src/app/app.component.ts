@@ -1,4 +1,5 @@
 import { Component,OnInit} from '@angular/core';
+import { HeaderService } from './shared/services/header.service';
 import { SettingsService } from './shared/services/settings.service';
 
 @Component({
@@ -11,16 +12,20 @@ export class AppComponent {
   storage = 'Storage is place where you store an information';
 
   ngOnInit(): void {
-    this.settingsService.homeShadowID = this.sendHomeShadow();
+    this.headerService.homeShadowID = this.sendHomeShadow();
   }
 
-  constructor(private settingsService: SettingsService) {
+
+  constructor(private settingsService: SettingsService, private headerService: HeaderService) {
     this.settingsService.loadSettings();
   }
 
   sendHomeShadow(): HTMLElement {
       return document.getElementById("siteContainerTop") as HTMLElement;
   }
+  
+
+
 
   // faCoffee = faCoffee;                   font-awesome variable
 }
