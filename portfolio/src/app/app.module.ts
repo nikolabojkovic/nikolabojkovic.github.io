@@ -12,6 +12,9 @@ import { StandardHeaderComponent } from './shared/header/standard-header/standar
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 import { SettingsService } from './shared/services/settings.service';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
+import { HomeModule } from './modules/home/home.module';
+import { SocialMediaMobileComponent } from './shared/social-media/social-media-mobile/social-media-mobile.component';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -30,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HomeModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -38,6 +42,9 @@ export function HttpLoaderFactory(http: HttpClient) {
           deps: [HttpClient]
       }
   })
+  ],
+  exports: [
+    HomeModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]

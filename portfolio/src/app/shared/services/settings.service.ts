@@ -17,8 +17,8 @@ export class SettingsService {
     homePageActive = true;
 
     constructor(private translate: TranslateService) {
-        translate.setDefaultLang('srb-LT');
-        this.settings = new Settings('Dark', 'srb-LT');
+        translate.setDefaultLang('en-US');
+        this.settings = new Settings('Dark', 'en-US');
     }
     
     homePageActivated(): void {

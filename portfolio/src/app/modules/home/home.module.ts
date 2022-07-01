@@ -10,6 +10,9 @@ import { BannerComponent } from './home-page/banner/banner.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './home-page/home.page.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { SocialMediaStandardComponent } from 'src/app/shared/social-media/social-media-standard/social-media.component';
+import { SocialMediaMobileComponent } from 'src/app/shared/social-media/social-media-mobile/social-media-mobile.component';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,19 @@ import { TranslateModule } from '@ngx-translate/core';
     PortfolioSectionComponent,
     ResumeSectionComponent,
     ClientsSectionComponent,
-    HomePageComponent
+    HomePageComponent,
+    SocialMediaStandardComponent,
+    SocialMediaMobileComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     FontAwesomeModule,
     TranslateModule
+  ],
+  exports: [
+    SocialMediaStandardComponent,
+    SocialMediaMobileComponent
   ]
 })
 export class HomeModule { }

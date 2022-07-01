@@ -1,0 +1,35 @@
+@import "../social-media-standard/social-media.component.scss";
+
+.media-container-mobile-holder {
+    margin-top: 50px;
+    border-top: 1px solid var(--text-ternary-color);
+    width: 340px;
+    margin-left: 37px;
+    margin-right: 37px;
+}
+
+.media-container-mobile {
+    width: 250px;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+
+}
+
+@media only screen and (min-width:100px) and (max-width: 768px) {
+    .media-container-mobile {
+        width: 280px;
+    }
+
+    .media-container__text-mobile {
+        margin-left:0;
+    }
+
+    .media-container-mobile-holder  {
+        width: calc(100% - 74px);
+        padding-right: 37px;
+        border-top: 1px solid var(--text-ternary-color);
+    }
+}
