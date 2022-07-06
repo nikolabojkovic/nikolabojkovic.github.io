@@ -13,9 +13,8 @@ export class BannerComponent implements OnInit {
 
   interval: any;
   WIDE_SCREEEN_SIZE: number = 1500;
-
   facebook =  faFacebookF;
-  instagram = faInstagram;
+  instagram = faInstagram; 
   twitter = faTwitter;
   linkedin = faLinkedinIn;
 
@@ -78,6 +77,5 @@ export class BannerComponent implements OnInit {
   resetAnimations(): void {
       let r = document.querySelector(':root') as HTMLElement;
       r.style.setProperty("--text-shadow-length", "22%");
-      console.log('clear');
   }
 }

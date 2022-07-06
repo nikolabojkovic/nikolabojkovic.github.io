@@ -1,0 +1,165 @@
+<div 
+  id='menuShadow' 
+  class='menu-mobile-shadow' 
+  (click)="hideMobileMenu()"
+  >
+</div>
+<div class="header-container-holder">
+  <div class="header-container">
+    <div class="header-logo">
+      <span class="red-color-logo-text">NBO</span> Development
+    </div>
+    <div 
+      class="toggle-button"
+      (click)="toggleMobileMenu()"
+      >
+        <fa-icon 
+          class="toggler-icon-start"
+          [icon]="bar">
+        </fa-icon> 
+        <fa-icon 
+          class="toggler-icon-end"
+          [icon]="bar">
+        </fa-icon> 
+    </div>
+    <div class="menu">
+      <ul>
+          <li>
+            <a 
+              #refEl
+              id="home" 
+              (click)="activatelink(refEl); homePageActivated();" 
+              class="links default-menu-item menu-links" 
+              [routerLink]="['/home']" 
+              routerLinkActive="active"
+              >
+                {{ 'HOME' | translate }}
+            </a>
+          </li>
+          <li class="dropdown">
+            <a 
+              #refEl2 
+              id="features"
+              (click)="activatelink(refEl2)" 
+              class="dropdown-button default-menu-item menu-links"
+              >
+                {{ 'FEATURES' | translate }}
+            </a>
+              <div class="dropdown-content">
+                <a class= "dropdown-links">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
+                <a class= "dropdown-links">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
+                <a class= "dropdown-links">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
+                <a class= "dropdown-links">{{ 'MENTORING' | translate }}</a>
+                <a class= "dropdown-links">{{ 'LEADERSHIP' | translate }}</a>
+                <a class= "dropdown-links">{{ 'CONSULTING' | translate }}</a>
+              </div>
+          </li>
+          <li class="dropdown">
+            <a 
+              #refEl3
+              id="resume"
+              (click)="activatelink(refEl3)" 
+              class="dropdown-button default-menu-item menu-links"
+              >
+                {{ 'RESUME' | translate }}
+            </a>
+            <div class="dropdown-content">
+              <a class="dropdown-links">{{ 'UNIVERSITY' | translate }}</a>
+              <a class="dropdown-links">{{ 'INFOSCREN/MIGROGEN' | translate }}</a>  
+              <a class="dropdown-links">{{ 'NULTIEN' | translate }}</a> 
+              <a class="dropdown-links">{{ 'INTELISALE' | translate }}</a> 
+              <a class="dropdown-links">{{ 'ORION INOVATION' | translate }}</a>  
+            </div>   
+          </li>   
+          <li>
+            <a 
+              #refEl4 
+              id="portfolio"
+              class="links default-menu-item menu-links" 
+              (click)="activatelink(refEl4)"
+              >
+                {{ 'PORTFOLIO' | translate }}
+            </a>
+          </li>
+          <li>
+            <a 
+              #refEl5 
+              id="clients"
+              class="links default-menu-item menu-links" 
+              (click)="activatelink(refEl5)"
+              >
+                {{ 'CLIENTS' | translate }}
+            </a>
+          </li>
+          <li>
+              <a 
+                #refEl6 
+                id="contact"
+                class="links default-menu-item menu-links" 
+                (click)="activatelink(refEl6); homePageDeactivated();" 
+                [routerLink]="['/contact']" 
+                routerLinkActive="active"
+                >
+                 {{ 'CONTACT' | translate }}
+              </a>
+            </li>
+          <li>
+            <a 
+              #refEl7 
+              id="github"
+              class="links default-menu-item menu-links"
+              (click)="activatelink(refEl7)"
+              href="https://github.com/nikolabojkovic" target="_blank"
+              >
+                {{ 'GITHUB' | translate }}
+            </a>
+          </li>
+          <li class="dropdown">
+            <a 
+            #refEl8 
+            (click)="activatelink(refEl8)"
+            class="dropdown-button default-menu-item menu-links"
+            >
+              <fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon>
+            </a>
+            <div class="dropdown-content-theme">
+              <a 
+                id="lightThemeID" 
+                (click)="onLightThemeClick();"
+                class="default"
+              >
+                <div class="settings-item theme-text">
+                  {{ 'LIGHT' | translate }}
+                  <fa-icon 
+                    class="theme-colors themes-icons-secondary" 
+                    [icon]="sun"
+                    >
+                    asdasd
+                  </fa-icon>
+                </div>
+              </a>
+              <a
+                id="darkThemeID" 
+                (click)="onDarkThemeClick();"
+                class="default"
+              >
+                <div class="settings-item theme-text">
+                  {{ 'DARK' | translate }}
+                  <fa-icon 
+                    class="theme-colors themes-icons-secondary" 
+                    [icon]="moon"
+                    >
+                  </fa-icon>
+                </div>
+              </a>
+            </div>
+          </li>
+      </ul>
+    </div> 
+  </div>
+</div>
+
+<app-mobile-header></app-mobile-header>
+
+  
+  

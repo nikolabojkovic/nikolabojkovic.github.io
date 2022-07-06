@@ -5,11 +5,16 @@ import { Settings } from '../models/settings.model';
 @Injectable({
     providedIn: 'root'
 })
+
 export class SettingsService {
 
     settings: Settings;
     homeShadow: any;
     homeShadowID: any;
+    menuThemes = false;
+    togglerActivated = false;
+    menuShadow = false;
+    homePageActive = true;
 
     constructor(private translate: TranslateService) {
         translate.setDefaultLang('en-US');
@@ -17,8 +22,12 @@ export class SettingsService {
     }
     
     homePageActivated(): void {
+        if(this.homeShadowID == undefined) {
+            return;
+        }
         this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     }
+    
 
     loadSettings(): void {
         let settingsAsString = localStorage.getItem("settings");
@@ -46,6 +55,8 @@ export class SettingsService {
         this.settings.setTheme('Light');
         localStorage.setItem("settings", JSON.stringify(this.settings));
     }
+
+
 
     setLanguage(language: string): void {
         this.translate.use(language);

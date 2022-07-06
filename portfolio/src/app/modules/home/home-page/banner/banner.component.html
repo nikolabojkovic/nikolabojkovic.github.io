@@ -1,0 +1,34 @@
+<!-- <img src="../../../assets/images/banner/Nikola-Bojkovic-profile-image.png" width="484" height="506"> -->
+<div class="banner-container">
+    <div class="banner-container__photo-container">
+        <img 
+            class="banner-photo"
+            src="assets/images/banner/Nikola-Bojkovic-profile-image.png"
+        >
+    </div>
+    <div class="banner-container__all-text-container">
+        <p class="all-text-container__header"> {{ 'WELCOME TO NBO DEVELOPMENT' | translate }}</p>
+        <h1 class="all-text-container__body">
+            {{ 'Hi, I\'m' | translate }}                  
+            <span>
+                {{ 'Nikola Bojkovic' | translate }}
+            </span>
+        </h1>
+        <div class="all-text-container__body-effect-container">
+            <h1 
+                id="text"
+                class = "all-text-container__body"
+            >
+                {{ 'a Professional Software Developer.' | translate }}
+            </h1>
+            <div
+                id="shadowText"
+                class="all-text-container__body-effect-container__shadow all-text-container__body-effect-container__shadow-animation">
+            </div>
+        </div>
+        <div class="all-text-container__footer">
+            <p> {{ 'Expert in software development area, Most skiled in .Net and Angular. Successful Team Leader of 20+ members. Experienced with different kinid of CMS’s, Enterprise Apps, Ticketing Systems  E-Commerce solutions and Social networks. Capable of doing Software architecture, UI/UX design, project organization,  project implementation and mentoring.' | translate }}</p>
+        </div>
+    </div>
+    <app-social-media></app-social-media>
+</div>

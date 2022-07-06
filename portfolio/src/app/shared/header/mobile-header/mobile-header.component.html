@@ -1,0 +1,157 @@
+<div id="menuMobile" class='menu-mobile menu-mobile-hide'>
+    <div class="mobile-header-logo-holder">
+          <div class="mobile-header-logo">
+              <div>
+                  <p class="header-logo-mobile">
+                    <span class="red-color-logo-text">
+                      NBO
+                    </span> 
+                    Development
+                </p>
+              </div>
+              <fa-icon (click)="hideMobileMenu();" class="btn-close-mobile" [icon]="closeBtn"></fa-icon> 
+          </div>
+          <div class="menu-items-mobile">
+              <ul>
+                <li>
+                  <a 
+                    #mobileItemRef1 
+                    class="menu-items-mobile-default mobile-headers" 
+                    (click)="activatelinkMobile(mobileItemRef1); hideMobileMenu();" 
+                    [routerLink]="['/home']" 
+                    routerLinkActive="active"
+                    >
+                    {{ 'HOME' | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    #mobileItemRef2 
+                    class="menu-items-mobile-default mobile-headers" 
+                    (click)="activatelinkMobile(mobileItemRef2); displayFeatures();"
+                    >
+                    {{ 'FEATURES' | translate }}
+                  </a>
+                  <div id=featuresMenu class="dropdown-menu-mobile">
+                    <ul>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'DEVELOPMENT STRATEGY' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'SOFTWARE ARCHITECTURE' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'PROJECT IMPLEMENTATION' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'MENTORING' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'LEADERSHIP' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'CONSULTING' | translate }}</a></li>
+                      </ul>
+                  </div>
+                </li>
+                <li>
+                  <a 
+                    #mobileItemRef3 
+                    class="menu-items-mobile-default mobile-headers" 
+                    (click)="activatelinkMobile(mobileItemRef3); displayResume();"
+                    >
+                    {{ 'RESUME' | translate }}
+                  </a>
+                  <div id=resumeMenu class="dropdown-menu-mobile">
+                    <ul>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'UNIVERSITY' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'INFOSCREN/MIGROGEN' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'NULTIEN' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'INTELISALE' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default">{{ 'ORION INOVATION' | translate }}</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a 
+                    #mobileItemRef4 
+                    class="menu-items-mobile-default mobile-headers" 
+                    (click)="activatelinkMobile(mobileItemRef4)"
+                    >
+                    {{ 'PORTFOLIO' | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    #mobileItemRef5
+                    class="menu-items-mobile-default mobile-headers"
+                    (click)="activatelinkMobile(mobileItemRef5)"
+                    >
+                    {{ 'CLIENTS' | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    #mobileItemRef6
+                    class="menu-items-mobile-default mobile-headers"
+                    (click)="activatelinkMobile(mobileItemRef6); hideMobileMenu();"
+                    [routerLink]="['/contact']"
+                    routerLinkActive="active"
+                    >
+                    {{ 'CONTACT' | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    #mobileItemRef7
+                    class="menu-items-mobile-default mobile-headers"
+                    (click)="activatelinkMobile(mobileItemRef7)"
+                    href="https://github.com/nikolabojkovic"
+                    target="_blank"
+                    >
+                    {{ 'GITHUB' | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    #mobileItemRef8
+                    class="menu-items-mobile-default mobile-headers"
+                    (click)="activatelinkMobile(mobileItemRef8); displayThemes()"
+                    >
+                    {{ 'THEMES' | translate }}
+                  </a>
+                <div  
+                  id=themesMenu
+                  class="dropdown-menu-mobile">
+                  <ul class="themes-ul">
+                      <li>
+                        <a 
+                          class="menu-dropdown-item-mobile-default"
+                          (click)="onLightThemeClick(); hideMobileMenu(); resetLinks();">
+                          <div class='item-light-container'>
+                            <p>{{ 'LIGHT' | translate }}</p>
+                            <span>
+                              <fa-icon
+                                class="themes-icons"
+                                [icon]="sun"
+                              >
+                              </fa-icon>
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          class="menu-dropdown-item-mobile-default"
+                          (click)="onDarkThemeClick(); hideMobileMenu(); resetLinks();"
+                          >
+                          <div class='item-light-container'>
+                            <p>{{ 'DARK' | translate }}</p>
+                            <span>
+                              <fa-icon
+                                class="themes-icons"
+                                [icon]="moon"
+                              >
+                              </fa-icon>
+                            </span>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+                </li>
+              </ul>
+          </div>
+    </div>
+    <app-social-media-mobile></app-social-media-mobile>
+  </div>
+  
