@@ -3,6 +3,8 @@ import { HeaderService } from "src/app/shared/services/header.service";
 import { SettingsService } from "src/app/shared/services/settings.service";
 import { ContactService } from "./contact.service";
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: "app-contact",
@@ -14,10 +16,72 @@ export class ContactPageComponent {
     instagram = faInstagram;
     twitter = faTwitter;
     linkedin = faLinkedinIn;
+    checkIcon = faCheck;
+    warningIcon =faTriangleExclamation;
+    sendingMsg: boolean = false;
+
     constructor(private contactService: ContactService, private settingsService: SettingsService, private headerService: HeaderService) {
 
     }
     ngOnInit(): void {
         this.headerService.HomePageDeactivated();
+    }
+
+    sendMsg(): void {
+        let firstName = document.getElementById("fname") as HTMLInputElement;
+        let phoneNumber = document.getElementById("pnumber") as HTMLInputElement;
+        let email = document.getElementById("email") as HTMLInputElement;
+        let subject = document.getElementById("subject") as HTMLInputElement;
+        let message = document.getElementById("message") as HTMLInputElement;
+
+        const contactMessage = {
+            contactFirstName : firstName,
+            contactPhoneNumber : phoneNumber,
+            contactEmail: email,
+            contactSubject : subject,
+            contactMsg : message
+        }
+        
+        this.resetSuccessResponse();
+        this.resetRejectResponse();
+        window.alert(firstName.value + " " + phoneNumber.value + " "+ email.value+ " "+subject.value+ " "+message.value);
+        let loader = document.getElementById("contact-page-forms-disabled") as HTMLElement;
+        this.sendingMsg =true;
+    }
+
+    displaySuccessResponse(): void {
+        let FeedBack = document.getElementById("successApplication") as HTMLElement;
+        FeedBack.classList.remove("contact-mail-feedback-done-hide");
+        FeedBack.classList.add("contact-mail-feedback-done-show");
+    }
+
+    closeSuccessResponse(): void {
+        let successElement = document.getElementById("successApplication") as HTMLElement;
+        successElement.classList.remove("contact-mail-feedback-done-show");
+        successElement.classList.add("contact-mail-feedback-done-hide");
+    }
+
+    resetSuccessResponse(): void {
+        let successElement = document.getElementById("successApplication") as HTMLElement;
+        successElement.classList.remove("contact-mail-feedback-done-hide");
+        successElement.classList.add("contact-mail-feedback-done-hide");
+    }
+
+    displayRejectResponse(): void {
+        let FeedBack = document.getElementById("rejectApplication") as HTMLElement;
+        FeedBack.classList.remove("contact-mail-feedback-reject-hide");
+        FeedBack.classList.add("contact-mail-feedback-reject-show");
+    }
+
+    closeRejectResponse(): void {
+        let successElement = document.getElementById("rejectApplication") as HTMLElement;
+        successElement.classList.remove("contact-mail-feedback-reject-show");
+        successElement.classList.add("contact-mail-feedback-reject-hide");
+    }
+
+    resetRejectResponse(): void {
+        let successElement = document.getElementById("rejectApplication") as HTMLElement;
+        successElement.classList.remove("contact-mail-feedback-reject-hide");
+        successElement.classList.add("contact-mail-feedback-reject-hide");
     }
 }

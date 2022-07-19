@@ -7,7 +7,8 @@ import { ContactInfoComponent } from './contact-page/contact-info/contact-info.c
 import { ContactFormComponent } from './contact-page/contact-form/contact-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { FormsModule } from '@angular/forms';
+import { HomeModule } from '../home/home.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,12 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     ContactRoutingModule,
     FontAwesomeModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule,
+    HomeModule
+  ],
+  exports: [
+    HomeModule
   ]
 })
 export class ContactModule { }

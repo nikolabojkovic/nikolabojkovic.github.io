@@ -13,9 +13,6 @@ import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component'
 import { SettingsService } from './shared/services/settings.service';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
 import { HomeModule } from './modules/home/home.module';
-import { SocialMediaMobileComponent } from './shared/social-media/social-media-mobile/social-media-mobile.component';
-
-
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
