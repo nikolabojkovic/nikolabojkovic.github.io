@@ -291,6 +291,18 @@ input[type=submit] {
 
 //Marko
 
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.testSend {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
 .contact-page-inputs-errors {
   color: var(--text-secondary-color);
   font-size: 12px;

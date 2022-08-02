@@ -19,6 +19,7 @@ export class ContactPageComponent {
     checkIcon = faCheck;
     warningIcon =faTriangleExclamation;
     sendingMsg: boolean = false;
+    newContact: any;
 
     constructor(private contactService: ContactService, private settingsService: SettingsService, private headerService: HeaderService) {
 
@@ -35,18 +36,23 @@ export class ContactPageComponent {
         let message = document.getElementById("message") as HTMLInputElement;
 
         const contactMessage = {
-            contactFirstName : firstName,
-            contactPhoneNumber : phoneNumber,
-            contactEmail: email,
-            contactSubject : subject,
-            contactMsg : message
+            contactFirstName : firstName.value,
+            contactPhoneNumber : phoneNumber.value,
+            contactEmail: email.value,
+            contactSubject : subject.value,
+            contactMsg : message.value
         }
-        
+
+        this.newContact = contactMessage;                       //new 
+        console.log(this.newContact.contactFirstName);
+        let JSONString = JSON.stringify(this.newContact);
+        console.log(JSONString);
+
         this.resetSuccessResponse();
         this.resetRejectResponse();
-        window.alert(firstName.value + " " + phoneNumber.value + " "+ email.value+ " "+subject.value+ " "+message.value);
         let loader = document.getElementById("contact-page-forms-disabled") as HTMLElement;
         this.sendingMsg =true;
+        this.postContact();
     }
 
     displaySuccessResponse(): void {
@@ -84,4 +90,26 @@ export class ContactPageComponent {
         successElement.classList.remove("contact-mail-feedback-reject-hide");
         successElement.classList.add("contact-mail-feedback-reject-hide");
     }
+
+    getContacts(): void {
+        this.contactService.getContacts();
+        console.log(this.newContact);
+    }
+    
+    postContact(): any {
+        this.contactService.postContact(this.newContact)
+        .then(
+            () => {
+                this.displaySuccessResponse();
+                this.sendingMsg=false;
+            }
+        )
+        .catch(
+            () => {
+                this.displayRejectResponse();
+                this.sendingMsg = false;
+            }
+        )
+    }
+
 }

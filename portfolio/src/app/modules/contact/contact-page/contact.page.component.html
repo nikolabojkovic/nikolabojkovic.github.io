@@ -23,8 +23,6 @@
 <div class="contact-page-forms">
     <div id="contact-page-forms-disabled" [ngClass]="{displayBlock: sendingMsg}" class="contact-page-forms-disabled">
       <div class="spinner-border text-danger loader"></div>
-      <button (click)="this.sendingMsg=false; formContainer.reset(); displaySuccessResponse();" type="button" class="btn btn-primary">success</button>
-      <button (click)="this.sendingMsg=false; formContainer.reset(); displayRejectResponse();" type="button" class="btn btn-primary">reject</button>
     </div>
     <div class="forms-container">
       <form autocomplete="off" class="form-container" action="/action_page.php" #formContainer="ngForm">
@@ -110,7 +108,7 @@
         <div class="error-container-message">
           <span class="contact-page-inputs-errors" *ngIf="!message.valid && message.touched">Please enter a message.</span>
         </div>
-        <input class="confirm-button" [disabled]="formContainer.invalid" (click)="sendMsg();" id="button" type="submit" value="SEND MESSAGE">
+        <input class="confirm-button" [disabled]="formContainer.invalid" (click)="sendMsg(); formContainer.reset();" id="button" type="submit" value="SEND MESSAGE">
       </form>
     </div>
   </div>
@@ -154,9 +152,16 @@
       </fa-icon>
       <div class="toast-body__text">
         <strong class="me-auto">Error</strong>
-        <p class="me-auto">Something went wrong.  Text sdf Text sdf Text sdf Text sdf Text sdf Text sdf Text sdf Text sdf Text sdf</p>
+        <p class="me-auto">Something went wrong.  Server is not responding. Pls try again later.</p>
       </div>
       <button (click)="closeRejectResponse()" type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
     </div>
   </div>
 </div>
+
+<button (click)="getContacts()" type="button" class="test">
+
+</button>
+<button (click)="postContact()" type="button" class="test">
+
+</button>
