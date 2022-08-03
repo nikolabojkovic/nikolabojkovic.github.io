@@ -10,17 +10,8 @@ export class ContactService {
 
     }
 
-    getContacts(): any {
-        this.httpClient.get("http://localhost:4000/contacts").toPromise()
-        .then(
-            (data) => {
-                console.log(data);
-            }
-        )
-    }
-
     postContact(newContact:any): any {
-        return this.httpClient.post("http://localhost:4000/contacts", newContact).toPromise()
+        return this.httpClient.post("http://developer-tool.com/api/contact/send/email", newContact).toPromise()
     }
     
 }

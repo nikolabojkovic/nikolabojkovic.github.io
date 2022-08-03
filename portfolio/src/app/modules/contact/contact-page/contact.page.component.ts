@@ -36,11 +36,11 @@ export class ContactPageComponent {
         let message = document.getElementById("message") as HTMLInputElement;
 
         const contactMessage = {
-            contactFirstName : firstName.value,
-            contactPhoneNumber : phoneNumber.value,
-            contactEmail: email.value,
-            contactSubject : subject.value,
-            contactMsg : message.value
+            name : firstName.value,
+            phone : phoneNumber.value,
+            email: email.value,
+            subject : subject.value,
+            message : message.value
         }
 
         this.newContact = contactMessage;                       //new 
@@ -91,11 +91,6 @@ export class ContactPageComponent {
         successElement.classList.add("contact-mail-feedback-reject-hide");
     }
 
-    getContacts(): void {
-        this.contactService.getContacts();
-        console.log(this.newContact);
-    }
-    
     postContact(): any {
         this.contactService.postContact(this.newContact)
         .then(
