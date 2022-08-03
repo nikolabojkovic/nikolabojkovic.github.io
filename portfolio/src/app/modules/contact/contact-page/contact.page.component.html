@@ -5,78 +5,110 @@
 <p class="title">Contact Me</p>
 <div class="contact-page">
   <div class="info-section">
-    <img src="../../assets/images/contact/contact-page-info-section.jpeg" alt="contact-photo" style="width:100%">
+    <img class="info-section-photo" src="../../assets/images/contact/contact-page-info-section.jpeg" alt="contact-photo" style="width:100%">
     <div class="container-information">
       <p class="developer-name">Nikola Bojkovic</p>
-      <p class="position-and-information">Chif operating officer</p>
-      <p class="position-and-information">I am available for freelance work. Connect with me via and call in to my
-        account.</p>
-      <p class="contact-number">Phone: +381 60 34 34 097</p>
-      <p class="contact-email">Email: nikolabojkovic@gmail.com</p>
+      <p class="position-and-information">Software Developer</p>
+      <p class="position-and-information">I am available for freelance work. Connect with me via email or phone call.</p>
+      <p class="contact-number">Phone: <span class="contact-text-highlights">+381 60 34 34 097</span></p>
+      <p class="contact-email">Email: <span  class="contact-text-highlights">nikolabojkovic@gmail.com</span></p>
     </div>
-    <div class="media-container">
-        <p class="position-and-information">FIND ME ON</p>
-        <div class="links-container">
-            <a>
-                <div class="link-container">
-                    <fa-icon 
-                        class="icons-links"
-                        [icon]="facebook"
-                    >
-                    </fa-icon>
-                </div>
-            </a>
-            <a>
-                <div class="link-container">
-                    <fa-icon 
-                        class="icons-links" 
-                        [icon]="instagram"
-                    >
-                    </fa-icon>
-                </div>
-            </a>
-            <a>
-                <div class="link-container">
-                    <fa-icon 
-                        class="icons-links" 
-                        [icon]="twitter"
-                    >
-                    </fa-icon>
-                </div>
-            </a>
-            <a>
-                <div class="link-container">
-                    <fa-icon 
-                        class="icons-links" 
-                        [icon]="linkedin"
-                    >
-                    </fa-icon>
-                </div>
-            </a>    
-        </div>
-    </div>
- </div>
-<div class="contact-page-forms">
-    <div class="forms-container">
-      <form action="/action_page.php">
+
+    <!-- Social media -->
     
-       <div class="forms-section">
-         <div class="input-container-one">
-           <label for="fname">YOUR NAME</label>
-           <input type="text" id="fname" name="firstname">
-         </div>
-         <div class="input-container-two">
-           <label for="pnumber">PHONE NUMBER</label>
-           <input type="text" id="pnumber" name="phonenumber">
-         </div>
-         </div>
-          <label for="email">EMAIL</label>
-          <input type="text" id="email" name="email">
-          <label for="subject">SUBJECT</label>
-          <input type="text" id="subject" name="subject">
-          <label for="message">YOUR MESSAGE</label>
-          <textarea id="message" name="message"></textarea>
-          <input id="button" type="submit" value="SEND MESSAGE">
+    <div class="social-media-contant-page">
+      <app-social-media></app-social-media>
+    </div>
+  </div>
+<div class="contact-page-forms">
+    <div id="contact-page-forms-disabled" [ngClass]="{displayBlock: sendingMsg}" class="contact-page-forms-disabled">
+      <div class="spinner-border text-danger loader"></div>
+    </div>
+    <div class="forms-container">
+      <form autocomplete="off" class="form-container" action="/action_page.php" #formContainer="ngForm">
+        <div class="forms-section">
+          <div class="input-container-one">
+            <label for="fname">* YOUR NAME</label>
+            <input 
+              required
+              ngModel
+              #firstName="ngModel"
+              minlength="3"
+              maxlength="50"
+              type="text" 
+              id="fname" 
+              name="firstname"
+              spellcheck="false"
+            >
+            <div class="error-container">
+              <span class="contact-page-inputs-errors" *ngIf="!firstName.valid && firstName.touched && firstName.hasError('minlength')">An invalid name, min. 3 characters.</span>
+              <span class="contact-page-inputs-errors" *ngIf="!firstName.valid && firstName.touched && firstName.hasError('maxlength')">An invalid name, max. 50 characters.</span>
+            </div>
+          </div>
+          <div class="input-container-two">
+            <label for="pnumber">* PHONE NUMBER</label>
+            <input 
+              required
+              ngModel
+              #phoneNumber="ngModel" 
+              type="text" 
+              id="pnumber" 
+              name="phonenumber"
+              minlength="10"
+              maxlength="13"
+              pattern="[0-9]+$"
+              spellcheck="false"
+            >
+            <div class="error-container">
+              <span class="contact-page-inputs-errors" *ngIf="!phoneNumber.valid && phoneNumber.touched">Please enter a valid number.</span>
+            </div>
+          </div>
+        </div>
+        <label class="email" for="email">* EMAIL</label>
+        <input 
+          required
+          ngModel
+          #email="ngModel"
+          type="text" 
+          id="email" 
+          name="email"
+          email
+          spellcheck="false"
+        >
+        <div class="error-container">
+          <span class="contact-page-inputs-errors" *ngIf="!email.valid && email.touched">Please enter a valid email adress.</span>
+        </div>
+        <label for="subject">* SUBJECT</label>
+        <input 
+          required
+          ngModel
+          #subject="ngModel"
+          type="text" 
+          id="subject" 
+          name="subject"
+          maxlength="50"
+          minlength="1"
+          spellcheck="false"
+        >
+        <div class="error-container">
+          <span class="contact-page-inputs-errors" *ngIf="!subject.valid && subject.touched">Please enter a subject.</span>
+        </div>
+        <label for="message">* YOUR MESSAGE</label>
+        <textarea
+          required
+          spellcheck="false"
+          ngModel
+          maxlength="500"
+          minlength="1"
+          #message="ngModel"
+          id="message"
+          name="message"
+        >
+        </textarea>
+        <div class="error-container-message">
+          <span class="contact-page-inputs-errors" *ngIf="!message.valid && message.touched">Please enter a message.</span>
+        </div>
+        <input class="confirm-button" [disabled]="formContainer.invalid" (click)="sendMsg(); formContainer.reset();" id="button" type="submit" value="SEND MESSAGE">
       </form>
     </div>
   </div>
@@ -90,4 +122,39 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181139.35491305715!2d20.28251233706116!3d44.815403289561466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade!5e0!3m2!1sen!2srs!4v1655900278775!5m2!1sen!2srs" width="100%" height="325" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div> 
+</div>
+
+
+<div id="successApplication" class="contact-mail-feedback-done contact-mail-feedback-done-hide">
+  <div class="toast show contact-mail-feedback-success">
+    <div class="toast-body contact-mail-feedback-success__body">
+      <fa-icon 
+        class="success-icon" 
+        [icon]="checkIcon"
+      >
+      </fa-icon>
+      <div class="toast-body__text">
+        <strong class="me-auto">Success</strong>
+        <strong class="me-auto">Your application was successfully send.</strong>
+      </div>
+      <button (click)="closeSuccessResponse()" type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<div id="rejectApplication" class="contact-mail-feedback-reject contact-mail-feedback-reject-hide">
+  <div class="toast show contact-mail-feedback-reject">
+    <div class="toast-body contact-mail-feedback-reject__body">
+      <fa-icon 
+        class="reject-icon" 
+        [icon]="warningIcon"
+      >
+      </fa-icon>
+      <div class="toast-body__text">
+        <strong class="me-auto">Error</strong>
+        <p class="me-auto">Something went wrong.  Server is not responding. Pls try again later.</p>
+      </div>
+      <button (click)="closeRejectResponse()" type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
 </div>

@@ -21,6 +21,8 @@ export class SettingsService {
         this.settings = new Settings('Dark', 'en-US');
     }
     
+
+    
     homePageActivated(): void {
         if(this.homeShadowID == undefined) {
             return;
