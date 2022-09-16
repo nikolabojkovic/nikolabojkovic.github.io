@@ -131,7 +131,12 @@ li.dropdown {
   
 .dropdown:hover .dropdown-content,
 .dropdown:hover .dropdown-content-theme {
-  display: block;
+  $displayable: block;
+  display: $displayable;
+}
+.hideDropDownMenu {
+  $displayable: none;
+  display: $displayable;
 }
   
 .dropdown-content a.selected {

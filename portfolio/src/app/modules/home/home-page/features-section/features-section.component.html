@@ -1,1 +1,105 @@
-<p>features-section works!</p>
+
+   <div class="features">
+     <div class="title-container">
+       <p class="paragraph1">FEATURES</p>
+       <p class="paragraph2">What I Do</p>
+     </div>
+     <div class="cards-container">
+      <a 
+        class="link-cards" 
+        [routerLink]="['/features/development-strategy']"
+        (click)="activateFeatureSection()"
+      >
+       <div class="cards">
+         <i class="fa fa-line-chart icon"></i>
+         <p class="information-paragraph">Development Strategy</p>
+         <p class="information-paragraph-one">I research and identify strategic options, decide how resources will be allocated across the organisation to achieve results.</p>
+         <fa-icon 
+            class="arrow"
+            [icon]="arrow">
+         </fa-icon> 
+  
+       </div>
+      </a>
+
+      <a 
+        class="link-cards card-exception"
+        [routerLink]="['/features/software-architecture']" 
+        (click)="activateFeatureSection()"
+      >
+        <div class="cards">
+          <i class="fa fa-sitemap icon"></i>
+          <p class="information-paragraph">Software Architecture</p>
+          <p class="information-paragraph-one">I analyze and suggest the way software component should be buit and connected.</p>
+          <fa-icon 
+              class="arrow"
+              [icon]="arrow">
+          </fa-icon> 
+        </div>
+        </a>
+      <a 
+        class="link-cards"
+        [routerLink]="['/features/project-implementation']" 
+        (click)="activateFeatureSection()"
+      >
+        <div class="cards">
+          <i class="fa fa-wrench icon"></i>
+          <p class="information-paragraph">Project Implementation</p>
+          <p class="information-paragraph-one">I define project structure based on selected architecture and provide codding best practicies which help to develop project faster and easyer. </p>
+          <fa-icon 
+             class="arrow"
+            [icon]="arrow">
+          </fa-icon> 
+        </div>
+      </a>
+
+      <a 
+        class="link-cards"
+        [routerLink]="['/features/mentoring']" 
+        (click)="activateFeatureSection()"
+      >
+       <div class="cards">
+          <i class="fa fa-graduation-cap icon"></i>
+          <p class="information-paragraph">Mentoring</p>
+          <p class="information-paragraph-one">With my help it is easy to learn to code, easy to improve your codding skills even more and organize your time and finances.</p>
+          <fa-icon 
+             class="arrow"
+             [icon]="arrow">
+          </fa-icon> 
+        </div>
+      </a>
+
+      <a 
+        class="link-cards"
+        [routerLink]="['/features/leadership']" 
+        (click)="activateFeatureSection()"
+      >
+        <div class="cards">
+          <i class="fa fa-institution icon"></i>
+          <p class="information-paragraph">Leadership</p>
+          <p class="information-paragraph-one">I establish great communication with team members and I organize a team according to Agile methodologies which gives estonishing results.</p>
+          <fa-icon 
+            class="arrow"
+             [icon]="arrow">
+          </fa-icon> 
+        </div>
+      </a>
+
+      <a 
+        class="link-cards"
+        [routerLink]="['/features/consulting']" 
+        (click)="activateFeatureSection()"
+      >
+        <div class="cards">
+          <i class="fa fa-briefcase icon"></i>
+          <p class="information-paragraph">Consulting</p>
+          <p class="information-paragraph-one">I can indetify bottlenecks in your sotware. I can organiize you teams and many other things related to softawre development.</p>
+          <fa-icon 
+             class="arrow"
+             [icon]="arrow">
+          </fa-icon> 
+        </div>
+      </a>  
+     </div>
+   </div>
+

@@ -1,0 +1,30 @@
+
+<div class="development-strategy">
+   <div class="text-and-photo">
+       <p class="title">Software Architecture</p>
+          
+       <p class="text">It all depends of the complecity of the project. If we know that project is going to be complex and we now a lot about the project in advance then we can choose more complex architecture from start, otherwise we can start samll, start with simle three-tier architecture and then refactor to a more complex architecture later in the process.</p>
+
+        <p class="text">Every architecture has pros and cons. Microservices are great for huge systems and complex domains. Clean architecture is great way to decouple the sytem and organize files and folder. Three-tier architecture is great for small apps and apps that has to be developed really fast.</p>
+        
+        <p class="text">On the other hand microservices are complex architecture and take a lot of time to implement. Clean architecture is overkill for small app and three-tier achitecture is not good enough to suport medium size and big applications.</p>
+        
+        <p class="text">It could happen that we have to switch to a different achitecture in developement process and that is fine. There is no one universal solution for everyting, it all depends what wee need and what kind of problem we are trying to solve.</p>
+         
+        <b>
+            <a 
+                class="red-color-text"
+                [routerLink]="['/home']" 
+                (click)="closeFeatures()" 
+            >
+                GO BACK
+            </a>
+        </b>   
+
+    </div>
+
+   <div class="text-and-photo-secondary">
+    <img class="image-development" src="../../../../../assets/images/features/software-architectures.jpeg" alt="software">
+   </div>
+</div>
+

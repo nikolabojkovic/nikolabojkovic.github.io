@@ -40,18 +40,18 @@
             <a 
               #refEl2 
               id="features"
-              (click)="activatelink(refEl2)" 
               class="dropdown-button default-menu-item menu-links"
+              (mouseenter)="showDropDownMenu()"
               >
                 {{ 'FEATURES' | translate }}
             </a>
-              <div class="dropdown-content">
-                <a class= "dropdown-links">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
-                <a class= "dropdown-links">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
-                <a class= "dropdown-links">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
-                <a class= "dropdown-links">{{ 'MENTORING' | translate }}</a>
-                <a class= "dropdown-links">{{ 'LEADERSHIP' | translate }}</a>
-                <a class= "dropdown-links">{{ 'CONSULTING' | translate }}</a>
+              <div class="dropdown-content" *ngIf ="display">
+                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'MENTORING' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'LEADERSHIP' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'CONSULTING' | translate }}</a>
               </div>
           </li>
           <li class="dropdown">

@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter'), url(../../../../../assets/fonts/inter/Inter-ExtraBold.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Inter-links';
+    src: local('Inter'), url(../../../../../assets/fonts/inter/Inter-Medium.ttf) format('truetype');
+  }
+  
+  body {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .features {
+    width: 100%;
+    height: 1000px;
+  }
+  
+  .title-container {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .paragraph1 {
+    font-size: 12px;
+    font-family: Inter-links;
+    color: var(--text-secondary-color); 
+    padding-top: 30px;
+  }
+  
+  .paragraph2 {
+    font-size: 32px;
+    font-family: Inter-links;
+    color: var(--text-primary-color); 
+    margin-top: 0px;
+  }
+  
+  .cards-container {
+    height: 800px;
+    width: 960px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .cards {
+    width: 260px;
+    height: 250px;
+    background-image: linear-gradient( 300deg, var(--background-primary-color), var(--background-secondary-color));
+    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition-duration: 200ms;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    bottom: 0px;
+    padding-top: 40px;
+    box-shadow: 5px 10px 15px 5px var(--background-primary-color);
+  }
+
+  .cards::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    box-shadow:  -4px -2px 35px -2px var(--text-ternary-color);
+  }
+
+  .cards::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    box-shadow: 5px 10px 15px 5px var(--background-secondary-color);
+  }
+
+  
+  .cards:hover {
+    transition-duration: 200ms;
+    cursor: pointer;
+    background-image: linear-gradient( 30deg, var(--background-secondary-color),var(--background-secondary-color) );
+    position: relative;
+    left: 0;
+    transform:translateY( -8px );
+    padding-bottom:25px;
+  }
+
+  .cards:hover p, .cards:hover i {
+    transform:translateY( -10px );
+  }
+
+  .cards:hover .information-paragraph, .cards:hover .information-paragraph-one {
+    color: var(--text-primary-color);
+  }
+
+  .cards:hover .arrow {
+    opacity: 1;
+    transform:translateY( -10px );
+    transition-property: opacity;
+    transition-duration: 300ms;
+  }
+
+  .arrow {
+    color: var( --text-secondary-color);
+    position: relative;
+    left: 20px;
+    font-size: 22px;
+    top:-12px;
+    opacity: 0;
+    transition-duration: 200ms;
+  }
+  
+  
+  .information-paragraph {
+    font-size: 18px;
+    color: var(--text-ternary-color);
+    font-family: Inter;
+    padding-left: 20px;
+  
+  }
+  
+  .information-paragraph-one {
+    font-size: 12px;
+    color: var(--text-ternary-color);
+    font-family: Inter-links;
+    padding-left: 20px;
+  
+  }
+  
+  .icon {
+    padding-left: 20px;
+    font-size:35px;
+    color:var( --text-secondary-color);
+    margin-bottom:15px;
+  }
+  
+  .link-cards {
+     text-decoration: none;
+     display: inline-block;
+  }
+
+  // Desktop screen  //
+  @media only screen and (min-width:1024px) {
+    .cards-container { 
+      width: 960px;
+    }
+  }
+
+  
+  // Laptop screen  //
+  @media only screen and (max-width:1023px)  and (min-width: 605px) {
+    .cards-container {
+      width: 640px;
+    }
+  }
+
+  
+  // Mobile screen  //
+  @media only screen and (max-width:649px)  and (min-width: 200px) {
+    .cards-container {
+      width: 95%;
+    }
+
+    .cards {
+      width: 100%;
+      height: 350px;
+      padding: 30px;
+      box-sizing: border-box;
+      margin: 7px 0 !important;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cards .information-paragraph {
+      font-size: 20px;
+    }
+
+    .cards .information-paragraph-one {
+      font-size: 13px;
+    }
+
+    .card-exception {
+      width: 100% !important;
+    }
+
+    .icon {
+      font-size: 45px;
+    }
+
+  }

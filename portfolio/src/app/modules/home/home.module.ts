@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home.page.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { SocialMediaStandardComponent } from 'src/app/shared/social-media/social-media-standard/social-media.component';
 import { SocialMediaMobileComponent } from 'src/app/shared/social-media/social-media-mobile/social-media-mobile.component';
+import { FeatureModule } from '../feature/feature.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SocialMediaMobileComponent } from 'src/app/shared/social-media/social-m
     CommonModule,
     HomeRoutingModule,
     FontAwesomeModule,
-    TranslateModule
+    TranslateModule,
+    FeatureModule
   ],
   exports: [
     SocialMediaStandardComponent,

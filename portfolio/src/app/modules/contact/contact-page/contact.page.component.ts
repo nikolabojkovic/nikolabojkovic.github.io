@@ -19,11 +19,14 @@ export class ContactPageComponent {
     checkIcon = faCheck;
     warningIcon =faTriangleExclamation;
     sendingMsg: boolean = false;
-    newContact: any;
 
-    constructor(private contactService: ContactService, private settingsService: SettingsService, private headerService: HeaderService) {
+
+    constructor(private contactService: ContactService, 
+                private settingsService: SettingsService, 
+                private headerService: HeaderService) {
 
     }
+
     ngOnInit(): void {
         this.headerService.HomePageDeactivated();
     }
@@ -42,17 +45,13 @@ export class ContactPageComponent {
             subject : subject.value,
             message : message.value
         }
-
-        this.newContact = contactMessage;                       //new 
-        console.log(this.newContact.contactFirstName);
-        let JSONString = JSON.stringify(this.newContact);
-        console.log(JSONString);
+                 //new 
 
         this.resetSuccessResponse();
         this.resetRejectResponse();
         let loader = document.getElementById("contact-page-forms-disabled") as HTMLElement;
         this.sendingMsg =true;
-        this.postContact();
+        this.postContact(contactMessage);
     }
 
     displaySuccessResponse(): void {
@@ -91,8 +90,8 @@ export class ContactPageComponent {
         successElement.classList.add("contact-mail-feedback-reject-hide");
     }
 
-    postContact(): any {
-        this.contactService.postContact(this.newContact)
+    postContact(newContact: any): any {
+        this.contactService.postContact(newContact)
         .then(
             () => {
                 this.displaySuccessResponse();
