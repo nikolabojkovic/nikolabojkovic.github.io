@@ -14,6 +14,7 @@ export class StandardHeaderComponent implements OnInit {
 
   featuresMenu = false;
   menuResume = false;
+  display = true;
 
   facebook =  faFacebookF;
   instagram = faInstagram;
@@ -97,5 +98,13 @@ export class StandardHeaderComponent implements OnInit {
 
   activatelinkMobile(itemMobile: HTMLElement): void {
     this.headerService.activateLinkMobileOn(itemMobile);
+  }
+
+  closeDropDownMenu(): void {
+    this.display = false;
+  }
+
+  showDropDownMenu(): void {
+    this.display = true;
   }
 }

@@ -15,6 +15,11 @@ export class HeaderService {
     menuResume = false;
     homeShadowID: any;
 
+    unHighlightFeaturesMenuitem(): void {
+      let featuresMenuItem = document.getElementById("home") as HTMLElement;
+      this.activateLink(featuresMenuItem);
+    }
+
     activateLink(Element: HTMLElement): void {
         let menuitems = document.getElementsByClassName('menu-links');
         for(let i=0; i<menuitems.length; i++) {
@@ -178,5 +183,10 @@ export class HeaderService {
         return "home";
       }
       return activeItem;
+    }
+
+    activateFeatureSection(): void {
+      let featuresMenuItem = document.getElementById("features") as HTMLElement;
+      this.activateLink(featuresMenuItem);
     }
 }

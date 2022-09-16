@@ -1,0 +1,153 @@
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter'), url(../../../../../assets/fonts/inter/Inter-ExtraBold.ttf) format('truetype');
+}
+  
+@font-face {
+    font-family: 'Inter-links';
+    src: local('Inter'), url(../../../../../assets/fonts/inter/Inter-Medium.ttf) format('truetype');
+}
+
+  body {
+    background-color: rgb(51, 51, 51);
+  }
+
+.development-strategy {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.text-and-photo {
+    width: 500px;
+    height: 550px;
+    margin: 40px;
+    padding: 20px;
+}
+
+.text-and-photo-secondary {
+    width: 500px;
+    height: 550px;
+    margin: 40px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 36px;
+    font-family: Inter;
+    color: white;
+}
+
+.text {
+    font-size: 14px;
+    font-family: Inter-links;
+    color: rgb(114, 113, 113);
+}
+
+.red-color-text {
+    color: red;
+    font-size: 14px;
+    font-family: Inter;
+}
+
+.image-development {
+  width: 100%;
+  height: 339px; 
+  padding-top: 35px;
+}
+
+
+@media only screen and ( max-width: 1160px) and (min-width: 900px){
+
+    .development-strategy { 
+        flex-direction: column;
+        height: auto;
+    }
+  
+    .text-and-photo {
+        width: calc( 100% - 80px);
+        height: auto;
+        margin: 40px;
+        margin-bottom: 0px;
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+  
+    .text-and-photo-secondary {
+        width: calc( 60% - 80px);
+        height: 550px;
+        padding: 0px 20px;
+        margin-top: 10px;
+    }
+  
+    .image-development {
+        width: 100%;
+        height: auto; 
+        padding-top: 0px;
+        object-fit: contain;
+    }
+  }
+  
+  //Mobile screen
+  @media only screen and ( max-width: 900px) and (min-width: 551px){
+    .development-strategy { 
+      flex-direction: column;
+      height: auto;
+  }
+  
+  .text-and-photo {
+      width: calc( 100% - 80px);
+      height: auto;
+      margin: 40px;
+      margin-bottom: 0px;
+      padding: 20px;
+      padding-bottom: 0px;
+  }
+  
+  .text-and-photo-secondary {
+      width: calc( 100% - 80px);
+      height: auto;
+      padding: 0px 20px;
+      margin-top: 10px;
+  }
+  
+  .image-development {
+      width: 100%;
+      height: auto; 
+      padding-top: 0px;
+      object-fit: contain;
+  }
+  }
+  @media only screen and ( max-width: 550px) and (min-width: 220px){
+    
+    .development-strategy { 
+        flex-direction: column;
+        height: auto;
+    }
+  
+    .text-and-photo {
+        width: calc( 100% - 20px );
+        height: auto;
+        padding: 5px;
+        margin: 10px;
+        margin-bottom: 1px;
+    }
+  
+    .text-and-photo-secondary {
+        width: calc( 100% - 30px);
+        height: auto;
+        padding: 0px;
+        margin: 15px;
+        margin-top: 0px;
+    }
+  
+    .image-development {
+        width: 100%;
+        height: auto; 
+        padding-top: 0px;
+        object-fit: contain;
+    }
+  }

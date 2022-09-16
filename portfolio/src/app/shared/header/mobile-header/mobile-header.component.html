@@ -34,12 +34,12 @@
                   </a>
                   <div id=featuresMenu class="dropdown-menu-mobile">
                     <ul>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'DEVELOPMENT STRATEGY' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'SOFTWARE ARCHITECTURE' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'PROJECT IMPLEMENTATION' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'MENTORING' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'LEADERSHIP' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'CONSULTING' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/development-strategy']" (click)=" hideMobileMenu();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/software-architecture']" (click)=" hideMobileMenu();">{{ 'SOFTWARE ARCHITECTURE' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/project-implementation']" (click)=" hideMobileMenu();">{{ 'PROJECT IMPLEMENTATION' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/mentoring']" (click)=" hideMobileMenu();">{{ 'MENTORING' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/leadership']" (click)=" hideMobileMenu();">{{ 'LEADERSHIP' | translate }}</a></li>
+                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/consulting']" (click)=" hideMobileMenu();">{{ 'CONSULTING' | translate }}</a></li>
                       </ul>
                   </div>
                 </li>
