@@ -107,4 +107,9 @@ export class StandardHeaderComponent implements OnInit {
   showDropDownMenu(): void {
     this.display = true;
   }
+
+  displaySettings(settingsButton: HTMLElement): void {
+    this.headerService.displaySettings(settingsButton);
+  }
+
 }

@@ -14,6 +14,7 @@ export class HeaderService {
     featuresMenu = false;
     menuResume = false;
     homeShadowID: any;
+    SettingsButtonActive = false;
 
     unHighlightFeaturesMenuitem(): void {
       let featuresMenuItem = document.getElementById("home") as HTMLElement;
@@ -188,5 +189,15 @@ export class HeaderService {
     activateFeatureSection(): void {
       let featuresMenuItem = document.getElementById("features") as HTMLElement;
       this.activateLink(featuresMenuItem);
+    }
+
+    displaySettings(settingsButton: HTMLElement): void {
+      if( this.SettingsButtonActive == false ) {
+        settingsButton.style.display = "block";
+        this.SettingsButtonActive = true;
+      } else {
+        settingsButton.style.display = "none";
+        this.SettingsButtonActive = false;
+      }
     }
 }
