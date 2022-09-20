@@ -30,9 +30,6 @@ li {
 
 .themes-icons-secondary {
   font-size:15px;
-  position: absolute;
-  right: 0px;
-  margin-right: 5px;
 }
 
 .themes-icon-primary {
@@ -83,7 +80,7 @@ li {
   color: var(--text-ternary-color);
   text-align: left;
   padding: 5px 5px 2px 0px;
-  padding-left: 8px !important;
+  padding-left: 11px !important;
   padding-right: 10px !important;
   text-decoration: none;
   font-size: 12px;
@@ -207,6 +204,10 @@ li.dropdown {
 
 .settings-item {
   padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 

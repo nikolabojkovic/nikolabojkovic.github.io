@@ -46,12 +46,12 @@
                 {{ 'FEATURES' | translate }}
             </a>
               <div class="dropdown-content" *ngIf ="display">
-                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'MENTORING' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'LEADERSHIP' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'CONSULTING' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); ">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'MENTORING' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'LEADERSHIP' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'CONSULTING' | translate }}</a>
               </div>
           </li>
           <li class="dropdown">
@@ -117,7 +117,7 @@
           <li class="dropdown">
             <a 
             #refEl8 
-            (click)="activatelink(refEl8); displaySettings(refElSettingsButton);"
+            (click)="displaySettings(refElSettingsButton);"
             class="dropdown-button default-menu-item menu-links"
             >
             <div class="gear-container" #refGearIcon >
@@ -128,7 +128,7 @@
               <div #refElSettingsButton class="dropdown-navigation dropdown-content-theme">
                 <div>
                   <span class="settings-item theme-text dropdown-navigation-item-theme">
-                    {{ 'THEME' | translate }}
+                    {{ 'THEMES' | translate }}
                   </span>
                 </div>
                 <a 
@@ -161,8 +161,8 @@
                   </div>
                 </a>
                 <div>
-                  <span class="settings-item theme-text dropdown-navigation-item-language">
-                    {{ 'LANGUAGE' | translate }}
+                  <span class=" theme-text dropdown-navigation-item-language">
+                    {{ 'LANGUAGES' | translate }}
                   </span>
                 </div>
                 <a 
