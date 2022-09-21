@@ -23,6 +23,13 @@ ul {
     position: relative;
     padding-top:20px;
   }
+
+  .flags {
+    width: 20px;
+    height: 12px;
+    position: relative;
+    float: right;
+  }
   
   .toggle-button {
     display: none;
@@ -161,10 +168,23 @@ ul {
     flex-direction: row;
     width: 70px;
     height: 20px;
-    display: inline-block;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     vertical-align: middle;
+  }
+    
+  .item-light-container p.english { 
+    margin-right: 25px;
+  }
+
+  .item-light-container p.serbian {
+    margin-right: 26px;
+  }
+
+  .item-light-container .themes-menu-item-text {
+    margin-right: 25px;
   }
   
   .item-light-container span {
@@ -174,6 +194,15 @@ ul {
   .item-light-container p {
     display: inline-block;
     margin-bottom: 0;
+    margin-right: 18px;
+  }
+
+  .default-link{
+    background-color: var(--background-primary-color);
+  }
+  .active-link{
+    background-color: var(--background-primary-color);
+    color:var(--text-secondary-color);
   }
   
   .themes-ul li {
@@ -355,6 +384,7 @@ ul {
     .menu-mobile {
       width: 100%;
       left:-100%;
+      overflow-y: scroll;
     }
   
     .header-logo-mobile {

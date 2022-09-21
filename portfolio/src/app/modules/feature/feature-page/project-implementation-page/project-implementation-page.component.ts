@@ -16,5 +16,6 @@ export class ProjectImplementationPageComponent implements OnInit {
 
   closeFeatures(): void {
     this.headerService.unHighlightFeaturesMenuitem();
+    this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
   }
 }

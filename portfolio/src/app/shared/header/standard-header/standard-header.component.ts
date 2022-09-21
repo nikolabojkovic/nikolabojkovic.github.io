@@ -76,6 +76,10 @@ export class StandardHeaderComponent implements OnInit {
     darkButton?.classList.remove("active");
   }
 
+  destroyHomePageShadow(): void {
+    this.homePageDeactivated();
+  }
+
   homePageActivated(): void {
     this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
   }
@@ -107,4 +111,9 @@ export class StandardHeaderComponent implements OnInit {
   showDropDownMenu(): void {
     this.display = true;
   }
+
+  displaySettings(settingsButton: HTMLElement): void {
+    this.headerService.displaySettings(settingsButton);
+  }
+
 }

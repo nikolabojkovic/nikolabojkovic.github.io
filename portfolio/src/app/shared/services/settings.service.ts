@@ -12,6 +12,7 @@ export class SettingsService {
     homeShadow: any;
     homeShadowID: any;
     menuThemes = false;
+    menuLanguages = false;
     togglerActivated = false;
     menuShadow = false;
     homePageActive = true;
@@ -29,8 +30,15 @@ export class SettingsService {
         }
         this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     }
-    
 
+    homePageDeactivated(): void {
+        if(this.homeShadowID == undefined) {
+            return;
+        }
+        console.log("Ungli");
+        this.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
+    }
+    
     loadSettings(): void {
         let settingsAsString = localStorage.getItem("settings");
 

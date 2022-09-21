@@ -38,17 +38,29 @@ export class MobileHeaderComponent implements OnInit {
   /*Zajednicko 1*/
 
   onDarkThemeClick(): void {
+    let lightButton = document.getElementById("MenuThemeLightID") as HTMLElement;
+    let darkButton = document.getElementById("MenuThemeDarkID") as HTMLElement;
     this.settingsService.setDarkTheme();
+
+    darkButton?.classList.remove("default-link");
+    darkButton?.classList.add("active-link");
+    lightButton?.classList.remove("active-link");
   }
 
   onLightThemeClick(): void {
+    let lightButton = document.getElementById("MenuThemeLightID") as HTMLElement;
+    let darkButton = document.getElementById("MenuThemeDarkID") as HTMLElement;
     this.settingsService.setLightTheme();
+
+    lightButton?.classList.remove("default-link");
+    lightButton?.classList.add("active-link");
+    darkButton?.classList.remove("active-link");
   }
 
     /*Zajednicko*/
 
   homePageActivated(): void {
-    this.settingsService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
+    this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
   }
 
   homePageDeactivated(): void {
@@ -72,6 +84,7 @@ export class MobileHeaderComponent implements OnInit {
   }
 
   activatelinkMobile(itemMobile: HTMLElement): void {
+    this.headerService.HomePageDeactivated();
     this.headerService.activateLinkMobileOn(itemMobile);
   }
   
@@ -89,6 +102,9 @@ export class MobileHeaderComponent implements OnInit {
   
   displayThemes(): void {
     this.headerService.displayThemesOn();
+  }
+  displayLanguages(): void {
+    this.headerService.displayLanguagesOn();
   }
 }
 

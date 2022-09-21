@@ -14,6 +14,7 @@ export class HeaderService {
     featuresMenu = false;
     menuResume = false;
     homeShadowID: any;
+    SettingsButtonActive = false;
 
     unHighlightFeaturesMenuitem(): void {
       let featuresMenuItem = document.getElementById("home") as HTMLElement;
@@ -63,6 +64,7 @@ export class HeaderService {
         this.closeFeatures();
         this.closeResume();
         this.closeThemes();
+        this.closeLanguages();
     }
 
     resetLinksOn():  void {
@@ -88,6 +90,12 @@ export class HeaderService {
         let menu = document.getElementById("themesMenu") as HTMLElement;
         menu.style.display = 'none';
         this.settingsService.menuThemes = false;
+    }
+
+    closeLanguages(): void {
+      let menu = document.getElementById("languagesMenu") as HTMLElement;
+      menu.style.display = 'none';
+      this.settingsService.menuLanguages = false;
     }
      
     displayFeaturesOn(): void {
@@ -134,7 +142,6 @@ export class HeaderService {
         for(let i = 0 ;i<menu.length ;i ++) {
           menu[i].classList.remove("menu-items-mobile-active");
           menu[i].classList.add("menu-items-mobile-default");
-          console.log("aa");
         }
         Element.classList.remove("menu-items-mobile-default");
         Element.classList.add("menu-items-mobile-active");
@@ -171,6 +178,21 @@ export class HeaderService {
           this.settingsService.menuThemes = false;
         }
     }
+    displayLanguagesOn(): void {
+        let menu = document.getElementById("languagesMenu") as HTMLElement;
+        if(this.settingsService.menuLanguages == true) {
+    
+        } else {
+          this.closeRestOfMenus();
+        }
+        if(this.settingsService.menuLanguages == false) {
+          menu.style.display = "block";
+          this.settingsService.menuLanguages = true;
+        } else {
+          menu.style.display = "none";
+          this.settingsService.menuLanguages = false;
+        }
+    }
 
     SaveMenuItem(element: HTMLElement): void {
       window.sessionStorage.setItem("ActiveMenuItem", element.id);
@@ -188,5 +210,15 @@ export class HeaderService {
     activateFeatureSection(): void {
       let featuresMenuItem = document.getElementById("features") as HTMLElement;
       this.activateLink(featuresMenuItem);
+    }
+
+    displaySettings(settingsButton: HTMLElement): void {
+      if( this.SettingsButtonActive == false ) {
+        settingsButton.style.display = "block";
+        this.SettingsButtonActive = true;
+      } else {
+        settingsButton.style.display = "none";
+        this.SettingsButtonActive = false;
+      }
     }
 }

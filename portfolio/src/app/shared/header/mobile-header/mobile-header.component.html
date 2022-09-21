@@ -17,7 +17,7 @@
                   <a 
                     #mobileItemRef1 
                     class="menu-items-mobile-default mobile-headers" 
-                    (click)="activatelinkMobile(mobileItemRef1); hideMobileMenu();" 
+                    (click)="activatelinkMobile(mobileItemRef1); homePageActivated(); hideMobileMenu();" 
                     [routerLink]="['/home']" 
                     routerLinkActive="active"
                     >
@@ -115,10 +115,11 @@
                   <ul class="themes-ul">
                       <li>
                         <a 
+                          id="lightThemeID" 
                           class="menu-dropdown-item-mobile-default"
                           (click)="onLightThemeClick(); hideMobileMenu(); resetLinks();">
                           <div class='item-light-container'>
-                            <p>{{ 'LIGHT' | translate }}</p>
+                            <p id="MenuThemeLightID">{{ 'LIGHT' | translate }}</p>
                             <span>
                               <fa-icon
                                 class="themes-icons"
@@ -131,11 +132,12 @@
                       </li>
                       <li>
                         <a 
+                          id="darkThemeID" 
                           class="menu-dropdown-item-mobile-default"
                           (click)="onDarkThemeClick(); hideMobileMenu(); resetLinks();"
                           >
                           <div class='item-light-container'>
-                            <p>{{ 'DARK' | translate }}</p>
+                            <p id="MenuThemeDarkID" class="themes-menu-item-text">{{ 'DARK' | translate }}</p>
                             <span>
                               <fa-icon
                                 class="themes-icons"
@@ -143,6 +145,42 @@
                               >
                               </fa-icon>
                             </span>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+                </li>
+                <li>
+                  <a
+                    #mobileItemRef9
+                    class="menu-items-mobile-default mobile-headers"
+                    (click)="activatelinkMobile(mobileItemRef9); displayLanguages()"
+                    >
+                    {{ 'LANGUAGES' | translate }}
+                  </a>
+                <div  
+                  id=languagesMenu
+                  class="dropdown-menu-mobile">
+                  <ul class="themes-ul">
+                      <li>
+                        <a 
+                          class="menu-dropdown-item-mobile-default"
+                          (click)="hideMobileMenu(); resetLinks();">
+                          <div class='item-light-container'>
+                            <p class="english">{{ 'ENGLISH' | translate }}</p>
+                            <span><img class="flags" src="../../../../assets/images/header/America.webp"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          class="menu-dropdown-item-mobile-default"
+                          (click)="hideMobileMenu(); resetLinks();"
+                          >
+                          <div class='item-light-container'>
+                            <p class="serbian">{{ 'SERBIAN' | translate }}</p>
+                            <span><img class="flags" src="../../../../assets/images/header/srbija.webp"></span>
                           </div>
                         </a>
                       </li>

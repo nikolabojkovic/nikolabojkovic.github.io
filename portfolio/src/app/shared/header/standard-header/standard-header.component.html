@@ -46,12 +46,12 @@
                 {{ 'FEATURES' | translate }}
             </a>
               <div class="dropdown-content" *ngIf ="display">
-                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'MENTORING' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'LEADERSHIP' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeDropDownMenu(); activatelink(refEl2)">{{ 'CONSULTING' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); ">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'MENTORING' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'LEADERSHIP' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'CONSULTING' | translate }}</a>
               </div>
           </li>
           <li class="dropdown">
@@ -117,42 +117,77 @@
           <li class="dropdown">
             <a 
             #refEl8 
-            (click)="activatelink(refEl8)"
+            (click)="displaySettings(refElSettingsButton);"
             class="dropdown-button default-menu-item menu-links"
             >
+            <div class="gear-container" #refGearIcon >
               <fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon>
-            </a>
-            <div class="dropdown-content-theme">
-              <a 
-                id="lightThemeID" 
-                (click)="onLightThemeClick();"
-                class="default"
-              >
-                <div class="settings-item theme-text">
-                  {{ 'LIGHT' | translate }}
-                  <fa-icon 
-                    class="theme-colors themes-icons-secondary" 
-                    [icon]="sun"
-                    >
-                    asdasd
-                  </fa-icon>
-                </div>
-              </a>
-              <a
-                id="darkThemeID" 
-                (click)="onDarkThemeClick();"
-                class="default"
-              >
-                <div class="settings-item theme-text">
-                  {{ 'DARK' | translate }}
-                  <fa-icon 
-                    class="theme-colors themes-icons-secondary" 
-                    [icon]="moon"
-                    >
-                  </fa-icon>
-                </div>
-              </a>
             </div>
+            </a>
+            <div class="dropdown-content-settings">
+              <div #refElSettingsButton class="dropdown-navigation dropdown-content-theme">
+                <div>
+                  <span class="settings-item theme-text dropdown-navigation-item-theme">
+                    {{ 'THEMES' | translate }}
+                  </span>
+                </div>
+                <a 
+                  id="lightThemeID" 
+                  (click)="onLightThemeClick();  displaySettings(refElSettingsButton)"
+                  class="default"
+                >
+                  <div class="settings-item theme-text">
+                    {{ 'LIGHT' | translate }}
+                    <fa-icon 
+                      class="theme-colors themes-icons-secondary" 
+                      [icon]="sun"
+                      >
+                      asdasd
+                    </fa-icon>
+                  </div>
+                </a>
+                <a
+                  id="darkThemeID" 
+                  (click)="onDarkThemeClick(); displaySettings(refElSettingsButton)"
+                  class="default"
+                >
+                  <div class="settings-item theme-text">
+                    {{ 'DARK' | translate }}
+                    <fa-icon 
+                      class="theme-colors themes-icons-secondary" 
+                      [icon]="moon"
+                      >
+                    </fa-icon>
+                  </div>
+                </a>
+                <div>
+                  <span class=" theme-text dropdown-navigation-item-language">
+                    {{ 'LANGUAGES' | translate }}
+                  </span>
+                </div>
+                <a 
+                  id="lightThemeID" 
+                  (click)="displaySettings(refElSettingsButton)"
+                  class="default"
+                >
+                  <div class="settings-item theme-text">
+                    {{ 'ENGLISH' | translate }}
+                    <span><img class="flags" src="../../../../assets/images/header/America.webp"></span>
+                  </div>
+                </a>
+                <a
+                  id="darkThemeID" 
+                  (click)= "displaySettings(refElSettingsButton)"
+                  class="default"
+                >
+                  <div class="settings-item theme-text">
+                    {{ 'SERBIAN' | translate }}
+                    <span><img class="flags" src="../../../../assets/images/header/srbija.webp"></span>
+                  </div>
+                </a>
+              </div>
+            </div>  
+          
           </li>
       </ul>
     </div> 
