@@ -21,5 +21,17 @@
             <app-footer></app-footer>
          </div>
       </div>
+      <div 
+         [ngClass]="{'scrollButton-active': scrollButtonStatus == true, 'scrollButton-default': scrollButtonStatus == false}" 
+         class="scrollButton"
+         (click)="scrollToTop()"
+      >
+         <div class="scroll-to-top-arrow-container">
+            <fa-icon 
+               class="scroll-to-top-arrow"
+               [icon]="arrow">
+            </fa-icon> 
+         </div>
+      </div>
    </div>
    
