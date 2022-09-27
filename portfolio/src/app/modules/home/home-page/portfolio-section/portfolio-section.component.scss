@@ -1,6 +1,7 @@
 .portfolio-section-container {
     width: 100%;
     height: auto;   // changeble
+    margin-top: 40px;
 }
 
 .portfolio-header {
@@ -25,15 +26,15 @@
 }
 
 .cards-container{
-    max-width: 965px;
+    max-width: 1155px;
     height: auto;
     margin: auto;
     text-align: center;
 }
 
 .card {
-    width: 260px;
-    height: 280px;
+    width: 320px;
+    height: 310px;
     display: inline-block;
     margin-left: 30px;
     margin-right: 30px;
@@ -76,8 +77,8 @@
 }
 
 .card-body {
-    width: 260px;
-    height: 280px;
+    width: 320px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -88,8 +89,8 @@
 
 .card-photo {
     object-fit: cover;
-    width: 260px;
-    height: 180px;
+    width: 320px;
+    height: 200px;
     position: relative;
     top:-20px
 }
@@ -99,17 +100,17 @@
     font-size: 12px;
     position: absolute;
     left: 0px;
-    top: 185px;
+    top: 205px;
     background-color: transparent;
     border: 0px;
 }
 
 .card-header-text {
     color: var(--text-ternary-color);
-    font-size: 15px;
+    font-size: 19px;
     position: absolute;
     left: 17px;
-    top: 217px;
+    top: 237px;
     text-align: left;
 }
 
