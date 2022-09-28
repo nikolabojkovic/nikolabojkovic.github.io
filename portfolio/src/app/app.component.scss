@@ -22,6 +22,41 @@
 }
 
 
+//scroll Button 
+
+.scrollButton {
+    width:50px;
+    height: 50px;
+    position: fixed;
+    bottom:10%;
+    right:10%;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--background-secondary-color);
+}
+
+.scrollButton-default {
+    display: none;
+}
+
+.scrollButton-active {
+    display: block;
+}
+
+.scroll-to-top-arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    margin-top: 12px;
+}
+.scroll-to-top-arrow {
+    transform: rotate(90deg);
+    color:var(--text-secondary-color);
+}
+
+
+
 @media only screen and (max-width: 1440px) {
     .site-container-top {
         height: 500px;
