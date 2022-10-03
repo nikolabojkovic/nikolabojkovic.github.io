@@ -112,6 +112,7 @@
     opacity: 0.3;
     box-shadow:  -4px -2px 35px -2px var(--text-ternary-color);
   }
+  
   /* Fix the circle for containers on the right side */
   .right::after {
     left: -16px;
@@ -126,7 +127,21 @@
     border-radius: 6px;
     left: 30px;
     color: var(--text-ternary-color);
+    transition-duration: 1s;
+    z-index: 3;
   }
+
+  .content-left:hover {
+    left:90px;
+    transition-duration: 2s;
+  }
+
+  .content-right:hover {
+    left:-20px;
+    transition-duration: 2s;
+  }
+
+
 
   .content:hover {
     color: var(--text-primary-color);
