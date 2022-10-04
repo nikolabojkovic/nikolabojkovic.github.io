@@ -43,5 +43,15 @@ p {
 }
 
 body {
-    background-color: var(--background-primary-color);
+    background-color: var(--background-primary-color) !important;
+}
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+.left.carousel-control, .right.carousel-control {
+    display: none;
+}
+
+.carousel-inner {
+    overflow: visible;
 }

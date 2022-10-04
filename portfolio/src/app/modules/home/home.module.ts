@@ -21,6 +21,8 @@ import { MentoringComponent } from './home-page/portfolio-section/modals/mentori
 import { LeadershipComponent } from './home-page/portfolio-section/modals/leadership/leadership.component';
 import { ConsultingComponent } from './home-page/portfolio-section/modals/consulting/consulting.component';
 import { BusinessComponent } from './home-page/portfolio-section/modals/business/business.component';
+import { ClientsCarouselComponent } from './home-page/clients-section/clients-carousel/clients-carousel.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { BusinessComponent } from './home-page/portfolio-section/modals/business
     MentoringComponent,
     LeadershipComponent,
     ConsultingComponent,
-    BusinessComponent
+    BusinessComponent,
+    ClientsCarouselComponent,
   ],
   imports: [
     CommonModule,
@@ -46,7 +49,8 @@ import { BusinessComponent } from './home-page/portfolio-section/modals/business
     FontAwesomeModule,
     TranslateModule,
     FeatureModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   exports: [
     SocialMediaStandardComponent,

@@ -1,0 +1,199 @@
+<carousel class="carousel-container" id="carousel" [interval]=0 datainterval = false [isAnimated]=true [showIndicators]=false>
+    <slide>
+        <div class="carousel-slider">
+            <div class="profile-container">
+                <div class="profile-container__photo-container">
+                    <img src="../../../../../../assets/images/clients/aleksandar-rajic.jpg" alt="first slide">
+                </div>
+                <div class="profile-container__info-container">
+                    <p class="info-container__title-mobile">MENTORING</p>
+                    <p class="info-container__name-mobile">Aleksandar Rajic</p>
+                    <p class="info-container-mobile">Front-end Web Developer</p>
+                </div>
+            </div>
+            <div class="profile-container__post">
+                <div class="profile-container__post__navigation">
+                    <fa-icon class="navigation-quotes" [icon]="faQuotes"></fa-icon>  
+                    <div class="navigation-buttons">
+                        <div class="navigation-button" (click)="prevSlide();">
+                            <fa-icon class="navigation-button-arrows" [icon]='arrowLeft'></fa-icon> 
+                        </div>
+                        <div class="navigation-button" (click)="nextSlide()">
+                            <fa-icon class="navigation-button-arrows" [icon]='arrowRight'></fa-icon> 
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-container__post__body">
+                    <div class="info-contianer__name-container">
+                        <p class="info-container__name">Medior - Web Development</p>
+                        <div class="stars">
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                        </div>
+                    </div>
+                    <p class="info-container__timeline"> <span class="info-container__title">Course</span><span class="info-container__tiitle-spaces">-</span> November 2021. - May 2022.</p>
+                    <div class="stars-mobile__container">
+                        <div class="stars-mobile">
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                        </div>
+                    </div>
+                    <p class="info-container__text">Web desing, implementation, codding best practices, time management, self organization, Agile methodologies, progress tracking and many other things helped me to learn web developemnt in no time. Very satisfied with mentoring.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>   
+        <div class="carousel__indicators-container">
+            <div class="carousel__indicators">
+                <div [ngClass]="{'indicators-default': firstSlide == false, 'indicators-active': firstSlide == true}" (click)="selectSlide(0)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+                <div [ngClass]="{'indicators-default': secondSlide == false, 'indicators-active': secondSlide == true}" (click)="selectSlide(1)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+                <div [ngClass]="{'indicators-default': thirdSlide == false, 'indicators-active': thirdSlide == true}" (click)="selectSlide(2)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+            </div>
+        </div>
+    </slide>
+    <slide>
+        <div class="carousel-slider">
+            <div class="profile-container">
+                <div class="profile-container__photo-container">
+                    <img src="../../../../../../assets/images/clients/marko-bojkovic.jpg" alt="first slide">
+                </div>
+                <div class="profile-container__info-container">
+                    <p class="info-container__title-mobile">MENTORING</p>
+                    <p class="info-container__name-mobile">Aleksandar Rajic</p>
+                    <p class="info-container-mobile">Front-end Web Developer</p>
+                </div>
+            </div>
+            <div class="profile-container__post">
+                <div class="profile-container__post__navigation">
+                    <div class="profile-container__post__navigation">
+                        <fa-icon class="navigation-quotes" [icon]="faQuotes"></fa-icon>  
+                        <div class="navigation-buttons">
+                            <div class="navigation-button" (click)="prevSlide();">
+                                <fa-icon class="navigation-button-arrows" [icon]='arrowLeft'></fa-icon> 
+                            </div>
+                            <div class="navigation-button" (click)="nextSlide()">
+                                <fa-icon class="navigation-button-arrows" [icon]='arrowRight'></fa-icon> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-container__post__body">
+                    <div class="info-contianer__name-container">
+                        <p class="info-container__name">Medior - Web Development</p>
+                        <div class="stars">
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                        </div>
+                    </div>
+                    <p class="info-container__timeline"> <span class="info-container__title">Course</span><span class="info-container__tiitle-spaces">-</span> November 2021. - May 2022.</p>
+                    <div class="stars-mobile__container">
+                        <div class="stars-mobile">
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                        </div>
+                    </div>
+                    <p class="info-container__text">Web desing, implementation, codding best practices, time management, self organization, Agile methodologies, progress tracking and many other things helped me to learn web developemnt in no time. Very satisfied with mentoring.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__indicators-container">
+            <div class="carousel__indicators">
+                <div [ngClass]="{'indicators-default': firstSlide == false, 'indicators-active': firstSlide == true}" (click)="selectSlide(0)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+                <div [ngClass]="{'indicators-default': secondSlide == false, 'indicators-active': secondSlide == true}" (click)="selectSlide(1)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+                <div [ngClass]="{'indicators-default': thirdSlide == false, 'indicators-active': thirdSlide == true}" (click)="selectSlide(2)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+            </div>
+        </div>
+    </slide>
+    <slide>
+        <div class="carousel-slider">
+            <div class="profile-container">
+                <div class="profile-container__photo-container">
+                    <img src="../../../../../../assets/images/clients/milos-stankovic.jpg" alt="first slide">
+                </div>
+                <div class="profile-container__info-container">
+                    <p class="info-container__title-mobile">MENTORING</p>
+                    <p class="info-container__name-mobile">Aleksandar Rajic</p>
+                    <p class="info-container-mobile">Front-end Web Developer</p>
+                </div>
+            </div>
+            <div class="profile-container__post">
+                <div class="profile-container__post__navigation">
+                    <fa-icon class="navigation-quotes" [icon]="faQuotes"></fa-icon>  
+                    <div class="navigation-buttons">
+                        <div class="navigation-button" (click)="prevSlide();">
+                            <fa-icon class="navigation-button-arrows" [icon]='arrowLeft'></fa-icon> 
+                        </div>
+                        <div class="navigation-button" (click)="nextSlide()">
+                            <fa-icon class="navigation-button-arrows" [icon]='arrowRight'></fa-icon> 
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-container__post__body">
+                    <div class="info-contianer__name-container">
+                        <p class="info-container__name">Medior - Web Development</p>
+                        <div class="stars">
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                        </div>
+                    </div>
+                    <p class="info-container__timeline"> <span class="info-container__title">Course</span><span class="info-container__tiitle-spaces">-</span> November 2021. - May 2022.</p>
+                    <div class="stars-mobile__container">
+                        <div class="stars-mobile">
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                        </div>
+                    </div>
+                    <p class="info-container__text">Web desing, implementation, codding best practices, time management, self organization, Agile methodologies, progress tracking and many other things helped me to learn web developemnt in no time. Very satisfied with mentoring.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__indicators-container">
+            <div class="carousel__indicators">
+                <div [ngClass]="{'indicators-default': firstSlide == false, 'indicators-active': firstSlide == true}" (click)="selectSlide(0)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+                <div [ngClass]="{'indicators-default': secondSlide == false, 'indicators-active': secondSlide == true}" (click)="selectSlide(1)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+                <div [ngClass]="{'indicators-default': thirdSlide == false, 'indicators-active': thirdSlide == true}" (click)="selectSlide(2)" class="indicator-container">
+                    <fa-icon class="indicators" [icon]='indicators'></fa-icon> 
+                </div>
+            </div>
+        </div>
+    </slide>
+</carousel>

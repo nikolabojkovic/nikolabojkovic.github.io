@@ -14,6 +14,7 @@ import { SettingsService } from './shared/services/settings.service';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
 import { HomeModule } from './modules/home/home.module';
 import { TestComponent } from './modules/home/home-page/portfolio-section/modals/test/test.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -39,7 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+    CarouselModule.forRoot()
   ],
   exports: [
     HomeModule
