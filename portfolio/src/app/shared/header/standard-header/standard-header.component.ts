@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SettingsService } from '../../services/settings.service';
 import { faXmark, faBars, faGear, faSun, faMoon} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -10,11 +10,14 @@ import { HeaderService } from '../../services/header.service';
   styleUrls: ['./standard-header.component.scss']
 })
 
+
 export class StandardHeaderComponent implements OnInit {
 
   featuresMenu = false;
   menuResume = false;
   display = true;
+  lightThemeColorPickerState = false;
+  darkThemeColorPickerState = false;
 
   facebook =  faFacebookF;
   instagram = faInstagram;
@@ -30,9 +33,10 @@ export class StandardHeaderComponent implements OnInit {
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
   ngOnInit(): void {
-    this.checkTheme();
+  //  this.checkTheme();
     this.homePageActivated();
     this.checkActiveMenuItem();
+    this.checkThemeActiveMenuItem();
   }
 
   checkActiveMenuItem(): void {
@@ -43,37 +47,109 @@ export class StandardHeaderComponent implements OnInit {
     this.setActiveMenuItem(value);
   }
 
+  checkThemeActiveMenuItem(): void {
+    let activeThemeMenuItem = this.headerService.loadActiveThemeMenuItem();
+    let element;
+
+    element = document.getElementById(activeThemeMenuItem) as HTMLElement;
+    this.setActiveThemeMenuItem(element);
+
+  }
+
   setActiveMenuItem(value: HTMLElement): void {
     value.classList.remove('default-menu-item')
     value.classList.add('active-menu-item');
   }
 
-  checkTheme(): void {
-    if(this.settingsService.settings.theme == "Dark") {
-      this.onDarkThemeClick();
-    } else {
-      this.onLightThemeClick();
-    }
+  setActiveThemeMenuItem(value: HTMLElement): void {
+    this.updateThemeMenuItems();
+    value.classList.remove("defaultThemeColor");
+    value.classList.add("activeThemeColor");
   }
 
-  onDarkThemeClick(): void {
+  updateThemeMenuItems(): void {
+    let light = document.getElementById("lightThemeID") as HTMLElement;
+    let dark = document.getElementById("darkThemeID") as HTMLElement;
+
+    light.classList.remove("activeThemeColor");
+    light.classList.add("defaultThemeColor");
+    dark.classList.remove("activeThemeColor");
+    dark.classList.add("defaultThemeColor");
+  }
+  /*
+  checkTheme(): void {
+    if(this.settingsService.settings.theme == "Dark") {
+      this.onDarkBlueThemeClick();
+    } else {
+      this.onLightRedThemeClick();
+    }
+  }
+  */
+ 
+  onDarkBlueThemeClick(): void {
     let lightButton = document.getElementById("lightThemeID") as HTMLElement;
     let darkButton = document.getElementById("darkThemeID") as HTMLElement;
-    this.settingsService.setDarkTheme();
+    this.settingsService.setDarkTheme(1);
 
     darkButton?.classList.remove("default");
     darkButton?.classList.add("active");
     lightButton?.classList.remove("active");
   }
 
-  onLightThemeClick(): void {
+  onDarkRedThemeClick(): void {
     let lightButton = document.getElementById("lightThemeID") as HTMLElement;
     let darkButton = document.getElementById("darkThemeID") as HTMLElement;
-    this.settingsService.setLightTheme();
+    this.settingsService.setDarkTheme(0);
 
+    darkButton?.classList.remove("default");
+    darkButton?.classList.add("active");
+    lightButton?.classList.remove("active");
+  }
+
+  setActiveButton(): void {
+    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
+    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
     lightButton?.classList.remove("default");
     lightButton?.classList.add("active");
     darkButton?.classList.remove("active");
+  }
+
+  onLightRedThemeClick(): void {
+    this.setActiveButton();
+    this.settingsService.setLightTheme(0);
+    /*displaySettings(refElSettingsButton) 
+    */
+    
+  }
+  onLightBlueThemeClick(): void {
+    this.setActiveButton();
+    this.settingsService.setLightTheme(1);
+  }
+
+  displayOnLightThemeColorPicker(): void {
+    let lightThemeColorPicker = document.getElementById("LightThemeColorPickerID") as HTMLElement;
+    if(this.lightThemeColorPickerState == false) {
+      this.lightThemeColorPickerState = true;
+    } else {
+      this.lightThemeColorPickerState = false;
+    }
+
+    if(this.darkThemeColorPickerState == true) {
+      this.darkThemeColorPickerState = false;
+    }
+  }
+
+  displayOnDarkThemeColorPicker(): void {
+    let darkThemeColorPicker = document.getElementById("DarkThemeColorPickerID") as HTMLElement;
+    if(this.darkThemeColorPickerState == false) {
+      this.darkThemeColorPickerState = true;
+    } else {
+      this.darkThemeColorPickerState = false;
+    }
+
+    if(this.lightThemeColorPickerState == true) {
+      this.lightThemeColorPickerState = false;
+    }
   }
 
   destroyHomePageShadow(): void {
@@ -90,6 +166,11 @@ export class StandardHeaderComponent implements OnInit {
 
   activatelink(linkitem: HTMLElement) {
     this.headerService.activateLink(linkitem);
+  }
+
+  activeThemeItem(linkitem:HTMLElement) {
+    this.setActiveThemeMenuItem(linkitem);
+    this.headerService.SaveThemeMenuItem(linkitem);
   }
 
   toggleMobileMenu(): void {

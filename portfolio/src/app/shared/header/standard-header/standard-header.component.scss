@@ -172,7 +172,6 @@ li.dropdown {
   background-color: var(--background-primary-color);
   color:var(--text-secondary-color);
 }
-
   
 .dropdown-content a:hover,
 .dropdown-content-settings a:hover,
@@ -208,8 +207,56 @@ li.dropdown {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
+.settings-item__color {
+  width: 200px;
+  height: 99px;
+  background-color: var(--background-primary-color);
+  position: absolute;
+  right: -210px;
+  top:-13px;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.settings-item__color__item {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left:15px;
+  padding-right: 25px;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-item__color__item span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 10px;
+  font-family: "Inter-links";
+  color:var(--text-ternary-color);
+}
+
+.settings-item__color__item:hover {
+  background-color: var(--background-secondary-color);
+}
+
+.settings-item__color__item:hover span {
+  color:var(--text-primary-color);
+}
 
 .gear-container {
   padding: 0;
@@ -249,6 +296,10 @@ li.dropdown {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.active-theme-color {
+  color: var(--text-secondary-color);
+}
   
 .menu {
   padding-right: 30px;
@@ -271,6 +322,14 @@ li.dropdown {
   padding-top:20px;
 }
   
+.defaultThemeColor {
+  color:var(--text-ternary-color);
+}
+
+.activeThemeColor {
+  color:var(--text-secondary-color) !important;
+}
+
 .toggle-button {
   display: none;
   position: absolute;
@@ -319,7 +378,7 @@ li.dropdown {
     }
   
     .dropdown-content-theme {
-      top:47px;
+      top: -20px;
       left:-170px;
     }
   
@@ -343,8 +402,20 @@ li.dropdown {
       justify-content: space-between;
     }
   
-  
-  
+  }
+
+
+  // ThemeMenuItems 
+
+  @media only screen and (max-width:1820px) {
+    .settings-item__color {
+      width: 200px;
+      height: 99px;
+      background-color: var(--background-primary-color);
+      position: absolute;
+      left:-210px;
+      top:-13px;
+    }
   }
   
    //Tablet View

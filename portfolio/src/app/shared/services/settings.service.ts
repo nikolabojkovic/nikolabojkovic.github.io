@@ -19,7 +19,7 @@ export class SettingsService {
 
     constructor(private translate: TranslateService) {
         translate.setDefaultLang('en-US');
-        this.settings = new Settings('Dark', 'en-US');
+        this.settings = new Settings('DarkRed', 'en-US');
     }
     
 
@@ -35,7 +35,6 @@ export class SettingsService {
         if(this.homeShadowID == undefined) {
             return;
         }
-        console.log("Ungli");
         this.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
     }
     
@@ -49,20 +48,41 @@ export class SettingsService {
 
         this.homePageActivated();
         this.loadTheme();
+        console.log("deafult"+ this.settings.theme);
         this.loadLanguage();
     }
 
-    setDarkTheme(): void {
-        document.getElementsByTagName('body')[0].classList.remove("theme-light");
-        document.getElementsByTagName('body')[0].classList.add("theme-dark");
-        this.settings.setTheme('Dark');
+    setDarkTheme(type:number): void {
+      if( type == 0 ) {
+            document.getElementsByTagName('body')[0].classList.remove("theme-dark-blue");
+            document.getElementsByTagName('body')[0].classList.remove("theme-light-blue");
+            document.getElementsByTagName('body')[0].classList.remove("theme-light-red");
+            document.getElementsByTagName('body')[0].classList.add("theme-dark-red");
+            this.settings.setTheme('DarkRed');
+        } else {
+            document.getElementsByTagName('body')[0].classList.remove("theme-dark-red");
+            document.getElementsByTagName('body')[0].classList.remove("theme-light-red");
+            document.getElementsByTagName('body')[0].classList.remove("theme-light-blue");
+            document.getElementsByTagName('body')[0].classList.add("theme-dark-blue");
+            this.settings.setTheme('DarkBlue');
+        }
         localStorage.setItem("settings", JSON.stringify(this.settings));
     }
 
-    setLightTheme(): void {
-        document.getElementsByTagName('body')[0].classList.remove("theme-dark");
-        document.getElementsByTagName('body')[0].classList.add("theme-light");
-        this.settings.setTheme('Light');
+    setLightTheme(type:number): void {
+        if(type == 0 ) {
+            document.getElementsByTagName('body')[0].classList.remove("theme-dark-blue");
+            document.getElementsByTagName('body')[0].classList.remove("theme-dark-red");
+            document.getElementsByTagName('body')[0].classList.remove("theme-light-blue");
+            document.getElementsByTagName('body')[0].classList.add("theme-light-red");
+            this.settings.setTheme('LightRed');
+        } else {
+            document.getElementsByTagName('body')[0].classList.remove("theme-dark-blue");
+            document.getElementsByTagName('body')[0].classList.remove("theme-dark-red");
+            document.getElementsByTagName('body')[0].classList.remove("theme-light-red");
+            document.getElementsByTagName('body')[0].classList.add("theme-light-blue");
+            this.settings.setTheme('LightBlue');
+        }
         localStorage.setItem("settings", JSON.stringify(this.settings));
     }
 
@@ -75,17 +95,26 @@ export class SettingsService {
     }
 
     private loadTheme(): void {
-        if(this.settings.theme == "Dark") {
-            this.setDarkTheme();
-            return;
-        } 
-        
-        if (this.settings.theme == "Light"){
-            this.setLightTheme();
-            return;
-        } 
+        console.log(this.settings.theme);
 
-        this.setDarkTheme();
+        switch(this.settings.theme) {
+            case "DarkRed":
+                this.setDarkTheme(0);
+                console.log("loaded red");
+                break;
+            case "DarkBlue":
+                this.setDarkTheme(1);
+                console.log("loaded blue");
+                break;
+            case "LightRed":
+                this.setLightTheme(0);
+                break;
+            case "LightBlue":
+                this.setLightTheme(1);
+                break;
+            default:
+                this.setDarkTheme(0);
+        }
     }
 
     private loadLanguage(): void {

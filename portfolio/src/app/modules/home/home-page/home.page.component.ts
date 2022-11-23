@@ -16,10 +16,10 @@ export class HomePageComponent {
       }
       
       ngOnInit(): void {
-   
+    //    this.settingsService.loadSettings();
       }
     
-      onEnglishLanguageClick(): void {
+ /*     onEnglishLanguageClick(): void {
         this.settingsService.setLanguage('en-US');
       }
     
@@ -28,13 +28,13 @@ export class HomePageComponent {
       }
     
       onDarkThemeClick(): void {
-        this.settingsService.setDarkTheme();
+        this.settingsService.setDarkTheme(0);
       }
     
       onLightThemeClick(): void {
-        this.settingsService.setLightTheme();
+        this.settingsService.setLightTheme(0);
       }
-
+*/
       ngOnDestroy(): void {
         console.log("OnDestroy executed");
       }
