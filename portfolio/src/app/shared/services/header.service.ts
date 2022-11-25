@@ -217,8 +217,6 @@ export class HeaderService {
 
     loadActiveThemeMenuItem(): string {
       let activeThemeMenuItem = window.sessionStorage.getItem("ActiveThemeMenuItem");
-
-      console.log("Theme is "+activeThemeMenuItem);
       if(activeThemeMenuItem == null) {
         return "themeLightID";
       }
