@@ -1,9 +1,55 @@
-<div class="modal-header">
-    <h4 class="modal-title pull-left">MENTORING</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
+<div class="modal-container">
+  <div class="modal-header">
+    <fa-icon
+      class="btn-close-custom"
+      [icon]="btn_close"
+      (click)="modalRef?.hide()"
+    >
+    </fa-icon>
   </div>
   <div class="modal-body">
-    Web development skills in 6 months
+    <div class="modal-body-container">
+      <div class="photo-container">
+        <img class="card-photo" src="../../../../../assets/images/portfolio/mentoring.jpg">
+      </div>
+      <div class="text-container">
+        <p class="text-container__paragraph">Portfolio - Mentoring</p>
+        <h4 class="text-container__header">Web development skills in 6 months</h4>
+        <p class="text-container__paragraph">Everyone can learn web development in less then 6 months, but there are several things which are required if we really want to see results. After a month you will be able to see first results and you will be amazed how much you can do in such a short period of time. As soon as you apply all reuired principles in the fist couple of months you will have everything you need and the only thing left is to continue several more months in the same way. You will be able to track your progress and avoid unpleasent pressure and stress.  </p>
+        <p class="text-container__secondary-header">Required principles:</p>
+        <div class="list-of-items">
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Organization</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Discipline</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Practice</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Daily sync</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Step by step progress</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Find your pace</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Specialized & wide knowledge - balance </p>
+          </div>
+        </div>
+        <p class="text-container__secondary-header">The last thing that you need to skyrocket your learning proccess is our amazing team who can guide you through the entire process of applying all required principles and will be available for you whenever you need help.</p>
+        <p class="text-container__post-paragraph">Have fun and learn how to create amazing web pages with modern design and awesome animations.</p>
+      </div>
+    </div>
   </div>
+</div>

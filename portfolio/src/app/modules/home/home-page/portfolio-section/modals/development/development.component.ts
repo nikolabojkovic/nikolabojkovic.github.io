@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-development',
   templateUrl: './development.component.html',
@@ -13,4 +13,5 @@ export class DevelopmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  btn_close = faXmark;
 }

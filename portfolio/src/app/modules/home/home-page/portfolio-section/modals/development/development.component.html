@@ -1,9 +1,59 @@
-<div class="modal-header">
-    <h4 class="modal-title pull-left">DEVELOPMENT</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
+<div class="modal-container">
+  <div class="modal-header">
+    <fa-icon
+      class="btn-close-custom"
+      [icon]="btn_close"
+      (click)="modalRef?.hide()"
+    >
+    </fa-icon>
   </div>
   <div class="modal-body">
-    Monolith to microservices
+    <div class="modal-body-container">
+      <div class="photo-container">
+        <img class="card-photo" src="../../../../../assets/images/portfolio/development.jpg">
+      </div>
+      <div class="text-container">
+        <p class="text-container__paragraph">Portfolio - Development</p>
+        <h4 class="text-container__header">Monolith to microservices</h4>
+        <p class="text-container__paragraph">When software reaches stage where monolith has to be splitted accros multiple domains, first we have to separate domains into different bounded contexts and then farther into microservice. Bounded context is logical and micrroservice phisical separation between domains. </p>
+        <p class="text-container__paragraph">Process of separatioin is time consuming and expensive as well, but benefits are huge. </p>
+
+        <p class="text-container__secondary-header">There are serveral phases during this conversion:</p>
+        <div class="list-of-items">
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Domain separation</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Code refactoring</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Testing</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Domain isolation</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Components/Microservices Integration</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Infrastructure refactoring </p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Optimization</p>
+          </div>
+          <div class="li-item-container">
+            <i class="fa fa-check red-check"></i>
+            <p class="li-item">Scaling</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

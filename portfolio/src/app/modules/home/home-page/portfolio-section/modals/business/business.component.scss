@@ -1,0 +1,108 @@
+.modal-container {
+    padding:13px 5px;
+    background-color: var(--text-ternary-color);
+    border-radius: 5px;
+}
+
+.app-modal-window .modal-dialog {
+    width: 1100px;
+}
+
+.modal-body-container {
+    width: 1040px;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    border-radius:7px;
+}
+
+.photo-container {
+    padding-top: 5px;
+    width: 35%;
+    height: auto;
+    background-color: transparent;
+    border-radius:7px;
+}
+
+.text-container {
+    padding: 0px 40px;
+    width: 65%;
+    height: auto;
+    background-color: transparent;
+}
+
+.text-container p, .text-container h4 {
+    color:var(--text-ternary-color);
+}
+
+.text-container h4 {
+    color:var(--text-primary-color);
+    font-size: 35px;
+}
+
+.text-container p.text-container__secondary-header {
+    color:var(--text-primary-color);
+}
+
+.li-item-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.red-check {
+    color: var(--text-secondary-color);
+    position: relative;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.red-transparent {
+    opacity: 0;
+    position: relative;
+    font-size: 17px;
+    margin-right: 4px;
+}
+
+.btn-close-custom {
+    color:var(--text-secondary-color);
+    font-size: 32px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.list-of-items {
+    margin-bottom: 15px;
+}
+
+.list-of-items p {
+    margin: 0px 0px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 300px;
+    top: 0px;
+}
+
+.card-photo {
+    object-fit: cover;
+    width: 320px;
+    height: 120px;
+    position: relative;
+    top:-20px;
+    border-radius:7px;
+}
+
+.btn-close-active {
+    display: none;
+}
+
+.modalClosingLightButtonVisibility {
+    display: block;
+}
+
+.modalClosingDarkButtonVisibility {
+    display: block;
+}
