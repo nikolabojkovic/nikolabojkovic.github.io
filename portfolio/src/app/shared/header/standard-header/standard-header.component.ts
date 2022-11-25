@@ -33,7 +33,6 @@ export class StandardHeaderComponent implements OnInit {
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
   ngOnInit(): void {
-  //  this.checkTheme();
     this.homePageActivated();
     this.checkActiveMenuItem();
     this.checkThemeActiveMenuItem();
@@ -76,15 +75,6 @@ export class StandardHeaderComponent implements OnInit {
     dark.classList.remove("activeThemeColor");
     dark.classList.add("defaultThemeColor");
   }
-  /*
-  checkTheme(): void {
-    if(this.settingsService.settings.theme == "Dark") {
-      this.onDarkBlueThemeClick();
-    } else {
-      this.onLightRedThemeClick();
-    }
-  }
-  */
  
   onDarkBlueThemeClick(): void {
     let lightButton = document.getElementById("lightThemeID") as HTMLElement;
@@ -117,9 +107,6 @@ export class StandardHeaderComponent implements OnInit {
   onLightRedThemeClick(): void {
     this.setActiveButton();
     this.settingsService.setLightTheme(0);
-    /*displaySettings(refElSettingsButton) 
-    */
-    
   }
   onLightBlueThemeClick(): void {
     this.setActiveButton();
