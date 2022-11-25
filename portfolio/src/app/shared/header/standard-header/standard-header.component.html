@@ -133,8 +133,9 @@
                 </div>
                 <a 
                   id="lightThemeID" 
-                  (click)="onLightThemeClick();  displaySettings(refElSettingsButton)"
-                  class="default"
+                  #themeLightID
+                  (click)="displayOnLightThemeColorPicker();"
+                  class="default defaultThemeColor"
                 >
                   <div class="settings-item theme-text">
                     {{ 'LIGHT' | translate }}
@@ -144,11 +145,36 @@
                       >
                       asdasd
                     </fa-icon>
+                    <div [ngClass]="{'display':lightThemeColorPickerState == true, 'hide':lightThemeColorPickerState == false }" id="LightThemeColorPickerID" class="settings-item__color display">
+                      <div (click)="onLightRedThemeClick(); displaySettings(refElSettingsButton); activeThemeItem(themeLightID);" class="settings-item__color__item">
+                        <span>RED</span>
+                        <span>
+                          <fa-icon 
+                            class="theme-colors themes-icons-secondary" 
+                            [icon]="sun"
+                          >
+                            asdasd
+                          </fa-icon>
+                        </span>
+                      </div>
+                      <div (click)="onLightBlueThemeClick(); displaySettings(refElSettingsButton); activeThemeItem(themeLightID);" class="settings-item__color__item">
+                        <span>BLUE</span>
+                        <span>
+                          <fa-icon 
+                            class="theme-colors themes-icons-secondary" 
+                            [icon]="sun"
+                          >
+                            asdasd
+                          </fa-icon>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </a>
                 <a
                   id="darkThemeID" 
-                  (click)="onDarkThemeClick(); displaySettings(refElSettingsButton)"
+                  #themeDarkID
+                  (click)="displayOnDarkThemeColorPicker();"
                   class="default"
                 >
                   <div class="settings-item theme-text">
@@ -158,6 +184,30 @@
                       [icon]="moon"
                       >
                     </fa-icon>
+                    <div [ngClass]="{'display':darkThemeColorPickerState == true, 'hide':darkThemeColorPickerState == false }" id="DarkThemeColorPickerID" class="settings-item__color display">
+                      <div (click)="onDarkRedThemeClick(); displaySettings(refElSettingsButton); activeThemeItem(themeDarkID);" class="settings-item__color__item">
+                        <span>RED</span>
+                        <span>
+                          <fa-icon 
+                            class="theme-colors themes-icons-secondary" 
+                            [icon]="moon"
+                          >
+                            asdasd
+                          </fa-icon>
+                        </span>
+                      </div>
+                      <div (click)="onDarkBlueThemeClick(); displaySettings(refElSettingsButton);  activeThemeItem(themeDarkID);" class="settings-item__color__item">
+                        <span>BLUE</span>
+                        <span>
+                          <fa-icon 
+                            class="theme-colors themes-icons-secondary" 
+                            [icon]="moon"
+                          >
+                            asdasd
+                          </fa-icon>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </a>
                 <div>

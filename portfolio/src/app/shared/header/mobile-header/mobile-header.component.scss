@@ -165,11 +165,10 @@ ul {
   
   .item-light-container {
     display: flex;
-    flex-direction: row;
-    width: 70px;
-    height: 20px;
+    width: 200px;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     vertical-align: middle;
@@ -184,7 +183,9 @@ ul {
   }
 
   .item-light-container .themes-menu-item-text {
-    margin-right: 25px;
+    margin-left: 25px;
+    position: absolute;
+    left:0px;
   }
   
   .item-light-container span {
@@ -212,7 +213,6 @@ ul {
   
   .themes-icons {
     font-size:17px;
-    margin-bottom: 10px;
     color:var(--text-ternary-color);
   }
   
@@ -249,8 +249,73 @@ ul {
     cursor: pointer;
   }
   
+  .display {
+    display: block;
+  }
   
+  .hide {
+    display: none;
+  }
+
+  .settings-item__color {
+    width: 100%;
+    height: 65px;
+    background-color: var(--background-primary-color);
+    position: relative;
+    right: 0px;
+    margin-top:7px;
+  }
+
+  .settings-item__color__dark-theme {
+    width: 100%;
+    height: 65px;
+    background-color: var(--background-primary-color);
+    position: relative;
+    right: 0px;
+    margin-top:25px;
+  }
+
+  .settings-item__color__item {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left:15px;
+    padding-right: 25px;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   
+.settings-item__color__item span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 10px;
+  font-family: "Inter-links";
+  color:var(--text-ternary-color);
+}
+
+.settings-item__color__item:hover {
+  background-color: var(--background-secondary-color);
+}
+
+.settings-item__color__item:hover span {
+  color:var(--text-primary-color);
+}
+
+.item-light-container__mobile_theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 15px;
+}
+
    // Desktop View
   
    @media only screen and (min-width:1440px) {

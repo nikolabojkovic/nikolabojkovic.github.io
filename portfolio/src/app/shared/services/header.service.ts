@@ -31,6 +31,10 @@ export class HeaderService {
         Element.classList.add('active-menu-item');
         this.SaveMenuItem(Element);
     }
+
+    activeThemeItem(Element:HTMLElement): void {
+
+    }
     
 
     HomePageDeactivated(): void {
@@ -198,6 +202,10 @@ export class HeaderService {
       window.sessionStorage.setItem("ActiveMenuItem", element.id);
     }
 
+    SaveThemeMenuItem(element: HTMLElement): void {
+      window.sessionStorage.setItem("ActiveThemeMenuItem",element.id);
+    }
+
     loadActiveMenuItem(): string {
       let activeItem = window.sessionStorage.getItem("ActiveMenuItem");
 
@@ -205,6 +213,14 @@ export class HeaderService {
         return "home";
       }
       return activeItem;
+    }
+
+    loadActiveThemeMenuItem(): string {
+      let activeThemeMenuItem = window.sessionStorage.getItem("ActiveThemeMenuItem");
+      if(activeThemeMenuItem == null) {
+        return "themeLightID";
+      }
+      return activeThemeMenuItem;
     }
 
     activateFeatureSection(): void {

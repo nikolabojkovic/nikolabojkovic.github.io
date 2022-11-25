@@ -113,38 +113,78 @@
                   id=themesMenu
                   class="dropdown-menu-mobile">
                   <ul class="themes-ul">
+
+                    <!-- onLightThemeClick(); hideMobileMenu(); resetLinks(); -->
                       <li>
                         <a 
                           id="lightThemeID" 
+                          #themeLightMobileID
                           class="menu-dropdown-item-mobile-default"
-                          (click)="onLightThemeClick(); hideMobileMenu(); resetLinks();">
+                          (click)=" displayOnLightThemeColorPicker()">
                           <div class='item-light-container'>
-                            <p id="MenuThemeLightID">{{ 'LIGHT' | translate }}</p>
-                            <span>
-                              <fa-icon
-                                class="themes-icons"
-                                [icon]="sun"
-                              >
-                              </fa-icon>
-                            </span>
+                            <div class="item-light-container__mobile_theme">
+                              <p id="MenuThemeLightID">{{ 'LIGHT' | translate }}</p>
+                            </div>
+                            <div [ngClass]="{'display':lightThemeColorPickerState == true, 'hide':lightThemeColorPickerState == false }" id="LightThemeColorPickerID" class="settings-item__color display">
+                              <div (click)="onLightRedThemeClick(); activeThemeItem(themeLightMobileID);" class="settings-item__color__item">
+                                <span>RED</span>
+                                <span>
+                                  <fa-icon 
+                                    class="theme-colors themes-icons-secondary" 
+                                    [icon]="sun"
+                                  >
+                                    asdasd
+                                  </fa-icon>
+                                </span>
+                              </div>
+                              <div (click)="onLightBlueThemeClick();  activeThemeItem(themeLightMobileID);" class="settings-item__color__item">
+                                <span>BLUE</span>
+                                <span>
+                                  <fa-icon 
+                                    class="theme-colors themes-icons-secondary" 
+                                    [icon]="sun"
+                                  >
+                                    asdasd
+                                  </fa-icon>
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </a>
                       </li>
                       <li>
                         <a 
-                          id="darkThemeID" 
+                          id="darkThemeID"
+                          #themeDarktMobileID
                           class="menu-dropdown-item-mobile-default"
-                          (click)="onDarkThemeClick(); hideMobileMenu(); resetLinks();"
+                          (click)="displayOnDarkThemeColorPicker()"
                           >
                           <div class='item-light-container'>
                             <p id="MenuThemeDarkID" class="themes-menu-item-text">{{ 'DARK' | translate }}</p>
-                            <span>
-                              <fa-icon
-                                class="themes-icons"
-                                [icon]="moon"
-                              >
-                              </fa-icon>
-                            </span>
+                            <div [ngClass]="{'display':darkThemeColorPickerState == true, 'hide':darkThemeColorPickerState == false }" id="DarkThemeColorPickerID" class="settings-item__color__dark-theme">
+                              <div (click)="onDarkRedThemeClick(); activeThemeItem(themeDarktMobileID);" class="settings-item__color__item">
+                                <span>RED</span>
+                                <span>
+                                  <fa-icon 
+                                    class="theme-colors themes-icons-secondary" 
+                                    [icon]="moon"
+                                  >
+                                    asdasd
+                                  </fa-icon>
+                                </span>
+                              </div>
+                              <div (click)="onDarkBlueThemeClick();  activeThemeItem(themeDarktMobileID);" class="settings-item__color__item">
+                                <span>BLUE</span>
+                                <span>
+                                  <fa-icon 
+                                    class="theme-colors themes-icons-secondary" 
+                                    [icon]="moon"
+                                  >
+                                    asdasd
+                                  </fa-icon>
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </a>
                       </li>

@@ -16,6 +16,8 @@ export class MobileHeaderComponent implements OnInit {
 
   featuresMenu = false;
   menuResume = false;
+  lightThemeColorPickerState = false;
+  darkThemeColorPickerState = false;
 
   facebook =  faFacebookF;
   instagram = faInstagram;
@@ -40,7 +42,7 @@ export class MobileHeaderComponent implements OnInit {
   onDarkThemeClick(): void {
     let lightButton = document.getElementById("MenuThemeLightID") as HTMLElement;
     let darkButton = document.getElementById("MenuThemeDarkID") as HTMLElement;
-    this.settingsService.setDarkTheme();
+    this.settingsService.setDarkTheme(0);
 
     darkButton?.classList.remove("default-link");
     darkButton?.classList.add("active-link");
@@ -50,7 +52,7 @@ export class MobileHeaderComponent implements OnInit {
   onLightThemeClick(): void {
     let lightButton = document.getElementById("MenuThemeLightID") as HTMLElement;
     let darkButton = document.getElementById("MenuThemeDarkID") as HTMLElement;
-    this.settingsService.setLightTheme();
+    this.settingsService.setLightTheme(0);
 
     lightButton?.classList.remove("default-link");
     lightButton?.classList.add("active-link");
@@ -106,5 +108,94 @@ export class MobileHeaderComponent implements OnInit {
   displayLanguages(): void {
     this.headerService.displayLanguagesOn();
   }
+
+  onLightRedThemeClick(): void {
+    this.setActiveButton();
+    this.settingsService.setLightTheme(0);
+    /*displaySettings(refElSettingsButton) 
+    */
+    
+  }
+
+  setActiveButton(): void {
+    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
+    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
+    lightButton?.classList.remove("default");
+    lightButton?.classList.add("active");
+    darkButton?.classList.remove("active");
+  }
+
+  activeThemeItem(linkitem:HTMLElement) {
+    this.setActiveThemeMenuItem(linkitem);
+    this.headerService.SaveThemeMenuItem(linkitem);
+  }
+
+  setActiveThemeMenuItem(value: HTMLElement): void {
+    this.updateThemeMenuItems();
+    value.classList.remove("defaultThemeColor");
+    value.classList.add("activeThemeColor");
+  }
+
+  updateThemeMenuItems(): void {
+    let light = document.getElementById("lightThemeID") as HTMLElement;
+    let dark = document.getElementById("darkThemeID") as HTMLElement;
+
+    light.classList.remove("activeThemeColor");
+    light.classList.add("defaultThemeColor");
+    dark.classList.remove("activeThemeColor");
+    dark.classList.add("defaultThemeColor");
+  }
+
+  onLightBlueThemeClick(): void {
+    this.setActiveButton();
+    this.settingsService.setLightTheme(1);
+  }
+  
+  displayOnLightThemeColorPicker(): void {
+    let lightThemeColorPicker = document.getElementById("LightThemeColorPickerID") as HTMLElement;
+    if(this.lightThemeColorPickerState == false) {
+      this.lightThemeColorPickerState = true;
+    } else {
+      this.lightThemeColorPickerState = false;
+    }
+
+    if(this.darkThemeColorPickerState == true) {
+      this.darkThemeColorPickerState = false;
+    }
+  }
+
+  onDarkRedThemeClick(): void {
+    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
+    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
+    this.settingsService.setDarkTheme(0);
+
+    darkButton?.classList.remove("default");
+    darkButton?.classList.add("active");
+    lightButton?.classList.remove("active");
+  }
+
+  onDarkBlueThemeClick(): void {
+    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
+    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
+    this.settingsService.setDarkTheme(1);
+
+    darkButton?.classList.remove("default");
+    darkButton?.classList.add("active");
+    lightButton?.classList.remove("active");
+  }
+
+  displayOnDarkThemeColorPicker(): void {
+    let darkThemeColorPicker = document.getElementById("DarkThemeColorPickerID") as HTMLElement;
+    if(this.darkThemeColorPickerState == false) {
+      this.darkThemeColorPickerState = true;
+    } else {
+      this.darkThemeColorPickerState = false;
+    }
+
+    if(this.lightThemeColorPickerState == true) {
+      this.lightThemeColorPickerState = false;
+    }
+  }
+
 }
 
