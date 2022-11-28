@@ -1,8 +1,0 @@
-	# dodaj podmeni za temu
-	# kad se overuje light button, prosledi funkciju ka podmeni
-	# promena ikonice sun.. prema temi i boja
-	# clients info-div padding
-	# resume dots centriraj
-	# resume title povecaj i text smanji
-	# check-red to new class name
-	# feature card link from red to color
