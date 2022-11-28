@@ -1,9 +1,25 @@
-<div class="modal-header">
-    <h4 class="modal-title pull-left">CONSULTING</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
+<div class="modal-container">
+  <div class="modal-header">
+    <fa-icon
+      class="btn-close-custom"
+      [icon]="btn_close"
+      (click)="modalRef?.hide()"
+    >
+    </fa-icon>
   </div>
   <div class="modal-body">
-    Quality on a budget
+    <div class="modal-body-container">
+      <div class="photo-container">
+        <img class="card-photo" src="../../../../../assets/images/portfolio/consulting.jpg">
+      </div>
+      <div class="text-container">
+        <p class="text-container__paragraph">Portfolio - Consulting</p>
+        <h4 class="text-container__header">Quality on the budget</h4>
+        <p class="text-container__paragraph">First we need the budget, then we can allocate resources, set deadlines and do the planning. Of cource there has to be balance between quality and how fast we are goint to build a software.</p>
+        <p class="text-container__paragraph">Building a software requires a lot of efort and time. Some parts of the system can not be built in parallel and sometimes it is not possible to have more then one person doing one feature at a time. So we have to balance between how fast are we going to build our software and keep the quality of the software at a high level.   </p>
+        <p class="text-container__paragraph"> Rushing trough the proccess can create a huge problems later when we realize that because of pure quality of the software we have to re-write it from scratch. Is that more expensive then writing high quality software from start?</p>
+        <p class="text-container__paragraph">It is not a rare case that software has to be re-writen because of bad code quality (spaghetty code) and that is the reason why we need to have at least decent quality of the software and decent development speed. Of course we would like to have software developed as soon as possible, but if we spent some time to build it and it doesn’t work or it brakes easily then we are at the beggining of the proccess.</p>
+      </div>
+    </div>
   </div>
+</div>

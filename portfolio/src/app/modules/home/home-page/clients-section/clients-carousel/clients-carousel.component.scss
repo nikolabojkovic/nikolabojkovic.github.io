@@ -90,6 +90,7 @@ div {
     height: 35%;
     background-image: linear-gradient( 140deg, var(--background-secondary-color),var(--background-primary-color));
     border-radius: 0px 0px 15px 15px;
+    padding-left: 20px;
 }
 
 .info-container__title {
@@ -433,7 +434,9 @@ div {
     .profile-container__info-container {
         height: 100%;
         background-image: none;
+        padding-left: 0px;
     }
+
 
     .profile-container__post {
         width: 100%;
@@ -516,6 +519,7 @@ div {
     .profile-container__info-container {
         height: 100%;
         background-image: none;
+        padding-left: 0px;
     }
 
     .profile-container__post {
@@ -578,6 +582,7 @@ div {
     .profile-container__info-container {
         height: 100%;
         background-image: none;
+        padding-left: 0px;
     }
 
     .profile-container__post {
