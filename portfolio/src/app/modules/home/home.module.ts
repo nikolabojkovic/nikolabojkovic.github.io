@@ -23,6 +23,7 @@ import { ConsultingComponent } from './home-page/portfolio-section/modals/consul
 import { BusinessComponent } from './home-page/portfolio-section/modals/business/business.component';
 import { ClientsCarouselComponent } from './home-page/clients-section/clients-carousel/clients-carousel.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ResumeModule } from '../resume/resume.module';
 
 @NgModule({
   declarations: [

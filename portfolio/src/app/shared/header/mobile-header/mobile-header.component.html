@@ -53,11 +53,11 @@
                   </a>
                   <div id=resumeMenu class="dropdown-menu-mobile">
                     <ul>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'UNIVERSITY' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'INFOSCREN/MIGROGEN' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'NULTIEN' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'INTELISALE' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default">{{ 'ORION INOVATION' | translate }}</a></li>
+                      <li><a [routerLink]="['/resume/university']" (click)=" hideMobileMenu();" class="menu-dropdown-item-mobile-default">{{ 'UNIVERSITY' | translate }}</a></li>
+                      <li><a [routerLink]="['/resume/infoscreen-microgen']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'INFOSCREN/MIGROGEN' | translate }}</a></li>
+                      <li><a [routerLink]="['/resume/nultien']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'NULTIEN' | translate }}</a></li>
+                      <li><a [routerLink]="['/resume/intelisale']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'INTELISALE' | translate }}</a></li>
+                      <li><a [routerLink]="['/resume/orion-inovation']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'ORION INOVATION' | translate }}</a></li>
                     </ul>
                   </div>
                 </li>

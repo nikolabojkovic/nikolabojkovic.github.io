@@ -17,19 +17,19 @@ export class HeaderService {
     SettingsButtonActive = false;
 
     unHighlightFeaturesMenuitem(): void {
-      let featuresMenuItem = document.getElementById("home") as HTMLElement;
-      this.activateLink(featuresMenuItem);
+      let activeMenuItem = document.getElementById("home") as HTMLElement;
+      this.activateLink(activeMenuItem);
     }
 
     activateLink(Element: HTMLElement): void {
-        let menuitems = document.getElementsByClassName('menu-links');
-        for(let i=0; i<menuitems.length; i++) {
-          menuitems[i].classList.remove('active-menu-item');
-          menuitems[i].classList.add('default-menu-item');
-        }
-        Element.classList.remove('default-menu-item')
-        Element.classList.add('active-menu-item');
-        this.SaveMenuItem(Element);
+      let menuitems = document.getElementsByClassName('menu-links');
+      for(let i=0; i<menuitems.length; i++) {
+        menuitems[i].classList.remove('active-menu-item');
+        menuitems[i].classList.add('default-menu-item');
+      }
+      Element.classList.remove('default-menu-item')
+      Element.classList.add('active-menu-item');
+      this.SaveMenuItem(Element);
     }
 
     activeThemeItem(Element:HTMLElement): void {

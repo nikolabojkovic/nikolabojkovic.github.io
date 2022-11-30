@@ -18,5 +18,10 @@ export class ConsultingPageComponent implements OnInit {
   closeFeatures(): void {
     this.headerService.unHighlightFeaturesMenuitem();
     this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
+    this.scrollToTop();
+  }
+
+  scrollToTop(): void {
+    document.documentElement.scrollTop = 0;
   }
 }

@@ -30,7 +30,6 @@ export class AppComponent {
   // Scroll event
 
   scrollToTop(): void {
-    console.log("aa");
     document.documentElement.scrollTop = 0;
   }
 

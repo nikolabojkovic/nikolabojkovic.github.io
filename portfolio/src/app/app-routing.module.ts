@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'page404', component: PageNotFoundComponent },
   { path: 'contact', loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule) },
   { path: 'features', loadChildren: () => import('./modules/feature/feature.module').then(m => m.FeatureModule) },
+  { path: 'resume' , loadChildren: () => import('./modules/resume/resume.module').then(m => m.ResumeModule)},
   { path: '**',redirectTo: 'page404' }
 ];
 
