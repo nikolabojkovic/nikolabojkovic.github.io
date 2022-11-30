@@ -2,19 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderService } from 'src/app/shared/services/header.service';
 
 @Component({
-  selector: 'app-mentoring-page',
-  templateUrl: './mentoring-page.component.html',
-  styleUrls: ['./mentoring-page.component.scss']
+  selector: 'app-university',
+  templateUrl: './university.component.html',
+  styleUrls: ['./university.component.scss']
 })
+export class UniversityComponent implements OnInit {
 
-export class MentoringPageComponent implements OnInit {
-
-  constructor( private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
   }
 
-  closeFeatures(): void {
+  closeResume(): void {
     this.headerService.unHighlightFeaturesMenuitem();
     this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     this.scrollToTop();
@@ -23,5 +22,6 @@ export class MentoringPageComponent implements OnInit {
   scrollToTop(): void {
     document.documentElement.scrollTop = 0;
   }
-
+  
 }
+

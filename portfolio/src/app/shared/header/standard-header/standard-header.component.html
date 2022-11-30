@@ -41,38 +41,38 @@
               #refEl2 
               id="features"
               class="dropdown-button default-menu-item menu-links"
-              (mouseenter)="showDropDownMenu()"
+              (mouseenter)="showFeatureDropDownMenu()"
               >
                 {{ 'FEATURES' | translate }}
             </a>
-              <div class="dropdown-content" *ngIf ="display">
-                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); ">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'MENTORING' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'LEADERSHIP' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'CONSULTING' | translate }}</a>
+              <div class="dropdown-content" *ngIf ="displayFeature">
+                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); ">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'MENTORING' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'LEADERSHIP' | translate }}</a>
+                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'CONSULTING' | translate }}</a>
               </div>
           </li>
           <li class="dropdown">
             <a 
               #refEl3
               id="resume"
-              (click)="activatelink(refEl3)" 
               class="dropdown-button default-menu-item menu-links"
+              (mouseenter)="showResumeDropDownMenu()"
               >
                 {{ 'RESUME' | translate }}
             </a>
-            <div class="dropdown-content">
-              <a class="dropdown-links">{{ 'UNIVERSITY' | translate }}</a>
-              <a class="dropdown-links">{{ 'INFOSCREN/MIGROGEN' | translate }}</a>  
-              <a class="dropdown-links">{{ 'NULTIEN' | translate }}</a> 
-              <a class="dropdown-links">{{ 'INTELISALE' | translate }}</a> 
-              <a class="dropdown-links">{{ 'ORION INOVATION' | translate }}</a>  
+            <div *ngIf="displayResume" class="dropdown-content">
+              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/university']" class="dropdown-links">{{ 'UNIVERSITY' | translate }}</a>
+              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/infoscreen-microgen']" class="dropdown-links">{{ 'INFOSCREN/MIGROGEN' | translate }}</a>  
+              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/nultien']" class="dropdown-links">{{ 'NULTIEN' | translate }}</a> 
+              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/intelisale']"  class="dropdown-links">{{ 'INTELISALE' | translate }}</a> 
+              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/orion-inovation']"  class="dropdown-links">{{ 'ORION INOVATION' | translate }}</a>  
             </div>   
           </li>   
           <li>
-            <a 
+            <a  
               #refEl4 
               id="portfolio"
               class="links default-menu-item menu-links" 

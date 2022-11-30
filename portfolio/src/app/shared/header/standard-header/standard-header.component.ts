@@ -15,7 +15,8 @@ export class StandardHeaderComponent implements OnInit {
 
   featuresMenu = false;
   menuResume = false;
-  display = true;
+  displayFeature = true;
+  displayResume = true;
   lightThemeColorPickerState = false;
   darkThemeColorPickerState = false;
 
@@ -172,16 +173,23 @@ export class StandardHeaderComponent implements OnInit {
     this.headerService.activateLinkMobileOn(itemMobile);
   }
 
-  closeDropDownMenu(): void {
-    this.display = false;
+  closeFeatureDropDownMenu(): void {
+    this.displayFeature = false;
   }
 
-  showDropDownMenu(): void {
-    this.display = true;
+  showFeatureDropDownMenu(): void {
+    this.displayFeature = true;
   }
 
   displaySettings(settingsButton: HTMLElement): void {
     this.headerService.displaySettings(settingsButton);
   }
 
+  closeResumeDropDownMenu(): void {
+    this.displayResume = false;
+  }
+
+  showResumeDropDownMenu(): void {
+    this.displayResume = true;
+  }
 }
