@@ -1,11 +1,11 @@
 .modal-container {
-    padding:13px 5px;
-    background-color: var(--text-ternary-color);
+    background-color: transparent;
     border-radius: 5px;
 }
 
 .app-modal-window .modal-dialog {
     width: 1100px;
+    background-color: transparent;
 }
 
 .modal-body-container {
@@ -48,6 +48,7 @@
 .li-item-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .check-box-icon {
@@ -64,6 +65,10 @@
     position: absolute;
     right: 20px;
     cursor: pointer;
+}
+
+.text-container p.li-item {
+    color: var(--text-primary-color);
 }
 
 .list-of-items {

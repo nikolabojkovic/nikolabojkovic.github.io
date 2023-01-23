@@ -76,6 +76,10 @@ body {
     overflow: visible;
 }
 
+.settingsButtonLight {
+  color:white;
+}
+
 ///// RESUME CSS
 /// 
 
@@ -214,15 +218,29 @@ body {
 
   /* Fix the circle for containers on the right side */
   .right::after {
-    left: -16px;
+    left: -17.5px;
   }
   
   /* The actual content */
-  .content {
+  .content-left {
     padding: 20px 30px;
     padding-top:25px;
     padding-bottom:12px;
-    width: 450px;
+    width: 400px;
+    background-image:linear-gradient(320deg, var(--background-primary-color), var(--background-secondary-color));
+    position: relative;
+    border-radius: 6px;
+    left: 83px;
+    color: var(--text-ternary-color);
+    transition-duration: 1s;
+    z-index: 3;
+  }
+
+  .content-right {
+    padding: 20px 30px;
+    padding-top:25px;
+    padding-bottom:12px;
+    width: 400px;
     background-image:linear-gradient(320deg, var(--background-primary-color), var(--background-secondary-color));
     position: relative;
     border-radius: 6px;
@@ -231,7 +249,6 @@ body {
     transition-duration: 1s;
     z-index: 3;
   }
-
   .content:hover {
     color: var(--text-primary-color);
     background-image:linear-gradient(320deg, var(--background-secondary-color), var(--background-secondary-color));
@@ -250,13 +267,17 @@ body {
   }
 
   .content-title {
-    font-size: 20px;
+    font-size: 16px;
+    color:white;
   }
   
   .content-job-title {
     color:var(--text-secondary-color);
   }
 
+  .content-left p, .content-right p {
+    font-size: 12px;
+  }
   .timeline-title {
     color: var(--text-secondary-color);
     text-align: center;
@@ -289,8 +310,9 @@ body {
         left:-20px;
     }
 
-    .content {
+    .content-left, .content-right {
         width: 80%;
+        left:30px;
     }
 
 
@@ -354,8 +376,9 @@ body {
         left:15px;
     }
 
-    .content {
+    .content-left, .content-right {
         width: 97%;
+        left:30px;
     }
 
 
@@ -425,7 +448,7 @@ body {
         left:10px;
     }
 
-    .content {
+    .content-left, .content-right {
         width: 99%;
         padding:15px 10px 3px 20px;
         position: relative;

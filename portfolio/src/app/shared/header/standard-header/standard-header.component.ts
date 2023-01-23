@@ -24,6 +24,7 @@ export class StandardHeaderComponent implements OnInit {
   instagram = faInstagram;
   twitter = faTwitter;
   linkedin = faLinkedinIn;
+  
 
   sun = faSun;
   moon = faMoon;
@@ -31,12 +32,52 @@ export class StandardHeaderComponent implements OnInit {
   gear = faGear
   closeBtn = faXmark;
 
+  featureMenuItemDevelopmentStrategy: boolean = false;
+  featureMenuItemSoftwareArchitecture: boolean = false;
+  featureMenuItemProjectImplementation: boolean = false;
+  featureMenuItemMentoring: boolean = false;
+  featureMenuItemLeadership: boolean = false;
+  featureMenuItemConsulting: boolean = false;
+
+  resumeMenuItemUniversity: boolean = false;
+  resumeMenuItemInfoscreen: boolean = false;
+  resumeMenuItemNultien: boolean = false;
+  resumeMenuItemIntelisale: boolean = false;
+  resumeMenuItemOrionInovation: boolean = false;
+
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.headerService.$ActiveResumeMenuItem.subscribe((item) => {
+      this.checkActiveReusmeMenuItem(item);
+    })
+
+    this.checkFeatureMenuItems();
     this.homePageActivated();
     this.checkActiveMenuItem();
     this.checkThemeActiveMenuItem();
+  }
+
+
+  checkActiveReusmeMenuItem(item:string) {
+    this.setResumeMenuItemsToDefaults();
+    switch(item) {
+      case 'orionInovation': this.resumeMenuItemOrionInovation = true; break;
+      case 'intelisale': this.resumeMenuItemIntelisale = true; break;
+      case 'nultien': this.resumeMenuItemNultien = true; break;
+      case 'infoscreen': this.resumeMenuItemInfoscreen = true; break;
+      case 'university': this.resumeMenuItemUniversity = true; break;
+      default: console.log("Error ActiveResumeMenuItem") ;
+    }
+  }
+
+  setResumeMenuItemsToDefaults(): void {
+    this.resumeMenuItemOrionInovation = false;
+    this.resumeMenuItemUniversity = false;
+    this.resumeMenuItemInfoscreen= false;
+    this.resumeMenuItemNultien = false;
+    this.resumeMenuItemIntelisale= false;
+    this.resumeMenuItemOrionInovation = false;
   }
 
   checkActiveMenuItem(): void {
@@ -56,15 +97,25 @@ export class StandardHeaderComponent implements OnInit {
 
   }
 
+  checker(value: HTMLElement, className: string): boolean {
+    return value?.classList.contains(className);
+  }
+
+  
+
   setActiveMenuItem(value: HTMLElement): void {
-    value.classList.remove('default-menu-item')
-    value.classList.add('active-menu-item');
+    if(this.checker(value, "default-menu-item")) {
+      value?.classList.remove('default-menu-item')
+    }
+    value?.classList.add('active-menu-item');
   }
 
   setActiveThemeMenuItem(value: HTMLElement): void {
     this.updateThemeMenuItems();
-    value.classList.remove("defaultThemeColor");
-    value.classList.add("activeThemeColor");
+    if(this.checker(value, "defaultThemeColor")) {
+      value?.classList.remove("defaultThemeColor");
+    }
+    value?.classList.add("activeThemeColor");
   }
 
   updateThemeMenuItems(): void {
@@ -145,11 +196,10 @@ export class StandardHeaderComponent implements OnInit {
   }
 
   homePageActivated(): void {
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
+    this.setItemsOnDefault();
   }
 
   homePageDeactivated(): void {
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
   }
 
   activatelink(linkitem: HTMLElement) {
@@ -175,6 +225,7 @@ export class StandardHeaderComponent implements OnInit {
 
   closeFeatureDropDownMenu(): void {
     this.displayFeature = false;
+    this.setResumeMenuItemsToDefaults();
   }
 
   showFeatureDropDownMenu(): void {
@@ -185,11 +236,52 @@ export class StandardHeaderComponent implements OnInit {
     this.headerService.displaySettings(settingsButton);
   }
 
-  closeResumeDropDownMenu(): void {
+  closeResumeDropDownMenu(item: string): void {
     this.displayResume = false;
+    this.resetAllLinks();
+    this.headerService.setupActiveResumeMenuItem(item);
   }
 
   showResumeDropDownMenu(): void {
     this.displayResume = true;
+  }
+
+  selectMenuItemEvent(item: string): void {
+    this.setItemsOnDefault();
+    switch(item) {
+      case 'developmentStrategy': this.featureMenuItemDevelopmentStrategy = true; break;
+      case 'softwareArchitecture': this.featureMenuItemSoftwareArchitecture = true; break;
+      case 'projectImplementation': this.featureMenuItemProjectImplementation = true; break;
+      case 'mentoring': this.featureMenuItemMentoring = true; break;
+      case 'leadership': this.featureMenuItemLeadership = true;  break;
+      case 'consulting': this.featureMenuItemConsulting = true; break;
+    }
+  }
+
+  
+  setItemsOnDefault(): void {
+    this.headerService.resetAllMenuItems();
+    this.featureMenuItemDevelopmentStrategy = false;
+    this.featureMenuItemSoftwareArchitecture = false;
+    this.featureMenuItemProjectImplementation = false;
+    this.featureMenuItemMentoring = false;
+    this.featureMenuItemLeadership = false;
+    this.featureMenuItemConsulting = false;
+  }
+
+  checkFeatureMenuItems(): void {
+    setInterval(()=> {
+ //     console.log("checking")
+      if(this.headerService.checkFeatureMenuitems()){
+        this.setItemsOnDefault();
+        this.headerService.confirmReset();
+      } else {
+
+      }
+    },100)
+  }
+
+  resetAllLinks(): void {
+    this.setItemsOnDefault();
   }
 }

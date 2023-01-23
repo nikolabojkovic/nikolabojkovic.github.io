@@ -41,7 +41,7 @@
               spellcheck="false"
             >
             <div class="error-container">
-              <span class="contact-page-inputs-errors" *ngIf="!firstName.valid && firstName.touched && firstName.hasError('minlength')">An invalid name, min. 3 characters.</span>
+              <span class="contact-page-inputs-errors" *ngIf="!firstName.valid && firstName.touched && firstName.hasError('minlength') || firstName.touched && firstName.value == ''">An invalid name, min. 3 characters.</span>
               <span class="contact-page-inputs-errors" *ngIf="!firstName.valid && firstName.touched && firstName.hasError('maxlength')">An invalid name, max. 50 characters.</span>
             </div>
           </div>

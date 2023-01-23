@@ -1,6 +1,5 @@
 .modal-container {
-    padding:13px 5px;
-    background-color: var(--text-ternary-color);
+    background-color: transparent;
     border-radius: 5px;
 }
 
@@ -23,6 +22,10 @@
     height: auto;
     background-color: transparent;
     border-radius:7px;
+}
+
+.text-container p.li-item {
+    color: var(--text-primary-color);
 }
 
 .text-container {
@@ -56,6 +59,7 @@ div p.text-container__post-paragraph {
 .li-item-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .check-box-icon {

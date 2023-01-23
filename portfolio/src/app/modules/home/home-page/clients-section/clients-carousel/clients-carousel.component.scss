@@ -207,7 +207,18 @@ div {
     color: var(--text-ternary-color);
     font-size: 14px;
     padding-left: 22px;
-    padding-right: 15px;
+    padding-right: 105px;
+ }
+
+ .info-container__text-feedback {
+    margin-top: 10px;
+    padding-top: 0px;
+    color: var(--text-ternary-color);
+    font-size: 14px;
+    padding-left: 22px;
+    padding-right: 105px;
+    position: relative;
+    top:-15px;
  }
 
  .info-container__text-mobile {

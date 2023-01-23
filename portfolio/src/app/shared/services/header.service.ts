@@ -1,4 +1,5 @@
 import { Component, Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 import { SettingsService } from "./settings.service";
 
 @Injectable({
@@ -15,6 +16,18 @@ export class HeaderService {
     menuResume = false;
     homeShadowID: any;
     SettingsButtonActive = false;
+    resetFeatureMenuItems = false;
+
+    public $ActiveResumeMenuItem: Subject<string> = new Subject();
+
+    public setupActiveResumeMenuItem(item: string) {
+      this.$ActiveResumeMenuItem.next(item);
+    }
+
+
+    activateHomeBanner(): void {
+      this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
+    }
 
     unHighlightFeaturesMenuitem(): void {
       let activeMenuItem = document.getElementById("home") as HTMLElement;
@@ -32,8 +45,11 @@ export class HeaderService {
       this.SaveMenuItem(Element);
     }
 
-    activeThemeItem(Element:HTMLElement): void {
-
+    resetResumeMenuItems(): void {
+      let items = document.getElementsByClassName('resume-menu-item-active');
+      for(let i = 0; i < items.length; i++) {
+        items[i].classList.remove("resume-menu-item-active")
+      }
     }
     
 
@@ -232,9 +248,41 @@ export class HeaderService {
       if( this.SettingsButtonActive == false ) {
         settingsButton.style.display = "block";
         this.SettingsButtonActive = true;
+        this.setUpSettingsButton();
       } else {
         settingsButton.style.display = "none";
         this.SettingsButtonActive = false;
+        this.setUpSettingsButton();
+      }
+    }
+
+    setUpSettingsButton(): void {
+      let settingsButton = document.getElementById("settingsButton") as HTMLElement;
+      if(this.SettingsButtonActive) {
+        settingsButton.style.color = "var(--text-primary-color)"
+      }
+      else {
+        settingsButton.style.color = "var(--text-ternary-color)"
+      }
+    }
+
+    checkFeatureMenuitems(): boolean {
+      return this.resetFeatureMenuItems;
+    }
+
+    setItemsOnDefault(): void {
+      this.resetFeatureMenuItems = true;
+      this.resetAllMenuItems();
+    }
+
+    confirmReset(): void {
+      this.resetFeatureMenuItems = false;
+    }
+
+    resetAllMenuItems(): void {
+      let items = document.getElementsByClassName("feature-menu-items");
+      for(let i = 0; i<items.length; i++ ) {
+        items[i].classList.remove("feature-menu-item-active");
       }
     }
 }

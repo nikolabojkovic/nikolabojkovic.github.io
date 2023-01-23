@@ -15,8 +15,8 @@ export class OrionInovationComponent implements OnInit {
 
   closeResume(): void {
     this.headerService.unHighlightFeaturesMenuitem();
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
     this.scrollToTop();
+    this.headerService.resetResumeMenuItems();
   }
 
   scrollToTop(): void {

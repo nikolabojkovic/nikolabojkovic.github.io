@@ -18,7 +18,6 @@ export class ResumeSectionComponent implements OnInit {
   }
 
   homePageDeactivated(): void {
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
   }
 
   activatelink() {
@@ -29,5 +28,20 @@ export class ResumeSectionComponent implements OnInit {
 
   scrollToTop(): void {
     document.documentElement.scrollTop = 0;
+  }
+
+  onResumeCardClick(item: string): void {
+    this.destroyHomePageShadow();
+    this.activatelink()
+
+    switch(item) {
+      case 'orionInovation': this.headerService.setupActiveResumeMenuItem('orionInovation'); break;
+      case 'intelisale': this.headerService.setupActiveResumeMenuItem('intelisale'); break;
+      case 'nultien': this.headerService.setupActiveResumeMenuItem('nultien');break;
+      case 'infoscreen': this.headerService.setupActiveResumeMenuItem('infoscreen'); break;
+      case 'university': this.headerService.setupActiveResumeMenuItem('university'); break;
+      default: console.log("Error ActiveResumeMenuItem");
+    }
+   // this.headerService.setNotification(4);
   }
 }

@@ -12,13 +12,66 @@ export class FeaturesSectionComponent implements OnInit {
   constructor(private headerService: HeaderService, private settingsServices: SettingsService) { }
 
   ngOnInit(): void {
+    /*
+    this.headerService.$notification.subscribe((item)=> {       //rxjs
+      console.log("rxjs home page features section component: "+item);
+    });
+    */
   }
 
   arrow = faArrowRight;
   datum = new Date();
+
   activateFeatureSection(): void {
     this.headerService.activateFeatureSection();
-    console.log("cl");
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
+  }
+
+  selectDevelopmentStrategy(): void {
+    this.headerService.resetAllMenuItems();
+    let item = document.getElementById("DevelopmentStrategy") as HTMLElement;
+    item.classList.add("feature-menu-item-active")
+  }
+
+  selectSoftwareArchitecture(): void {
+    this.headerService.resetAllMenuItems();
+    let item = document.getElementById("SoftwareArhitecture") as HTMLElement;
+    item.classList.add("feature-menu-item-active")
+  }
+
+  selectProjectImplementation(): void {
+    this.headerService.resetAllMenuItems();
+    let item = document.getElementById("ProjectImplementation") as HTMLElement;
+    item.classList.add("feature-menu-item-active")
+  }
+
+  selectMentoring(): void {
+    this.headerService.resetAllMenuItems();
+    let item = document.getElementById("Mentoring") as HTMLElement;
+    item.classList.add("feature-menu-item-active")
+  }
+
+  selectLeadership(): void {
+    this.headerService.resetAllMenuItems();
+    let item = document.getElementById("Leadership") as HTMLElement;
+    item.classList.add("feature-menu-item-active")
+  }
+
+  selectConsulting(): void {
+    this.headerService.resetAllMenuItems();
+    let item = document.getElementById("Consulting") as HTMLElement;
+    item.classList.add("feature-menu-item-active")
+  }
+
+  onFeaturesCardClick(section: string): void {
+    this.activateFeatureSection();
+    switch(section) {
+      case 'development': this.selectDevelopmentStrategy(); break;
+      case 'softwareArchitecture': this.selectSoftwareArchitecture(); break;
+      case 'projectImplementation': this.selectProjectImplementation(); break;
+      case 'mentoring': this.selectMentoring(); break; 
+      case 'leadership': this.selectLeadership(); break;
+      case 'consulting': this.selectConsulting(); break;
+    }
+    // this.headerService.setNotification(10);
   }
 }
