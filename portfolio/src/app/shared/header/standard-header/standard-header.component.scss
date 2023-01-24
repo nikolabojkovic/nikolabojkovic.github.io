@@ -1,6 +1,18 @@
 @import "../../../../styles.scss";
 @import "../../../modules/home/home-page/banner/banner.component.scss";
 
+
+//Emty classes
+
+.feature-menu-items {}
+
+
+//
+
+.feature-menu-item-active {
+  color:var(--text-secondary-color) !important;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -358,6 +370,25 @@ li.dropdown {
   display: none;
 }
 
+.redMoon {
+  color:#BE1E1E;;
+}
+
+.blueMoon {
+  color:#24C6D0;;
+}
+
+.blueSun {
+  color:#24C6D0;;
+}
+
+.redSun {
+  color:#BE1E1E;;
+}
+
+.resume-menu-item-active {
+  color:var(--text-secondary-color) !important;
+}
   
   
    // Desktop View

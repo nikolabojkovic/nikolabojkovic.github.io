@@ -8,7 +8,7 @@
       <a 
         class="link-cards" 
         [routerLink]="['/features/development-strategy']"
-        (click)="activateFeatureSection()"
+        (click)="onFeaturesCardClick('development');"
       >
        <div class="cards">
          <i class="fa fa-line-chart icon"></i>
@@ -25,7 +25,7 @@
       <a 
         class="link-cards card-exception"
         [routerLink]="['/features/software-architecture']" 
-        (click)="activateFeatureSection()" 
+        (click)="onFeaturesCardClick('softwareArchitecture');"
       >
         <div class="cards">
           <i class="fa fa-sitemap icon"></i>
@@ -40,7 +40,7 @@
       <a 
         class="link-cards"
         [routerLink]="['/features/project-implementation']" 
-        (click)="activateFeatureSection()"
+        (click)="onFeaturesCardClick('projectImplementation');"
       >
         <div class="cards">
           <i class="fa fa-wrench icon"></i>
@@ -56,7 +56,7 @@
       <a 
         class="link-cards"
         [routerLink]="['/features/mentoring']" 
-        (click)="activateFeatureSection()"
+        (click)="onFeaturesCardClick('mentoring');"
       >
        <div class="cards">
           <i class="fa fa-graduation-cap icon"></i>
@@ -72,7 +72,7 @@
       <a 
         class="link-cards"
         [routerLink]="['/features/leadership']" 
-        (click)="activateFeatureSection()"
+        (click)="onFeaturesCardClick('leadership');"
       >
         <div class="cards">
           <i class="fa fa-institution icon"></i>
@@ -88,7 +88,7 @@
       <a 
         class="link-cards"
         [routerLink]="['/features/consulting']" 
-        (click)="activateFeatureSection()"
+        (click)="onFeaturesCardClick('consulting');"
       >
         <div class="cards">
           <i class="fa fa-briefcase icon"></i>

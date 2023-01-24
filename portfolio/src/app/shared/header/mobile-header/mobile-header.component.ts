@@ -62,11 +62,10 @@ export class MobileHeaderComponent implements OnInit {
     /*Zajednicko*/
 
   homePageActivated(): void {
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
   }
 
   homePageDeactivated(): void {
-    this.settingsService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
+    //this.settingsService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
   }
 
 

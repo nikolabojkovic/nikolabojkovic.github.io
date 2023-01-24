@@ -1,6 +1,5 @@
 .modal-container {
-    padding:13px 5px;
-    background-color: var(--text-ternary-color);
+    background-color: transparent;
     border-radius: 5px;
 }
 
@@ -25,6 +24,10 @@
     border-radius:7px;
 }
 
+.text-container p.li-item {
+    color: var(--text-primary-color);
+}
+
 .text-container {
     padding: 0px 40px;
     width: 65%;
@@ -34,6 +37,18 @@
 
 div p.text-container__secondary-header {
     margin-top: 20px;
+    color: var(--text-ternary-color)
+}
+
+.text-container__secondary-header-text-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container__secondary-header-text-holder .check-box-icon {
+    margin-left: 10px;
 }
 
 div p.text-container__post-paragraph {
@@ -56,6 +71,7 @@ div p.text-container__post-paragraph {
 .li-item-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .check-box-icon {

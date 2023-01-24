@@ -1,6 +1,5 @@
 .modal-container {
-    padding:13px 5px;
-    background-color: var(--text-ternary-color);
+    background-color: transparent;
     border-radius: 5px;
 }
 
@@ -33,7 +32,7 @@
 }
 
 .text-container p, .text-container h4 {
-    color:var(--text-ternary-color);
+    color:var(--text-ternary-color);  //
 }
 
 .text-container h4 {
@@ -48,6 +47,7 @@
 .li-item-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .check-box-icon {
@@ -59,7 +59,7 @@
 
 
 .btn-close-custom {
-    color: var(--text-ternary-color);
+    color:var(--text-secondary-color);
     font-size: 32px;
     position: absolute;
     right: 20px;
@@ -68,6 +68,10 @@
 
 .list-of-items p {
     margin: 0px 0px;
+}
+
+.text-container p.li-item {
+    color: var(--text-primary-color);
 }
 
 .list-of-items  {

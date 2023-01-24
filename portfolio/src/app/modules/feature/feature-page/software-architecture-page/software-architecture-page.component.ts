@@ -16,8 +16,8 @@ export class SoftwareArchitecturePageComponent implements OnInit {
 
   closeFeatures(): void {
     this.headerService.unHighlightFeaturesMenuitem();
-    this.headerService.homeShadowID.style.backgroundColor = "var(--background-secondary-color)"; 
     this.scrollToTop();
+    this.headerService.setItemsOnDefault();
   }
 
   scrollToTop(): void {

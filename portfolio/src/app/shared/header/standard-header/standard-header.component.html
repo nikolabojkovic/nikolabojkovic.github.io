@@ -28,7 +28,7 @@
             <a 
               #refEl
               id="home" 
-              (click)="activatelink(refEl); homePageActivated();" 
+              (click)="activatelink(refEl); homePageActivated(); setResumeMenuItemsToDefaults()" 
               class="links default-menu-item menu-links" 
               [routerLink]="['/home']" 
               routerLinkActive="active"
@@ -46,12 +46,59 @@
                 {{ 'FEATURES' | translate }}
             </a>
               <div class="dropdown-content" *ngIf ="displayFeature">
-                <a class= "dropdown-links" [routerLink]="['/features/development-strategy']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/software-architecture']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'SOFTWARE ARHITECTURE' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/project-implementation']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); ">{{ 'PROJECT IMPLEMENTATION' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/mentoring']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'MENTORING' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/leadership']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'LEADERSHIP' | translate }}</a>
-                <a class= "dropdown-links" [routerLink]="['/features/consulting']" (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow();">{{ 'CONSULTING' | translate }}</a>
+                <a
+                  id="DevelopmentStrategy"
+                  [ngClass]="{'feature-menu-item-active':featureMenuItemDevelopmentStrategy == true}" 
+                  class= "dropdown-links feature-menu-items" 
+                  [routerLink]="['/features/development-strategy']" 
+                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('developmentStrategy')"
+                >
+                  {{ 'DEVELOPMENT STRATEGY' | translate }}
+                </a>
+                <a 
+                  id="SoftwareArhitecture"
+                  [ngClass]="{'feature-menu-item-active':featureMenuItemSoftwareArchitecture == true}"
+                  class= "dropdown-links feature-menu-items"
+                  [routerLink]="['/features/software-architecture']"
+                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('softwareArchitecture')"
+                >
+                  {{ 'SOFTWARE ARHITECTURE' | translate }}
+                </a>
+                <a
+                  id="ProjectImplementation"
+                  [ngClass]="{'feature-menu-item-active':featureMenuItemProjectImplementation == true}"
+                  class= "dropdown-links feature-menu-items" [routerLink]="['/features/project-implementation']" 
+                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('projectImplementation')"
+                >
+                  {{ 'PROJECT IMPLEMENTATION' | translate }}
+                </a>
+                <a 
+                  id="Mentoring"
+                  [ngClass]="{'feature-menu-item-active':featureMenuItemMentoring == true}"
+                  class= "dropdown-links feature-menu-items"
+                  [routerLink]="['/features/mentoring']"
+                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('mentoring')"
+                >
+                  {{ 'MENTORING' | translate }}
+                </a>
+                <a 
+                  id="Leadership"
+                  [ngClass]="{'feature-menu-item-active':featureMenuItemLeadership == true}"
+                  class= "dropdown-links feature-menu-items"
+                  [routerLink]="['/features/leadership']"
+                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('leadership')"
+                >
+                  {{ 'LEADERSHIP' | translate }}
+                </a>
+                <a 
+                  id="Consulting"
+                  [ngClass]="{'feature-menu-item-active':featureMenuItemConsulting == true}"
+                  class= "dropdown-links feature-menu-items"
+                  [routerLink]="['/features/consulting']"
+                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('consulting')"
+                >
+                  {{ 'CONSULTING' | translate }}
+                </a>
               </div>
           </li>
           <li class="dropdown">
@@ -64,11 +111,46 @@
                 {{ 'RESUME' | translate }}
             </a>
             <div *ngIf="displayResume" class="dropdown-content">
-              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/university']" class="dropdown-links">{{ 'UNIVERSITY' | translate }}</a>
-              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/infoscreen-microgen']" class="dropdown-links">{{ 'INFOSCREN/MIGROGEN' | translate }}</a>  
-              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/nultien']" class="dropdown-links">{{ 'NULTIEN' | translate }}</a> 
-              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/intelisale']"  class="dropdown-links">{{ 'INTELISALE' | translate }}</a> 
-              <a (click)="closeResumeDropDownMenu();  destroyHomePageShadow(); activatelink(refEl3);" [routerLink]="['/resume/orion-inovation']"  class="dropdown-links">{{ 'ORION INOVATION' | translate }}</a>  
+              <a 
+                [ngClass]="{'resume-menu-item-active': resumeMenuItemUniversity == true}"
+                (click)="closeResumeDropDownMenu('university');  destroyHomePageShadow(); activatelink(refEl3);"
+                [routerLink]="['/resume/university']" 
+                class="dropdown-links"
+              >
+                {{ 'UNIVERSITY' | translate }}
+              </a>
+              <a 
+                [ngClass]="{'resume-menu-item-active': resumeMenuItemInfoscreen == true}"
+                (click)="closeResumeDropDownMenu('infoscreen');  destroyHomePageShadow(); activatelink(refEl3);"
+                [routerLink]="['/resume/infoscreen-microgen']"
+                class="dropdown-links"
+              >
+                {{ 'INFOSCREN/MIGROGEN' | translate }}
+              </a>  
+              <a
+                [ngClass]="{'resume-menu-item-active': resumeMenuItemNultien == true}"
+                (click)="closeResumeDropDownMenu('nultien');  destroyHomePageShadow(); activatelink(refEl3);" 
+                [routerLink]="['/resume/nultien']" 
+                class="dropdown-links"
+              >
+                {{ 'NULTIEN' | translate }}
+              </a> 
+              <a
+                [ngClass]="{'resume-menu-item-active': resumeMenuItemIntelisale == true}"
+                (click)="closeResumeDropDownMenu('intelisale'); destroyHomePageShadow(); activatelink(refEl3);"
+                [routerLink]="['/resume/intelisale']"  
+                class="dropdown-links"
+              >
+                {{ 'INTELISALE' | translate }}
+              </a> 
+              <a 
+                [ngClass]="{'resume-menu-item-active': resumeMenuItemOrionInovation == true}"
+                (click)="closeResumeDropDownMenu('orionInovation');  destroyHomePageShadow(); activatelink(refEl3);" 
+                [routerLink]="['/resume/orion-inovation']"  
+                class="dropdown-links"
+              >
+                {{ 'ORION INOVATION' | translate }}
+              </a>  
             </div>   
           </li>   
           <li>
@@ -76,7 +158,7 @@
               #refEl4 
               id="portfolio"
               class="links default-menu-item menu-links" 
-              (click)="activatelink(refEl4)"
+              (click)="activatelink(refEl4); resetAllLinks(); setResumeMenuItemsToDefaults()"
               >
                 {{ 'PORTFOLIO' | translate }}
             </a>
@@ -86,7 +168,7 @@
               #refEl5 
               id="clients"
               class="links default-menu-item menu-links" 
-              (click)="activatelink(refEl5)"
+              (click)="activatelink(refEl5); resetAllLinks(); setResumeMenuItemsToDefaults()"
               >
                 {{ 'CLIENTS' | translate }}
             </a>
@@ -96,7 +178,7 @@
                 #refEl6 
                 id="contact"
                 class="links default-menu-item menu-links" 
-                (click)="activatelink(refEl6); homePageDeactivated();" 
+                (click)="activatelink(refEl6); homePageDeactivated(); resetAllLinks(); setResumeMenuItemsToDefaults()" 
                 [routerLink]="['/contact']" 
                 routerLinkActive="active"
                 >
@@ -108,7 +190,7 @@
               #refEl7 
               id="github"
               class="links default-menu-item menu-links"
-              (click)="activatelink(refEl7)"
+              (click)="activatelink(refEl7); resetAllLinks(); setResumeMenuItemsToDefaults();"
               href="https://github.com/nikolabojkovic" target="_blank"
               >
                 {{ 'GITHUB' | translate }}
@@ -121,7 +203,7 @@
             class="dropdown-button default-menu-item menu-links"
             >
             <div class="gear-container" #refGearIcon >
-              <fa-icon class="themes-icon-primary" [icon]="gear"></fa-icon>
+              <fa-icon id="settingsButton" class="themes-icon-primary" [icon]="gear"></fa-icon>
             </div>
             </a>
             <div class="dropdown-content-settings">
@@ -150,7 +232,7 @@
                         <span>RED</span>
                         <span>
                           <fa-icon 
-                            class="theme-colors themes-icons-secondary" 
+                            class="theme-colors themes-icons-secondary redSun" 
                             [icon]="sun"
                           >
                             asdasd
@@ -161,7 +243,7 @@
                         <span>BLUE</span>
                         <span>
                           <fa-icon 
-                            class="theme-colors themes-icons-secondary" 
+                            class="theme-colors themes-icons-secondary blueSun" 
                             [icon]="sun"
                           >
                             asdasd
@@ -189,7 +271,7 @@
                         <span>RED</span>
                         <span>
                           <fa-icon 
-                            class="theme-colors themes-icons-secondary" 
+                            class="theme-colors themes-icons-secondary redMoon" 
                             [icon]="moon"
                           >
                             asdasd
@@ -200,7 +282,7 @@
                         <span>BLUE</span>
                         <span>
                           <fa-icon 
-                            class="theme-colors themes-icons-secondary" 
+                            class="theme-colors themes-icons-secondary blueMoon" 
                             [icon]="moon"
                           >
                             asdasd

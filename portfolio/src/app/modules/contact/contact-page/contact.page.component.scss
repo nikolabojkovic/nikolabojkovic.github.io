@@ -146,6 +146,10 @@ input[type=submit] {
   box-shadow: 2px 2px 15px var(--background-secondary-color);
 }
 
+.confirm-button:disabled {
+  color:gray !important;
+}
+
 .confirm-button:hover {
   background-color: var(--background-secondary-color);
 }
@@ -291,6 +295,10 @@ input[type=submit] {
 
 //Marko
 
+.user-message {
+  resize: none;
+}
+
 .test {
   width: 100px;
   height: 100px;
@@ -304,7 +312,7 @@ input[type=submit] {
 }
 
 .contact-page-inputs-errors {
-  color: var(--text-secondary-color);
+  color: red;
   font-size: 12px;
   margin-left: 10px;
 }
@@ -318,6 +326,7 @@ input[type=submit] {
   height: auto;
   min-height: 24px;
   margin-top: -7px;
+  margin-bottom: 5px;
 }
 
 .loader {

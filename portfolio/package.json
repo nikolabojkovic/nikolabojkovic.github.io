@@ -32,7 +32,7 @@
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
     "ngx-bootstrap": "^8.0.0",
-    "rxjs": "~7.5.0",
+    "rxjs": "^7.5.7",
     "source-map-support": "^0.5.21",
     "tslib": "^2.3.0",
     "webpack-sources": "^3.2.3",
