@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
-const serverURL: string = "http://developer-tool.com";
+const serverURL: string = environment.serverUrl;
 
 @Injectable({providedIn: 'root'})
 
