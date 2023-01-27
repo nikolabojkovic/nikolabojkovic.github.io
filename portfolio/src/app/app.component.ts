@@ -28,7 +28,7 @@ export class AppComponent {
     router.events.pipe(
       filter((event: Event): event is RouterEvent => event instanceof RouterEvent)
    ).subscribe((event: RouterEvent) => {
-     if(event.url == "/home"){
+     if(event.url === "/home" || event.url === "/"){
         headerService.activateHomeBanner();
      } else {
         headerService.HomePageDeactivated();
