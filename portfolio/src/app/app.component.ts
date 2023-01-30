@@ -22,13 +22,11 @@ export class AppComponent {
 
   constructor(private settingsService: SettingsService, private headerService: HeaderService, public router: Router) {
     this.settingsService.loadSettings();
-
-    console.log(router.url);
     
     router.events.pipe(
       filter((event: Event): event is RouterEvent => event instanceof RouterEvent)
    ).subscribe((event: RouterEvent) => {
-     if(event.url === "/home" || event.url === "/"){
+     if(event.url === "/home" || event.url === "/" || event.url === "/home#featuresSection" || event.url === "/home#resumeSection"){
         headerService.activateHomeBanner();
      } else {
         headerService.HomePageDeactivated();

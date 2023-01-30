@@ -38,7 +38,7 @@
 .title {
     font-size: 36px;
     font-family: Inter;
-    color: white;
+    color: var(--text-primary-color);
 }
 
 .text {
@@ -62,14 +62,14 @@
 
 .title-check-list{
   font-size: 14px;
-  color: white;
+  color: var(--text-primary-color);
   margin-bottom: 5px;
   margin-top: 10px;
 }
 
 .text-check-list{
   font-size: 14px;
-  color: white;
+  color: var(--text-primary-color);
   padding-left: 5px;
 }
 
