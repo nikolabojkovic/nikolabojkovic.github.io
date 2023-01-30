@@ -12,11 +12,7 @@ export class FeaturesSectionComponent implements OnInit {
   constructor(private headerService: HeaderService, private settingsServices: SettingsService) { }
 
   ngOnInit(): void {
-    /*
-    this.headerService.$notification.subscribe((item)=> {       //rxjs
-      console.log("rxjs home page features section component: "+item);
-    });
-    */
+
   }
 
   arrow = faArrowRight;

@@ -15,7 +15,7 @@
 
 .development-strategy {
     width: 100%;
-    height: fit-content;
+    height: auto;
     display: flex;
     flex-direction: row; 
     justify-content: center;
@@ -38,7 +38,7 @@
 .title {
     font-size: 36px;
     font-family: Inter;
-    color: white;
+    color: var(--text-primary-color);
 }
 
 .text {
@@ -52,14 +52,14 @@
 
 .title-check-list{
     font-size: 14px;
-    color: white;
+    color: var(--text-primary-color);
     margin-bottom: 5px;
     margin-top: 10px;
 }
 
 .text-check-list{
   font-size: 14px;
-  color: white;
+  color: var(--text-primary-color);
   padding-left: 5px;
 }
 
@@ -91,7 +91,7 @@
 
     .text-and-photo {
         width: 450px;
-        height: 180px;
+        height: auto;
         margin: 40px;
         padding: 20px;
         padding-right: 0px;
@@ -130,8 +130,13 @@
         width: 500px;
         height: 215px;
         margin: 40px;
+        margin-bottom: 0px;
         padding: 20px;
+        padding-bottom:0px;
+        height: auto;
     }
+
+
 
     .text-and-photo-secondary {
         width: 100%;
@@ -168,7 +173,12 @@
         height: 240px;
         padding: 5px;
         margin: 10px;
+        margin-bottom: 0px;
+        height: auto;
     }
+
+
+
 
     .text-and-photo-secondary {
         width: calc( 100% - 30px);
