@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { StandardHeaderComponent } from '../standard-header/standard-header.component';
+
 import { SettingsService } from '../../services/settings.service';
 import { HeaderService } from '../../services/header.service';
+
 import { faXmark, faBars, faGear, faSun, faMoon} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
@@ -34,10 +35,7 @@ export class MobileHeaderComponent implements OnInit {
 
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
- 
   ngOnInit(): void { }
-
-  /*Zajednicko 1*/
 
   onDarkThemeClick(): void {
     let lightButton = document.getElementById("MenuThemeLightID") as HTMLElement;
@@ -59,22 +57,9 @@ export class MobileHeaderComponent implements OnInit {
     darkButton?.classList.remove("active-link");
   }
 
-    /*Zajednicko*/
-
-  homePageActivated(): void {
-  }
-
-  homePageDeactivated(): void {
-    //this.settingsService.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
-  }
-
-
-    /*Zajednicko 1 */
   activatelink(linkitem: HTMLElement) {
     this.headerService.activateLink(linkitem);
   }
-
-    /*Zajednicko*/
 
   toggleMobileMenu(): void {
     this.headerService.toogleMobileMneuOn();
@@ -111,9 +96,6 @@ export class MobileHeaderComponent implements OnInit {
   onLightRedThemeClick(): void {
     this.setActiveButton();
     this.settingsService.setLightTheme(0);
-    /*displaySettings(refElSettingsButton) 
-    */
-    
   }
 
   setActiveButton(): void {
@@ -151,7 +133,6 @@ export class MobileHeaderComponent implements OnInit {
   }
   
   displayOnLightThemeColorPicker(): void {
-    let lightThemeColorPicker = document.getElementById("LightThemeColorPickerID") as HTMLElement;
     if(this.lightThemeColorPickerState == false) {
       this.lightThemeColorPickerState = true;
     } else {
@@ -184,17 +165,11 @@ export class MobileHeaderComponent implements OnInit {
   }
 
   displayOnDarkThemeColorPicker(): void {
-    let darkThemeColorPicker = document.getElementById("DarkThemeColorPickerID") as HTMLElement;
-    if(this.darkThemeColorPickerState == false) {
-      this.darkThemeColorPickerState = true;
-    } else {
-      this.darkThemeColorPickerState = false;
-    }
+    this.darkThemeColorPickerState = !this.darkThemeColorPickerState;
 
-    if(this.lightThemeColorPickerState == true) {
+    if(this.lightThemeColorPickerState) {
       this.lightThemeColorPickerState = false;
     }
   }
-
 }
 

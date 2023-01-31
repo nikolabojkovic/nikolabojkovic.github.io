@@ -10,7 +10,6 @@ import { HeaderService } from '../../services/header.service';
   styleUrls: ['./standard-header.component.scss']
 })
 
-
 export class StandardHeaderComponent implements OnInit {
 
   featuresMenu = false;
@@ -25,7 +24,6 @@ export class StandardHeaderComponent implements OnInit {
   twitter = faTwitter;
   linkedin = faLinkedinIn;
   
-
   sun = faSun;
   moon = faMoon;
   bar = faBars;
@@ -101,8 +99,6 @@ export class StandardHeaderComponent implements OnInit {
     return value?.classList.contains(className);
   }
 
-  
-
   setActiveMenuItem(value: HTMLElement): void {
     if(this.checker(value, "default-menu-item")) {
       value?.classList.remove('default-menu-item')
@@ -166,7 +162,6 @@ export class StandardHeaderComponent implements OnInit {
   }
 
   displayOnLightThemeColorPicker(): void {
-    let lightThemeColorPicker = document.getElementById("LightThemeColorPickerID") as HTMLElement;
     if(this.lightThemeColorPickerState == false) {
       this.lightThemeColorPickerState = true;
     } else {
@@ -179,7 +174,6 @@ export class StandardHeaderComponent implements OnInit {
   }
 
   displayOnDarkThemeColorPicker(): void {
-    let darkThemeColorPicker = document.getElementById("DarkThemeColorPickerID") as HTMLElement;
     if(this.darkThemeColorPickerState == false) {
       this.darkThemeColorPickerState = true;
     } else {
@@ -199,8 +193,7 @@ export class StandardHeaderComponent implements OnInit {
     this.setItemsOnDefault();
   }
 
-  homePageDeactivated(): void {
-  }
+  homePageDeactivated(): void {}
 
   activatelink(linkitem: HTMLElement) {
     this.headerService.activateLink(linkitem);
@@ -271,12 +264,9 @@ export class StandardHeaderComponent implements OnInit {
 
   checkFeatureMenuItems(): void {
     setInterval(()=> {
- //     console.log("checking")
       if(this.headerService.checkFeatureMenuitems()){
         this.setItemsOnDefault();
         this.headerService.confirmReset();
-      } else {
-
       }
     },100)
   }

@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeModule } from './modules/home/home.module';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+import { SettingsService } from './shared/services/settings.service';
+
+import { AppComponent } from './app.component';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer.component';
 import { StandardHeaderComponent } from './shared/header/standard-header/standard-header.component';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
-import { SettingsService } from './shared/services/settings.service';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
-import { HomeModule } from './modules/home/home.module';
-import { TestComponent } from './modules/home/home-page/portfolio-section/modals/test/test.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -49,6 +50,4 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [SettingsService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule {}

@@ -22,8 +22,6 @@ export class SettingsService {
         this.settings = new Settings('DarkRed', 'en-US');
     }
     
-
-    
     homePageActivated(): void {
         if(this.homeShadowID == undefined) {
             return;
@@ -48,7 +46,6 @@ export class SettingsService {
 
         this.homePageActivated();
         this.loadTheme();
-        console.log("deafult"+ this.settings.theme);
         this.loadLanguage();
     }
 
@@ -95,16 +92,12 @@ export class SettingsService {
     }
 
     private loadTheme(): void {
-        console.log(this.settings.theme);
-
         switch(this.settings.theme) {
             case "DarkRed":
                 this.setDarkTheme(0);
-                console.log("loaded red");
                 break;
             case "DarkBlue":
                 this.setDarkTheme(1);
-                console.log("loaded blue");
                 break;
             case "LightRed":
                 this.setLightTheme(0);

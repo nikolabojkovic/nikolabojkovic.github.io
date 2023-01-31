@@ -8,22 +8,18 @@ import { SettingsService } from "./settings.service";
 
 export class HeaderService {
 
-    constructor(private settingsService: SettingsService) {
-
-    }
-
     featuresMenu = false;
     menuResume = false;
     homeShadowID: any;
     SettingsButtonActive = false;
     resetFeatureMenuItems = false;
-
     public $ActiveResumeMenuItem: Subject<string> = new Subject();
+
+    constructor(private settingsService: SettingsService) {}
 
     public setupActiveResumeMenuItem(item: string) {
       this.$ActiveResumeMenuItem.next(item);
     }
-
 
     activateHomeBanner(): void {
       this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
@@ -52,7 +48,6 @@ export class HeaderService {
       }
     }
     
-
     HomePageDeactivated(): void {
       this.homeShadowID.style.backgroundColor = "var(--background-primary-color)";
     }
@@ -100,6 +95,7 @@ export class HeaderService {
         menu.style.display = 'none';
         this.featuresMenu = false;
     }
+
     closeResume(): void {
         let menu = document.getElementById("resumeMenu") as HTMLElement;
         menu.style.display = 'none';
@@ -183,13 +179,13 @@ export class HeaderService {
           this.menuResume = false;
         }
     }
+
     displayThemesOn(): void {
         let menu = document.getElementById("themesMenu") as HTMLElement;
-        if(this.settingsService.menuThemes == true) {
-    
-        } else {
+        if(!this.settingsService.menuThemes) {
           this.closeRestOfMenus();
-        }
+        } 
+
         if(this.settingsService.menuThemes == false) {
           menu.style.display = "block";
           this.settingsService.menuThemes = true;
@@ -198,11 +194,11 @@ export class HeaderService {
           this.settingsService.menuThemes = false;
         }
     }
+
     displayLanguagesOn(): void {
         let menu = document.getElementById("languagesMenu") as HTMLElement;
-        if(this.settingsService.menuLanguages == true) {
-    
-        } else {
+        if(this.settingsService.menuLanguages == true) {}
+        else {
           this.closeRestOfMenus();
         }
         if(this.settingsService.menuLanguages == false) {
