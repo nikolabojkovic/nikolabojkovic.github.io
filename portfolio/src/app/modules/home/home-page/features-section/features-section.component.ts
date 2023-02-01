@@ -68,6 +68,10 @@ export class FeaturesSectionComponent implements OnInit {
       case 'leadership': this.selectLeadership(); break;
       case 'consulting': this.selectConsulting(); break;
     }
-    // this.headerService.setNotification(10);
+    this.scrollToTop();
+  }
+
+  scrollToTop(): void {
+    document.documentElement.scrollTop = 0;
   }
 }

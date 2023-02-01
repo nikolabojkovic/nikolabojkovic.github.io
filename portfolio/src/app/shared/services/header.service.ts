@@ -161,7 +161,6 @@ export class HeaderService {
         }
         Element.classList.remove("menu-items-mobile-default");
         Element.classList.add("menu-items-mobile-active");
-        console.log(Element);
     }
 
     displayResumeOn(): void {

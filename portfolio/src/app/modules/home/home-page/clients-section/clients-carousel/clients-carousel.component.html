@@ -1,4 +1,6 @@
-<carousel class="carousel-container" id="carousel" [interval]=0 datainterval = false [isAnimated]=true [showIndicators]=false>
+
+
+<carousel class="carousel-container" id="carousel" (activeSlideChange)="activeSlideChange($event)" [isAnimated]=true pauseOnHover=true [showIndicators]=false>
     <slide>
         <div class="carousel-slider">
             <div class="profile-container">
@@ -24,32 +26,37 @@
                     </div>
                 </div>
                 <div class="profile-container__post__body">
-                    <div class="info-contianer__name-container">
-                        <p class="info-container__name">Website - Web Development</p>
-                        <div class="stars">
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                    <div class="name-container_and_timeline">
+                        <div class="info-contianer__name-container">
+                            <p class="info-container__name">Website - Web Development</p>
+                            <div class="stars">
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            </div>
+                        </div>
+                        <p class="info-container__timeline"> <span class="info-container__title">Project Implementation</span><span class="info-container__tiitle-spaces">-</span> Jun 2020. - May 2022.</p>
+                        <div class="stars-mobile__container">
+                            <div class="stars-mobile">
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            </div>
                         </div>
                     </div>
-                    <p class="info-container__timeline"> <span class="info-container__title">Project Implementation</span><span class="info-container__tiitle-spaces">-</span> Jun 2020. - May 2022.</p>
-                    <div class="stars-mobile__container">
-                        <div class="stars-mobile">
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                        </div>
+                
+                    <div class="into-container__text_and_info-container__text-feedback">
+                        <p class="info-container__text">
+                            Collaboration was easy and pleasent, no issues at all. We have built entire wabsite frrom scratch including design, codding and testing.
+                        </p>
+                        <p class="info-container__text-feedback">
+                            Looking forward to our next collaboration.
+                        </p>
                     </div>
-                    <p class="info-container__text">
-                        Collaboration was easy and pleasent, no issues at all. We have built entire wabsite frrom scratch including design, codding and testing.
-                    </p>
-                    <p class="info-container__text-feedback">
-                        Looking forward to our next collaboration.
-                    </p>
                 </div>
             </div>
         </div>   
@@ -94,29 +101,34 @@
                     </div>
                 </div>
                 <div class="profile-container__post__body">
-                    <div class="info-contianer__name-container">
-                        <p class="info-container__name">Medior - Web Development</p>
-                        <div class="stars">
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                    <div class="name-container_and_timeline">
+                        <div class="info-contianer__name-container">
+                            <p class="info-container__name">Website - Web Development</p>
+                            <div class="stars">
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            </div>
+                        </div>
+                        <p class="info-container__timeline"> <span class="info-container__title">Project Implementation</span><span class="info-container__tiitle-spaces">-</span> Jun 2020. - May 2022.</p>
+                        <div class="stars-mobile__container">
+                            <div class="stars-mobile">
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            </div>
                         </div>
                     </div>
-                    <p class="info-container__timeline"> <span class="info-container__title">Course</span><span class="info-container__tiitle-spaces">-</span> November 2021. - May 2022.</p>
-                    <div class="stars-mobile__container">
-                        <div class="stars-mobile">
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                        </div>
+                
+                    <div class="into-container__text_and_info-container__text-feedback">
+                        <p class="info-container__text">
+                            Web desing, implementation, codding best practices, time management, self organization, Agile methodologies, progress tracking and many other things helped me to learn web developemnt in no time. Very satisfied with mentoring.
+                        </p>
                     </div>
-                    <p class="info-container__text">Web desing, implementation, codding best practices, time management, self organization, Agile methodologies, progress tracking and many other things helped me to learn web developemnt in no time. Very satisfied with mentoring.
-                        
-                    </p>
                 </div>
             </div>
         </div>
@@ -159,32 +171,37 @@
                     </div>
                 </div>
                 <div class="profile-container__post__body">
-                    <div class="info-contianer__name-container">
-                        <p class="info-container__name">Junior - Web Development</p>
-                        <div class="stars">
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                    <div class="name-container_and_timeline">
+                        <div class="info-contianer__name-container">
+                            <p class="info-container__name">Website - Web Development</p>
+                            <div class="stars">
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            </div>
+                        </div>
+                        <p class="info-container__timeline"> <span class="info-container__title">Project Implementation</span><span class="info-container__tiitle-spaces">-</span> Jun 2020. - May 2022.</p>
+                        <div class="stars-mobile__container">
+                            <div class="stars-mobile">
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                                <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
+                            </div>
                         </div>
                     </div>
-                    <p class="info-container__timeline"> <span class="info-container__title">Course</span><span class="info-container__tiitle-spaces">-</span> November 2021. - May 2022.</p>
-                    <div class="stars-mobile__container">
-                        <div class="stars-mobile">
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                            <fa-icon class="star-filled" [icon]="faStarIcon"></fa-icon>  
-                        </div>
+                
+                    <div class="into-container__text_and_info-container__text-feedback">
+                        <p class="info-container__text">
+                            I wasn’t interested in web development at all untill I saw how it’s done by NBO Development team and then I fall in love with it. Nikola has a great methods to introduce anyone to the web development.
+                        </p>
+                        <p class="info-container__text-feedback">
+                            If you would like to lean web development, I reccomend NBO Development team as a great way to start.
+                        </p>
                     </div>
-                    <p class="info-container__text">
-                        I wasn’t interested in web development at all untill I saw how it’s done by NBO Development team and then I fall in love with it. Nikola has a great methods to introduce anyone to the web development. 
-                    </p>
-                    <p class="info-container__text-feedback">
-                        If you would like to lean web development, I reccomend NBO Development team as a great way to start.
-                    </p>
                 </div>
             </div>
         </div>

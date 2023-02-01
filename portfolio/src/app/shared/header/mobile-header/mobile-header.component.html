@@ -20,7 +20,7 @@
                     (click)="activatelinkMobile(mobileItemRef1); hideMobileMenu();" 
                     [routerLink]="['/home']" 
                     routerLinkActive="active"
-                    >
+                  >
                     {{ 'HOME' | translate }}
                   </a>
                 </li>
@@ -29,7 +29,7 @@
                     #mobileItemRef2 
                     class="menu-items-mobile-default mobile-headers" 
                     (click)="activatelinkMobile(mobileItemRef2); displayFeatures();"
-                    >
+                  >
                     {{ 'FEATURES' | translate }}
                   </a>
                   <div id=featuresMenu class="dropdown-menu-mobile">
@@ -113,19 +113,22 @@
                   id=themesMenu
                   class="dropdown-menu-mobile">
                   <ul class="themes-ul">
-
-                    <!-- onLightThemeClick(); hideMobileMenu(); resetLinks(); -->
                       <li>
                         <a 
                           id="lightThemeID" 
                           #themeLightMobileID
                           class="menu-dropdown-item-mobile-default"
-                          (click)=" displayOnLightThemeColorPicker()">
+                          (click)="displayOnLightThemeColorPicker()"
+                        >
                           <div class='item-light-container'>
                             <div class="item-light-container__mobile_theme">
                               <p id="MenuThemeLightID">{{ 'LIGHT' | translate }}</p>
                             </div>
-                            <div [ngClass]="{'display':lightThemeColorPickerState == true, 'hide':lightThemeColorPickerState == false }" id="LightThemeColorPickerID" class="settings-item__color display">
+                            <div 
+                              [ngClass]="{'display':lightThemeColorPickerState == true, 'hide':lightThemeColorPickerState == false }"
+                              id="LightThemeColorPickerID" 
+                              class="settings-item__color display"
+                            >
                               <div (click)="onLightRedThemeClick(); activeThemeItem(themeLightMobileID);" class="settings-item__color__item">
                                 <span>RED</span>
                                 <span>
