@@ -157,6 +157,9 @@ div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+    right: 0px;
+
  }
 
  .stars-mobile {
@@ -183,6 +186,7 @@ div {
     padding-top: 0px;
     color: var(--text-ternary-color);
     font-size: 14px;
+    margin-bottom: 25px;
  }
 
  .info-container{
@@ -325,10 +329,24 @@ div {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
 }
 
+.name-container_and_timeline {
+    position: relative;
+    top:30px;
+    left:0px;
+    width: 100%;
+}
+
+.into-container__text_and_info-container__text-feedback {
+    position: relative;
+    top:0px;
+}
+
+.into-container__text_and_info-container__text-feedback p {
+    margin-top: 25px;
+}
 
 .profile-container__post__body::before {
     content: "";
@@ -645,6 +663,6 @@ div {
      }
 
      .info-container__timeline {
-
+        
      }
 }

@@ -25,7 +25,6 @@ html {
     margin: auto;
 }
 
-
 //scroll Button 
 
 .scrollButton {
@@ -55,12 +54,11 @@ html {
     transform: rotate(180deg);
     margin-top: 12px;
 }
+
 .scroll-to-top-arrow {
     transform: rotate(90deg);
     color:var(--text-secondary-color);
 }
-
-
 
 @media only screen and (max-width: 1440px) {
     .site-container-top {

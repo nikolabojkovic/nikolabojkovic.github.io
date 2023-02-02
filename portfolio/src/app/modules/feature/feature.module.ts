@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { FeatureRoutingModule } from './feature.routing.module';
 import { TranslateModule } from '@ngx-translate/core';
+
 import { SoftwareArchitecturePageComponent } from './feature-page/software-architecture-page/software-architecture-page.component';
 import { DevelopmentStrategyPageComponent } from './feature-page/development-strategy-page/development-strategy-page.component';
 import { LeadershipPageComponent } from './feature-page/leadership-page/leadership-page.component';

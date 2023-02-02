@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { faQuoteRight, faStar, faArrowRight, faArrowLeft, faCircle} from '@fortawesome/free-solid-svg-icons';
 import { CarouselComponent } from 'ngx-bootstrap/carousel';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-clients-carousel',
@@ -21,6 +22,10 @@ export class ClientsCarouselComponent implements OnInit {
   firstSlide: boolean = true;
   secondSlide:boolean = false;
   thirdSlide: boolean = false;
+  carouselCycle = {
+    interval: 1,
+    cycles: 5
+  }
 
   constructor() { }
 
@@ -63,4 +68,9 @@ export class ClientsCarouselComponent implements OnInit {
         break;
     }
   }
+
+  activeSlideChange(currentSlide: number): void {
+    this.notificateActiveSlide(currentSlide);
+  }
+
 }

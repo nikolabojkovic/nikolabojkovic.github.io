@@ -17,6 +17,4 @@ export class SocialMediaStandardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
 }

@@ -2,7 +2,7 @@
   id='menuShadow' 
   class='menu-mobile-shadow' 
   (click)="hideMobileMenu()"
-  >
+>
 </div>
 <div class="header-container-holder">
   <div class="header-container">
@@ -15,11 +15,13 @@
       >
         <fa-icon 
           class="toggler-icon-start"
-          [icon]="bar">
+          [icon]="bar"
+        >
         </fa-icon> 
         <fa-icon 
           class="toggler-icon-end"
-          [icon]="bar">
+          [icon]="bar"
+        >
         </fa-icon> 
     </div>
     <div class="menu">
@@ -32,8 +34,8 @@
               class="links default-menu-item menu-links" 
               [routerLink]="['/home']" 
               routerLinkActive="active"
-              >
-                {{ 'HOME' | translate }}
+            >
+              {{ 'HOME' | translate }}
             </a>
           </li>
           <li class="dropdown">
@@ -43,8 +45,8 @@
               href="home#featuresSection"
               class="dropdown-button default-menu-item menu-links"
               (mouseenter)="showFeatureDropDownMenu()"
-              >
-                {{ 'FEATURES' | translate }}
+            >
+              {{ 'FEATURES' | translate }}
             </a>
               <div class="dropdown-content" *ngIf ="displayFeature">
                 <a
@@ -226,7 +228,7 @@
                     <fa-icon 
                       class="theme-colors themes-icons-secondary" 
                       [icon]="sun"
-                      >
+                    >
                       asdasd
                     </fa-icon>
                     <div [ngClass]="{'display':lightThemeColorPickerState == true, 'hide':lightThemeColorPickerState == false }" id="LightThemeColorPickerID" class="settings-item__color display">
@@ -268,16 +270,15 @@
                       [icon]="moon"
                       >
                     </fa-icon>
-                    <div [ngClass]="{'display':darkThemeColorPickerState == true, 'hide':darkThemeColorPickerState == false }" id="DarkThemeColorPickerID" class="settings-item__color display">
+                    <div 
+                      [ngClass]="{'display':darkThemeColorPickerState == true, 'hide':darkThemeColorPickerState == false }"
+                      id="DarkThemeColorPickerID"
+                      class="settings-item__color display"
+                    >
                       <div (click)="onDarkRedThemeClick(); displaySettings(refElSettingsButton); activeThemeItem(themeDarkID);" class="settings-item__color__item">
                         <span>RED</span>
                         <span>
-                          <fa-icon 
-                            class="theme-colors themes-icons-secondary redMoon" 
-                            [icon]="moon"
-                          >
-                            asdasd
-                          </fa-icon>
+                          <fa-icon class="theme-colors themes-icons-secondary redMoon" [icon]="moon"></fa-icon>
                         </span>
                       </div>
                       <div (click)="onDarkBlueThemeClick(); displaySettings(refElSettingsButton);  activeThemeItem(themeDarkID);" class="settings-item__color__item">
@@ -321,7 +322,6 @@
                 </a>
               </div>
             </div>  
-          
           </li>
       </ul>
     </div> 
