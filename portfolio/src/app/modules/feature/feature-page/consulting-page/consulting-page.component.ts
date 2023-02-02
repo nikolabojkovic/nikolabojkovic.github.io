@@ -13,7 +13,17 @@ export class ConsultingPageComponent implements OnInit {
   constructor( private headerService: HeaderService, private settingsServices: SettingsService) { }
 
   ngOnInit(): void {
+    this.activeFeaturesMenuItem();
   }
+  
+
+  activeFeaturesMenuItem(): void {
+    let sessionItem = window.sessionStorage.getItem("activeFeaturesMenuItem");
+    if(sessionItem != null) {
+      this.headerService.setupActiveFeaturesMenuItem(sessionItem);
+    }
+  }
+
 
   closeFeatures(): void {
     this.headerService.unHighlightFeaturesMenuitem();

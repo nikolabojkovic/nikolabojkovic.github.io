@@ -11,6 +11,13 @@ export class NulTienComponent implements OnInit {
   constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.activeResumeMenuItem();
+  }
+  
+
+  activeResumeMenuItem(): void {
+    let sessionItem = window.sessionStorage.getItem("activeResumeMenuItem");
+    this.headerService.setupActiveResumeMenuItem("nultien");
   }
 
   closeResume(): void {
