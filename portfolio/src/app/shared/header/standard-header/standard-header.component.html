@@ -54,7 +54,7 @@
                   [ngClass]="{'feature-menu-item-active':featureMenuItemDevelopmentStrategy == true}" 
                   class= "dropdown-links feature-menu-items" 
                   [routerLink]="['/features/development-strategy']" 
-                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('developmentStrategy')"
+                  (click)="closeFeatureDropDownMenu('development'); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('developmentStrategy')"
                 >
                   {{ 'DEVELOPMENT STRATEGY' | translate }}
                 </a>
@@ -63,7 +63,7 @@
                   [ngClass]="{'feature-menu-item-active':featureMenuItemSoftwareArchitecture == true}"
                   class= "dropdown-links feature-menu-items"
                   [routerLink]="['/features/software-architecture']"
-                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('softwareArchitecture')"
+                  (click)="closeFeatureDropDownMenu('softwareArchitecture'); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('softwareArchitecture')"
                 >
                   {{ 'SOFTWARE ARHITECTURE' | translate }}
                 </a>
@@ -71,7 +71,7 @@
                   id="ProjectImplementation"
                   [ngClass]="{'feature-menu-item-active':featureMenuItemProjectImplementation == true}"
                   class= "dropdown-links feature-menu-items" [routerLink]="['/features/project-implementation']" 
-                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('projectImplementation')"
+                  (click)="closeFeatureDropDownMenu('projectImplementation'); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('projectImplementation')"
                 >
                   {{ 'PROJECT IMPLEMENTATION' | translate }}
                 </a>
@@ -80,7 +80,7 @@
                   [ngClass]="{'feature-menu-item-active':featureMenuItemMentoring == true}"
                   class= "dropdown-links feature-menu-items"
                   [routerLink]="['/features/mentoring']"
-                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('mentoring')"
+                  (click)="closeFeatureDropDownMenu('mentoring'); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('mentoring')"
                 >
                   {{ 'MENTORING' | translate }}
                 </a>
@@ -89,7 +89,7 @@
                   [ngClass]="{'feature-menu-item-active':featureMenuItemLeadership == true}"
                   class= "dropdown-links feature-menu-items"
                   [routerLink]="['/features/leadership']"
-                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('leadership')"
+                  (click)="closeFeatureDropDownMenu('leadership'); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('leadership')"
                 >
                   {{ 'LEADERSHIP' | translate }}
                 </a>
@@ -98,7 +98,7 @@
                   [ngClass]="{'feature-menu-item-active':featureMenuItemConsulting == true}"
                   class= "dropdown-links feature-menu-items"
                   [routerLink]="['/features/consulting']"
-                  (click)="closeFeatureDropDownMenu(); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('consulting')"
+                  (click)="closeFeatureDropDownMenu('consulting'); activatelink(refEl2); destroyHomePageShadow(); selectMenuItemEvent('consulting')"
                 >
                   {{ 'CONSULTING' | translate }}
                 </a>
@@ -160,6 +160,7 @@
           <li>
             <a  
               #refEl4 
+              href="home#portfolioSection"
               id="portfolio"
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl4); resetAllLinks(); setResumeMenuItemsToDefaults()"
@@ -171,6 +172,7 @@
             <a 
               #refEl5 
               id="clients"
+              href="home#clientsSection"
               class="links default-menu-item menu-links" 
               (click)="activatelink(refEl5); resetAllLinks(); setResumeMenuItemsToDefaults()"
               >

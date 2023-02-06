@@ -11,8 +11,14 @@ export class UniversityComponent implements OnInit {
   constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
+    this.activeResumeMenuItem();
   }
+  
 
+  activeResumeMenuItem(): void {
+    let sessionItem = window.sessionStorage.getItem("activeResumeMenuItem");
+    this.headerService.setupActiveResumeMenuItem("university");
+  }
   closeResume(): void {
     this.headerService.unHighlightFeaturesMenuitem();
     this.scrollToTop();

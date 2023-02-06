@@ -1,5 +1,5 @@
 import { Component, Injectable } from "@angular/core";
-import { Subject } from "rxjs";
+import { Subject, windowWhen } from "rxjs";
 import { SettingsService } from "./settings.service";
 
 @Injectable({
@@ -14,12 +14,21 @@ export class HeaderService {
     SettingsButtonActive = false;
     resetFeatureMenuItems = false;
     public $ActiveResumeMenuItem: Subject<string> = new Subject();
+    public $ActiveFeaturesMenuItem: Subject<string> = new Subject();
+    public $ActiveMenuItem: Subject<string> = new Subject();
 
     constructor(private settingsService: SettingsService) {}
 
     public setupActiveResumeMenuItem(item: string) {
+      window.sessionStorage.setItem('activeResumeMenuItem',item);
       this.$ActiveResumeMenuItem.next(item);
     }
+
+    public setupActiveFeaturesMenuItem(item: string) {
+      window.sessionStorage.setItem('activeFeaturesMenuItem',item);
+      this.$ActiveFeaturesMenuItem.next(item);
+    }
+
 
     activateHomeBanner(): void {
       this.homeShadowID.style.backgroundColor = "var(--background-secondary-color)";
@@ -279,5 +288,18 @@ export class HeaderService {
       for(let i = 0; i<items.length; i++ ) {
         items[i].classList.remove("feature-menu-item-active");
       }
+    }
+
+    sessionStorageEvent__SetItem(menuItemID: string): void {
+      window.sessionStorage.setItem('featuresMenuItemActive',menuItemID);
+    }
+
+    sessionStorageEvent__GetItem(): void {
+      let session = window.sessionStorage.getItem("featuresMenuItemActive");
+      let item;
+      if(session != null) {
+        item = document.getElementById("DevelopmentStrategy");
+      }
+  
     }
 }

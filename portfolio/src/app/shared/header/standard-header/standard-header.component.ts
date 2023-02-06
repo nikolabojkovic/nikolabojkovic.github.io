@@ -43,12 +43,21 @@ export class StandardHeaderComponent implements OnInit {
   resumeMenuItemIntelisale: boolean = false;
   resumeMenuItemOrionInovation: boolean = false;
 
+
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
   ngOnInit(): void {
+
+    // Sending Items
     this.headerService.$ActiveResumeMenuItem.subscribe((item) => {
       this.checkActiveReusmeMenuItem(item);
     })
+
+    this.headerService.$ActiveFeaturesMenuItem.subscribe((item) => {
+      this.checkActiveFeaturesMenuItem(item);
+    })
+
+    // Sending Items
 
     this.checkFeatureMenuItems();
     this.homePageActivated();
@@ -69,6 +78,20 @@ export class StandardHeaderComponent implements OnInit {
     }
   }
 
+  checkActiveFeaturesMenuItem(item: string) {
+    this.setFeaturesMenuItemsToDefaults();
+    switch(item) {
+      case 'development': this.featureMenuItemDevelopmentStrategy = true; break;
+      case 'softwareArchitecture': this.featureMenuItemSoftwareArchitecture = true; break;
+      case 'projectImplementation': this.featureMenuItemProjectImplementation = true;break;
+      case 'mentoring': this.featureMenuItemMentoring = true; break;
+      case 'leadership': this.featureMenuItemLeadership = true; break;
+      case 'consulting': this.featureMenuItemConsulting = true; break;
+      default: console.log("Error ActiveFeaturesMenuItem");
+    }
+  }
+
+
   setResumeMenuItemsToDefaults(): void {
     this.resumeMenuItemOrionInovation = false;
     this.resumeMenuItemUniversity = false;
@@ -76,6 +99,15 @@ export class StandardHeaderComponent implements OnInit {
     this.resumeMenuItemNultien = false;
     this.resumeMenuItemIntelisale= false;
     this.resumeMenuItemOrionInovation = false;
+  }
+
+  setFeaturesMenuItemsToDefaults(): void {
+    this.featureMenuItemDevelopmentStrategy = false;
+    this.featureMenuItemSoftwareArchitecture = false;
+    this.featureMenuItemProjectImplementation = false;
+    this.featureMenuItemMentoring = false;
+    this.featureMenuItemLeadership = false;
+    this.featureMenuItemConsulting = false;
   }
 
   checkActiveMenuItem(): void {
@@ -216,9 +248,10 @@ export class StandardHeaderComponent implements OnInit {
     this.headerService.activateLinkMobileOn(itemMobile);
   }
 
-  closeFeatureDropDownMenu(): void {
+  closeFeatureDropDownMenu(item: string): void {
     this.displayFeature = false;
     this.setResumeMenuItemsToDefaults();
+    this.headerService.setupActiveFeaturesMenuItem(item);
   }
 
   showFeatureDropDownMenu(): void {

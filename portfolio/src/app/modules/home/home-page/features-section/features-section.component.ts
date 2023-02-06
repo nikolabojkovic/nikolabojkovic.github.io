@@ -9,11 +9,14 @@ import { SettingsService } from 'src/app/shared/services/settings.service';
 })
 export class FeaturesSectionComponent implements OnInit {
 
-  constructor(private headerService: HeaderService, private settingsServices: SettingsService) { }
+  constructor(private headerService: HeaderService, private settingsServices: SettingsService) { 
+
+  }
 
   ngOnInit(): void {
 
   }
+  
 
   arrow = faArrowRight;
   datum = new Date();
@@ -26,6 +29,7 @@ export class FeaturesSectionComponent implements OnInit {
     this.headerService.resetAllMenuItems();
     let item = document.getElementById("DevelopmentStrategy") as HTMLElement;
     item.classList.add("feature-menu-item-active")
+    this.sessionStorageEvent__SetItem("DevelopmentStrategy");
   }
 
   selectSoftwareArchitecture(): void {
@@ -58,15 +62,22 @@ export class FeaturesSectionComponent implements OnInit {
     item.classList.add("feature-menu-item-active")
   }
 
-  onFeaturesCardClick(section: string): void {
+  sessionStorageEvent__SetItem(menuItemID: string): void {
+    this.headerService.sessionStorageEvent__SetItem(menuItemID);
+  }
+
+  onFeaturesCardClick(item: string): void {
+    window.sessionStorage.setItem("activeFeaturesMenuitem",item);
     this.activateFeatureSection();
-    switch(section) {
-      case 'development': this.selectDevelopmentStrategy(); break;
-      case 'softwareArchitecture': this.selectSoftwareArchitecture(); break;
-      case 'projectImplementation': this.selectProjectImplementation(); break;
-      case 'mentoring': this.selectMentoring(); break; 
-      case 'leadership': this.selectLeadership(); break;
-      case 'consulting': this.selectConsulting(); break;
+
+    switch(item) {
+      case 'development': this.headerService.setupActiveFeaturesMenuItem('development'); break;
+      case 'softwareArchitecture': this.headerService.setupActiveFeaturesMenuItem('softwareArchitecture'); break;
+      case 'projectImplementation': this.headerService.setupActiveFeaturesMenuItem('projectImplementation');break;
+      case 'mentoring': this.headerService.setupActiveFeaturesMenuItem('mentoring'); break;
+      case 'leadership': this.headerService.setupActiveFeaturesMenuItem('leadership'); break;
+      case 'consulting': this.headerService.setupActiveFeaturesMenuItem('consulting'); break;
+      default: console.log("Error ActiveFeaturesMenuItem");
     }
     this.scrollToTop();
   }

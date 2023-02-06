@@ -12,6 +12,15 @@ export class DevelopmentStrategyPageComponent implements OnInit {
   constructor( private headerService: HeaderService ) { }
 
   ngOnInit(): void {
+    this.activeFeaturesMenuItem();
+  }
+  
+
+  activeFeaturesMenuItem(): void {
+    let sessionItem = window.sessionStorage.getItem("activeFeaturesMenuItem");
+    if(sessionItem != null) {
+      this.headerService.setupActiveFeaturesMenuItem(sessionItem);
+    }
   }
 
   closeFeatures(): void {

@@ -316,6 +316,18 @@ li {
   height: 15px;
 }
 
+.feature-menu-item-active {
+  color:var(--text-secondary-color) !important;
+}
+
+.resume-menu-item-active {
+  color:var(--text-secondary-color) !important;
+}
+
+.menu-item-active {
+  color:var(--text-secondary-color) !important;
+}
+
 // Desktop View
   
 @media only screen and (min-width:1440px) {
