@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../../services/settings.service';
 import { HeaderService } from '../../services/header.service';
 
-import { faXmark, faBars, faGear, faSun, faMoon} from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faBars, faGear, faSun, faMoon, faL} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -31,12 +31,128 @@ export class MobileHeaderComponent implements OnInit {
   gear = faGear
   closeBtn = faXmark;
 
+  home: boolean = false;
+  features: boolean = false;
+  resume: boolean = false;
+  portfolio: boolean = false;
+  contact: boolean = false;
+  clients: boolean = false;
+
+  featureMenuItemDevelopmentStrategy: boolean = false;
+  featureMenuItemSoftwareArchitecture: boolean = false;
+  featureMenuItemProjectImplementation: boolean = false;
+  featureMenuItemMentoring: boolean = false;
+  featureMenuItemLeadership: boolean = false;
+  featureMenuItemConsulting: boolean = false;
+
+  resumeMenuItemUniversity: boolean = false;
+  resumeMenuItemInfoscreen: boolean = false;
+  resumeMenuItemNultien: boolean = false;
+  resumeMenuItemIntelisale: boolean = false;
+  resumeMenuItemOrionInovation: boolean = false;
+
   /*settings*/
 
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    // Sending Items
+  this.headerService.$ActiveResumeMenuItem.subscribe((item) => {
+    this.checkActiveReusmeMenuItem(item);
+  })
 
+  this.headerService.$ActiveFeaturesMenuItem.subscribe((item) => {
+    this.checkActiveFeaturesMenuItem(item);
+  })
+
+  this.headerService.$ActiveMenuItem.subscribe((item) => {
+    switch(item) {
+      case 'home':  this.resetMenuItems(); this.home = true; break;
+      case 'features': this.resetMenuItems(); this.features = true; break;
+      case 'resume': this.resetMenuItems(); this.resume = true; break;
+      case 'portfolio': this.resetMenuItems(); this.portfolio = true; break;
+      case 'contact': this.resetMenuItems(); this.contact = true; break;
+      case 'clients': this.resetMenuItems(); this.clients = true; break;
+    }
+  })
+  // Sending Items
+  }
+
+  resetMenuItems(): void {
+    this.home = false;
+    this.features = false;
+    this.resume = false;
+    this.contact = false;
+    this.portfolio = false;
+    this.clients = false;
+
+  }
+
+  checkActiveReusmeMenuItem(item:string) {
+    this.setResumeMenuItemsToDefaults();
+    switch(item) {
+      case 'orionInovation': this.resumeMenuItemOrionInovation = true; break;
+      case 'intelisale': this.resumeMenuItemIntelisale = true; break;
+      case 'nultien': this.resumeMenuItemNultien = true; break;
+      case 'infoscreen': this.resumeMenuItemInfoscreen = true; break;
+      case 'university': this.resumeMenuItemUniversity = true; break;
+      default: console.log("Error ActiveResumeMenuItem") ;
+    }
+  }
+
+  checkActiveFeaturesMenuItem(item: string) {
+    this.setFeaturesMenuItemsToDefaults();
+    switch(item) {
+      case 'development': this.featureMenuItemDevelopmentStrategy = true; break;
+      case 'softwareArchitecture': this.featureMenuItemSoftwareArchitecture = true; break;
+      case 'projectImplementation': this.featureMenuItemProjectImplementation = true;break;
+      case 'mentoring': this.featureMenuItemMentoring = true; break;
+      case 'leadership': this.featureMenuItemLeadership = true; break;
+      case 'consulting': this.featureMenuItemConsulting = true; break;
+      default: console.log("Error ActiveFeaturesMenuItem");
+    }
+  }
+
+    setResumeMenuItemsToDefaults(): void {
+      this.resumeMenuItemOrionInovation = false;
+      this.resumeMenuItemUniversity = false;
+      this.resumeMenuItemInfoscreen= false;
+      this.resumeMenuItemNultien = false;
+      this.resumeMenuItemIntelisale= false;
+      this.resumeMenuItemOrionInovation = false;
+    }
+  
+    setFeaturesMenuItemsToDefaults(): void {
+      this.featureMenuItemDevelopmentStrategy = false;
+      this.featureMenuItemSoftwareArchitecture = false;
+      this.featureMenuItemProjectImplementation = false;
+      this.featureMenuItemMentoring = false;
+      this.featureMenuItemLeadership = false;
+      this.featureMenuItemConsulting = false;
+    }
+  
+    closeFeatureDropDownMenu(item: string): void {
+      this.setFeaturesMenuItemsToDefaults();
+      this.setResumeMenuItemsToDefaults();
+      this.headerService.setupActiveFeaturesMenuItem(item);
+    }
+
+    closeResumeDropDownMenu(item: string): void {
+      this.setResumeMenuItemsToDefaults();
+      this.setFeaturesMenuItemsToDefaults();
+      this.headerService.setupActiveResumeMenuItem(item);
+    }
+
+    setItemsOnDefault(): void {
+      this.headerService.resetAllMenuItems();
+      this.featureMenuItemDevelopmentStrategy = false;
+      this.featureMenuItemSoftwareArchitecture = false;
+      this.featureMenuItemProjectImplementation = false;
+      this.featureMenuItemMentoring = false;
+      this.featureMenuItemLeadership = false;
+      this.featureMenuItemConsulting = false;
+    }
+  
   onDarkThemeClick(): void {
     let lightButton = document.getElementById("MenuThemeLightID") as HTMLElement;
     let darkButton = document.getElementById("MenuThemeDarkID") as HTMLElement;

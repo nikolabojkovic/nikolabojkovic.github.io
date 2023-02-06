@@ -1,7 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
+
 import { HeaderService } from "src/app/shared/services/header.service";
 import { SettingsService } from "src/app/shared/services/settings.service";
 import { ContactService } from "./contact.service";
+
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";

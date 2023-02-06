@@ -16,8 +16,9 @@
                 <li>
                   <a 
                     #mobileItemRef1 
+                    [ngClass]="{'menu-item-active':home == true}"
                     class="menu-items-mobile-default mobile-headers" 
-                    (click)="activatelinkMobile(mobileItemRef1); hideMobileMenu();" 
+                    (click)="activatelinkMobile(mobileItemRef1); hideMobileMenu(); setItemsOnDefault();" 
                     [routerLink]="['/home']" 
                     routerLinkActive="active"
                   >
@@ -27,6 +28,7 @@
                 <li>
                   <a 
                     #mobileItemRef2 
+                    [ngClass]="{'menu-item-active':features == true}"
                     class="menu-items-mobile-default mobile-headers" 
                     (click)="activatelinkMobile(mobileItemRef2); displayFeatures();"
                   >
@@ -34,18 +36,76 @@
                   </a>
                   <div id=featuresMenu class="dropdown-menu-mobile">
                     <ul>
-                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/development-strategy']" (click)=" hideMobileMenu();">{{ 'DEVELOPMENT STRATEGY' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/software-architecture']" (click)=" hideMobileMenu();">{{ 'SOFTWARE ARCHITECTURE' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/project-implementation']" (click)=" hideMobileMenu();">{{ 'PROJECT IMPLEMENTATION' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/mentoring']" (click)=" hideMobileMenu();">{{ 'MENTORING' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/leadership']" (click)=" hideMobileMenu();">{{ 'LEADERSHIP' | translate }}</a></li>
-                      <li><a class="menu-dropdown-item-mobile-default" [routerLink]="['/features/consulting']" (click)=" hideMobileMenu();">{{ 'CONSULTING' | translate }}</a></li>
+                      <li>
+                        <a 
+                          [ngClass]="{'feature-menu-item-active':featureMenuItemDevelopmentStrategy == true}" 
+                          class="menu-dropdown-item-mobile-default"
+                          [routerLink]="['/features/development-strategy']"
+                          (click)="closeFeatureDropDownMenu('development'); hideMobileMenu(); "
+                        >
+                          {{ 'DEVELOPMENT STRATEGY' | translate }}
+
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'feature-menu-item-active':featureMenuItemSoftwareArchitecture == true}"
+                          class="menu-dropdown-item-mobile-default"
+                          [routerLink]="['/features/software-architecture']"
+                          (click)="closeFeatureDropDownMenu('softwareArchitecture'); hideMobileMenu();"
+                        >
+                          {{ 'SOFTWARE ARCHITECTURE' | translate }}
+
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'feature-menu-item-active':featureMenuItemProjectImplementation == true}"
+                          class="menu-dropdown-item-mobile-default" 
+                          [routerLink]="['/features/project-implementation']" 
+                          (click)="closeFeatureDropDownMenu('projectImplementation'); hideMobileMenu();"
+                        >
+                          {{ 'PROJECT IMPLEMENTATION' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'feature-menu-item-active':featureMenuItemMentoring == true}"
+                          class="menu-dropdown-item-mobile-default"
+                          [routerLink]="['/features/mentoring']" 
+                          (click)="closeFeatureDropDownMenu('mentoring'); hideMobileMenu();"
+                        >
+                          {{ 'MENTORING' | translate }}
+
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'feature-menu-item-active':featureMenuItemLeadership == true}"
+                          class="menu-dropdown-item-mobile-default" 
+                          [routerLink]="['/features/leadership']" 
+                          (click)="closeFeatureDropDownMenu('leadership'); hideMobileMenu();"
+                        >
+                          {{ 'LEADERSHIP' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'feature-menu-item-active':featureMenuItemConsulting == true}"
+                          class="menu-dropdown-item-mobile-default" 
+                          [routerLink]="['/features/consulting']" 
+                          (click)="closeFeatureDropDownMenu('consulting'); hideMobileMenu();"
+                        >
+                          {{ 'CONSULTING' | translate }}
+                        </a>
+                      </li>
                       </ul>
                   </div>
                 </li>
                 <li>
                   <a 
                     #mobileItemRef3 
+                    [ngClass]="{'menu-item-active':resume == true}"
                     class="menu-items-mobile-default mobile-headers" 
                     (click)="activatelinkMobile(mobileItemRef3); displayResume();"
                     >
@@ -53,19 +113,66 @@
                   </a>
                   <div id=resumeMenu class="dropdown-menu-mobile">
                     <ul>
-                      <li><a [routerLink]="['/resume/university']" (click)=" hideMobileMenu();" class="menu-dropdown-item-mobile-default">{{ 'UNIVERSITY' | translate }}</a></li>
-                      <li><a [routerLink]="['/resume/infoscreen-microgen']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'INFOSCREN/MIGROGEN' | translate }}</a></li>
-                      <li><a [routerLink]="['/resume/nultien']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'NULTIEN' | translate }}</a></li>
-                      <li><a [routerLink]="['/resume/intelisale']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'INTELISALE' | translate }}</a></li>
-                      <li><a [routerLink]="['/resume/orion-inovation']" (click)=" hideMobileMenu();"  class="menu-dropdown-item-mobile-default">{{ 'ORION INOVATION' | translate }}</a></li>
+                      <li>
+                        <a 
+                          [ngClass]="{'resume-menu-item-active': resumeMenuItemUniversity == true}"
+                          [routerLink]="['/resume/university']" 
+                          (click)="closeResumeDropDownMenu('university'); hideMobileMenu();"
+                          class="menu-dropdown-item-mobile-default"
+                        >
+                          {{ 'UNIVERSITY' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'resume-menu-item-active': resumeMenuItemInfoscreen == true}"
+                          [routerLink]="['/resume/infoscreen-microgen']" 
+                          (click)="closeResumeDropDownMenu('infoscreen'); hideMobileMenu();"
+                          class="menu-dropdown-item-mobile-default"
+                        >
+                          {{ 'INFOSCREN/MIGROGEN' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'resume-menu-item-active': resumeMenuItemNultien == true}"
+                          [routerLink]="['/resume/nultien']" 
+                          (click)="closeResumeDropDownMenu('nultien'); hideMobileMenu();"
+                          class="menu-dropdown-item-mobile-default"
+                        >
+                          {{ 'NULTIEN' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          [ngClass]="{'resume-menu-item-active': resumeMenuItemIntelisale == true}"
+                          [routerLink]="['/resume/intelisale']" 
+                          (click)="closeResumeDropDownMenu('intelisale'); hideMobileMenu();"
+                          class="menu-dropdown-item-mobile-default"
+                        >
+                          {{ 'INTELISALE' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          [ngClass]="{'resume-menu-item-active': resumeMenuItemOrionInovation == true}"
+                          [routerLink]="['/resume/orion-inovation']" 
+                          (click)="closeResumeDropDownMenu('orionInovation'); hideMobileMenu();"
+                          class="menu-dropdown-item-mobile-default"
+                        >
+                          {{ 'ORION INOVATION' | translate }}
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </li>
                 <li>
                   <a 
                     #mobileItemRef4 
+                    [ngClass]="{'menu-item-active':portfolio == true}"
+                    href="home#portfolioSection"
                     class="menu-items-mobile-default mobile-headers" 
-                    (click)="activatelinkMobile(mobileItemRef4)"
+                    (click)="activatelinkMobile(mobileItemRef4); hideMobileMenu();"
                     >
                     {{ 'PORTFOLIO' | translate }}
                   </a>
@@ -73,8 +180,10 @@
                 <li>
                   <a 
                     #mobileItemRef5
+                    [ngClass]="{'menu-item-active':clients == true}"
+                    href="home#clientsSection"
                     class="menu-items-mobile-default mobile-headers"
-                    (click)="activatelinkMobile(mobileItemRef5)"
+                    (click)="activatelinkMobile(mobileItemRef5); hideMobileMenu();"
                     >
                     {{ 'CLIENTS' | translate }}
                   </a>
@@ -82,6 +191,7 @@
                 <li>
                   <a 
                     #mobileItemRef6
+                    [ngClass]="{'menu-item-active':contact == true}"
                     class="menu-items-mobile-default mobile-headers"
                     (click)="activatelinkMobile(mobileItemRef6); hideMobileMenu();"
                     [routerLink]="['/contact']"

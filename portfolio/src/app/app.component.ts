@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
   storage = 'Storage is place where you store an information';
   scrollButtonStatus = false;
   arrow = faArrowRight;
-  
+
   ngOnInit(): void {
     this.headerService.homeShadowID = this.sendHomeShadow();
   }
@@ -26,10 +26,31 @@ export class AppComponent implements OnInit{
     router.events.pipe(
       filter((event: Event): event is RouterEvent => event instanceof RouterEvent)
    ).subscribe((event: RouterEvent) => {
-     if(event.url === "/home" || event.url === "/" || event.url === "/home#featuresSection" || event.url === "/home#resumeSection"){
+     if(event.url === "/home" || event.url === "/" || event.url === "/home#featuresSection" || event.url === "/home#resumeSection" || event.url == '/home#portfolioSection' || event.url === '/home#clientsSection'){
         headerService.activateHomeBanner();
      } else {
         headerService.HomePageDeactivated();
+     }
+
+     switch(event.url) {
+      case '/home': this.headerService.$ActiveMenuItem.next('home'); break;
+      case '/contact': this.headerService.$ActiveMenuItem.next('contact'); break;
+      default: 
+        if(event.url.startsWith('/features')) {
+          this.headerService.$ActiveMenuItem.next('features');
+        }
+
+        if(event.url.startsWith('/resume')) {
+          this.headerService.$ActiveMenuItem.next('resume');
+        }
+
+        if(event.url.startsWith('/home#portfolio')) {
+          this.headerService.$ActiveMenuItem.next('portfolio');
+        }
+
+        if(event.url.startsWith('/home#clients')) {
+          this.headerService.$ActiveMenuItem.next('clients');
+        }
      }
    });
   }

@@ -15,6 +15,7 @@ export class HeaderService {
     resetFeatureMenuItems = false;
     public $ActiveResumeMenuItem: Subject<string> = new Subject();
     public $ActiveFeaturesMenuItem: Subject<string> = new Subject();
+    public $ActiveMenuItem: Subject<string> = new Subject();
 
     constructor(private settingsService: SettingsService) {}
 

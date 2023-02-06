@@ -56,6 +56,7 @@ export class StandardHeaderComponent implements OnInit {
     this.headerService.$ActiveFeaturesMenuItem.subscribe((item) => {
       this.checkActiveFeaturesMenuItem(item);
     })
+
     // Sending Items
 
     this.checkFeatureMenuItems();
