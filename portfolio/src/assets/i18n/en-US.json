@@ -1,10 +1,9 @@
 {
-    "Hello World": "Hello World - translated",
-    "match": "match - translated",
     "English": "English",
     "Serbian": "Serbian",
-    "Storage is place where you store an information":"Storage is place where you store an information",
-    "Home": "Home",
+    "Welcome to nbo development": "Welcome to NBO DEVELOPMENT",
     "Languages": "Languages",
-    "Themes": "Themes"
+    "Themes": "Themes",
+    "home": "Home",
+    "features": "Features"
 }

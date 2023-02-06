@@ -35,7 +35,7 @@
               [routerLink]="['/home']" 
               routerLinkActive="active"
             >
-              {{ 'HOME' | translate }}
+              {{ 'home' | translate | uppercase }}
             </a>
           </li>
           <li class="dropdown">
@@ -46,7 +46,7 @@
               class="dropdown-button default-menu-item menu-links"
               (mouseenter)="showFeatureDropDownMenu()"
             >
-              {{ 'FEATURES' | translate }}
+              {{ 'features' | translate | uppercase }}
             </a>
               <div class="dropdown-content" *ngIf ="displayFeature">
                 <a
