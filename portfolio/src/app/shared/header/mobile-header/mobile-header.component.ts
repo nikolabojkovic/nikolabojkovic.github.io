@@ -85,7 +85,6 @@ export class MobileHeaderComponent implements OnInit {
     this.contact = false;
     this.portfolio = false;
     this.clients = false;
-
   }
 
   checkActiveReusmeMenuItem(item:string) {
@@ -94,7 +93,7 @@ export class MobileHeaderComponent implements OnInit {
       case 'orionInovation': this.resumeMenuItemOrionInovation = true; break;
       case 'intelisale': this.resumeMenuItemIntelisale = true; break;
       case 'nultien': this.resumeMenuItemNultien = true; break;
-      case 'infoscreen': this.resumeMenuItemInfoscreen = true; break;
+      case 'infoscreenMicrogen': this.resumeMenuItemInfoscreen = true; break;
       case 'university': this.resumeMenuItemUniversity = true; break;
       default: console.log("Error ActiveResumeMenuItem") ;
     }
@@ -103,9 +102,9 @@ export class MobileHeaderComponent implements OnInit {
   checkActiveFeaturesMenuItem(item: string) {
     this.setFeaturesMenuItemsToDefaults();
     switch(item) {
-      case 'development': this.featureMenuItemDevelopmentStrategy = true; break;
+      case 'developmentStrategy': this.featureMenuItemDevelopmentStrategy = true; break;
       case 'softwareArchitecture': this.featureMenuItemSoftwareArchitecture = true; break;
-      case 'projectImplementation': this.featureMenuItemProjectImplementation = true;break;
+      case 'projectImplementation': this.featureMenuItemProjectImplementation = true; break;
       case 'mentoring': this.featureMenuItemMentoring = true; break;
       case 'leadership': this.featureMenuItemLeadership = true; break;
       case 'consulting': this.featureMenuItemConsulting = true; break;
@@ -144,13 +143,8 @@ export class MobileHeaderComponent implements OnInit {
     }
 
     setItemsOnDefault(): void {
-      this.headerService.resetAllMenuItems();
-      this.featureMenuItemDevelopmentStrategy = false;
-      this.featureMenuItemSoftwareArchitecture = false;
-      this.featureMenuItemProjectImplementation = false;
-      this.featureMenuItemMentoring = false;
-      this.featureMenuItemLeadership = false;
-      this.featureMenuItemConsulting = false;
+      this.setResumeMenuItemsToDefaults();
+      this.setFeaturesMenuItemsToDefaults();
     }
   
   onDarkThemeClick(): void {

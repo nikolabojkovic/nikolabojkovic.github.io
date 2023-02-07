@@ -30,6 +30,7 @@
             <a 
               #refEl
               id="home" 
+              [ngClass]="{'menu-item-active':home == true}"
               (click)="activatelink(refEl); homePageActivated(); setResumeMenuItemsToDefaults()" 
               class="links default-menu-item menu-links" 
               [routerLink]="['/home']" 
@@ -42,6 +43,7 @@
             <a 
               #refEl2 
               id="features"
+              [ngClass]="{'menu-item-active':features == true}"
               href="home#featuresSection"
               class="dropdown-button default-menu-item menu-links"
               (mouseenter)="showFeatureDropDownMenu()"
@@ -109,6 +111,7 @@
               #refEl3
               href="home#resumeSection"
               id="resume"
+              [ngClass]="{'menu-item-active':resume == true}"
               class="dropdown-button default-menu-item menu-links"
               (mouseenter)="showResumeDropDownMenu()"
               >
@@ -160,10 +163,11 @@
           <li>
             <a  
               #refEl4 
+              [ngClass]="{'menu-item-active':portfolio == true}"
               href="home#portfolioSection"
               id="portfolio"
               class="links default-menu-item menu-links" 
-              (click)="activatelink(refEl4); resetAllLinks(); setResumeMenuItemsToDefaults()"
+              (click)="resetAllLinks(); setResumeMenuItemsToDefaults()"
               >
                 {{ 'PORTFOLIO' | translate }}
             </a>
@@ -172,9 +176,10 @@
             <a 
               #refEl5 
               id="clients"
+              [ngClass]="{'menu-item-active':clients == true}"
               href="home#clientsSection"
               class="links default-menu-item menu-links" 
-              (click)="activatelink(refEl5); resetAllLinks(); setResumeMenuItemsToDefaults()"
+              (click)="resetAllLinks(); setResumeMenuItemsToDefaults()"
               >
                 {{ 'CLIENTS' | translate }}
             </a>
@@ -182,6 +187,7 @@
           <li>
               <a 
                 #refEl6 
+                [ngClass]="{'menu-item-active':contact == true}"
                 id="contact"
                 class="links default-menu-item menu-links" 
                 (click)="activatelink(refEl6); homePageDeactivated(); resetAllLinks(); setResumeMenuItemsToDefaults()" 

@@ -32,27 +32,49 @@ export class AppComponent implements OnInit{
         headerService.HomePageDeactivated();
      }
 
-     switch(event.url) {
+     this.menuList(event.url);
+     this.subMenuListFeatures(event.url);
+     this.subMenuListResume(event.url);
+   });
+  }
+
+  menuList(url: any): void {
+    switch(url) {
+      case '/': 
       case '/home': this.headerService.$ActiveMenuItem.next('home'); break;
       case '/contact': this.headerService.$ActiveMenuItem.next('contact'); break;
       default: 
-        if(event.url.startsWith('/features')) {
+        if(url.startsWith('/features')) {
           this.headerService.$ActiveMenuItem.next('features');
         }
 
-        if(event.url.startsWith('/resume')) {
+        if(url.startsWith('/resume')) {
           this.headerService.$ActiveMenuItem.next('resume');
         }
-
-        if(event.url.startsWith('/home#portfolio')) {
-          this.headerService.$ActiveMenuItem.next('portfolio');
-        }
-
-        if(event.url.startsWith('/home#clients')) {
-          this.headerService.$ActiveMenuItem.next('clients');
-        }
      }
-   });
+  }
+
+  subMenuListFeatures(url: any): void {
+    switch(url) {
+      case '/features/development-strategy': this.headerService.$ActiveFeaturesMenuItem.next('developmentStrategy'); break;
+      case '/features/software-architecture': this.headerService.$ActiveFeaturesMenuItem.next('softwareArchitecture'); break;
+      case '/features/project-implementation': this.headerService.$ActiveFeaturesMenuItem.next('projectImplementation'); break;
+      case '/features/mentoring': this.headerService.$ActiveFeaturesMenuItem.next('mentoring'); break;
+      case '/features/leadership': this.headerService.$ActiveFeaturesMenuItem.next('leadership'); break;
+      case '/features/consulting': this.headerService.$ActiveFeaturesMenuItem.next('consulting'); break;
+      default: 
+     }
+  }
+
+  subMenuListResume(url: any): void {
+    switch(url) {
+      case '/resume/university': this.headerService.$ActiveResumeMenuItem.next('university'); break;
+      case '/resume/infoscreen-microgen':  this.headerService.$ActiveResumeMenuItem.next('infoscreenMicrogen'); break;
+      case '/resume/orion-inovation': this.headerService.$ActiveResumeMenuItem.next('orionInovation'); break;
+      case '/resume/intelisale': this.headerService.$ActiveResumeMenuItem.next('intelisale'); break;
+      case '/resume/nultien': this.headerService.$ActiveResumeMenuItem.next('nultien'); break;
+      default: 
+     }
   }
 
   sendHomeShadow(): HTMLElement {

@@ -172,7 +172,7 @@
                     [ngClass]="{'menu-item-active':portfolio == true}"
                     href="home#portfolioSection"
                     class="menu-items-mobile-default mobile-headers" 
-                    (click)="activatelinkMobile(mobileItemRef4); hideMobileMenu();"
+                    (click)="activatelinkMobile(mobileItemRef4); hideMobileMenu();  setItemsOnDefault();"
                     >
                     {{ 'PORTFOLIO' | translate }}
                   </a>
@@ -183,7 +183,7 @@
                     [ngClass]="{'menu-item-active':clients == true}"
                     href="home#clientsSection"
                     class="menu-items-mobile-default mobile-headers"
-                    (click)="activatelinkMobile(mobileItemRef5); hideMobileMenu();"
+                    (click)="activatelinkMobile(mobileItemRef5); hideMobileMenu();  setItemsOnDefault();"
                     >
                     {{ 'CLIENTS' | translate }}
                   </a>
@@ -193,7 +193,7 @@
                     #mobileItemRef6
                     [ngClass]="{'menu-item-active':contact == true}"
                     class="menu-items-mobile-default mobile-headers"
-                    (click)="activatelinkMobile(mobileItemRef6); hideMobileMenu();"
+                    (click)="activatelinkMobile(mobileItemRef6); hideMobileMenu();  setItemsOnDefault();"
                     [routerLink]="['/contact']"
                     routerLinkActive="active"
                     >

@@ -30,6 +30,14 @@ export class StandardHeaderComponent implements OnInit {
   gear = faGear
   closeBtn = faXmark;
 
+  home: boolean = false;
+  features: boolean = false;
+  resume: boolean = false;
+  clients: boolean = false;
+  portfolio: boolean = false;
+  contact: boolean = false;
+
+
   featureMenuItemDevelopmentStrategy: boolean = false;
   featureMenuItemSoftwareArchitecture: boolean = false;
   featureMenuItemProjectImplementation: boolean = false;
@@ -57,6 +65,17 @@ export class StandardHeaderComponent implements OnInit {
       this.checkActiveFeaturesMenuItem(item);
     })
 
+    this.headerService.$ActiveMenuItem.subscribe((item) => {
+      switch(item) {
+        case 'home':  this.resetMenuItems(); this.home = true; break;
+        case 'features': this.resetMenuItems(); this.features = true; break;
+        case 'resume': this.resetMenuItems(); this.resume = true; break;
+        case 'portfolio': this.resetMenuItems(); this.portfolio = true; break;
+        case 'contact': this.resetMenuItems(); this.contact = true; break;
+        case 'clients': this.resetMenuItems(); this.clients = true; break;
+      }
+    })
+
     // Sending Items
 
     this.checkFeatureMenuItems();
@@ -66,22 +85,31 @@ export class StandardHeaderComponent implements OnInit {
   }
 
 
+  resetMenuItems(): void {
+    this.home = false;
+    this.features = false;
+    this.resume = false;
+    this.contact = false;
+    this.portfolio = false;
+    this.clients = false;
+  }
+
   checkActiveReusmeMenuItem(item:string) {
     this.setResumeMenuItemsToDefaults();
     switch(item) {
       case 'orionInovation': this.resumeMenuItemOrionInovation = true; break;
       case 'intelisale': this.resumeMenuItemIntelisale = true; break;
       case 'nultien': this.resumeMenuItemNultien = true; break;
-      case 'infoscreen': this.resumeMenuItemInfoscreen = true; break;
+      case 'infoscreenMicrogen': this.resumeMenuItemInfoscreen = true; break;
       case 'university': this.resumeMenuItemUniversity = true; break;
       default: console.log("Error ActiveResumeMenuItem") ;
     }
   }
 
-  checkActiveFeaturesMenuItem(item: string) {
+  checkActiveFeaturesMenuItem(item: string) { 
     this.setFeaturesMenuItemsToDefaults();
     switch(item) {
-      case 'development': this.featureMenuItemDevelopmentStrategy = true; break;
+      case 'developmentStrategy': this.featureMenuItemDevelopmentStrategy = true; break;
       case 'softwareArchitecture': this.featureMenuItemSoftwareArchitecture = true; break;
       case 'projectImplementation': this.featureMenuItemProjectImplementation = true;break;
       case 'mentoring': this.featureMenuItemMentoring = true; break;
