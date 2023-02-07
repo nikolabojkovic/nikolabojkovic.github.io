@@ -228,8 +228,9 @@
                 <a 
                   id="lightThemeID" 
                   #themeLightID
+                  [ngClass]="{'activeThemeColor':LightThemeMenuItemActive == true}"
                   (click)="displayOnLightThemeColorPicker();"
-                  class="default defaultThemeColor"
+                  class="default"
                 >
                   <div class="settings-item theme-text">
                     {{ 'LIGHT' | translate }}
@@ -268,6 +269,7 @@
                 <a
                   id="darkThemeID" 
                   #themeDarkID
+                  [ngClass]="{'activeThemeColor':DarkThemeMenuItemActive == true}"
                   (click)="displayOnDarkThemeColorPicker();"
                   class="default"
                 >

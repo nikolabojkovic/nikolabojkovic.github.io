@@ -51,6 +51,8 @@ export class StandardHeaderComponent implements OnInit {
   resumeMenuItemIntelisale: boolean = false;
   resumeMenuItemOrionInovation: boolean = false;
 
+  LightThemeMenuItemActive: boolean = false;
+  DarkThemeMenuItemActive: boolean = false;
 
   constructor(private settingsService: SettingsService, private headerService: HeaderService) { }
 
@@ -76,8 +78,19 @@ export class StandardHeaderComponent implements OnInit {
       }
     })
 
+    this.settingsService.$ThemeMenuActiveItem.subscribe((item) => {
+      switch(item) {
+        case 'DarkRed':   //Force to jump down
+        case 'DarkBlue': this.DarkThemeMenuItemActive = true; break;
+        case 'LightRed': 
+        case 'LightBlue': this.LightThemeMenuItemActive = true; break;
+      }
+    })
+
+
     // Sending Items
 
+    this.settingsService.loadSettings();
     this.checkFeatureMenuItems();
     this.homePageActivated();
     this.checkActiveMenuItem();
