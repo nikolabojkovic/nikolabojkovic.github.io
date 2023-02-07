@@ -335,4 +335,8 @@ export class StandardHeaderComponent implements OnInit {
   resetAllLinks(): void {
     this.setItemsOnDefault();
   }
+
+  changeLanguageTo(language: string): void {
+    this.settingsService.setLanguage(language);
+  }
 }
