@@ -227,6 +227,7 @@
                         <a 
                           id="lightThemeID" 
                           #themeLightMobileID
+                          [ngClass]="{'activeThemeColor':LightThemeMenuItemActive == true}"
                           class="menu-dropdown-item-mobile-default"
                           (click)="displayOnLightThemeColorPicker()"
                         >
@@ -243,7 +244,7 @@
                                 <span>RED</span>
                                 <span>
                                   <fa-icon 
-                                    class="theme-colors themes-icons-secondary" 
+                                    class="theme-colors themes-icons-secondary redSun" 
                                     [icon]="sun"
                                   >
                                     asdasd
@@ -254,7 +255,7 @@
                                 <span>BLUE</span>
                                 <span>
                                   <fa-icon 
-                                    class="theme-colors themes-icons-secondary" 
+                                    class="theme-colors themes-icons-secondary blueSun" 
                                     [icon]="sun"
                                   >
                                     asdasd
@@ -269,6 +270,7 @@
                         <a 
                           id="darkThemeID"
                           #themeDarktMobileID
+                          [ngClass]="{'activeThemeColor':DarkThemeMenuItemActive == true}"
                           class="menu-dropdown-item-mobile-default"
                           (click)="displayOnDarkThemeColorPicker()"
                           >
@@ -279,7 +281,7 @@
                                 <span>RED</span>
                                 <span>
                                   <fa-icon 
-                                    class="theme-colors themes-icons-secondary" 
+                                    class="theme-colors themes-icons-secondary redMoon" 
                                     [icon]="moon"
                                   >
                                     asdasd
@@ -290,7 +292,7 @@
                                 <span>BLUE</span>
                                 <span>
                                   <fa-icon 
-                                    class="theme-colors themes-icons-secondary" 
+                                    class="theme-colors themes-icons-secondary blueMoon" 
                                     [icon]="moon"
                                   >
                                     asdasd

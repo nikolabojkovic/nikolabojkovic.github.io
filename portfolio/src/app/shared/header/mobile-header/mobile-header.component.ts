@@ -38,6 +38,9 @@ export class MobileHeaderComponent implements OnInit {
   contact: boolean = false;
   clients: boolean = false;
 
+  LightThemeMenuItemActive: boolean = false;
+  DarkThemeMenuItemActive: boolean = false;
+
   featureMenuItemDevelopmentStrategy: boolean = false;
   featureMenuItemSoftwareArchitecture: boolean = false;
   featureMenuItemProjectImplementation: boolean = false;
@@ -76,6 +79,13 @@ export class MobileHeaderComponent implements OnInit {
     }
   })
   // Sending Items
+
+    switch(this.settingsService.settings.theme) {
+      case 'DarkRed':   //Force to jump down
+      case 'DarkBlue': this.DarkThemeMenuItemActive = true; break;
+      case 'LightRed': 
+      case 'LightBlue': this.LightThemeMenuItemActive = true; break;
+    }
   }
 
   resetMenuItems(): void {
@@ -204,8 +214,20 @@ export class MobileHeaderComponent implements OnInit {
   }
 
   onLightRedThemeClick(): void {
-    this.setActiveButton();
+    this.resetThemesItems();
+    this.LightThemeMenuItemActive = true;
     this.settingsService.setLightTheme(0);
+  }
+
+  onLightBlueThemeClick(): void {
+    this.resetThemesItems();
+    this.LightThemeMenuItemActive = true;
+    this.settingsService.setLightTheme(1);
+  }
+
+  resetThemesItems(): void {
+    this.DarkThemeMenuItemActive = false;
+    this.LightThemeMenuItemActive = false;
   }
 
   setActiveButton(): void {
@@ -217,7 +239,6 @@ export class MobileHeaderComponent implements OnInit {
   }
 
   activeThemeItem(linkitem:HTMLElement) {
-    this.setActiveThemeMenuItem(linkitem);
     this.headerService.SaveThemeMenuItem(linkitem);
   }
 
@@ -237,10 +258,6 @@ export class MobileHeaderComponent implements OnInit {
     dark.classList.add("defaultThemeColor");
   }
 
-  onLightBlueThemeClick(): void {
-    this.setActiveButton();
-    this.settingsService.setLightTheme(1);
-  }
   
   displayOnLightThemeColorPicker(): void {
     if(this.lightThemeColorPickerState == false) {
@@ -255,23 +272,15 @@ export class MobileHeaderComponent implements OnInit {
   }
 
   onDarkRedThemeClick(): void {
-    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
-    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
+    this.resetThemesItems();
+    this.DarkThemeMenuItemActive = true;
     this.settingsService.setDarkTheme(0);
-
-    darkButton?.classList.remove("default");
-    darkButton?.classList.add("active");
-    lightButton?.classList.remove("active");
   }
 
   onDarkBlueThemeClick(): void {
-    let lightButton = document.getElementById("lightThemeID") as HTMLElement;
-    let darkButton = document.getElementById("darkThemeID") as HTMLElement;
+    this.resetThemesItems();
+    this.DarkThemeMenuItemActive = true;
     this.settingsService.setDarkTheme(1);
-
-    darkButton?.classList.remove("default");
-    darkButton?.classList.add("active");
-    lightButton?.classList.remove("active");
   }
 
   displayOnDarkThemeColorPicker(): void {

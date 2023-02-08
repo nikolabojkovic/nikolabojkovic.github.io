@@ -51,6 +51,10 @@ export class AppComponent implements OnInit{
         if(url.startsWith('/resume')) {
           this.headerService.$ActiveMenuItem.next('resume');
         }
+        
+        if(url.startsWith('/home#')) {
+          this.headerService.$ActiveMenuItem.next('home');
+        }
      }
   }
 
