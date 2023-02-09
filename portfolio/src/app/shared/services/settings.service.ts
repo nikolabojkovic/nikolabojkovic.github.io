@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Subject } from 'rxjs';
 import { Settings } from '../models/settings.model';
 
 @Injectable({
@@ -16,6 +17,7 @@ export class SettingsService {
     togglerActivated = false;
     menuShadow = false;
     homePageActive = true;
+    public $ThemeMenuActiveItem: Subject<string> = new Subject();
 
     constructor(private translate: TranslateService) {
         translate.setDefaultLang('en-US');
@@ -92,6 +94,7 @@ export class SettingsService {
     }
 
     private loadTheme(): void {
+        this.$ThemeMenuActiveItem.next(this.settings.theme);
         switch(this.settings.theme) {
             case "DarkRed":
                 this.setDarkTheme(0);

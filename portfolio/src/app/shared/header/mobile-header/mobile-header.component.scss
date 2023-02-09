@@ -328,6 +328,26 @@ li {
   color:var(--text-secondary-color) !important;
 }
 
+
+.activeThemeColor {
+  color:var(--text-secondary-color) !important;
+}
+
+.redMoon {
+  color:#BE1E1E;;
+}
+
+.blueMoon {
+  color:#24C6D0;;
+}
+
+.blueSun {
+  color:#24C6D0;;
+}
+
+.redSun {
+  color:#BE1E1E;;
+}
 // Desktop View
   
 @media only screen and (min-width:1440px) {

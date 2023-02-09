@@ -1,5 +1,5 @@
 import { Component, Injectable } from "@angular/core";
-import { Subject, windowWhen } from "rxjs";
+import { Subject } from "rxjs";
 import { SettingsService } from "./settings.service";
 
 @Injectable({
@@ -20,13 +20,13 @@ export class HeaderService {
     constructor(private settingsService: SettingsService) {}
 
     public setupActiveResumeMenuItem(item: string) {
-      window.sessionStorage.setItem('activeResumeMenuItem',item);
-      this.$ActiveResumeMenuItem.next(item);
+    //  window.sessionStorage.setItem('activeResumeMenuItem',item);
+    //  this.$ActiveResumeMenuItem.next(item);
     }
 
     public setupActiveFeaturesMenuItem(item: string) {
-      window.sessionStorage.setItem('activeFeaturesMenuItem',item);
-      this.$ActiveFeaturesMenuItem.next(item);
+     //  window.sessionStorage.setItem('activeFeaturesMenuItem',item);
+     //  this.$ActiveFeaturesMenuItem.next(item);
     }
 
 
