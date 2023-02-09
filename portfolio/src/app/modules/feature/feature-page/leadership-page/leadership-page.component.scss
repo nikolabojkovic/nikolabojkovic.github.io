@@ -89,6 +89,12 @@
 
 @media only screen and ( max-width: 1150px) and (min-width: 760px){
 
+    .development-strategy { 
+        flex-direction: column;
+        height: auto;
+    }
+
+
     .text-and-photo {
         width: 450px;
         height: auto;
@@ -102,7 +108,8 @@
         width: 550px;
         height: 550px;
         padding: 20px;
-        padding-top: 40px;
+        padding-top: 0px;
+        margin-top: 0px;
     }
 
     .image-development {
