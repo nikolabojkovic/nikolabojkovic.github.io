@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/shared/loader/loader.service';
 import { HeaderService } from 'src/app/shared/services/header.service';
 import { SettingsService } from 'src/app/shared/services/settings.service';
 
@@ -10,12 +11,15 @@ import { SettingsService } from 'src/app/shared/services/settings.service';
 
 export class ConsultingPageComponent implements OnInit {
 
-  constructor( private headerService: HeaderService, private settingsServices: SettingsService) { }
+  constructor( private headerService: HeaderService, private settingsServices: SettingsService, private loaderService: LoaderService) { }
 
   ngOnInit(): void {
     this.activeFeaturesMenuItem();
   }
   
+  ngAfterViewInit(): void {
+    this.loaderService.desibleLoader(); 
+  }
 
   activeFeaturesMenuItem(): void {
     let sessionItem = window.sessionStorage.getItem("activeFeaturesMenuItem");

@@ -17,6 +17,22 @@ $displayable: block;
     --text-shadow-length: 10%;
 }
 
+* {
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track  {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--text-primary-color);
+    border-radius: 10px;
+  }
+}
+
 .theme-light-blue {
     --text-primary-color: #000000;
     --text-secondary-color: #24C6D0;
@@ -268,7 +284,7 @@ body {
 
   .content-title {
     font-size: 16px;
-    color:white;
+    color:var(--text-primary-color);
   }
   
   .content-job-title {
