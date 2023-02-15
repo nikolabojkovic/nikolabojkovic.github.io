@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 
 import { HeaderService } from "src/app/shared/services/header.service";
 import { SettingsService } from "src/app/shared/services/settings.service";
@@ -7,13 +7,14 @@ import { ContactService } from "./contact.service";
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { LoaderService } from "src/app/shared/loader/loader.service";
 
 @Component({
     selector: "app-contact",
     templateUrl: "./contact.page.component.html",
     styleUrls: ["./contact.page.component.scss"]
 })
-export class ContactPageComponent {
+export class ContactPageComponent implements OnInit, AfterViewInit {
     facebook =  faFacebookF;
     instagram = faInstagram;
     twitter = faTwitter;
@@ -25,12 +26,17 @@ export class ContactPageComponent {
 
     constructor(private contactService: ContactService, 
                 private settingsService: SettingsService, 
-                private headerService: HeaderService) {
+                private headerService: HeaderService,
+                private loaderService: LoaderService) {
 
     }
 
     ngOnInit(): void {
         this.headerService.HomePageDeactivated();
+    }
+
+    ngAfterViewInit(): void {
+        this.loaderService.desibleLoader(); 
     }
 
     sendMsg(): void {

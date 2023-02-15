@@ -16,6 +16,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { StandardHeaderComponent } from './shared/header/standard-header/standard-header.component';
 import { PageNotFoundComponent } from './shared/pageNotFound/404.page.component';
 import { MobileHeaderComponent } from './shared/header/mobile-header/mobile-header.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { LoaderService } from './shared/loader/loader.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,7 +29,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     StandardHeaderComponent,
     PageNotFoundComponent,
-    MobileHeaderComponent
+    MobileHeaderComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   exports: [
     HomeModule
   ],
-  providers: [SettingsService],
+  providers: [SettingsService, LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

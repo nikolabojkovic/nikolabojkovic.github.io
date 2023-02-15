@@ -1,4 +1,4 @@
-   <div class = "site-container">
+   <div [hidden]="isLoading" class = "site-container">
       <div id = "siteContainerTop" class = "site-container-top">
          <div class = 'view-container'>
             <app-header></app-header>
@@ -19,6 +19,8 @@
          </div>
       </div>
    </div>
+
+   <app-loader *ngIf="isLoading"></app-loader>
 
    
    

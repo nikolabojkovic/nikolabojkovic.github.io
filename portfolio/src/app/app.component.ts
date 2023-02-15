@@ -1,9 +1,10 @@
 import { Component,HostListener,OnInit} from '@angular/core';
-import { Event, RouterEvent, Router} from '@angular/router';
+import { Event, RouterEvent, Router, NavigationStart} from '@angular/router';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { HeaderService } from './shared/services/header.service';
 import { SettingsService } from './shared/services/settings.service';
 import { filter } from 'rxjs/operators'
+import { LoaderService } from './shared/loader/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +17,9 @@ export class AppComponent implements OnInit{
   storage = 'Storage is place where you store an information';
   scrollButtonStatus = false;
   arrow = faArrowRight;
+  isLoading = true;
 
-  ngOnInit(): void {
-    this.headerService.homeShadowID = this.sendHomeShadow();
-  }
-
-  constructor(private settingsService: SettingsService, private headerService: HeaderService, public router: Router) {
+  constructor(private settingsService: SettingsService, private headerService: HeaderService, private loadingService: LoaderService, public router: Router) {
     this.settingsService.loadSettings();
     router.events.pipe(
       filter((event: Event): event is RouterEvent => event instanceof RouterEvent)
@@ -35,7 +33,27 @@ export class AppComponent implements OnInit{
      this.menuList(event.url);
      this.subMenuListFeatures(event.url);
      this.subMenuListResume(event.url);
+
+     if (event instanceof NavigationStart) {
+        if(event.url === "/home#featuresSection" || event.url === "/home#resumeSection" || event.url == '/home#portfolioSection' || event.url === '/home#clientsSection')
+        {
+          this.isLoading = false;
+        }
+        else {
+          this.isLoading = true;
+        }
+     } else {
+      this.loadingService.desibleLoader();
+     }
    });
+  }
+
+  ngOnInit(): void {
+    this.headerService.homeShadowID = this.sendHomeShadow();
+
+    this.loadingService.$loading.subscribe((isLoading) => {
+      this.isLoading = isLoading;
+    })
   }
 
   menuList(url: any): void {

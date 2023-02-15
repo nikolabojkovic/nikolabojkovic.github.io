@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/shared/loader/loader.service';
 import { HeaderService } from 'src/app/shared/services/header.service';
 
 @Component({
@@ -7,14 +8,17 @@ import { HeaderService } from 'src/app/shared/services/header.service';
   styleUrls: ['./development-strategy-page.component.scss']
 })
 
-export class DevelopmentStrategyPageComponent implements OnInit {
+export class DevelopmentStrategyPageComponent implements OnInit, AfterViewInit {
 
-  constructor( private headerService: HeaderService ) { }
+  constructor( private headerService: HeaderService, private loaderService: LoaderService ) { }
 
   ngOnInit(): void {
     this.activeFeaturesMenuItem();
   }
   
+  ngAfterViewInit(): void {
+    this.loaderService.desibleLoader(); 
+  }
 
   activeFeaturesMenuItem(): void {
     let sessionItem = window.sessionStorage.getItem("activeFeaturesMenuItem");

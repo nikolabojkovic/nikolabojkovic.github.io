@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/shared/loader/loader.service';
 import { HeaderService } from 'src/app/shared/services/header.service';
 
 @Component({
@@ -6,14 +7,17 @@ import { HeaderService } from 'src/app/shared/services/header.service';
   templateUrl: './nul-tien.component.html',
   styleUrls: ['./nul-tien.component.scss']
 })
-export class NulTienComponent implements OnInit {
+export class NulTienComponent implements OnInit, AfterViewInit {
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService, private loaderService: LoaderService) { }
 
   ngOnInit(): void {
     this.activeResumeMenuItem();
   }
   
+  ngAfterViewInit(): void {
+    this.loaderService.desibleLoader(); 
+  }
 
   activeResumeMenuItem(): void {
     let sessionItem = window.sessionStorage.getItem("activeResumeMenuItem");

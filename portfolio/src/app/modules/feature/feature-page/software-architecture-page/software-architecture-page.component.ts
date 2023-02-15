@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/shared/loader/loader.service';
 import { HeaderService } from 'src/app/shared/services/header.service';
 
 @Component({
@@ -7,12 +8,16 @@ import { HeaderService } from 'src/app/shared/services/header.service';
   styleUrls: ['./software-architecture-page.component.scss']
 })
 
-export class SoftwareArchitecturePageComponent implements OnInit {
+export class SoftwareArchitecturePageComponent implements OnInit, AfterViewInit {
 
-  constructor( private headerService: HeaderService) { }
+  constructor( private headerService: HeaderService, private loaderService: LoaderService) { }
 
   ngOnInit(): void {
     this.activeFeaturesMenuItem();
+  }
+
+  ngAfterViewInit(): void {
+    this.loaderService.desibleLoader(); 
   }
   
 
