@@ -290,5 +290,9 @@ export class MobileHeaderComponent implements OnInit {
       this.lightThemeColorPickerState = false;
     }
   }
+
+  changeLanguageTo(language: string): void {
+    this.settingsService.setLanguage(language);
+  }
 }
 
