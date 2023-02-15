@@ -34,6 +34,7 @@ export class BannerComponent implements OnInit {
     if(window.innerWidth < this.WIDE_SCREEEN_SIZE) {
       rootElement.style.setProperty("--text-shadow-length" , "0%");
       shadow.style.borderLeft = "0px solid transparent";
+      shadow.style.animationName = "text_hoverable"
       return false;
     } else {
       return true;
@@ -53,14 +54,14 @@ export class BannerComponent implements OnInit {
           case 1: text.innerHTML = row[0];
           textInRow = 2;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "21%");
+            r.style.setProperty("--text-shadow-length", "27%");
           }
           break;
 
           case 2: text.innerHTML = row[1];
           textInRow = 3;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "52%");
+            r.style.setProperty("--text-shadow-length", "55%");
           }
           break;
 
@@ -76,6 +77,6 @@ export class BannerComponent implements OnInit {
 
   resetAnimations(): void {
       let r = document.querySelector(':root') as HTMLElement;
-      r.style.setProperty("--text-shadow-length", "22%");
+      r.style.setProperty("--text-shadow-length", "27%");
   }
 }

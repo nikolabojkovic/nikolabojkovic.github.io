@@ -111,8 +111,8 @@
 
 .all-text-container__body-effect-container__shadow {
     width: var(--text-shadow-length);
-    height: 90%;
-    top: 0;
+    height: 76%;
+    top: 3px;
     right: 0;
     background-color: var(--background-secondary-color);
     position: absolute;
@@ -121,12 +121,26 @@
 }
 
 .all-text-container__body-effect-container__shadow-animation {
-    animation-name: text_hoverable;
-    animation-duration: 5s;
-    animation-delay: 1.25s;
+    animation-name: text_hoverable, blinkingLine;
+    animation-duration: 5s,0.7s;
+    animation-delay: 0.30s,0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-fill-mode: backwards;
+}
+
+@keyframes blinkingLine {
+    0% {
+        border-left: 1px solid var(--text-ternary-color);
+    }
+
+    50% {
+        border-left: 0px;
+    }
+
+    100% {
+        border-left: 1px solid var(--text-ternary-color);
+    }
 }
 
 @keyframes text_hoverable {
