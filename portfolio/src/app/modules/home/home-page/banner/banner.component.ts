@@ -1,5 +1,6 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { LoaderService } from 'src/app/shared/loader/loader.service';
 
 @Component({
   selector: 'app-banner',
@@ -7,18 +8,22 @@ import { faFacebookF,faInstagram,faTwitter, faLinkedinIn } from '@fortawesome/fr
   styleUrls: ['./banner.component.scss']
 })
 
-export class BannerComponent implements OnInit {
-
-  constructor() { }
-
+export class BannerComponent implements OnInit, AfterViewInit {
   interval: any;
-  WIDE_SCREEEN_SIZE: number = 1500;
+  WIDE_SCREEEN_SIZE: number = 768;
   facebook =  faFacebookF;
   instagram = faInstagram; 
   twitter = faTwitter;
   linkedin = faLinkedinIn;
+  @ViewChild('text') animationText : ElementRef | undefined
+
+  constructor(private elRef: ElementRef, private loaderService: LoaderService) { }
 
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit(): void {
     this.resetAnimations();
     this.changeBannerText();
     this.isItBigScreen();
@@ -32,7 +37,10 @@ export class BannerComponent implements OnInit {
     let rootElement = document.querySelector(':root') as HTMLElement;
     let shadow = document.getElementById("shadowText") as HTMLElement;
     if(window.innerWidth < this.WIDE_SCREEEN_SIZE) {
-      rootElement.style.setProperty("--text-shadow-length" , "0%");
+      let text = document.getElementById("text") as HTMLElement;
+      const animationContainer = document.getElementById('animation-container') as HTMLElement;
+      const hoverWidth = animationContainer.offsetWidth - text.offsetWidth - 5;
+      rootElement.style.setProperty("--text-shadow-length" , hoverWidth + '');
       shadow.style.borderLeft = "0px solid transparent";
       shadow.style.animationName = "text_hoverable"
       return false;
@@ -54,21 +62,27 @@ export class BannerComponent implements OnInit {
           case 1: text.innerHTML = row[0];
           textInRow = 2;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "27%");
+            const animationContainer = document.getElementById('animation-container') as HTMLElement;
+            const hoverWidth = animationContainer.offsetWidth - text.offsetWidth - 5;
+            r.style.setProperty("--text-shadow-length", hoverWidth + 'px');
           }
           break;
 
           case 2: text.innerHTML = row[1];
           textInRow = 3;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "55%");
+            const animationContainer = document.getElementById('animation-container') as HTMLElement;
+            const hoverWidth = animationContainer.offsetWidth - text.offsetWidth - 5;
+            r.style.setProperty("--text-shadow-length", hoverWidth + 'px');
           }
           break;
 
           case 3: text.innerHTML = row[2];
           textInRow = 1;
           if(bigScreen) {
-            r.style.setProperty("--text-shadow-length", "79%");
+            const animationContainer = document.getElementById('animation-container') as HTMLElement;
+            const hoverWidth = animationContainer.offsetWidth - text.offsetWidth - 5;
+            r.style.setProperty("--text-shadow-length", hoverWidth + 'px');
           }
           break;
         }
@@ -76,7 +90,14 @@ export class BannerComponent implements OnInit {
   }
 
   resetAnimations(): void {
-      let r = document.querySelector(':root') as HTMLElement;
-      r.style.setProperty("--text-shadow-length", "27%");
+    this.loaderService.$loading.subscribe((isLoading) => {
+      if (!isLoading) {
+        let r = document.querySelector(':root') as HTMLElement;
+        let text = this.elRef.nativeElement.querySelector("#text");
+        const animationContainer = this.elRef.nativeElement.querySelector('#animation-container');
+        const hoverWidth = animationContainer.offsetWidth - text.offsetWidth - 5;
+        r.style.setProperty("--text-shadow-length", hoverWidth + 'px');
+      }
+    });
   }
 }
